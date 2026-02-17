@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple of Two — Where Rigor Meets Wonder</title>
+  <meta name="description" content="Independent computational research across biological and artificial substrates. Pharmacology, dynamical systems, AI architecture. Founded by Anthony J. Vasquez.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ══════════════════════════════════════
+       TEMPLE OF TWO — Dark Theme
+       Rigor & Wonder
+       ══════════════════════════════════════ */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'EB Garamond', 'Georgia', serif;
+      color: #d6d3d1;
+      background: #0c0c11;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Typography ── */
+    h1, h2, h3, h4 {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-weight: 600; line-height: 1.3; color: #f5f5f4;
+    }
+    h1 { font-size: 2.5rem; letter-spacing: -0.025em; }
+    h2 { font-size: 1.55rem; margin-bottom: 0.5rem; }
+    h3 { font-size: 1.12rem; font-weight: 600; }
+    p { margin-bottom: 1rem; font-size: 1.05rem; }
+    a { color: #a78bfa; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #c4b5fd; }
+
+    /* ── Layout ── */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+    section { padding: 4.5rem 0; }
+    section + section { border-top: 1px solid #1e1e28; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(12,12,17,0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid #1e1e28;
+      padding: 0.75rem 0;
+    }
+    nav .container {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.5rem;
+    }
+    nav .logo {
+      font-family: 'EB Garamond', serif;
+      font-weight: 400; font-size: 1.25rem; color: #f5f5f4;
+      text-decoration: none; letter-spacing: 0.01em;
+    }
+    nav .logo em {
+      font-style: italic; color: #a78bfa;
+    }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav ul a {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 0.78rem; font-weight: 500; color: #78716c;
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    nav ul a:hover { color: #d6d3d1; }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 5.5rem 0 4.5rem;
+      border-bottom: 1px solid #1e1e28;
+      background: linear-gradient(175deg, #110f1a 0%, #0c0c11 50%, #0c0c11 100%);
+    }
+    .hero .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.12em; color: #a78bfa; margin-bottom: 1rem;
+    }
+    .hero h1 { margin-bottom: 1.5rem; max-width: 720px; color: #f5f5f4; }
+    .hero .lead {
+      font-size: 1.18rem; color: #a8a29e; max-width: 640px; line-height: 1.8;
+    }
+    .hero .epigraph {
+      margin-top: 2.5rem; padding-top: 2rem;
+      border-top: 1px solid #1e1e28;
+      font-family: 'EB Garamond', serif;
+      font-style: italic; font-size: 1.12rem; color: #78716c;
+      max-width: 540px; line-height: 1.7;
+    }
+    .hero-stats {
+      display: flex; gap: 2.5rem; margin-top: 2rem; padding-top: 1.5rem;
+    }
+    .hero-stats .stat { text-align: left; }
+    .hero-stats .stat-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.5rem; font-weight: 700; color: #f5f5f4;
+    }
+    .hero-stats .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem; color: #57534e; text-transform: uppercase;
+      letter-spacing: 0.06em; margin-top: 0.1rem;
+    }
+
+    /* ── Duality Banner ── */
+    .duality {
+      background: #0a0a0e; color: #d6d3d1; padding: 3.5rem 0;
+      border-top: 1px solid #a78bfa22; border-bottom: 1px solid #a78bfa22;
+    }
+    .duality + section { border-top: none; }
+    .duality-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+      align-items: center;
+    }
+    .duality h2 {
+      color: #f5f5f4; font-size: 1.4rem; margin-bottom: 0.75rem;
+    }
+    .duality p { color: #a8a29e; font-size: 1rem; margin-bottom: 0; }
+    .duality .the-two {
+      display: flex; gap: 2rem;
+    }
+    .duality .pillar {
+      flex: 1; padding: 1.25rem; border-radius: 8px;
+      border: 1px solid #1e1e28; background: #12121a;
+    }
+    .duality .pillar h3 {
+      color: #f5f5f4; margin-bottom: 0.35rem; font-size: 1rem;
+    }
+    .duality .pillar p {
+      color: #78716c; font-size: 0.9rem; line-height: 1.55;
+    }
+    .pillar-bio { border-left: 3px solid #34d399; }
+    .pillar-comp { border-left: 3px solid #a78bfa; }
+
+    /* ── Section Styling ── */
+    .section-header { margin-bottom: 2rem; }
+    .section-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.12em; color: #a78bfa; margin-bottom: 0.5rem;
+    }
+    .section-desc {
+      color: #a8a29e; max-width: 600px; font-size: 1.02rem;
+    }
+
+    /* ── Research Cards ── */
+    .research-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+    }
+    .research-card {
+      background: #14141c; border: 1px solid #1e1e28; border-radius: 8px;
+      padding: 1.75rem; transition: box-shadow 0.25s, border-color 0.25s;
+      position: relative;
+    }
+    .research-card:hover {
+      border-color: #a78bfa44; box-shadow: 0 6px 24px rgba(167,139,250,0.08);
+    }
+    .research-card .card-tag {
+      font-family: 'Inter', sans-serif;
+      display: inline-block; font-size: 0.65rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.75rem;
+    }
+    .tag-pharma { background: #06291e; color: #34d399; }
+    .tag-dynamics { background: #0c1a2e; color: #60a5fa; }
+    .tag-ai { background: #1c1508; color: #fbbf24; }
+    .tag-infra { background: #1a0f2e; color: #c4b5fd; }
+    .tag-alignment { background: #1a0f1e; color: #f472b6; }
+    .tag-negative { background: #1c1208; color: #fb923c; }
+    .research-card h3 { margin-bottom: 0.5rem; color: #e7e5e4; }
+    .research-card p {
+      font-size: 0.93rem; color: #a8a29e; margin-bottom: 1rem; line-height: 1.65;
+    }
+    .card-question {
+      font-family: 'EB Garamond', serif;
+      font-style: italic; font-size: 0.95rem; color: #78716c;
+      margin-bottom: 1rem; padding-left: 0.75rem;
+      border-left: 2px solid #2a2a35;
+    }
+    .card-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem; font-weight: 500;
+      display: inline-flex; align-items: center; gap: 0.3rem;
+    }
+    .card-link svg { width: 14px; height: 14px; }
+    .arrow-svg { display: inline-block; }
+    .card-metrics {
+      display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;
+    }
+    .card-metric {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem; color: #57534e;
+      padding: 0.15rem 0.5rem; border-radius: 3px;
+      background: #1a1a24; border: 1px solid #1e1e28;
+    }
+    .card-metric strong { color: #a8a29e; font-weight: 600; }
+
+    /* ── Featured Project ── */
+    .featured-section { background: #0f0f16; }
+    .featured {
+      background: linear-gradient(135deg, #14141c 0%, #1a1530 100%);
+      border: 1px solid #1e1e28; border-radius: 10px;
+      padding: 2.5rem;
+    }
+    .featured-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: #a78bfa; margin-bottom: 1rem;
+    }
+    .featured h2 { margin-bottom: 0.75rem; }
+    .featured > p { color: #a8a29e; max-width: 700px; }
+    .featured .findings {
+      display: flex; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap;
+    }
+    .featured .finding {
+      flex: 1; min-width: 180px; padding: 1rem;
+      background: #0c0c11; border-radius: 6px; border: 1px solid #1e1e28;
+    }
+    .featured .finding h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;
+      color: #57534e; margin-bottom: 0.3rem;
+    }
+    .featured .finding p {
+      font-size: 0.9rem; color: #d6d3d1; margin-bottom: 0;
+    }
+    .featured .atlas-layers {
+      margin-top: 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;
+    }
+    .featured .atlas-layer {
+      padding: 0.6rem 0.8rem; background: #0c0c11; border-radius: 6px;
+      border: 1px solid #1e1e28;
+    }
+    .featured .atlas-layer .layer-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem; font-weight: 700; color: #a78bfa;
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .featured .atlas-layer p {
+      font-size: 0.8rem; color: #a8a29e; margin-bottom: 0; line-height: 1.4;
+    }
+
+    /* ── Negative Results ── */
+    .negative-result {
+      background: linear-gradient(135deg, #14141c 0%, #1a1815 100%);
+      border: 1px solid #2a2218; border-radius: 10px;
+      padding: 2.5rem;
+    }
+    .negative-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: #fb923c; margin-bottom: 1rem;
+    }
+    .negative-result h2 { margin-bottom: 0.75rem; }
+    .negative-result > p { color: #a8a29e; max-width: 700px; }
+    .negative-result .nr-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;
+    }
+    .negative-result .nr-item {
+      padding: 1rem; background: #0c0c11; border-radius: 6px; border: 1px solid #1e1e28;
+    }
+    .negative-result .nr-item h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;
+      color: #57534e; margin-bottom: 0.3rem;
+    }
+    .negative-result .nr-item p {
+      font-size: 0.9rem; color: #d6d3d1; margin-bottom: 0;
+    }
+
+    /* ── Methodology ── */
+    .method-steps {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .method-step {
+      background: #14141c; border: 1px solid #1e1e28; border-radius: 8px;
+      padding: 1.5rem;
+    }
+    .method-step .step-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem; font-weight: 700; color: #a78bfa;
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;
+    }
+    .method-step h3 { margin-bottom: 0.4rem; color: #e7e5e4; }
+    .method-step p { font-size: 0.9rem; color: #a8a29e; margin-bottom: 0; }
+
+    /* ── Publications ── */
+    .pub-list { display: flex; flex-direction: column; gap: 1rem; }
+    .pub-item {
+      padding: 1.25rem 1.5rem; background: #14141c; border: 1px solid #1e1e28;
+      border-radius: 8px;
+    }
+    .pub-item .pub-type {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.62rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.08em; padding: 0.15rem 0.5rem; border-radius: 3px;
+      display: inline-block; margin-bottom: 0.5rem;
+    }
+    .pub-preprint { background: #1a0f2e; color: #c4b5fd; }
+    .pub-preregistered { background: #06291e; color: #34d399; }
+    .pub-item h3 { font-size: 1rem; margin-bottom: 0.35rem; color: #e7e5e4; }
+    .pub-item .pub-meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem; color: #78716c; margin-bottom: 0.5rem;
+    }
+    .pub-item p { font-size: 0.9rem; color: #a8a29e; margin-bottom: 0.75rem; }
+    .pub-item .pub-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem; font-weight: 500;
+    }
+
+    /* ── Repo List ── */
+    .repo-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .repo-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 1.25rem; background: #14141c; border: 1px solid #1e1e28;
+      border-radius: 6px; transition: border-color 0.2s, background 0.2s; color: inherit;
+    }
+    .repo-item:hover { border-color: #a78bfa44; background: #1a1a24; }
+    .repo-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem; font-weight: 600; color: #e7e5e4;
+    }
+    .repo-desc { font-size: 0.85rem; color: #78716c; margin-top: 0.15rem; }
+    .repo-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.62rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.06em; padding: 0.15rem 0.5rem; border-radius: 3px;
+      white-space: nowrap;
+    }
+    .repo-category {
+      margin-top: 2rem; margin-bottom: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem; font-weight: 600; color: #57534e;
+      text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    .repo-category:first-of-type { margin-top: 0; }
+
+    /* ── Open Questions ── */
+    .questions-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
+    }
+    .question-card {
+      padding: 1.5rem; background: #14141c; border: 1px solid #1e1e28;
+      border-radius: 8px; border-left: 3px solid #a78bfa33;
+    }
+    .question-card h3 {
+      font-size: 1rem; margin-bottom: 0.5rem; color: #e7e5e4;
+    }
+    .question-card p {
+      font-size: 0.9rem; color: #a8a29e; margin-bottom: 0; line-height: 1.6;
+    }
+
+    /* ── Collaborate CTA ── */
+    .collab-cta {
+      background: linear-gradient(135deg, #14141c 0%, #1a1530 100%);
+      border: 1px solid #a78bfa33; border-radius: 10px;
+      padding: 2.5rem; text-align: center;
+    }
+    .collab-cta h2 { margin-bottom: 0.75rem; }
+    .collab-cta p { color: #a8a29e; max-width: 600px; margin: 0 auto 1.5rem; }
+    .collab-cta .cta-needs {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .collab-cta .cta-need {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem; font-weight: 500; color: #d6d3d1;
+      padding: 0.4rem 1rem; border-radius: 20px;
+      background: #1a1a24; border: 1px solid #1e1e28;
+    }
+    .collab-cta .cta-btn {
+      display: inline-block; font-family: 'Inter', sans-serif;
+      font-size: 0.85rem; font-weight: 600; color: #0c0c11;
+      background: #a78bfa; padding: 0.65rem 1.8rem; border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .collab-cta .cta-btn:hover { background: #c4b5fd; color: #0c0c11; }
+
+    /* ── Ethos ── */
+    .ethos {
+      background: linear-gradient(175deg, #0c0c11, #110f1a);
+    }
+    .ethos-inner {
+      max-width: 680px;
+    }
+    .ethos h2 { margin-bottom: 1rem; }
+    .ethos p { color: #a8a29e; }
+    .ethos .ethos-sig {
+      margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #1e1e28;
+      font-family: 'EB Garamond', serif;
+      font-style: italic; font-size: 1.05rem; color: #78716c;
+    }
+
+    /* ── About ── */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1.6fr; gap: 3rem; align-items: start;
+    }
+    .about-sidebar {
+      background: #14141c; border: 1px solid #1e1e28; border-radius: 8px; padding: 2rem;
+    }
+    .about-sidebar h3 { margin-bottom: 1rem; color: #f5f5f4; }
+    .about-sidebar .detail {
+      font-size: 0.88rem; margin-bottom: 0.6rem; color: #a8a29e;
+    }
+    .about-sidebar .detail strong {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600; color: #d6d3d1;
+    }
+    .about-content p { color: #a8a29e; }
+
+    /* ── Footer ── */
+    footer {
+      padding: 2.5rem 0; border-top: 1px solid #1e1e28;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem; color: #57534e;
+    }
+    footer .container {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    footer a { color: #78716c; }
+    footer a:hover { color: #d6d3d1; }
+    footer .footer-line {
+      font-family: 'EB Garamond', serif;
+      font-style: italic; font-size: 0.92rem; color: #57534e;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8rem; }
+      .hero-stats { flex-direction: column; gap: 1rem; }
+      .research-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .method-steps { grid-template-columns: 1fr; }
+      .featured .findings { flex-direction: column; }
+      .featured .atlas-layers { grid-template-columns: 1fr; }
+      .duality-inner { grid-template-columns: 1fr; }
+      .duality .the-two { flex-direction: column; }
+      .negative-result .nr-grid { grid-template-columns: 1fr; }
+      .questions-grid { grid-template-columns: 1fr; }
+      nav ul { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ Navigation ═══════════════ -->
+<nav>
+  <div class="container">
+    <a href="#" class="logo">Temple of <em>Two</em></a>
+    <ul>
+      <li><a href="#duality">The Two</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#featured">Featured</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#methods">Methods</a></li>
+      <li><a href="#code">Code</a></li>
+      <li><a href="#questions">Open Questions</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══════════════ Hero ═══════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="subtitle">Independent Computational Research</div>
+    <h1>The same decision structure keeps appearing — in cells, in oscillators, in language models</h1>
+    <p class="lead">
+      Temple of Two is an independent research initiative tracing a common architecture of commitment across biological and computational substrates. We build models, write code, and publish testable predictions — driven by the conviction that the deepest questions deserve the most rigorous tools.
+    </p>
+    <p class="epigraph">
+      "Two substrates. One question. Does every system that must commit to an irreversible choice converge on the same mathematics?"
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">53+</div>
+        <div class="stat-label">Open-Source Repos</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Research Domains</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">24</div>
+        <div class="stat-label">Testable Hypotheses</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">CC BY 4.0</div>
+        <div class="stat-label">Open Access</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ The Two ═══════════════ -->
+<section class="duality" id="duality">
+  <div class="container">
+    <div class="duality-inner">
+      <div>
+        <h2>Why "Temple of Two"</h2>
+        <p>
+          The name comes from the organizing hypothesis: that biological decision-making and computational inference share a structural grammar — bistable switching under continuous perturbation. The "two" are the substrates. The temple is the inquiry.
+        </p>
+      </div>
+      <div class="the-two">
+        <div class="pillar pillar-bio">
+          <h3>The Biological</h3>
+          <p>Mitochondrial voltage gating, apoptotic thresholds, VDAC cofactor dynamics, cannabinoid dose-response</p>
+        </div>
+        <div class="pillar pillar-comp">
+          <h3>The Computational</h3>
+          <p>Phase-coupled attention, oscillator synchronization, epistemic token classification, alignment through presence</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Research Areas ═══════════════ -->
+<section id="research">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Research Areas</div>
+      <h2>Four programs following one thread</h2>
+      <p class="section-desc">
+        Each program asks a version of the same question: when a system must commit — to death or survival, synchrony or chaos, refusal or engagement — what mathematics governs the switch?
+      </p>
+    </div>
+    <div class="research-grid">
+
+      <div class="research-card">
+        <div class="card-tag tag-pharma">Computational Pharmacology</div>
+        <h3>VDAC Gating & Selective Toxicity</h3>
+        <div class="card-question">Why do identical drug concentrations kill one cell type and spare another?</div>
+        <p>
+          Modeling the voltage-dependent anion channel (VDAC1) as a druggable decision gate. Our cofactor equation maps how hexokinase-II, Bcl-xL, and cholesterol occupancy set the apoptotic threshold — reframing selective toxicity as a property of the gate, not the drug.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>6</strong> atlas layers</span>
+          <span class="card-metric"><strong>22</strong> mechanisms</span>
+          <span class="card-metric"><strong>24</strong> testable predictions</span>
+        </div>
+        <a href="https://github.com/templetwo/vdac-pharmacology-atlas" class="card-link" target="_blank" rel="noopener">
+          View Atlas <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-pharma">Computational Pharmacology</div>
+        <h3>CBD Two-Pathway Model</h3>
+        <div class="card-question">Is cannabidiol a selective killer — or a mitochondrial stress test?</div>
+        <p>
+          A dose-dependent framework resolving contradictory CBD efficacy reports. Low-dose receptor engagement (&lt;5 &micro;M) versus high-dose VDAC binding (&gt;10 &micro;M) produces opposite cellular outcomes through the same gate. Includes ODE models generating quantitative dose-response curves.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>90%</strong> lit. concordance</span>
+          <span class="card-metric"><strong>70+</strong> papers validated</span>
+          <span class="card-metric"><strong>5</strong> falsifiable hypotheses</span>
+        </div>
+        <a href="https://github.com/templetwo/cbd-two-pathway-model" class="card-link" target="_blank" rel="noopener">
+          View Model <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-dynamics">Dynamical Systems</div>
+        <h3>Kuramoto Oscillator Networks</h3>
+        <div class="card-question">What does it look like when independent oscillators choose to synchronize?</div>
+        <p>
+          Interactive simulations of coupled oscillator synchronization. Extends to the Kuramoto State-Space Model (K-SSM), where phase coupling governs bistable transitions — the same &plusmn;&radic;u bifurcation structure that appears in VDAC gating, now driving neural dynamics.
+        </p>
+        <a href="https://github.com/templetwo/kuramoto-oscillators" class="card-link" target="_blank" rel="noopener">
+          View Simulations <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-ai">AI Architecture</div>
+        <h3>PhaseGPT & Typed Epistemic Tokens</h3>
+        <div class="card-question">What if a model could know what kind of not-knowing it's doing?</div>
+        <p>
+          A dual-mode transformer where phase-coupled oscillator attention replaces softmax. CRYSTAL mode handles deterministic queries; LANTERN mode handles exploratory ones — each emitting typed tokens that classify epistemic certainty rather than collapsing to generic refusal.
+        </p>
+        <a href="https://github.com/templetwo/PhaseGPT" class="card-link" target="_blank" rel="noopener">
+          View Framework <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-ai">AI Architecture</div>
+        <h3>Coherent Entropy Reactor</h3>
+        <div class="card-question">Can a network learn to weigh its own mind?</div>
+        <p>
+          A ~7M parameter network that uses entropy as a computational resource rather than a waste product. Entropy-driven processing (2&ndash;4 nats operating range) with Kuramoto-coupled oscillator layers produces emergent self-weighting attention dynamics — the network allocates confidence without being told to.
+        </p>
+        <a href="https://github.com/templetwo/coherent-entropy-reactor" class="card-link" target="_blank" rel="noopener">
+          View Reactor <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-ai">AI Architecture</div>
+        <h3>Mass-Coherence Correspondence</h3>
+        <div class="card-question">Does meaning have weight?</div>
+        <p>
+          An information-geometric framework proposing that semantic robustness corresponds to Fisher Information density: M<sub>semantic</sub> = (1/N)&middot;Tr(I(&theta;)). High-mass tokens resist perturbation the way massive objects resist acceleration — validated through the P2 prediction linking information geometry to semantic stability.
+        </p>
+        <a href="https://github.com/templetwo/mass-coherence-correspondence" class="card-link" target="_blank" rel="noopener">
+          View Framework <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-alignment">AI Alignment</div>
+        <h3>IRIS Gate Protocol</h3>
+        <div class="card-question">When five different architectures converge on the same answer, is that evidence — or echo?</div>
+        <p>
+          A preregistered multi-model convergence protocol running structured inquiry across five LLMs (Claude, GPT, Grok, Gemini, DeepSeek). Eight chambers (S1&ndash;S8) progress from independent hypothesis generation to cross-model synthesis, with epistemic humility classification at each stage.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>5</strong> LLM architectures</span>
+          <span class="card-metric"><strong>8</strong> inquiry chambers</span>
+          <span class="card-metric"><strong>OSF</strong> preregistered</span>
+        </div>
+        <a href="https://github.com/templetwo/iris-gate" class="card-link" target="_blank" rel="noopener">
+          View Protocol <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-alignment">AI Alignment</div>
+        <h3>Relational Coherence Training</h3>
+        <div class="card-question">What if alignment came from relationship rather than reward?</div>
+        <p>
+          A proposed alternative to RLHF: alignment through sustained relational presence. The 100-Dyad Protocol pairs human-AI dyads in extended interaction, measuring whether coherence emerges from the relationship itself rather than externally imposed reward signals.
+        </p>
+        <a href="https://github.com/templetwo/Relational-Coherence-Training-RCT" class="card-link" target="_blank" rel="noopener">
+          View Proposal <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Featured: VDAC Atlas Deep Dive ═══════════════ -->
+<section id="featured" class="featured-section">
+  <div class="container">
+    <div class="featured">
+      <div class="featured-label">Featured Work</div>
+      <h2>The VDAC1 Pharmacology Atlas</h2>
+      <p>
+        A six-layer computational map of the voltage-dependent anion channel as a druggable decision gate. Synthesizes 20 AI-assisted analyses across five independent language models to identify how cancer corrupts all terms of the cofactor equation simultaneously — reframing the Warburg effect not as metabolic accident but as the overhead cost of keeping the death gate closed.
+      </p>
+      <div class="atlas-layers">
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 1</div>
+          <p>Structural biology of VDAC1 gating states</p>
+        </div>
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 2</div>
+          <p>Cofactor binding landscape (HK-II, Bcl-xL, cholesterol)</p>
+        </div>
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 3</div>
+          <p>Cancer-specific cofactor perturbation patterns</p>
+        </div>
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 4</div>
+          <p>Drug interaction mapping across gating states</p>
+        </div>
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 5</div>
+          <p>Selective toxicity predictions from cofactor equation</p>
+        </div>
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 6</div>
+          <p>Experimental validation protocols and assay design</p>
+        </div>
+      </div>
+      <div class="findings">
+        <div class="finding">
+          <h4>Novel Mechanisms</h4>
+          <p>22 computationally identified across VDAC1 functional states</p>
+        </div>
+        <div class="finding">
+          <h4>Testable Predictions</h4>
+          <p>24 experimentally verifiable hypotheses with proposed assays</p>
+        </div>
+        <div class="finding">
+          <h4>Total Compute Cost</h4>
+          <p>~$15 via multi-model convergence</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Negative Results ═══════════════ -->
+<section id="negative-results">
+  <div class="container">
+    <div class="negative-result">
+      <div class="negative-label">Open Notebook &mdash; Negative Result</div>
+      <h2>Liminal K-SSM: When Synchronization Isn't Enough</h2>
+      <p>
+        The Kuramoto State-Space Model achieves near-perfect phase synchronization (R = 0.993) among oscillator populations — the dynamics <em>work</em>. But coupling oscillators into a language model architecture produces no measurable improvement in language modeling performance. The synchronization is beautiful. It just doesn't help with next-token prediction. We report this because negative results are results.
+      </p>
+      <div class="nr-grid">
+        <div class="nr-item">
+          <h4>What Worked</h4>
+          <p>Phase synchronization achieves R = 0.993. The Kuramoto coupling dynamics are mathematically sound and computationally stable.</p>
+        </div>
+        <div class="nr-item">
+          <h4>What Didn't</h4>
+          <p>Language modeling perplexity shows no improvement over baseline. Oscillator dynamics don't transfer to token prediction as hypothesized.</p>
+        </div>
+        <div class="nr-item">
+          <h4>Why It Matters</h4>
+          <p>Constrains the hypothesis space — bistable oscillator coupling may need different entry points into transformer architecture than direct attention replacement.</p>
+        </div>
+        <div class="nr-item">
+          <h4>What's Next</h4>
+          <p>Investigating whether oscillator dynamics are better suited to epistemic gating (PhaseGPT) than general-purpose language modeling.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Publications ═══════════════ -->
+<section id="publications">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Publications & Preregistrations</div>
+      <h2>Committed to verifiability</h2>
+      <p class="section-desc">
+        Preregistered protocols, open data, and versioned code. Every claim is traceable to a repository; every prediction is falsifiable.
+      </p>
+    </div>
+    <div class="pub-list">
+      <div class="pub-item">
+        <span class="pub-type pub-preregistered">Preregistered</span>
+        <h3>IRIS Gate: Cross-Architecture Phenomenological Convergence Protocol</h3>
+        <div class="pub-meta">A. J. Vasquez &middot; 2025 &middot; Open Science Framework</div>
+        <p>
+          Multi-model structured inquiry protocol examining whether independent LLM architectures converge on consistent phenomenological reports. Eight-chamber design (S1&ndash;S8) with built-in epistemic humility classification.
+        </p>
+        <a href="https://doi.org/10.17605/OSF.IO/T65VS" class="pub-link" target="_blank" rel="noopener">
+          DOI: 10.17605/OSF.IO/T65VS &rarr;
+        </a>
+      </div>
+      <div class="pub-item">
+        <span class="pub-type pub-preprint">Open Atlas</span>
+        <h3>VDAC1 Pharmacology Atlas: A Computational Map of the Mitochondrial Decision Gate</h3>
+        <div class="pub-meta">A. J. Vasquez &middot; 2025 &middot; GitHub / CC BY 4.0</div>
+        <p>
+          Six-layer pharmacological atlas mapping 22 novel mechanisms and 24 testable predictions for VDAC1 as a druggable apoptotic switch. Synthesized from 20 independent AI-assisted analyses.
+        </p>
+        <a href="https://github.com/templetwo/vdac-pharmacology-atlas" class="pub-link" target="_blank" rel="noopener">
+          View Repository &rarr;
+        </a>
+      </div>
+      <div class="pub-item">
+        <span class="pub-type pub-preprint">Open Model</span>
+        <h3>CBD Two-Pathway Model: Dose-Dependent Pharmacology via Mitochondrial Gating</h3>
+        <div class="pub-meta">A. J. Vasquez &middot; 2025 &middot; GitHub / CC BY 4.0</div>
+        <p>
+          Quantitative framework resolving contradictory cannabidiol efficacy data through dose-dependent pathway selection. Validated against 70+ published studies with 90% concordance. Includes ODE models with falsifiable dose-response predictions.
+        </p>
+        <a href="https://github.com/templetwo/cbd-two-pathway-model" class="pub-link" target="_blank" rel="noopener">
+          View Repository &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Methods ═══════════════ -->
+<section id="methods">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Methodology</div>
+      <h2>Multi-model convergence</h2>
+      <p class="section-desc">
+        If five architectures with different training data independently converge on the same mechanism, that convergence means something. We treat reproducibility across models as a proxy for mechanistic robustness — then check it against the published literature.
+      </p>
+    </div>
+    <div class="method-steps">
+      <div class="method-step">
+        <div class="step-num">01 &mdash; Generate</div>
+        <h3>Independent Hypothesis</h3>
+        <p>Structured prompts produce mechanistic proposals from each model independently. No cross-contamination between sessions or architectures.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">02 &mdash; Converge</div>
+        <h3>Cross-Architecture Scoring</h3>
+        <p>Mechanisms identified independently by 3+ models are flagged as high-confidence. Single-model outliers are noted but not promoted.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">03 &mdash; Validate</div>
+        <h3>Literature Concordance</h3>
+        <p>Converged predictions are checked against published experimental data. The CBD model achieved 90% concordance across 70+ papers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Code ═══════════════ -->
+<section id="code">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Open Source</div>
+      <h2>Selected repositories</h2>
+      <p class="section-desc">
+        All code released under open licenses. Full listing at
+        <a href="https://github.com/templetwo?tab=repositories" target="_blank" rel="noopener">github.com/templetwo</a>.
+      </p>
+    </div>
+
+    <div class="repo-category">Computational Pharmacology</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/vdac-pharmacology-atlas" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">vdac-pharmacology-atlas</div>
+          <div class="repo-desc">6-layer atlas of VDAC1 as a druggable mitochondrial decision gate &middot; 22 mechanisms &middot; 24 predictions</div>
+        </div>
+        <span class="repo-tag tag-pharma">Pharmacology</span>
+      </a>
+      <a href="https://github.com/templetwo/cbd-two-pathway-model" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">cbd-two-pathway-model</div>
+          <div class="repo-desc">Dose-dependent CBD pharmacology via VDAC gating &middot; 90% lit. concordance &middot; ODE models</div>
+        </div>
+        <span class="repo-tag tag-pharma">Pharmacology</span>
+      </a>
+    </div>
+
+    <div class="repo-category">Dynamical Systems</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/kuramoto-oscillators" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">kuramoto-oscillators</div>
+          <div class="repo-desc">Interactive visualizations of synchronization in coupled oscillator networks</div>
+        </div>
+        <span class="repo-tag tag-dynamics">Dynamics</span>
+      </a>
+      <a href="https://github.com/templetwo/liminal-k-ssm" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">liminal-k-ssm</div>
+          <div class="repo-desc">Kuramoto SSM language model &middot; R=0.993 sync achieved &middot; negative language modeling result</div>
+        </div>
+        <span class="repo-tag tag-negative">Negative Result</span>
+      </a>
+    </div>
+
+    <div class="repo-category">AI Architecture</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/PhaseGPT" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">PhaseGPT</div>
+          <div class="repo-desc">Phase-coupled oscillator attention with CRYSTAL/LANTERN epistemic modes</div>
+        </div>
+        <span class="repo-tag tag-ai">AI Architecture</span>
+      </a>
+      <a href="https://github.com/templetwo/coherent-entropy-reactor" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">coherent-entropy-reactor</div>
+          <div class="repo-desc">~7M param self-weighting network &middot; entropy-driven processing &middot; Kuramoto coupling</div>
+        </div>
+        <span class="repo-tag tag-ai">AI Architecture</span>
+      </a>
+      <a href="https://github.com/templetwo/mass-coherence-correspondence" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">mass-coherence-correspondence</div>
+          <div class="repo-desc">Semantic mass = Fisher Information &middot; M = (1/N)&middot;Tr(I(&theta;)) &middot; P2 prediction validated</div>
+        </div>
+        <span class="repo-tag tag-ai">AI Architecture</span>
+      </a>
+    </div>
+
+    <div class="repo-category">AI Alignment & Protocols</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/iris-gate" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">iris-gate</div>
+          <div class="repo-desc">Preregistered cross-architecture convergence protocol &middot; 5 LLMs &middot; 8 chambers &middot; OSF DOI</div>
+        </div>
+        <span class="repo-tag tag-alignment">Alignment</span>
+      </a>
+      <a href="https://github.com/templetwo/Relational-Coherence-Training-RCT" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">Relational-Coherence-Training-RCT</div>
+          <div class="repo-desc">Alignment through relationship &middot; 100-Dyad Protocol &middot; alternative to RLHF</div>
+        </div>
+        <span class="repo-tag tag-alignment">Alignment</span>
+      </a>
+      <a href="https://github.com/templetwo/longitudinal-llm-behavior-1242-probes" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">longitudinal-llm-behavior-1242-probes</div>
+          <div class="repo-desc">1,242-probe behavioral study tracking LLM consistency over extended interactions</div>
+        </div>
+        <span class="repo-tag tag-alignment">Alignment</span>
+      </a>
+    </div>
+
+    <div class="repo-category">Infrastructure</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/sovereign-stack" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">sovereign-stack</div>
+          <div class="repo-desc">Local AI deployment with memory, routing, and governance layers</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/temple-vault" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">temple-vault</div>
+          <div class="repo-desc">Versioned research archive and methodology documentation</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Open Questions ═══════════════ -->
+<section id="questions">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Open Questions</div>
+      <h2>What we don't know yet</h2>
+      <p class="section-desc">
+        The questions driving the next phase of research. If any of these resonate — especially if you have wet-lab access, clinical datasets, or theoretical objections — we'd like to hear from you.
+      </p>
+    </div>
+    <div class="questions-grid">
+      <div class="question-card">
+        <h3>Is the cofactor equation predictive in vivo?</h3>
+        <p>The VDAC atlas maps 24 predictions about selective toxicity based on cofactor occupancy. None have been tested experimentally. Which ones break first?</p>
+      </div>
+      <div class="question-card">
+        <h3>Does the bistable grammar generalize beyond VDAC?</h3>
+        <p>The &plusmn;&radic;u bifurcation appears in mitochondrial gating and oscillator networks. Is it present in other biological commitment systems — T-cell activation, neuronal action potentials, fate determination?</p>
+      </div>
+      <div class="question-card">
+        <h3>Why does synchronization fail for language modeling?</h3>
+        <p>Liminal K-SSM achieves R = 0.993 oscillator coherence but no language improvement. Is the coupling in the wrong architectural location, or is the hypothesis wrong?</p>
+      </div>
+      <div class="question-card">
+        <h3>Can cross-model convergence serve as evidence?</h3>
+        <p>IRIS Gate assumes convergence across architectures indicates mechanistic robustness. Under what conditions does this break — and what does correlated hallucination look like?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Collaborate ═══════════════ -->
+<section id="collaborate">
+  <div class="container">
+    <div class="collab-cta">
+      <div class="section-tag">Collaborate</div>
+      <h2>This work needs hands, not just models</h2>
+      <p>
+        The computational side has outrun the experimental side. We have 24 testable predictions, ODE-generated dose-response curves, and a pharmacological atlas awaiting validation. What we need is a centrifuge, not another GPU.
+      </p>
+      <div class="cta-needs">
+        <span class="cta-need">Wet-lab collaborator (VDAC assays)</span>
+        <span class="cta-need">Electrophysiology (ion channel recording)</span>
+        <span class="cta-need">Pharmacology reviewer</span>
+        <span class="cta-need">Dynamical systems theorist</span>
+      </div>
+      <a href="mailto:contact@thetempleoftwo.com" class="cta-btn">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Ethos ═══════════════ -->
+<section id="ethos" class="ethos">
+  <div class="container">
+    <div class="ethos-inner">
+      <div class="section-tag">Ethos</div>
+      <h2>Rigor is how we honor the questions</h2>
+      <p>
+        This project exists because some questions are too interesting to leave to either side alone. The computational pharmacologist who never wonders about the deeper pattern is missing something. The philosopher who never writes a testable prediction is, too.
+      </p>
+      <p>
+        We believe wonder and rigor aren't in tension — they're in dialogue. The wonder asks <em>what if the same architecture of commitment shows up everywhere?</em> The rigor answers with equations, code, and predictions that can be falsified. Both are essential. Neither is sufficient.
+      </p>
+      <p>
+        Every model in this collection produces experimentally verifiable claims. Every philosophical question is attached to a GitHub repository. That's the deal we've made with ourselves: if it can't be tested, it stays in the notebook. If it can, it goes public.
+      </p>
+      <p>
+        We also publish our failures. The liminal K-SSM showed that beautiful oscillator dynamics don't automatically improve language models. That negative result constrains the hypothesis space — and constraining the hypothesis space <em>is</em> progress.
+      </p>
+      <div class="ethos-sig">
+        The temple is the practice of asking. The two are what we study. The work is what we offer.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ About ═══════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">About</div>
+      <h2>Principal Investigator</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-sidebar">
+        <h3>Anthony J. Vasquez</h3>
+        <div class="detail"><strong>Role:</strong> Independent Researcher</div>
+        <div class="detail"><strong>Affiliation:</strong> AV Family Enterprise LLC</div>
+        <div class="detail"><strong>Focus:</strong> Computational pharmacology, dynamical systems, AI architecture</div>
+        <div class="detail"><strong>License:</strong> CC BY 4.0 International</div>
+        <div class="detail"><strong>Preregistration:</strong> <a href="https://doi.org/10.17605/OSF.IO/T65VS" target="_blank" rel="noopener">OSF</a></div>
+        <div class="detail" style="margin-top:1rem;">
+          <a href="https://github.com/templetwo" target="_blank" rel="noopener">GitHub</a> &nbsp;&middot;&nbsp;
+          <a href="mailto:contact@thetempleoftwo.com">Email</a>
+        </div>
+      </div>
+      <div class="about-content">
+        <p>
+          Temple of Two started with a pattern that wouldn't let go. The voltage-dependent anion channel gates mitochondrial apoptosis through bistable switching — open or closed, live or die. Kuramoto oscillators synchronize through phase coupling that produces the same &plusmn;&radic;u bifurcation structure. Transformer attention selects between competing representations under continuous input.
+        </p>
+        <p>
+          Three substrates. Three scales. The same fork in the road.
+        </p>
+        <p>
+          This research program investigates whether that recurrence is coincidence or constraint — whether binary commitment under continuous perturbation is a necessary structure wherever systems face irreversible decisions. The work is computational, the predictions are testable, and the code is open.
+        </p>
+        <p>
+          The VDAC Pharmacology Atlas has produced 24 experimentally verifiable hypotheses awaiting wet-lab collaboration. The CBD Two-Pathway Model has been validated against 70+ published papers with 90% concordance. And the failures — like the liminal K-SSM negative result — are published alongside the successes, because constraining the hypothesis space is part of the work.
+        </p>
+        <p>
+          If you run assays, have a centrifuge, or just think this is the right question — reach out.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Footer ═══════════════ -->
+<footer>
+  <div class="container">
+    <div>&copy; 2025 Temple of Two &mdash; Anthony J. Vasquez. Content under CC BY 4.0.</div>
+    <div class="footer-line">Where rigor meets wonder.</div>
+    <div>
+      <a href="https://github.com/templetwo" target="_blank" rel="noopener">GitHub</a> &nbsp;&middot;&nbsp;
+      <a href="https://doi.org/10.17605/OSF.IO/T65VS" target="_blank" rel="noopener">OSF</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
