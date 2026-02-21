@@ -434,6 +434,63 @@
       font-size: 0.9rem; color: #a8a29e; margin-bottom: 0; line-height: 1.6;
     }
 
+    /* ── Work With Us ── */
+    .work-cta {
+      background: linear-gradient(135deg, #0f0f16 0%, #1a1530 100%);
+      border: 1px solid #a78bfa44; border-radius: 10px;
+      padding: 3rem;
+    }
+    .work-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.12em; color: #a78bfa; margin-bottom: 1rem;
+    }
+    .work-cta h2 { margin-bottom: 0.75rem; }
+    .work-promise {
+      color: #a8a29e; max-width: 680px; font-size: 1.05rem;
+      margin-bottom: 2rem; border-bottom: 1px solid #1e1e28; padding-bottom: 2rem;
+    }
+    .work-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;
+    }
+    .work-section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: #57534e; margin-bottom: 0.75rem;
+    }
+    .work-list {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .work-list li {
+      font-family: 'EB Garamond', serif;
+      font-size: 0.97rem; color: #d6d3d1; padding: 0.35rem 0;
+      border-bottom: 1px solid #1e1e2844;
+      padding-left: 1rem; position: relative;
+    }
+    .work-list li::before {
+      content: '→'; position: absolute; left: 0;
+      color: #a78bfa; font-family: 'Inter', sans-serif; font-size: 0.75rem;
+    }
+    .work-list li:last-child { border-bottom: none; }
+    .work-footer {
+      margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #1e1e28;
+      display: flex; flex-direction: column; align-items: flex-start; gap: 1rem;
+    }
+    .work-btn {
+      display: inline-block; font-family: 'Inter', sans-serif;
+      font-size: 0.95rem; font-weight: 700; color: #0c0c11;
+      background: #a78bfa; padding: 0.85rem 2.2rem; border-radius: 6px;
+      transition: background 0.2s, transform 0.15s; letter-spacing: 0.01em;
+    }
+    .work-btn:hover { background: #c4b5fd; color: #0c0c11; transform: translateY(-1px); }
+    .work-disclaimer {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem; color: #57534e; margin: 0; line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .work-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── Collaborate CTA ── */
     .collab-cta {
       background: linear-gradient(135deg, #14141c 0%, #1a1530 100%);
@@ -571,6 +628,7 @@
       <li><a href="#methods">Methods</a></li>
       <li><a href="#code">Code</a></li>
       <li><a href="#questions">Open Questions</a></li>
+      <li><a href="#work-with-us">Work With Us</a></li>
       <li><a href="#about">About</a></li>
     </ul>
   </div>
@@ -1217,6 +1275,53 @@
       <div class="question-card">
         <h3>Can cross-model convergence serve as evidence?</h3>
         <p>IRIS Gate assumes convergence across architectures indicates mechanistic robustness. Under what conditions does this break — and what does correlated hallucination look like?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ Work With Us ═══════════════ -->
+<section id="work-with-us">
+  <div class="container">
+    <div class="work-cta">
+      <div class="work-label">Hypothesis Sprint &mdash; $650</div>
+      <h2>Bring us a question. We return a plan to answer it.</h2>
+      <p class="work-promise">
+        You have a scientific problem. We deliver a ranked set of falsifiable hypotheses and a minimal experiment plan to test them — with clear decision points for every outcome. Concrete artifact. Fixed fee. Five business days.
+      </p>
+      <div class="work-grid">
+        <div>
+          <div class="work-section-label">What you get</div>
+          <ul class="work-list">
+            <li>3–7 novel, ranked testable hypotheses</li>
+            <li>Mechanistic model &amp; causal chain</li>
+            <li>Experiment plan — assay, controls, readouts</li>
+            <li>Expected outcomes + explicit falsification criteria</li>
+            <li>Decision tree: if result A → next step; if result B → next step</li>
+            <li>Code scaffold or simulation if relevant</li>
+          </ul>
+        </div>
+        <div>
+          <div class="work-section-label">What to send after purchase</div>
+          <ul class="work-list">
+            <li>Problem statement (1–2 paragraphs)</li>
+            <li>What you've already tried or ruled out</li>
+            <li>Constraints: budget, equipment, timeline</li>
+            <li>Organism or model system</li>
+            <li>Key papers or datasets (optional)</li>
+          </ul>
+          <p style="font-size:0.85rem;color:#78716c;margin-top:1rem;">
+            Send to <a href="mailto:info@thetempleoftwo.com">info@thetempleoftwo.com</a> after checkout.
+          </p>
+        </div>
+      </div>
+      <div class="work-footer">
+        <a href="https://buy.stripe.com/7sYeVc5WU5Y7aTq0cqfMA02" class="work-btn" target="_blank" rel="noopener">
+          Book a Hypothesis Sprint &mdash; $650
+        </a>
+        <p class="work-disclaimer">
+          Research planning only &mdash; not medical advice. Deliverables are confidential. You retain full IP ownership of your data and results.
+        </p>
       </div>
     </div>
   </div>
