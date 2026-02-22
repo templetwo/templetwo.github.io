@@ -538,24 +538,21 @@
       border-radius: 10px;
       overflow: hidden;
       border: 1px solid #1e1e28;
-      max-height: 420px;
     }
-    .hero-image img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-    }
+    .hero-image img { width: 100%; height: auto; display: block; }
     .duality-image {
-      margin-top: 1.5rem; border-radius: 8px; overflow: hidden;
-      border: 1px solid #1e1e28; max-height: 280px;
+      margin-top: 2rem; border-radius: 8px; overflow: hidden;
+      border: 1px solid #1e1e28;
     }
-    .duality-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .duality-image img { width: 100%; height: auto; display: block; }
     .featured-diagram {
       display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
-      margin-top: 1.5rem;
+      margin-top: 1.5rem; align-items: start;
     }
     .featured-diagram-img {
       border-radius: 8px; overflow: hidden; border: 1px solid #1e1e28;
     }
-    .featured-diagram-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .featured-diagram-img img { width: 100%; height: auto; display: block; }
     @media (max-width: 768px) {
       .featured-diagram { grid-template-columns: 1fr; }
     }
@@ -725,9 +722,9 @@
           <p>Phase-coupled attention, oscillator synchronization, epistemic token classification, alignment through presence</p>
         </div>
       </div>
-      <div class="duality-image">
-        <img src="images/temple-duality.jpg" alt="A stone temple pillar split down the center — the left face carved with a mitochondrion, the right face etched with circuit board traces, united by a beam of light at the seam.">
-      </div>
+    </div>
+    <div class="duality-image">
+      <img src="images/temple-duality.jpg" alt="A stone temple pillar split down the center — the left face carved with a mitochondrion, the right face etched with circuit board traces, united by a beam of light at the seam.">
     </div>
   </div>
 </section>
