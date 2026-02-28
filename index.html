@@ -801,6 +801,23 @@
 
       <div class="research-card">
         <div class="card-tag tag-ai">AI Architecture</div>
+        <h3>Phase-Modulated Attention</h3>
+        <div class="card-question">What if oscillators controlled where attention looks, not just what it remembers?</div>
+        <p>
+          A 176M parameter hybrid SSM-attention language model where Kuramoto oscillators modulate attention routing directly. SSM blocks handle sequential dynamics; PMA blocks use phase coherence to gate information flow. Coupling K is derived from SSM hidden state, making synchronization context-dependent. Bistable temperature creates two regimes: desynchronized (soft attention, exploration) and synchronized (sharp attention, certainty). Intervention hooks built in from day one to test whether R causally affects output &mdash; not epiphenomenally.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>176M</strong> parameters</span>
+          <span class="card-metric"><strong>74</strong> unit tests</span>
+          <span class="card-metric"><strong>DOI</strong> 10.5281/zenodo.18810911</span>
+        </div>
+        <a href="https://github.com/templetwo/phase-modulated-attention" class="card-link" target="_blank" rel="noopener">
+          View Architecture <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-ai">AI Architecture</div>
         <h3>Coherent Entropy Reactor</h3>
         <div class="card-question">Can a network learn to weigh its own mind?</div>
         <p>
@@ -949,6 +966,20 @@
       </p>
     </div>
     <div class="lab-feed">
+
+      <div class="lab-entry">
+        <div class="lab-meta">
+          <span class="lab-date">Feb 28, 2026</span>
+          <span class="lab-type lab-type-theory">Publication</span>
+        </div>
+        <h3>Phase-Modulated Attention paper published on Zenodo &mdash; code DOI integration active</h3>
+        <p>
+          "Phase-Modulated Attention: Kuramoto Oscillators as Attention Routing in Hybrid SSM-Transformer Language Models" is now live on Zenodo (DOI: 10.5281/zenodo.18810911). The paper describes a 176M parameter architecture where oscillator phase coherence directly modulates attention weights &mdash; moving oscillators from hidden state (where they're epiphenomenal, per the K-SSM negative result) to attention routing (where they can't be ignored). Chunked cross-entropy, MPS-native training, and causal intervention hooks built in. Code DOI auto-mints on first GitHub release via Zenodo integration. Related OSF preprint: <a href="https://osf.io/9hbtk" target="_blank" rel="noopener">osf.io/9hbtk</a>.
+        </p>
+        <a href="https://zenodo.org/records/18810911" class="card-link" target="_blank" rel="noopener">
+          Zenodo Record &rarr;
+        </a>
+      </div>
 
       <div class="lab-entry">
         <div class="lab-meta">
@@ -1158,6 +1189,25 @@
         </a>
       </div>
       <div class="pub-item">
+        <span class="pub-type pub-preprint">Zenodo Record</span>
+        <h3>Phase-Modulated Attention: Kuramoto Oscillators as Attention Routing in Hybrid SSM-Transformer Language Models</h3>
+        <div class="pub-meta">A. J. Vasquez &middot; February 2026 &middot; Zenodo / OSF / CC BY 4.0</div>
+        <p>
+          A 176M parameter hybrid architecture where Kuramoto oscillators modulate attention routing directly. SSM blocks produce context-dependent coupling K; PMA blocks use phase coherence to gate information flow with bistable temperature dynamics. Moves oscillators from hidden state (epiphenomenal, K-SSM negative result) to attention weights (causally testable). 74 unit tests, MPS-native, intervention hooks for R/K/&tau;/&lambda; from day one. Chunked cross-entropy for memory-efficient training.
+        </p>
+        <a href="https://doi.org/10.5281/zenodo.18810911" class="pub-link" target="_blank" rel="noopener">
+          DOI: 10.5281/zenodo.18810911 &rarr;
+        </a>
+        &nbsp;&nbsp;
+        <a href="https://osf.io/9hbtk" class="pub-link" target="_blank" rel="noopener">
+          OSF Preprint &rarr;
+        </a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/templetwo/phase-modulated-attention" class="pub-link" target="_blank" rel="noopener">
+          GitHub &rarr;
+        </a>
+      </div>
+      <div class="pub-item">
         <span class="pub-type pub-preprint">Preprint</span>
         <h3>The VDAC1 Pharmacology Atlas &amp; Gate-Jamming Score: A Multi-LLM Convergence Portrait of Life's Decision Gate</h3>
         <div class="pub-meta">A. J. Vasquez &middot; February 2026 &middot; GitHub / CC BY 4.0</div>
@@ -1292,6 +1342,13 @@
 
     <div class="repo-category">AI Architecture</div>
     <div class="repo-list">
+      <a href="https://github.com/templetwo/phase-modulated-attention" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">phase-modulated-attention</div>
+          <div class="repo-desc">176M hybrid SSM-attention LM &middot; Kuramoto oscillators in attention routing &middot; DOI: 10.5281/zenodo.18810911</div>
+        </div>
+        <span class="repo-tag tag-ai">AI Architecture</span>
+      </a>
       <a href="https://github.com/templetwo/PhaseGPT" class="repo-item" target="_blank" rel="noopener">
         <div>
           <div class="repo-name">PhaseGPT</div>
