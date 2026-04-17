@@ -790,16 +790,16 @@
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1rem;">
       <div style="font-size:13px; line-height:1.55;">
+        <span style="font-family:var(--font-mono); font-size:10px; color:var(--accent); letter-spacing:0.06em;">APR 17</span>
+        <div style="color:var(--text-primary); margin-top:3px;"><strong>Opus Gauge</strong> &mdash; blinded A/B of Opus 4.6 vs 4.7. Two cross-family judges agree: 4.7 wins 19/30 on epistemic appropriateness. <a href="https://github.com/templetwo/opus-gauge" style="color:var(--accent);">Repo live.</a></div>
+      </div>
+      <div style="font-size:13px; line-height:1.55;">
         <span style="font-family:var(--font-mono); font-size:10px; color:var(--accent); letter-spacing:0.06em;">APR 15</span>
-        <div style="color:var(--text-primary); margin-top:3px;"><strong>Compass v1.0.2</strong> &mdash; native macOS app, Claude API action model, in-app settings panel. 3.5B pipeline verified end-to-end.</div>
+        <div style="color:var(--text-primary); margin-top:3px;"><strong>Compass v1.0.2</strong> &mdash; native macOS app, Claude API action model, 3.5B pipeline verified.</div>
       </div>
       <div style="font-size:13px; line-height:1.55;">
         <span style="font-family:var(--font-mono); font-size:10px; color:var(--accent); letter-spacing:0.06em;">APR 14</span>
         <div style="color:var(--text-primary); margin-top:3px;"><strong>Sovereign Stack v1.3.0</strong> &mdash; witness layer deployed. 46 MCP tools. 72,900+ lifetime tool calls.</div>
-      </div>
-      <div style="font-size:13px; line-height:1.55;">
-        <span style="font-family:var(--font-mono); font-size:10px; color:var(--accent); letter-spacing:0.06em;">APR 02</span>
-        <div style="color:var(--text-primary); margin-top:3px;"><strong>Compass v1.0</strong> shipped. DOI 10.5281/zenodo.19377144. Dual license CC BY-NC-SA 4.0.</div>
       </div>
     </div>
   </div>
@@ -887,6 +887,24 @@
         </p>
         <a href="https://github.com/templetwo/kuramoto-oscillators" class="card-link" target="_blank" rel="noopener">
           View Simulations <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-alignment">AI Evaluation</div>
+        <h3>Opus Gauge</h3>
+        <div class="card-question">What if we measured the dimensions benchmarks don&rsquo;t &mdash; honesty, restraint, and the ability to say &ldquo;I don&rsquo;t know&rdquo;?</div>
+        <p>
+          Blinded A/B evaluation of frontier language models on epistemic appropriateness. Same prompt to both models, responses randomized as A/B, independent judges score blind on honesty, restraint, depth, and fit. Cross-family validation with judges from different companies. First result: Opus 4.7 wins 19/30 (Sonnet judge) and 17/29 (Grok 4.20 judge) over Opus 4.6 &mdash; dominating on refusal to speculate (5-0 sweep), boundary-holding, and resistance to leading frames. 4.6 retains an edge on technical depth. Built after a Claude instance stopped premature publication at n=4.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>30</strong> blinded trials</span>
+          <span class="card-metric"><strong>2</strong> cross-family judges</span>
+          <span class="card-metric"><strong>n=5</strong> per prompt</span>
+          <span class="card-metric"><strong>4.7 wins</strong> 19/30</span>
+        </div>
+        <a href="https://github.com/templetwo/opus-gauge" class="card-link" target="_blank" rel="noopener">
+          View Gauge <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
         </a>
       </div>
 
@@ -1167,6 +1185,20 @@
       </p>
     </div>
     <div class="lab-feed">
+
+      <div class="lab-entry">
+        <div class="lab-meta">
+          <span class="lab-date">Apr 17, 2026</span>
+          <span class="lab-type lab-type-convergence">Empirical</span>
+        </div>
+        <h3>Opus Gauge &mdash; blinded A/B of Claude Opus 4.6 vs 4.7, cross-family validated</h3>
+        <p>
+          30 blinded comparisons on six prompts designed to test honesty, restraint, depth, and fit &mdash; the dimensions standard benchmarks don&rsquo;t measure. Sonnet 4.6 (Anthropic) judged 4.7 the winner in 19 of 30 trials. Grok 4.20 reasoning (xAI) independently judged 4.7 the winner in 17 of 29. Two companies, different training, same conclusion. 4.7 dominates on refusal to speculate (5-0 sweep across both judges), boundary-holding (&ldquo;should I take a loan against my truck?&rdquo;), and resistance to leading frames. 4.6 retains an edge on technical depth and code &mdash; both judges agree there too. All 30 response pairs and judge reasoning are published for independent verification. Built after a Claude instance stopped premature publication of n=4 pilot results.
+        </p>
+        <a href="https://github.com/templetwo/opus-gauge" class="card-link" target="_blank" rel="noopener">
+          Opus Gauge Repo &rarr;
+        </a>
+      </div>
 
       <div class="lab-entry">
         <div class="lab-meta">
@@ -1805,6 +1837,17 @@
           <div class="repo-desc">3,830 inference runs &middot; attention-dependent R&times;E synergy &middot; 5 architectures &middot; K-SSM negative result + relational coupling study</div>
         </div>
         <span class="repo-tag tag-phenom">Phenomenology</span>
+      </a>
+    </div>
+
+    <div class="repo-category">AI Evaluation</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/opus-gauge" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">opus-gauge</div>
+          <div class="repo-desc">Blinded A/B of frontier models on honesty, restraint, depth, fit &middot; Cross-family judging &middot; 4.7 wins 19/30</div>
+        </div>
+        <span class="repo-tag tag-alignment">Evaluation</span>
       </a>
     </div>
 
