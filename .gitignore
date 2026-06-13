@@ -1,2 +1,6 @@
 # macOS
 .DS_Store
+
+# Essay build tooling (sources live in ~/where-it-lands; site serves only rendered output)
+essays/_template.html
+essays/build.sh

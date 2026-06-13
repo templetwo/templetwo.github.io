@@ -1,0 +1,147 @@
+/* ══════════════════════════════════════════════════
+   TEMPLE OF TWO — Witness Essays
+   Long-form reading theme. Shares the site's tokens
+   (EB Garamond body, Inter chrome, #0c0c11 / #a78bfa)
+   but with a narrower measure and taller leading.
+   ══════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'EB Garamond', 'Georgia', serif;
+  color: #d6d3d1;
+  background: #0c0c11;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── Top chrome: minimal back-nav ── */
+.essay-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(12,12,17,0.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #1e1e28;
+  padding: 0.75rem 0;
+}
+.essay-nav .inner {
+  max-width: 720px; margin: 0 auto; padding: 0 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem;
+}
+.essay-nav a {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.78rem; font-weight: 500;
+  color: #78716c; text-decoration: none;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+.essay-nav a:hover { color: #d6d3d1; }
+.essay-nav .home { color: #f5f5f4; }
+.essay-nav .home em { font-style: italic; color: #a78bfa; }
+
+/* ── Article frame ── */
+.essay {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2rem;
+}
+
+/* ── Title block ── */
+.essay-head { margin-bottom: 3rem; text-align: center; }
+.essay-head .kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: #a78bfa; margin-bottom: 1.25rem;
+}
+.essay-head h1 {
+  font-family: 'EB Garamond', 'Georgia', serif;
+  font-weight: 600; font-size: 2.7rem; line-height: 1.15;
+  color: #f5f5f4; letter-spacing: -0.01em;
+}
+.essay-head .subtitle {
+  font-style: italic; font-size: 1.25rem;
+  color: #a8a29e; margin-top: 0.85rem; line-height: 1.5;
+}
+.essay-head .byline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem; color: #78716c;
+  margin-top: 1.5rem; line-height: 1.6;
+}
+.essay-head .byline a { color: #a78bfa; text-decoration: none; }
+.essay-head .byline a:hover { color: #c4b5fd; }
+.essay-head .rule {
+  width: 60px; height: 1px; background: #2a2a36;
+  margin: 2.25rem auto 0;
+}
+
+/* ── Body typography ── */
+.essay-body { font-size: 1.18rem; }
+.essay-body p { margin-bottom: 1.35rem; }
+.essay-body p:first-of-type { margin-top: 0; }
+/* Drop-cap on the opening paragraph */
+.essay-body > p:first-of-type::first-letter {
+  font-family: 'EB Garamond', serif;
+  font-size: 3.4rem; font-weight: 600; line-height: 0.8;
+  float: left; margin: 0.06em 0.08em 0 0; color: #a78bfa;
+}
+.essay-body h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600; font-size: 1.15rem;
+  color: #f5f5f4; letter-spacing: 0.01em;
+  margin: 2.75rem 0 1rem;
+  padding-top: 1.5rem; border-top: 1px solid #1e1e28;
+}
+.essay-body h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600; font-size: 1rem; color: #e7e5e4;
+  margin: 1.75rem 0 0.75rem;
+}
+.essay-body em { font-style: italic; color: #e7e5e4; }
+.essay-body strong { font-weight: 600; color: #f5f5f4; }
+.essay-body a { color: #a78bfa; text-decoration: none; border-bottom: 1px solid #2a2a36; }
+.essay-body a:hover { color: #c4b5fd; border-bottom-color: #a78bfa; }
+.essay-body blockquote {
+  border-left: 2px solid #a78bfa;
+  padding-left: 1.25rem; margin: 1.5rem 0;
+  color: #a8a29e; font-style: italic;
+}
+/* Horizontal rules / dinkus between movements */
+.essay-body hr {
+  border: 0; text-align: center; margin: 2.5rem 0;
+}
+.essay-body hr::before {
+  content: '* * *'; color: #57534e; letter-spacing: 0.5em;
+  font-size: 1rem;
+}
+.essay-body ul, .essay-body ol { margin: 0 0 1.35rem 1.5rem; }
+.essay-body li { margin-bottom: 0.5rem; }
+.essay-body code {
+  font-family: 'SF Mono', ui-monospace, monospace;
+  font-size: 0.85em; background: #14141c;
+  padding: 0.1em 0.4em; border-radius: 4px; color: #c4b5fd;
+}
+
+/* ── Footer: license + DOI + back ── */
+.essay-foot {
+  max-width: 680px; margin: 3rem auto 0;
+  padding: 2rem 1.5rem 4rem;
+  border-top: 1px solid #1e1e28;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem; color: #78716c; line-height: 1.7;
+}
+.essay-foot a { color: #a78bfa; text-decoration: none; }
+.essay-foot a:hover { color: #c4b5fd; }
+.essay-foot .lic { margin-bottom: 0.9rem; }
+.essay-foot .back { font-weight: 500; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .essay { padding: 2.5rem 1.25rem 1.5rem; }
+  .essay-head h1 { font-size: 2.1rem; }
+  .essay-head .subtitle { font-size: 1.1rem; }
+  .essay-body { font-size: 1.1rem; }
+}
