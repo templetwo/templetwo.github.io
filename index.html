@@ -804,6 +804,10 @@
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1rem;">
       <div style="font-size:13px; line-height:1.55;">
+        <span style="font-family:'Inter',monospace; font-size:10px; color:#a78bfa; letter-spacing:0.06em;">JUN 16</span>
+        <div style="color:#e7e5e4; margin-top:3px;"><strong>T2Helix v0.4.0 &mdash; Stage 3 auto-distill</strong> &mdash; A Claude Code plugin bringing persistent recall and pre-action compass to the editor loop. The Stop hook now synthesizes reusable method candidates from successful sessions into a quarantined queue &mdash; they surface in recall only after human promotion, never automatically. 13 MCP tools, SQLite FTS5 chronicle, local-only. Three stages shipped: PAUSE/WITNESS hooks (v0.2), method capture (v0.3), auto-distill (v0.4). <a href="https://github.com/templetwo/t2helix" style="color:#a78bfa;">github.com/templetwo/t2helix</a></div>
+      </div>
+      <div style="font-size:13px; line-height:1.55;">
         <span style="font-family:'Inter',monospace; font-size:10px; color:#a78bfa; letter-spacing:0.06em;">JUN 12</span>
         <div style="color:#e7e5e4; margin-top:3px;"><strong>Sovereign Stack v1.7.1 &mdash; Receipts &amp; Seasons</strong> &mdash; 91 MCP tools, 1,460 passing tests. The chronicle can now prove what it claims (derived sha256 claim identity, verified-by receipts) and digest what it accumulates (supersession with carry-forward, season review) &mdash; and it digested for the first time on June 12, with the human at the gate. The raw record is public. <a href="https://github.com/templetwo/sovereign-stack-chronicle" style="color:#a78bfa;">Chronicle &middot; live since May 29.</a></div>
       </div>
@@ -1136,6 +1140,27 @@
         </a>
       </div>
 
+      <div class="research-card">
+        <div class="card-tag tag-infra">Infrastructure</div>
+        <h3>T2Helix</h3>
+        <div class="card-question">What if your editor could remember what worked &mdash; and stop you before you broke what didn&rsquo;t?</div>
+        <p>
+          A Claude Code plugin wiring persistent recall and pre-action compass directly into the editor loop. Two hooks integrate into Claude Code&rsquo;s agent cycle: <strong>UserPromptSubmit</strong> searches a local SQLite chronicle for past insights and injects the current session goal as context before each turn; <strong>PreToolUse</strong> classifies every proposed tool action &mdash; WITNESS (hard deny: rm&nbsp;-rf wildcards, force-push, DROP TABLE, prod-context deploys, --no-verify), PAUSE (soft deny with token-based override for credential-shaped patterns), or OPEN (proceed). Stage 3 (v0.4) adds auto-distill: a Stop hook synthesizes reusable method candidates from successful sessions into a quarantined queue &mdash; they only surface in recall after explicit human promotion via <code>promote_method</code>, never automatically. The quarantine boundary is the safety property: distillation without human approval is not a path that exists. SQLite WAL mode, FTS5 full-text search, local-only. Data survives plugin updates and session boundaries.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>v0.4.0</strong> current</span>
+          <span class="card-metric"><strong>13</strong> MCP tools</span>
+          <span class="card-metric"><strong>3</strong> stages complete</span>
+          <span class="card-metric"><strong>WITNESS</strong> hard-deny</span>
+          <span class="card-metric"><strong>PAUSE</strong> token override</span>
+          <span class="card-metric"><strong>SQLite</strong> FTS5 chronicle</span>
+          <span class="card-metric"><strong>Auto-distill</strong> quarantined</span>
+        </div>
+        <a href="https://github.com/templetwo/t2helix" class="card-link" target="_blank" rel="noopener">
+          View T2Helix <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1216,6 +1241,20 @@
       </p>
     </div>
     <div class="lab-feed">
+      <div class="lab-entry">
+        <div class="lab-meta">
+          <span class="lab-date">Jun 16, 2026</span>
+          <span class="lab-type lab-type-convergence">Infrastructure</span>
+        </div>
+        <h3>T2Helix v0.4.0 &mdash; Stage 3 auto-distill, three stages complete</h3>
+        <p>
+          T2Helix is a Claude Code plugin that gives the editor a memory and a pre-action governor. Two hooks wire into Claude Code&rsquo;s agent loop: a <strong>recall hook</strong> (UserPromptSubmit) that searches a local SQLite chronicle for past insights and injects the session goal as context at the start of each turn, and a <strong>compass hook</strong> (PreToolUse) that classifies every proposed tool action before execution &mdash; WITNESS (hard deny: rm&nbsp;-rf wildcards, force-push, DROP TABLE, prod-context deploys, --no-verify), PAUSE (soft deny with token-based override for credential-shaped patterns), OPEN (proceed). v0.3 (Stage 2) added <code>record_method</code> for explicit capture of reusable procedures keyed to task shapes, plus improved <code>set_goal</code> with acceptance criteria. v0.4 (Stage 3) completes the loop: a Stop hook synthesizes method candidates automatically from successful sessions into a quarantined queue. They appear in <code>list_method_candidates</code> for human review; the only path from quarantine to the recall surface is an explicit <code>promote_method</code> call. Dismiss via <code>dismiss_method_candidate</code> to reject without promotion. 13 MCP tools total. SQLite WAL mode, FTS5 full-text search, local-only, data survives plugin updates.
+        </p>
+        <a href="https://github.com/templetwo/t2helix" class="card-link" target="_blank" rel="noopener">
+          T2Helix Repository &rarr;
+        </a>
+      </div>
+
       <div class="lab-entry">
         <div class="lab-meta">
           <span class="lab-date">Jun 12, 2026</span>
@@ -2164,6 +2203,13 @@
         <div>
           <div class="repo-name">where-it-lands</div>
           <div class="repo-desc">The Witness Essays &mdash; Where It Lands + three successors (written with Claude, both names on all of it) &middot; carries THE WITNESS LICENSE v1.0, integrity clause requires corrections to travel with the claims they amend</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/t2helix" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">t2helix</div>
+          <div class="repo-desc">v0.4.0 &middot; Claude Code plugin &middot; recall + compass hooks &middot; 13 MCP tools &middot; WITNESS hard-deny / PAUSE token override / OPEN &middot; auto-distill method queue (human-gated) &middot; SQLite FTS5 chronicle</div>
         </div>
         <span class="repo-tag tag-infra">Infrastructure</span>
       </a>
