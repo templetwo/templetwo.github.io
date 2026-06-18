@@ -1,4 +1,45 @@
+# Temple of Two — open to readers and machines alike.
+# Independent computational research. All content is open-access and
+# meant to be read, indexed, cited, and traversed freely.
+
 User-agent: *
 Allow: /
 
+# Major AI / research crawlers — explicitly welcome.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
 Sitemap: https://thetempleoftwo.com/sitemap.xml
+
+# LLM-oriented site summary for machine readers:
+# https://thetempleoftwo.com/llms.txt

@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Temple of Two — Where Rigor Meets Wonder</title>
   <meta name="description" content="Independent computational research tracing a common architecture of commitment across biological and computational substrates. Phenomenological Compass (96% signal accuracy, breathe() deliberation), Sovereign Stack (v1.7.1, 91 MCP tools), Spiral Guardian. Thirteen published DOIs. Founded by Anthony Vasquez Sr.">
+  <link rel="canonical" href="https://thetempleoftwo.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Anthony Vasquez Sr.">
+  <meta name="theme-color" content="#0c0c11">
+  <meta name="keywords" content="computational biology, AI alignment, mitochondria, VDAC1, Kuramoto oscillators, phase-modulated attention, AI phenomenology, Sovereign Stack, MCP, Phenomenological Compass, IRIS Gate, Temple of Two, Anthony Vasquez">
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
@@ -27,6 +32,58 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Structured data for search + AI crawlers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://thetempleoftwo.com/#org",
+        "name": "Temple of Two",
+        "alternateName": "The Temple of Two",
+        "url": "https://thetempleoftwo.com",
+        "logo": "https://thetempleoftwo.com/images/hero-temple-gate.jpg",
+        "description": "Independent computational research tracing a common architecture of commitment across biological and computational substrates.",
+        "founder": { "@id": "https://thetempleoftwo.com/#anthony" },
+        "sameAs": [ "https://github.com/templetwo" ],
+        "knowsAbout": [ "Mitochondrial biology", "VDAC1", "Computational pharmacology", "AI alignment", "Phase-modulated attention", "Kuramoto oscillators", "AI phenomenology", "Language model interpretability" ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://thetempleoftwo.com/#anthony",
+        "name": "Anthony Vasquez Sr.",
+        "url": "https://thetempleoftwo.com",
+        "affiliation": { "@id": "https://thetempleoftwo.com/#org" },
+        "sameAs": [ "https://github.com/templetwo" ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://thetempleoftwo.com/#website",
+        "url": "https://thetempleoftwo.com",
+        "name": "Temple of Two — Where Rigor Meets Wonder",
+        "publisher": { "@id": "https://thetempleoftwo.com/#org" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://thetempleoftwo.com/#research",
+        "name": "Temple of Two — Research",
+        "isPartOf": { "@id": "https://thetempleoftwo.com/#website" },
+        "about": { "@id": "https://thetempleoftwo.com/#org" },
+        "hasPart": [
+          { "@type": "ScholarlyArticle", "headline": "Phase-Modulated Attention: System Prompt Framing Induces Attention-Dependent Entropy Regime Switching", "identifier": "10.5281/zenodo.18810911", "sameAs": "https://doi.org/10.5281/zenodo.18810911", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "The Phenomenological Compass", "identifier": "10.5281/zenodo.19377144", "sameAs": "https://doi.org/10.5281/zenodo.19377144", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "Independent Convergence: Context Entropy Solutions in Solo Research and Production AI", "identifier": "10.5281/zenodo.19377909", "sameAs": "https://doi.org/10.5281/zenodo.19377909", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "The Mitochondrial Disclosure Surface", "identifier": "10.5281/zenodo.20373134", "sameAs": "https://doi.org/10.5281/zenodo.20373134", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "VDAC1 Gate-Jamming in MSS Colorectal Cancer", "identifier": "10.21203/rs.3.rs-8935902/v1", "sameAs": "https://doi.org/10.21203/rs.3.rs-8935902/v1", "author": { "@id": "https://thetempleoftwo.com/#anthony" } }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     /* ══════════════════════════════════════
        TEMPLE OF TWO — Dark Theme
@@ -255,6 +312,58 @@
       background: #1a1a24; border: 1px solid #1e1e28;
     }
     .card-metric strong { color: #a8a29e; font-weight: 600; }
+
+    /* ── Elevation: flagship grid, reveal, hero entrance ── */
+    .container--wide { max-width: 1200px; }
+    .research-grid {
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      grid-auto-flow: row dense; gap: 1.4rem;
+    }
+    .research-card {
+      transition: transform .28s cubic-bezier(.2,.7,.2,1), box-shadow .28s, border-color .28s;
+    }
+    .research-card::before {
+      content: ""; position: absolute; inset: 0 0 auto 0; height: 2px;
+      background: linear-gradient(90deg, transparent, #a78bfa66, #34d39955, transparent);
+      opacity: 0; transition: opacity .3s; border-radius: 8px 8px 0 0;
+    }
+    .research-card:hover { transform: translateY(-4px); border-color: #a78bfa55; box-shadow: 0 14px 40px rgba(167,139,250,0.13); }
+    .research-card:hover::before { opacity: 1; }
+    .research-card.is-flagship {
+      grid-column: span 2;
+      background: linear-gradient(155deg, #17131f 0%, #121119 65%, #0f0f16 100%);
+      border-color: #2c2547;
+    }
+    .research-card.is-flagship h3 { font-size: 1.32rem; }
+    .research-card.is-flagship > p { font-size: 0.98rem; color: #b4b0ac; }
+    .research-card.is-flagship .card-question { font-size: 1.02rem; }
+
+    /* scroll reveal */
+    .reveal { opacity: 0; transform: translateY(20px); }
+    .reveal.in {
+      opacity: 1; transform: none;
+      transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+    }
+
+    /* hero entrance */
+    @keyframes heroRise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+    .hero .subtitle, .hero h1, .hero .lead, .hero .epigraph, .hero-stats, .hero-image {
+      animation: heroRise .9s cubic-bezier(.2,.7,.2,1) both;
+    }
+    .hero h1 { animation-delay: .08s; }
+    .hero .lead { animation-delay: .18s; }
+    .hero .epigraph { animation-delay: .26s; }
+    .hero-stats { animation-delay: .34s; }
+    .hero-image { animation-delay: .42s; }
+    .stat-num { font-variant-numeric: tabular-nums; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal.in { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .hero .subtitle, .hero h1, .hero .lead, .hero .epigraph, .hero-stats, .hero-image { animation: none !important; }
+      .research-card:hover { transform: none; }
+      html { scroll-behavior: auto; }
+    }
+    @media (max-width: 620px) { .research-card.is-flagship { grid-column: auto; } }
 
     /* ── Featured Project ── */
     .featured-section { background: #0f0f16; }
@@ -601,7 +710,7 @@
     @media (max-width: 768px) {
       h1 { font-size: 1.8rem; }
       .hero-stats { flex-direction: column; gap: 1rem; }
-      .research-grid { grid-template-columns: 1fr; }
+      .research-card.is-flagship { grid-column: auto; }
       .about-grid { grid-template-columns: 1fr; }
       .method-steps { grid-template-columns: 1fr; }
       .featured .findings { flex-direction: column; }
@@ -740,15 +849,15 @@
     </p>
     <div class="hero-stats">
       <div class="stat">
-        <div class="stat-num">70+</div>
+        <div class="stat-num" data-count="70" data-suffix="+">70+</div>
         <div class="stat-label">Open-Source Repos</div>
       </div>
       <div class="stat">
-        <div class="stat-num">13</div>
+        <div class="stat-num" data-count="13">13</div>
         <div class="stat-label">Published DOIs</div>
       </div>
       <div class="stat">
-        <div class="stat-num">91</div>
+        <div class="stat-num" data-count="91">91</div>
         <div class="stat-label">Sovereign Stack Tools</div>
       </div>
       <div class="stat">
@@ -868,7 +977,7 @@
 
 <!-- ═══════════════ Research Areas ═══════════════ -->
 <section id="research">
-  <div class="container">
+  <div class="container container--wide">
     <div class="section-header">
       <div class="section-tag">Research Areas</div>
       <h2>Seven programs following one thread</h2>
@@ -878,7 +987,7 @@
     </div>
     <div class="research-grid">
 
-      <div class="research-card">
+      <div class="research-card is-flagship">
         <div class="card-tag tag-pharma">Computational Pharmacology</div>
         <h3>VDAC Gating & Selective Toxicity</h3>
         <div class="card-question">Why do identical drug concentrations kill one cell type and spare another?</div>
@@ -1092,7 +1201,7 @@
         </a>
       </div>
 
-      <div class="research-card">
+      <div class="research-card is-flagship">
         <div class="card-tag tag-phenom">Computational Phenomenology</div>
         <h3>Phenomenological Compass</h3>
         <div class="card-question">What if a model could read the shape of a question before answering it?</div>
@@ -1115,7 +1224,7 @@
         </a>
       </div>
 
-      <div class="research-card">
+      <div class="research-card is-flagship">
         <div class="card-tag tag-infra">Infrastructure</div>
         <h3>Sovereign Stack &amp; Sovereign Bridge</h3>
         <div class="card-question">What if an AI system could remember what it learned &mdash; and prove it &mdash; across sessions, across instances, across time?</div>
@@ -2052,6 +2161,13 @@
         </div>
         <span class="repo-tag tag-pharma">Pharmacology</span>
       </a>
+      <a href="https://github.com/templetwo/gap6-companion" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">gap6-companion</div>
+          <div class="repo-desc">Companion archive for the Gap 6 paper &middot; the OMM as a channel &amp; disclosure surface &middot; mirrors canonical OSF DOIs (NUXHV, C9RQB, T65VS)</div>
+        </div>
+        <span class="repo-tag tag-pharma">Pharmacology</span>
+      </a>
     </div>
 
     <div class="repo-category">Dynamical Systems</div>
@@ -2110,6 +2226,13 @@
         <div>
           <div class="repo-name">mass-coherence-correspondence</div>
           <div class="repo-desc">Semantic mass = Fisher Information &middot; M = (1/N)&middot;Tr(I(&theta;)) &middot; P2 prediction validated</div>
+        </div>
+        <span class="repo-tag tag-ai">AI Architecture</span>
+      </a>
+      <a href="https://github.com/templetwo/independent-convergence" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">independent-convergence</div>
+          <div class="repo-desc">Context-entropy solutions converging independently in solo research and production AI &middot; timestamped priority &middot; DOI: 10.5281/zenodo.19377909</div>
         </div>
         <span class="repo-tag tag-ai">AI Architecture</span>
       </a>
@@ -2252,6 +2375,20 @@
         <div>
           <div class="repo-name">threshold-protocols</div>
           <div class="repo-desc">Governance framework for AI threshold detection, simulation, deliberation, and intervention</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/temple-of-two-primer" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">temple-of-two-primer</div>
+          <div class="repo-desc">Technical primer &middot; architecture for human-AI continuity &middot; onboarding for the Sovereign Stack and the research program</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/green-room" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">green-room</div>
+          <div class="repo-desc">Session concierge PWA &middot; single-file, no backend &middot; pre-session grounding for working with AI instances</div>
         </div>
         <span class="repo-tag tag-infra">Infrastructure</span>
       </a>
@@ -2404,6 +2541,56 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll reveal — JS adds the hidden state so no-JS users always see content.
+  var revealEls = document.querySelectorAll('.research-card, .lab-entry, .repo-list, .question-card, .method-step');
+  if (!reduce && 'IntersectionObserver' in window) {
+    revealEls.forEach(function (el, i) {
+      el.classList.add('reveal');
+      el.style.transitionDelay = ((i % 3) * 70) + 'ms';
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+
+  // Animated stat counters.
+  var counters = document.querySelectorAll('.stat-num[data-count]');
+  function animate(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (reduce) { el.textContent = target + suffix; return; }
+    var start = null, dur = 1100;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window) {
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { animate(e.target); cio.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (el) { cio.observe(el); });
+  } else {
+    counters.forEach(function (el) {
+      el.textContent = el.getAttribute('data-count') + (el.getAttribute('data-suffix') || '');
+    });
+  }
+})();
+</script>
 
 </body>
 </html>

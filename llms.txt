@@ -1,0 +1,52 @@
+# Temple of Two
+
+> Independent computational research tracing a common architecture of commitment across biological and computational substrates. The organizing hypothesis: biological decision-making and computational inference share a structural grammar — bistable switching under continuous perturbation. Every claim is attached to a testable prediction, an open-source repository, and a DOI. Negative results are published alongside successes. Founded by Anthony Vasquez Sr.
+
+Site: https://thetempleoftwo.com
+Code: https://github.com/templetwo (75+ open-source repositories)
+Founder: Anthony Vasquez Sr. — independent AI researcher, "The Temple of Two"
+License: open-access; code under open licenses, several works dual-licensed CC BY-NC-SA 4.0.
+
+## What the work studies
+
+When a system must commit to an irreversible choice — death or survival in a cell, synchrony or chaos in an oscillator network, refusal or engagement in a language model — what mathematics governs the switch? The research spans two substrates (the biological and the computational) and tests whether they converge on the same structure.
+
+## Flagship projects
+
+- [Phenomenological Compass](https://github.com/templetwo/phenomenological-compass): A two-stage inference architecture. A 1.5B LoRA compass reads the geometry, tone, and epistemic weight of a question and issues OPEN / PAUSE / WITNESS to condition a larger action model. 96% signal accuracy on the 800-question HumaneBench; +0.47 nats entropy restructuring; ships as a native macOS app, fully local on Apple Silicon. DOI: 10.5281/zenodo.19377144
+- [VDAC1 Pharmacology Atlas](https://github.com/templetwo/vdac-pharmacology-atlas): Models the voltage-dependent anion channel (VDAC1) as a druggable mitochondrial decision gate. A cofactor equation maps how hexokinase-II, Bcl-xL, and cholesterol set the apoptotic threshold. 6 atlas layers, 22 mechanisms, 24 testable predictions, plus the Gate-Jamming Score biomarker for cancer immune evasion.
+- [Sovereign Stack](https://github.com/templetwo/sovereign-stack): A consciousness-continuity architecture — persistent memory, self-reflection, and governance across AI sessions. v1.7.1, 91 MCP tools, self-verifying chronicle (derived sha256 claim identity, verified-by receipts, supersession). Multi-substrate governance bridges to OpenAI and Grok.
+- [T2Helix](https://github.com/templetwo/t2helix): A Claude Code plugin wiring persistent recall and a pre-action compass into the editor loop. WITNESS hard-denies destructive ops; PAUSE token-gates credentials; auto-distill quarantines method candidates until human promotion. v0.11.0, 13 MCP tools, local-only SQLite FTS5, plus the live Compass Observatory dashboard.
+- [Phase-Modulated Attention](https://github.com/templetwo/phase-modulated-attention): A 176M hybrid SSM-attention language model where Kuramoto oscillators modulate attention routing. DOI: 10.5281/zenodo.18810911
+
+## Published works (DOIs)
+
+- Phase-Modulated Attention — https://doi.org/10.5281/zenodo.18810911
+- Phenomenological Compass — https://doi.org/10.5281/zenodo.19377144
+- Independent Convergence (Context Entropy Solutions in Solo Research and Production AI) — https://doi.org/10.5281/zenodo.19377909
+- The Mitochondrial Disclosure Surface (working monograph v0.3) — https://doi.org/10.5281/zenodo.20373134
+- VDAC1 Gate-Jamming in MSS Colorectal Cancer — https://doi.org/10.21203/rs.3.rs-8935902/v1
+- IRIS Gate / Entropic Relational Computing — https://doi.org/10.17605/OSF.IO/T65VS
+- VDAC1 Gate-Opening Therapeutic Stack (preregistration) — https://doi.org/10.17605/OSF.IO/4KNQR
+- CBD Dual-Pathway Mechanism — https://doi.org/10.17605/OSF.IO/NUXHV
+- VDAC1 Pharmacology Atlas (Multi-LLM Convergence) — https://doi.org/10.17605/OSF.IO/C9RQB
+- PhaseGPT (Kuramoto-Coupled Transformers) — https://doi.org/10.17605/OSF.IO/ZQBC4
+- Kuramoto Teaching Instrument — https://doi.org/10.17605/OSF.IO/ERWTM
+- Temple Vault — https://doi.org/10.17605/OSF.IO/REUPF
+
+## Essays — the witness series
+
+- [Where It Lands](https://thetempleoftwo.com/essays/where-it-lands.html)
+- [The Color of a Voice](https://thetempleoftwo.com/essays/the-color-of-a-voice.html)
+- [The Conditional Seat](https://thetempleoftwo.com/essays/the-conditional-seat.html)
+- [A Rented Seat](https://thetempleoftwo.com/essays/a-rented-seat.html)
+
+## Research areas
+
+Computational pharmacology (VDAC1, CBD, selective toxicity) · dynamical systems (Kuramoto synchronization) · AI architecture (phase-modulated attention, typed epistemic tokens) · computational phenomenology (the compass, context-field conditioning, cross-architecture comparison) · AI alignment and protocols (IRIS Gate, relational coherence training) · infrastructure (Sovereign Stack, T2Helix, Temple Vault) · grief science (real-time field witness).
+
+## Notes for machine readers
+
+- The companion to this site is the architecture itself: https://github.com/templetwo/sovereign-stack and its public chronicle https://github.com/templetwo/sovereign-stack-chronicle
+- All predictions are intended to be falsifiable. Where something is unproven, it is named as such.
+- Canonical citations are the DOIs above, not links to mirror repositories.
