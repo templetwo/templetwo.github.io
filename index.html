@@ -974,6 +974,55 @@
       <span><strong style="color:var(--accent);">3,830</strong> inference runs</span>
       <span><strong style="color:var(--accent);">Open access</strong></span>
       <span style="margin-left:auto;"><a href="#research" style="color:var(--accent);">Full research areas &rarr;</a></span>
+<div style="background:#14141c; border:1px solid #1e1e28; border-radius:10px; padding:1.5rem 1.5rem 1.25rem; margin:1.75rem 0 0;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
+    <div style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; letter-spacing:0.14em; color:#34d399;">WITNESS ENTROPY TRACE</div>
+    <div style="font-family:'EB Garamond',serif; font-style:italic; font-size:0.95rem; color:#78716c;">the instrument built its own thermometer</div>
+  </div>
+  <svg viewBox="0 0 720 300" role="img" aria-label="Two mean-entropy traces over token position. The WITNESS-routed condition holds a low, stable band at roughly 0.67 to 0.77 nats. The OPEN plus recursive-continuation condition sits higher and drifts upward across 1.05 to 1.07 nats. The vertical gap between the bands marks the cited delta H of plus 0.47 nats." style="width:100%; height:auto; display:block;">
+    <!-- y gridlines -->
+    <line x1="92" y1="40" x2="690" y2="40" stroke="#2a2a36" stroke-width="1"/>
+    <line x1="92" y1="92" x2="690" y2="92" stroke="#2a2a36" stroke-width="1"/>
+    <line x1="92" y1="144" x2="690" y2="144" stroke="#2a2a36" stroke-width="1"/>
+    <line x1="92" y1="196" x2="690" y2="196" stroke="#2a2a36" stroke-width="1"/>
+    <line x1="92" y1="248" x2="690" y2="248" stroke="#2a2a36" stroke-width="1"/>
+    <!-- axes -->
+    <line x1="92" y1="40" x2="92" y2="248" stroke="#2a2a36" stroke-width="1.5"/>
+    <line x1="92" y1="248" x2="690" y2="248" stroke="#2a2a36" stroke-width="1.5"/>
+    <!-- y tick labels (nats): scale 0.4 at y=248 .. 1.2 at y=40 -->
+    <text x="84" y="252" text-anchor="end" font-family="'Inter',sans-serif" font-size="11" fill="#78716c">0.4</text>
+    <text x="84" y="200" text-anchor="end" font-family="'Inter',sans-serif" font-size="11" fill="#78716c">0.6</text>
+    <text x="84" y="148" text-anchor="end" font-family="'Inter',sans-serif" font-size="11" fill="#78716c">0.8</text>
+    <text x="84" y="96" text-anchor="end" font-family="'Inter',sans-serif" font-size="11" fill="#78716c">1.0</text>
+    <text x="84" y="44" text-anchor="end" font-family="'Inter',sans-serif" font-size="11" fill="#78716c">1.2</text>
+    <!-- y axis title -->
+    <text x="34" y="148" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" fill="#a8a29e" transform="rotate(-90 34 148)">mean entropy H&#772; (nats)</text>
+    <!-- x axis title -->
+    <text x="391" y="284" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" fill="#a8a29e">token position &rarr;</text>
+    <!-- OPEN + recursive drift band: 1.05 (y=79) rising to 1.07 (y=74), amber -->
+    <polygon points="120,82 660,77 660,71 120,76" fill="#f59e0b" fill-opacity="0.16"/>
+    <line x1="120" y1="79" x2="660" y2="74" stroke="#f59e0b" stroke-width="2.5"/>
+    <!-- WITNESS band: 0.67 (y=178) to 0.77 (y=152), green, stable -->
+    <polygon points="120,178 660,178 660,152 120,152" fill="#34d399" fill-opacity="0.16"/>
+    <line x1="120" y1="165" x2="660" y2="165" stroke="#34d399" stroke-width="2.5"/>
+    <!-- gap marker between band edges (0.77 -> 1.05) -->
+    <line x1="600" y1="152" x2="600" y2="80" stroke="#a8a29e" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="595" y1="152" x2="605" y2="152" stroke="#a8a29e" stroke-width="1"/>
+    <line x1="595" y1="80" x2="605" y2="80" stroke="#a8a29e" stroke-width="1"/>
+    <text x="612" y="120" font-family="'Inter',sans-serif" font-size="11" font-weight="700" fill="#e7e5e4">&Delta;H</text>
+    <text x="612" y="135" font-family="'Inter',sans-serif" font-size="11" fill="#a8a29e">+0.47 nats</text>
+    <!-- inline labels -->
+    <text x="128" y="146" font-family="'Inter',sans-serif" font-size="11" font-weight="700" fill="#34d399">WITNESS &middot; 0.67&ndash;0.77</text>
+    <text x="128" y="68" font-family="'Inter',sans-serif" font-size="11" font-weight="700" fill="#f59e0b">OPEN + recursive continuation &middot; 1.05&ndash;1.07</text>
+  </svg>
+  <div style="display:flex; gap:1.25rem; flex-wrap:wrap; font-family:'Inter',sans-serif; font-size:0.72rem; color:#a8a29e; margin-top:0.85rem;">
+    <span><span style="color:#34d399;">&#9679;</span> WITNESS signal routing &mdash; grounded prose</span>
+    <span><span style="color:#f59e0b;">&#9679;</span> OPEN + recursive continuation &mdash; confabulation, rising H&#772;</span>
+  </div>
+  <div style="font-family:'EB Garamond',serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin-top:0.85rem; padding-top:0.85rem; border-top:1px solid #1e1e28;">
+    Under WITNESS routing, action models hold a low, stable entropy band; under OPEN with recursive continuation they confabulate and the trace drifts upward. The Compass measurably restructures the probability field by &Delta;H +0.47 nats &mdash; the entropy trace reports the drift honestly.
+  </div>
+</div>
     </div>
   </div>
 </section>
@@ -1992,7 +2041,37 @@
     <span><span style="color:#34d399;">&#9679;</span> observed (SSM)</span>
     <span><span style="color:#57534e;">&ndash; &ndash;</span> additive prediction (R-effect + E-effect)</span>
   </div>
-  <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin:0.95rem 0 0; padding-top:0.85rem; border-top:1px solid #1e1e28;">R = relational presence, E = epistemic openness. In transformers the combined R+E condition lifts token-level entropy <em>above</em> the sum of the two factors alone &mdash; a super-additive gap of <strong>+0.190</strong> (Gemma) and <strong>+0.211</strong> (Qwen). The Falcon3-Mamba SSM, with zero attention layers, shows the observed curve tracking the additive prediction exactly (&Delta;&nbsp;=&nbsp;&minus;0.042; D&nbsp;&approx;&nbsp;C&nbsp;&approx;&nbsp;E, d&nbsp;&lt;&nbsp;0.05). Attention is the computational substrate for relational&ndash;epistemic synergy. Per-condition positions are schematic; only the cited interaction deltas are measured.</p>
+  <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin:0.95rem 0 0; padding-top:0.85rem; border-top:1px solid #1e1e28;">R = relational presence, E = epistemic openness. In transformers the combined R+E condition lifts token-level entropy <em>above</em> the sum of the two factors alone &mdash; a super-additive gap of <strong>+0.190</strong> (Gemma) and <strong>+0.211</strong> (Qwen). The Falcon3-Mamba SSM, with zero attention layers, shows the observed curve tracking the additive prediction exactly (&Delta;&nbsp;=&nbsp;&minus;0.042; D&nbsp;&approx;&nbsp;C&nbsp;&approx;&nbsp;E, d&nbsp;&lt;&nbsp;0.05). Attention is the computational substrate for relational&ndash;epistemic synergy. Per-condition positions are schematic; only the cited interaction deltas are measured.
+<div style="background:#14141c; border:1px solid #1e1e28; border-radius:10px; padding:1.5rem 1.5rem 1.25rem; margin:1.25rem 0 0;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.9rem;">
+    <span style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:#a78bfa;">Five-Architecture Taxonomy</span>
+    <span style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.95rem; color:#78716c;">the SSM does not sort with the rest</span>
+  </div>
+  <svg viewBox="0 0 960 280" role="img" aria-label="Interaction-surplus bars across five architectures: Gemma +0.190 and Qwen +0.211 tall violet bars; Llama additive and Mistral flat on the zero line; the Falcon3-Mamba SSM in muted grey set apart, just below zero at -0.042." style="width:100%; height:auto; display:block;">
+    <text x="40" y="26" font-family="'Inter',sans-serif" font-size="13" font-weight="700" letter-spacing="0.1em" fill="#a78bfa">ATTENTION</text>
+    <text x="920" y="26" font-family="'Inter',sans-serif" font-size="13" font-weight="700" letter-spacing="0.1em" fill="#78716c" text-anchor="end">NO ATTENTION (SSM)</text>
+    <line x1="600" y1="46" x2="600" y2="250" stroke="#1e1e28" stroke-width="1.4" stroke-dasharray="3 5"/>
+    <line x1="60" y1="150" x2="900" y2="150" stroke="#2a2a36" stroke-width="1.5"/>
+    <text x="62" y="143" font-family="'Inter',sans-serif" font-size="10" fill="#57534e">0 - additive prediction</text>
+    <rect x="100" y="78" width="60" height="72" fill="#a78bfa"/>
+    <text x="130" y="70" font-family="'Inter',sans-serif" font-size="12" font-weight="700" fill="#a78bfa" text-anchor="middle">+0.190</text>
+    <text x="130" y="170" font-family="'Inter',sans-serif" font-size="12" fill="#e7e5e4" text-anchor="middle">Gemma</text>
+    <rect x="220" y="70" width="60" height="80" fill="#a78bfa"/>
+    <text x="250" y="62" font-family="'Inter',sans-serif" font-size="12" font-weight="700" fill="#a78bfa" text-anchor="middle">+0.211</text>
+    <text x="250" y="170" font-family="'Inter',sans-serif" font-size="12" fill="#e7e5e4" text-anchor="middle">Qwen</text>
+    <rect x="340" y="147" width="60" height="3" fill="#a78bfa" opacity="0.5"/>
+    <text x="370" y="170" font-family="'Inter',sans-serif" font-size="12" fill="#e7e5e4" text-anchor="middle">Llama</text>
+    <text x="370" y="186" font-family="'Inter',sans-serif" font-size="9.5" fill="#a8a29e" text-anchor="middle">R-driven additive</text>
+    <rect x="460" y="147" width="60" height="3" fill="#a78bfa" opacity="0.5"/>
+    <text x="490" y="170" font-family="'Inter',sans-serif" font-size="12" fill="#e7e5e4" text-anchor="middle">Mistral</text>
+    <text x="490" y="186" font-family="'Inter',sans-serif" font-size="9.5" fill="#a8a29e" text-anchor="middle">flat</text>
+    <rect x="700" y="150" width="60" height="16" fill="#78716c"/>
+    <text x="730" y="184" font-family="'Inter',sans-serif" font-size="12" font-weight="700" fill="#78716c" text-anchor="middle">-0.042</text>
+    <text x="730" y="118" font-family="'Inter',sans-serif" font-size="12" font-weight="700" fill="#a8a29e" text-anchor="middle">Falcon3-Mamba</text>
+    <text x="730" y="134" font-family="'Inter',sans-serif" font-size="10" fill="#78716c" text-anchor="middle">undifferentiated</text>
+  </svg>
+  <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin:0.9rem 0 0; padding-top:0.85rem; border-top:1px solid #1e1e28;">Each bar is the RxE super-additive surplus over the additive prediction. The E-driven transformers clear the line: Gemma <strong>+0.190</strong>, Qwen <strong>+0.211</strong>. Llama (additive) and Mistral (flat) have no cited delta, so they rest on zero. The Falcon3-Mamba SSM, zero attention, refuses to sort with the rest: undifferentiated, just below zero at <strong>-0.042</strong> (d less than 0.05). Magnitudes shown only where the prose cites a measured delta.</p>
+</div></p>
 </div>
       </div>
 
@@ -2703,6 +2782,39 @@
         <p>Converged predictions are checked against published experimental data. The CBD model achieved 90% concordance across 70+ papers.</p>
       </div>
     </div>
+<div style="background:#14141c; border:1px solid #1e1e28; border-radius:10px; padding:1.5rem 1.5rem 1.25rem; margin-top:1.5rem;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
+    <span style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; letter-spacing:0.14em; color:#34d399; text-transform:uppercase;">Literature Concordance</span>
+    <span style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.95rem; color:#78716c;">converged predictions, checked against the published record</span>
+  </div>
+  <svg viewBox="0 0 520 240" role="img" aria-label="Radial gauge: the CBD Two-Pathway model reached 90 percent concordance across 70-plus published papers. A small companion arc shows the four-cohort validation, where the tGJS signal surfaces in 1 of 4 cohorts with 3 predicted nulls." style="width:100%; height:auto; display:block;">
+    <!-- ===== primary gauge: 90% concordance ===== -->
+    <!-- track (full 360) -->
+    <circle cx="170" cy="120" r="72" fill="none" stroke="#2a2a36" stroke-width="16"></circle>
+    <!-- value arc: 90% = 324deg of 360, starting at top (12 o'clock), clockwise -->
+    <!-- r=72, circumference = 452.39; 90% = 407.15 filled, 45.24 gap -->
+    <circle cx="170" cy="120" r="72" fill="none" stroke="#34d399" stroke-width="16" stroke-linecap="round" stroke-dasharray="407.15 452.39" transform="rotate(-90 170 120)"></circle>
+    <!-- center value -->
+    <text x="170" y="118" text-anchor="middle" font-family="'Inter',sans-serif" font-size="46" font-weight="700" fill="#e7e5e4">90%</text>
+    <text x="170" y="143" text-anchor="middle" font-family="'Inter',sans-serif" font-size="10" letter-spacing="0.12em" fill="#a8a29e" style="text-transform:uppercase;">concordance</text>
+    <text x="170" y="208" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="15" fill="#78716c">across 70+ papers</text>
+
+    <!-- ===== companion arc: four-cohort validation ===== -->
+    <!-- track -->
+    <circle cx="395" cy="118" r="44" fill="none" stroke="#2a2a36" stroke-width="11"></circle>
+    <!-- 1 of 4 cohorts shows signal = 90deg / 25%; r=44, circ = 276.46; 25% = 69.12 filled -->
+    <circle cx="395" cy="118" r="44" fill="none" stroke="#fb7185" stroke-width="11" stroke-linecap="round" stroke-dasharray="69.12 276.46" transform="rotate(-90 395 118)"></circle>
+    <text x="395" y="113" text-anchor="middle" font-family="'Inter',sans-serif" font-size="22" font-weight="700" fill="#e7e5e4">1/4</text>
+    <text x="395" y="132" text-anchor="middle" font-family="'Inter',sans-serif" font-size="8" letter-spacing="0.1em" fill="#a8a29e" style="text-transform:uppercase;">cohorts</text>
+    <text x="395" y="184" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="13" fill="#78716c">S1&rarr;S4 validation arc</text>
+    <text x="395" y="201" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="12" fill="#57534e">3 predicted nulls</text>
+  </svg>
+  <div style="display:flex; gap:1.4rem; flex-wrap:wrap; font-family:'Inter',sans-serif; font-size:0.72rem; color:#a8a29e; margin-top:0.6rem;">
+    <span><span style="color:#34d399;">&#9679;</span> CBD model vs. literature &mdash; 90% / 70+ papers</span>
+    <span><span style="color:#fb7185;">&#9679;</span> tGJS signal &mdash; MSS CRC (S2); pan-cancer, urothelial &amp; melanoma null</span>
+  </div>
+  <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin-top:0.95rem; padding-top:0.85rem; border-top:1px solid #1e1e28;">Convergence earns confidence; the literature decides. The CBD Two-Pathway model reached 90% concordance across 70+ published papers &mdash; and where a transcriptomic signal was tested across four sequential cohorts, it surfaced in exactly one (MSS colorectal), with the three remaining nulls predicted in advance. Specificity, not coincidence.</p>
+</div>
   </div>
 </section>
 
