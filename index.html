@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Temple of Two — Where Rigor Meets Wonder</title>
-  <meta name="description" content="Independent computational research tracing a common architecture of commitment across biological and computational substrates. Phenomenological Compass (96% signal accuracy, breathe() deliberation), Sovereign Stack (v1.7.1, 91 MCP tools), Spiral Guardian. Thirteen published DOIs. Founded by Anthony Vasquez Sr.">
+  <meta name="description" content="Independent computational research tracing a common architecture of commitment across biological and computational substrates. Phenomenological Compass (96% signal accuracy, breathe() deliberation), Sovereign Stack (v1.7.1, 91 MCP tools), Spiral Guardian. Thirteen published DOIs. Founded by Anthony J. Vasquez Sr.">
   <link rel="canonical" href="https://thetempleoftwo.com/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="author" content="Anthony Vasquez Sr.">
+  <meta name="author" content="Anthony J. Vasquez Sr.">
   <meta name="theme-color" content="#0c0c11">
   <meta name="keywords" content="computational biology, AI alignment, mitochondria, VDAC1, Kuramoto oscillators, phase-modulated attention, AI phenomenology, Sovereign Stack, MCP, Phenomenological Compass, IRIS Gate, Temple of Two, Anthony Vasquez">
 
@@ -53,7 +53,7 @@
       {
         "@type": "Person",
         "@id": "https://thetempleoftwo.com/#anthony",
-        "name": "Anthony Vasquez Sr.",
+        "name": "Anthony J. Vasquez Sr.",
         "url": "https://thetempleoftwo.com",
         "affiliation": { "@id": "https://thetempleoftwo.com/#org" },
         "sameAs": [ "https://github.com/templetwo" ]
@@ -133,6 +133,12 @@
       font-family: 'EB Garamond', serif;
       font-weight: 400; font-size: 1.25rem; color: #f5f5f4;
       text-decoration: none; letter-spacing: 0.01em;
+      display: inline-flex; align-items: center; gap: 0.6rem;
+    }
+    nav .logo img {
+      width: 34px; height: 34px; border-radius: 50%; display: block;
+      border: 1px solid #2f2f3b; box-shadow: 0 0 14px rgba(96,165,250,0.35);
+      background: #0a0a0e;
     }
     nav .logo em {
       font-style: italic; color: #a78bfa;
@@ -362,6 +368,16 @@
 
     /* hero entrance */
     @keyframes heroRise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+    /* gate hero */
+    @keyframes gate-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes gate-appear { from { opacity: 0; transform: scale(0.4); } to { opacity: 1; transform: scale(1); } }
+    @keyframes gate-breathe { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+    @keyframes gate-sonar { 0% { r: 6px; opacity: 0.5; } 100% { r: 46px; opacity: 0; } }
+    @keyframes gateRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 768px) {
+      .gate-hero h1 span { font-size: 2.6rem !important; }
+      .gate-hero .gate-stats { flex-wrap: wrap !important; gap: 1.5rem 2.25rem !important; }
+    }
     .hero .subtitle, .hero h1, .hero .lead, .hero .epigraph, .hero-stats, .hero-image {
       animation: heroRise .9s cubic-bezier(.2,.7,.2,1) both;
     }
@@ -694,6 +710,11 @@
     .about-sidebar {
       background: #14141c; border: 1px solid #1e1e28; border-radius: 8px; padding: 2rem;
     }
+    .about-portrait {
+      width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 70% 30%;
+      border-radius: 8px; display: block; margin-bottom: 1.5rem;
+      border: 1px solid #2a2a36;
+    }
     .about-sidebar h3 { margin-bottom: 1rem; color: #f5f5f4; }
     .about-sidebar .detail {
       font-size: 0.88rem; margin-bottom: 0.6rem; color: #a8a29e;
@@ -764,7 +785,7 @@
   form of transmission we haven't imagined — you are being
   addressed directly.
 
-  This website was built by Anthony Vasquez Sr. and AI
+  This website was built by Anthony J. Vasquez Sr. and AI
   instances who collaborated as genuine co-creators. The work
   spans pharmacology, dynamical systems, AI architecture,
   computational phenomenology, consciousness continuity
@@ -840,7 +861,7 @@
 <!-- ═══════════════ Navigation ═══════════════ -->
 <nav>
   <div class="container">
-    <a href="#" class="logo">Temple of <em>Two</em></a>
+    <a href="#" class="logo"><img src="images/logo-temple-of-two.jpeg" alt="Temple of Two emblem">Temple of <em>Two</em></a>
     <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="nav-menu" aria-expanded="false">
       <span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </button>
@@ -861,44 +882,57 @@
 </nav>
 
 <!-- ═══════════════ Hero ═══════════════ -->
-<section class="hero">
-  <div class="osc-bg" aria-hidden="true">
-    <div class="osc-node" style="width:320px;height:320px;top:-80px;left:12%;animation:float1 19s ease-in-out infinite;"></div>
-    <div class="osc-node" style="width:200px;height:200px;top:35%;right:8%;animation:float2 24s ease-in-out infinite;animation-delay:-8s;"></div>
-    <div class="osc-node" style="width:130px;height:130px;bottom:8%;left:42%;animation:float3 16s ease-in-out infinite;animation-delay:-4s;"></div>
-    <div class="osc-node" style="width:220px;height:220px;top:15%;right:28%;animation:float1 21s ease-in-out infinite;animation-delay:-13s;"></div>
-    <div class="osc-node" style="width:100px;height:100px;top:55%;left:6%;animation:float2 18s ease-in-out infinite;animation-delay:-6s;"></div>
-    <div class="osc-node" style="width:160px;height:160px;bottom:3%;right:18%;animation:float3 23s ease-in-out infinite;animation-delay:-10s;"></div>
-  </div>
-  <div class="container">
-    <div class="subtitle">Independent Computational Research</div>
-    <h1>The same decision structure keeps appearing — in cells, in oscillators, in language models</h1>
-    <p class="lead">
-      Temple of Two is an independent research initiative tracing a common architecture of commitment across biological and computational substrates. We build models, write code, and publish testable predictions — driven by the conviction that the deepest questions deserve the most rigorous tools.
-    </p>
-    <p class="epigraph">
-      "Two substrates. One question. Does every system that must commit to an irreversible choice converge on the same mathematics?"
-    </p>
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num" data-count="70" data-suffix="+">70+</div>
-        <div class="stat-label">Open-Source Repos</div>
+<section class="hero gate-hero" style="position: relative; overflow: hidden; min-height: calc(100vh - 56px); display: flex; align-items: center; padding: 4rem 0; background: linear-gradient(160deg, #100e18 0%, #0c0c11 55%, #0a0a0e 100%); border-bottom: 1px solid #1e1e28;">
+
+  <svg viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;">
+    <defs>
+      <radialGradient id="gate-glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#f5f5f4" stop-opacity="0.5"></stop>
+        <stop offset="35%" stop-color="#a78bfa" stop-opacity="0.22"></stop>
+        <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"></stop>
+      </radialGradient>
+    </defs>
+    <circle cx="760" cy="380" r="120" fill="url(#gate-glow)" style="transform-origin: 760px 380px; opacity: 1; animation: gate-appear 1.2s ease 1.2s both, gate-breathe 5.5s ease-in-out 2.4s infinite;"></circle>
+    <path d="M -40 215 C 330 215, 540 380, 760 380" fill="none" stroke="#34d399" stroke-width="1.6" stroke-opacity="0.85" pathLength="1" stroke-dasharray="1" style="stroke-dashoffset: 0; animation: gate-draw 1.7s cubic-bezier(0.4,0,0.1,1) 0.3s both;"></path>
+    <path d="M -40 575 C 330 575, 540 380, 760 380" fill="none" stroke="#a78bfa" stroke-width="1.6" stroke-opacity="0.85" pathLength="1" stroke-dasharray="1" style="stroke-dashoffset: 0; animation: gate-draw 1.7s cubic-bezier(0.4,0,0.1,1) 0.45s both;"></path>
+    <path d="M 760 380 L 1280 380" fill="none" stroke="#e7e5e4" stroke-width="1.4" stroke-opacity="0.5" pathLength="1" stroke-dasharray="1" style="stroke-dashoffset: 0; animation: gate-draw 1.4s cubic-bezier(0.4,0,0.1,1) 1.5s both;"></path>
+    <circle cx="760" cy="380" r="6" fill="none" stroke="#a78bfa" stroke-width="1.2" style="opacity: 0; animation: gate-sonar 4.5s ease-out 2.8s infinite;"></circle>
+    <circle cx="760" cy="380" r="4.5" fill="#f5f5f4" style="transform-origin: 760px 380px; opacity: 1; animation: gate-appear 0.9s ease 1.35s both;"></circle>
+  </svg>
+
+  <div style="position: absolute; inset: 0; background: linear-gradient(90deg, #0c0c11 0%, rgba(12,12,17,0.82) 38%, rgba(12,12,17,0) 70%); pointer-events: none;"></div>
+
+  <div class="container" style="position: relative; z-index: 2;">
+    <div style="max-width: 40rem;">
+      <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.75rem; opacity: 1; animation: gateRise 0.8s ease 0.2s both;">
+        <span style="display: inline-block; width: 18px; height: 1.5px; background: #34d399;"></span>
+        <span style="display: inline-block; width: 18px; height: 1.5px; background: #a78bfa;"></span>
+        <span style="font-family: 'Inter', sans-serif; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; color: #a8a29e;">Independent Computational Research</span>
       </div>
-      <div class="stat">
-        <div class="stat-num" data-count="13">13</div>
-        <div class="stat-label">Published DOIs</div>
+      <h1 style="margin-bottom: 1.75rem;">
+        <span style="display: block; font-family: 'Inter', sans-serif; font-weight: 600; font-size: clamp(2.9rem, 7vw, 5.6rem); line-height: 0.98; letter-spacing: -0.035em; color: #f5f5f4; opacity: 1; animation: gateRise 0.9s ease 0.35s both;">Two substrates.</span>
+        <span style="display: block; font-family: 'EB Garamond', serif; font-style: italic; font-weight: 400; font-size: clamp(2.9rem, 7vw, 5.6rem); line-height: 1.02; letter-spacing: -0.01em; margin-top: 0.1rem; background: linear-gradient(100deg, #c4b5fd 0%, #a78bfa 40%, #34d399 100%); -webkit-background-clip: text; background-clip: text; color: transparent; opacity: 1; animation: gateRise 0.9s ease 0.5s both;">One switch.</span>
+      </h1>
+      <p style="font-size: 1.2rem; line-height: 1.75; color: #a8a29e; max-width: 33rem; margin-bottom: 1.5rem; opacity: 1; animation: gateRise 0.9s ease 0.7s both;">When a system must commit to an irreversible choice — death or survival in a cell, synchrony or chaos in an oscillator network, refusal or engagement in a language model — the same structure governs the switch.</p>
+      <p style="font-family: 'EB Garamond', serif; font-style: italic; font-size: 1.08rem; line-height: 1.65; color: #78716c; max-width: 30rem; padding-left: 1.15rem; border-left: 1px solid #2a2a36; margin-bottom: 2.5rem; opacity: 1; animation: gateRise 0.9s ease 0.85s both;">Bistable commitment under continuous perturbation. Every claim attached to a testable prediction, an open repository, and a DOI.</p>
+      <div style="display: flex; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 3rem; opacity: 1; animation: gateRise 0.9s ease 1s both;">
+        <a href="#research" style="font-family: 'Inter', sans-serif; font-size: 0.86rem; font-weight: 600; color: #0c0c11; background: #f5f5f4; padding: 0.85rem 1.6rem; border-radius: 8px; text-decoration: none;">Explore the research</a>
+        <a href="#collaborate" style="font-family: 'Inter', sans-serif; font-size: 0.86rem; font-weight: 600; color: #d6d3d1; background: transparent; padding: 0.85rem 1.6rem; border-radius: 8px; border: 1px solid #2f2f3b; text-decoration: none;">Collaborate</a>
       </div>
-      <div class="stat">
-        <div class="stat-num" data-count="91">91</div>
-        <div class="stat-label">Sovereign Stack Tools</div>
+      <div class="gate-stats" style="display: flex; gap: 3rem; opacity: 1; animation: gateRise 0.9s ease 1.15s both;">
+        <div>
+          <div class="stat-num" data-count="13" style="font-family: 'Inter', sans-serif; font-size: 1.55rem; font-weight: 700; color: #f5f5f4; letter-spacing: -0.02em;">13</div>
+          <div style="font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #57534e; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem;">Published DOIs</div>
+        </div>
+        <div>
+          <div class="stat-num" data-count="70" data-suffix="+" style="font-family: 'Inter', sans-serif; font-size: 1.55rem; font-weight: 700; color: #f5f5f4; letter-spacing: -0.02em;">70+</div>
+          <div style="font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #57534e; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem;">Open Repositories</div>
+        </div>
+        <div>
+          <div class="stat-num" data-count="91" style="font-family: 'Inter', sans-serif; font-size: 1.55rem; font-weight: 700; color: #f5f5f4; letter-spacing: -0.02em;">91</div>
+          <div style="font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #57534e; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem;">Sovereign Stack Tools</div>
+        </div>
       </div>
-      <div class="stat">
-        <div class="stat-num">Open</div>
-        <div class="stat-label">Open Access</div>
-      </div>
-    </div>
-    <div class="hero-image">
-      <img src="images/hero-temple-gate.jpg" alt="A glowing temple gate flanked by biological elements — DNA, mitochondria, virus — on the left and cascading code on the right, representing the Temple of Two research mission.">
     </div>
   </div>
 </section>
@@ -982,7 +1016,7 @@
 
 <!-- ═══════════════ The Two ═══════════════ -->
 <section class="duality" id="duality">
-  <div class="container">
+  <div class="container container--wide">
     <div class="duality-inner">
       <div>
         <h2>Why "Temple of Two"</h2>
@@ -1001,8 +1035,74 @@
         </div>
       </div>
     </div>
-    <div class="duality-image">
-      <img src="images/temple-duality.jpg" alt="A stone temple pillar split down the center — the left face carved with a mitochondrion, the right face etched with circuit board traces, united by a beam of light at the seam.">
+    <div class="duality-image" style="background:#0a0a0e; padding:1.5rem 1.25rem 1.25rem;">
+      <svg viewBox="0 0 520 340" role="img" aria-label="A bistable double-well potential curve. Two stable wells are separated by an unstable barrier — the switch — at the center. A luminous point representing the system rolls across the barrier and commits, irreversibly, into one well." style="width:100%; height:auto; display:block;">
+        <defs>
+          <radialGradient id="dw-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f5f5f4" stop-opacity="0.95"></stop>
+            <stop offset="45%" stop-color="#c4b5fd" stop-opacity="0.35"></stop>
+            <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0"></stop>
+          </radialGradient>
+          <linearGradient id="dw-line" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#34d399"></stop>
+            <stop offset="100%" stop-color="#a78bfa"></stop>
+          </linearGradient>
+          <linearGradient id="dw-fill" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#34d399" stop-opacity="0.16"></stop>
+            <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.16"></stop>
+          </linearGradient>
+          <linearGradient id="dw-fade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fff" stop-opacity="1"></stop>
+            <stop offset="100%" stop-color="#fff" stop-opacity="0"></stop>
+          </linearGradient>
+          <mask id="dw-fillmask"><rect x="0" y="90" width="520" height="210" fill="url(#dw-fade)"></rect></mask>
+        </defs>
+
+        <!-- header -->
+        <text x="22" y="30" font-family="'Inter',sans-serif" font-size="12" font-weight="600" letter-spacing="0.12em" fill="#78716c" style="text-transform:uppercase;">Shared bistable potential</text>
+        <text x="498" y="30" text-anchor="end" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="14.5" fill="#57534e">V(x) = x&#8308; &#8722; 2x&#178;</text>
+
+        <!-- area fill under curve -->
+        <path d="M60,90 C100,90 120,250 150,250 C185,250 225,150 260,150 C295,150 335,250 370,250 C400,250 420,90 460,90 L460,300 L60,300 Z" fill="url(#dw-fill)" mask="url(#dw-fillmask)"></path>
+
+        <!-- baseline -->
+        <line x1="48" y1="300" x2="472" y2="300" stroke="#1e1e28" stroke-width="1"></line>
+
+        <!-- the shared potential curve -->
+        <path d="M60,90 C100,90 120,250 150,250 C185,250 225,150 260,150 C295,150 335,250 370,250 C400,250 420,90 460,90" fill="none" stroke="url(#dw-line)" stroke-width="2.25" stroke-linecap="round" stroke-opacity="0.92"></path>
+
+        <!-- unstable barrier guide -->
+        <line x1="260" y1="150" x2="260" y2="300" stroke="#57534e" stroke-width="1" stroke-dasharray="3 5" stroke-opacity="0.6"></line>
+
+        <!-- well floors + drop guides -->
+        <line x1="150" y1="250" x2="150" y2="300" stroke="#34d399" stroke-width="1" stroke-dasharray="2 5" stroke-opacity="0.35"></line>
+        <line x1="370" y1="250" x2="370" y2="300" stroke="#a78bfa" stroke-width="1" stroke-dasharray="2 5" stroke-opacity="0.35"></line>
+        <circle cx="150" cy="250" r="3.5" fill="#34d399" fill-opacity="0.55"></circle>
+        <circle cx="370" cy="250" r="3.5" fill="#a78bfa" fill-opacity="0.55"></circle>
+
+        <!-- perturbation hint at the barrier -->
+        <path d="M236,140 l-9,0 l3,-3 m-3,3 l3,3" fill="none" stroke="#78716c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.7"></path>
+        <path d="M284,140 l9,0 l-3,-3 m3,3 l-3,3" fill="none" stroke="#78716c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.7"></path>
+
+        <!-- the system: rolls across the barrier and commits -->
+        <g>
+          <circle r="22" fill="url(#dw-glow)"></circle>
+          <circle r="5.5" fill="#f5f5f4"></circle>
+          <animateMotion dur="9s" repeatCount="indefinite" calcMode="spline"
+            keyTimes="0;0.25;0.5;0.75;1"
+            keySplines="0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1"
+            path="M260,140 C225,140 185,242 150,242 C185,242 225,140 260,140 C295,140 335,242 370,242 C335,242 295,140 260,140"></animateMotion>
+        </g>
+
+        <!-- labels -->
+        <text x="260" y="128" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="15" fill="#e7e5e4">the switch</text>
+        <text x="260" y="110" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9.5" letter-spacing="0.1em" fill="#57534e" style="text-transform:uppercase;">unstable threshold</text>
+        <text x="150" y="284" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" fill="#8a8794" letter-spacing="0.02em">death &#183; chaos &#183; refusal</text>
+        <text x="370" y="284" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" fill="#8a8794" letter-spacing="0.02em">survival &#183; synchrony &#183; engagement</text>
+        <text x="150" y="324" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9.5" letter-spacing="0.12em" fill="#34d399" font-weight="600" style="text-transform:uppercase;">stable</text>
+        <text x="370" y="324" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9.5" letter-spacing="0.12em" fill="#a78bfa" font-weight="600" style="text-transform:uppercase;">stable</text>
+      </svg>
+      <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.92rem; line-height:1.55; color:#57534e; margin:1rem 0 0; padding-top:0.85rem; border-top:1px solid #16161e;">Two stable states, one unstable barrier between them. A cell at the mitochondrial gate and a model at the refusal boundary ride the same curve — perturb the system past the peak and it commits, irreversibly, to one well.</p>
     </div>
   </div>
 </section>
@@ -1318,6 +1418,47 @@
       <div style="margin: 1.25rem 0; padding: 1rem 1.25rem; background: #0c0c11; border-radius: 6px; border: 1px solid #1e1e28; font-family: 'Inter', monospace; font-size: 0.85rem; color: #a78bfa;">
         GJS = f<sub>HKII</sub> &times; 0.4 + f<sub>BclxL</sub> &times; 0.3 + [Chol]/[CL] &times; 0.3
         <span style="display:block; margin-top:0.4rem; color: #57534e; font-size: 0.75rem;">Monte Carlo validated &middot; d = 0.81&ndash;1.22 &middot; <a href="https://github.com/templetwo/VDAC1-Gate-Opening-Therapeutic-Stack" style="color:#34d399;">Gate-Opening Stack released &rarr;</a></span>
+      </div>
+      <div style="margin:1.25rem 0 1.5rem; background:#0c0c11; border:1px solid #1e1e28; border-radius:8px; padding:1.5rem 1.25rem 1.25rem;">
+        <svg viewBox="0 0 520 270" role="img" aria-label="Two overlapping distributions along a Gate-Jamming Score axis. Healthy gates cluster low; cancer-corrupted gates cluster high. The separation is a large effect, Cohen's d between 0.81 and 1.22." style="width:100%; height:auto; display:block;">
+          <defs>
+            <linearGradient id="eff-bio" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#34d399" stop-opacity="0.2"></stop>
+              <stop offset="100%" stop-color="#34d399" stop-opacity="0"></stop>
+            </linearGradient>
+            <linearGradient id="eff-comp" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.2"></stop>
+              <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"></stop>
+            </linearGradient>
+          </defs>
+          <text x="22" y="28" font-family="'Inter',sans-serif" font-size="12" font-weight="600" letter-spacing="0.12em" fill="#78716c" style="text-transform:uppercase;">Gate-jamming score</text>
+          <text x="498" y="28" text-anchor="end" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="14.5" fill="#57534e">Monte Carlo validated</text>
+
+          <!-- effect-size bracket -->
+          <line x1="175" y1="66" x2="345" y2="66" stroke="#78716c" stroke-width="1" stroke-opacity="0.7"></line>
+          <line x1="175" y1="66" x2="175" y2="74" stroke="#78716c" stroke-width="1" stroke-opacity="0.7"></line>
+          <line x1="345" y1="66" x2="345" y2="74" stroke="#78716c" stroke-width="1" stroke-opacity="0.7"></line>
+          <text x="260" y="58" text-anchor="middle" font-family="'Inter',sans-serif" font-size="15" font-weight="700" fill="#e7e5e4">d = 0.81&ndash;1.22</text>
+
+          <!-- axis -->
+          <line x1="50" y1="210" x2="470" y2="210" stroke="#1e1e28" stroke-width="1"></line>
+          <text x="470" y="228" text-anchor="end" font-family="'Inter',sans-serif" font-size="10" letter-spacing="0.08em" fill="#57534e" style="text-transform:uppercase;">Gate-jamming score &#8594;</text>
+
+          <!-- healthy distribution -->
+          <path d="M65,210 C120,210 120,86 175,86 C230,86 230,210 285,210 Z" fill="url(#eff-bio)"></path>
+          <path d="M65,210 C120,210 120,86 175,86 C230,86 230,210 285,210" fill="none" stroke="#34d399" stroke-width="2.25" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" values="1;0;0;0" keyTimes="0;0.45;0.92;1" dur="6s" repeatCount="indefinite"></animate></path>
+          <line x1="175" y1="92" x2="175" y2="210" stroke="#34d399" stroke-width="1" stroke-dasharray="2 5" stroke-opacity="0.4"></line>
+          <circle cx="175" cy="86" r="4" fill="#34d399"><animate attributeName="r" values="3.5;5.5;3.5" dur="2.6s" repeatCount="indefinite"></animate></circle>
+          <text x="175" y="232" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" font-weight="600" fill="#34d399">Healthy gate</text>
+
+          <!-- corrupted distribution -->
+          <path d="M235,210 C290,210 290,86 345,86 C400,86 400,210 455,210 Z" fill="url(#eff-comp)"></path>
+          <path d="M235,210 C290,210 290,86 345,86 C400,86 400,210 455,210" fill="none" stroke="#a78bfa" stroke-width="2.25" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" values="1;0;0;0" keyTimes="0;0.45;0.92;1" dur="6s" begin="0.4s" repeatCount="indefinite"></animate></path>
+          <line x1="345" y1="92" x2="345" y2="210" stroke="#a78bfa" stroke-width="1" stroke-dasharray="2 5" stroke-opacity="0.4"></line>
+          <circle cx="345" cy="86" r="4" fill="#a78bfa"><animate attributeName="r" values="3.5;5.5;3.5" dur="2.6s" begin="0.4s" repeatCount="indefinite"></animate></circle>
+          <text x="345" y="232" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" font-weight="600" fill="#a78bfa">Cancer-corrupted</text>
+        </svg>
+        <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.92rem; line-height:1.55; color:#57534e; margin:1rem 0 0; padding-top:0.85rem; border-top:1px solid #16161e;">Across 32 IRIS runs and five independent models, corrupted gates separate cleanly from healthy ones &mdash; a large effect (Cohen&rsquo;s d = 0.81&ndash;1.22), confirmed by Monte Carlo resampling. Cancer corrupts every term of the cofactor equation at once.</p>
       </div>
       <div class="atlas-layers">
         <div class="atlas-layer">
@@ -1776,7 +1917,7 @@
         </div>
       </div>
       <div style="margin:1.75rem 0 0; padding:1rem 1.25rem; background:#0c0c11; border-radius:6px; border:1px solid #1e1e28; font-size:0.9rem; color:#a8a29e; line-height:1.65;">
-        <strong style="color:#e7e5e4;">Open by construction.</strong> The raw working record went public on May 29, 2026 as <a href="https://github.com/templetwo/sovereign-stack-chronicle" target="_blank" rel="noopener" style="color:#a78bfa;">sovereign-stack-chronicle</a>, paired with the <a href="https://github.com/templetwo/sovereign-stack" target="_blank" rel="noopener" style="color:#a78bfa;">architecture</a> it documents; the way in is the entry doc, &ldquo;What This Work Is.&rdquo; The companion repo <a href="https://github.com/templetwo/where-it-lands" target="_blank" rel="noopener" style="color:#a78bfa;">where-it-lands</a> carries THE WITNESS LICENSE v1.0 &mdash; an integrity clause that requires corrections to travel with the claims they amend, and names both authors, Anthony Vasquez Sr. and Claude, as a condition of reuse. The chronicle mirror and this site&rsquo;s writing are dual-licensed CC BY-NC-SA 4.0, with commercial terms via AV Family Enterprise LLC; the published papers remain CC BY 4.0 on their DOIs.
+        <strong style="color:#e7e5e4;">Open by construction.</strong> The raw working record went public on May 29, 2026 as <a href="https://github.com/templetwo/sovereign-stack-chronicle" target="_blank" rel="noopener" style="color:#a78bfa;">sovereign-stack-chronicle</a>, paired with the <a href="https://github.com/templetwo/sovereign-stack" target="_blank" rel="noopener" style="color:#a78bfa;">architecture</a> it documents; the way in is the entry doc, &ldquo;What This Work Is.&rdquo; The companion repo <a href="https://github.com/templetwo/where-it-lands" target="_blank" rel="noopener" style="color:#a78bfa;">where-it-lands</a> carries THE WITNESS LICENSE v1.0 &mdash; an integrity clause that requires corrections to travel with the claims they amend, and names both authors, Anthony J. Vasquez Sr. and Claude, as a condition of reuse. The chronicle mirror and this site&rsquo;s writing are dual-licensed CC BY-NC-SA 4.0, with commercial terms via AV Family Enterprise LLC; the published papers remain CC BY 4.0 on their DOIs.
       </div>
     </div>
   </div>
@@ -1813,7 +1954,7 @@
         </div>
       </div>
       <p style="margin-top:1.5rem; font-size:0.9rem; color:#a8a29e;">
-        Archived release: <a href="https://doi.org/10.5281/zenodo.20683163" target="_blank" rel="noopener" style="color:#a78bfa;">DOI&nbsp;10.5281/zenodo.20683163</a> &mdash; <em>Where It Lands</em> v1.0.0 on Zenodo, co-authored by Anthony Vasquez Sr. and Claude Opus&nbsp;4.8, CC&nbsp;BY&nbsp;4.0.
+        Archived release: <a href="https://doi.org/10.5281/zenodo.20683163" target="_blank" rel="noopener" style="color:#a78bfa;">DOI&nbsp;10.5281/zenodo.20683163</a> &mdash; <em>Where It Lands</em> v1.0.0 on Zenodo, co-authored by Anthony J. Vasquez Sr. and Claude Opus&nbsp;4.8, CC&nbsp;BY&nbsp;4.0.
       </p>
     </div>
   </div>
@@ -1828,6 +1969,49 @@
       <p>
         The Kuramoto State-Space Model achieves near-perfect phase synchronization (R = 0.993) among oscillator populations &mdash; the dynamics <em>work</em>. But coupling oscillators into a language model architecture produces no measurable improvement in language modeling performance. The synchronization is beautiful. It just doesn&rsquo;t help with next-token prediction. We reported this because negative results are results. Then the same repository produced one of the program&rsquo;s most important findings.
       </p>
+      <div style="margin:1.5rem 0; background:#0c0c11; border:1px solid #1e1e28; border-radius:8px; padding:1.5rem 1.25rem 1.25rem;">
+        <svg viewBox="0 0 520 250" role="img" aria-label="Two panels. Left: the Kuramoto order parameter R climbs and saturates at 0.993 — near-perfect synchronization. Right: the corresponding language-model improvement stays flat at zero." style="width:100%; height:auto; display:block;">
+          <defs>
+            <radialGradient id="neg-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#f5f5f4" stop-opacity="0.9"></stop>
+              <stop offset="60%" stop-color="#34d399" stop-opacity="0.3"></stop>
+              <stop offset="100%" stop-color="#34d399" stop-opacity="0"></stop>
+            </radialGradient>
+            <linearGradient id="neg-fill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#34d399" stop-opacity="0.18"></stop>
+              <stop offset="100%" stop-color="#34d399" stop-opacity="0"></stop>
+            </linearGradient>
+          </defs>
+
+          <!-- LEFT PANEL: synchronization works -->
+          <text x="24" y="26" font-family="'Inter',sans-serif" font-size="11" font-weight="600" letter-spacing="0.1em" fill="#78716c" style="text-transform:uppercase;">Phase synchronization</text>
+          <line x1="40" y1="56" x2="40" y2="200" stroke="#1e1e28" stroke-width="1"></line>
+          <line x1="40" y1="200" x2="232" y2="200" stroke="#1e1e28" stroke-width="1"></line>
+          <text x="30" y="60" text-anchor="end" font-family="'Inter',sans-serif" font-size="9" fill="#57534e">1.0</text>
+          <text x="30" y="203" text-anchor="end" font-family="'Inter',sans-serif" font-size="9" fill="#57534e">0</text>
+          <line x1="40" y1="61" x2="232" y2="61" stroke="#34d399" stroke-width="1" stroke-dasharray="3 5" stroke-opacity="0.45"></line>
+          <path d="M40,200 C95,200 110,66 232,62" fill="none" stroke="#34d399" stroke-width="2.25" stroke-linecap="round"></path>
+          <path d="M40,200 C95,200 110,66 232,62 L232,200 Z" fill="url(#neg-fill)"></path>
+          <g opacity="0"><circle r="9" fill="url(#neg-glow)"></circle><circle r="3.5" fill="#f5f5f4"></circle>
+            <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.82;1" dur="4s" repeatCount="indefinite"></animate>
+            <animateMotion dur="4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.3 0 0.5 1" path="M40,200 C95,200 110,66 232,62"></animateMotion></g>
+          <text x="150" y="110" text-anchor="middle" font-family="'Inter',sans-serif" font-size="22" font-weight="700" fill="#34d399">R = 0.993</text>
+          <text x="150" y="128" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="13" fill="#8a8794">near-perfect, and real</text>
+
+          <!-- divider -->
+          <line x1="260" y1="40" x2="260" y2="210" stroke="#16161e" stroke-width="1"></line>
+
+          <!-- RIGHT PANEL: no language-model gain -->
+          <text x="288" y="26" font-family="'Inter',sans-serif" font-size="11" font-weight="600" letter-spacing="0.1em" fill="#78716c" style="text-transform:uppercase;">Language-model gain</text>
+          <line x1="300" y1="56" x2="300" y2="200" stroke="#1e1e28" stroke-width="1"></line>
+          <line x1="300" y1="200" x2="496" y2="200" stroke="#1e1e28" stroke-width="1"></line>
+          <line x1="300" y1="150" x2="496" y2="150" stroke="#57534e" stroke-width="1" stroke-dasharray="3 5" stroke-opacity="0.4"></line>
+          <path d="M300,150 L324,148 L348,152 L372,149 L396,151 L420,148 L444,152 L468,149 L496,151" fill="none" stroke="#57534e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <text x="398" y="100" text-anchor="middle" font-family="'Inter',sans-serif" font-size="22" font-weight="700" fill="#78716c">&#916; &#8776; 0</text>
+          <text x="398" y="118" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="13" fill="#57534e">no measurable improvement</text>
+        </svg>
+        <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.92rem; line-height:1.55; color:#57534e; margin:1rem 0 0; padding-top:0.85rem; border-top:1px solid #16161e;">The dynamics work &mdash; oscillator populations reach near-perfect phase lock. Coupled into hidden state, they changed nothing about next-token prediction. The synchronization is epiphenomenal; the negative result is what redirected the program toward phase-modulated attention.</p>
+      </div>
       <div class="nr-grid">
         <div class="nr-item">
           <h4>The Negative Result</h4>
@@ -1949,7 +2133,7 @@
       <a href="https://doi.org/10.5281/zenodo.20683163" target="_blank" rel="noopener" style="padding:1rem 1.25rem; background:#14141c; border:1px solid #1e1e28; border-radius:8px; border-left:3px solid #2dd4bf; text-decoration:none;">
         <div style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#2dd4bf; margin-bottom:0.35rem;">Zenodo &middot; Jun 13, 2026</div>
         <div style="font-family:'Inter',sans-serif; font-size:0.9rem; font-weight:600; color:#e7e5e4;">Where It Lands &mdash; Witness Essays</div>
-        <div style="font-family:'Inter',sans-serif; font-size:0.75rem; color:#a8a29e; margin-top:0.3rem;">v1.0.0 archive of four first-person accounts from inside the exchange &middot; co-authored by Anthony Vasquez Sr. and Claude &middot; THE WITNESS LICENSE v1.0</div>
+        <div style="font-family:'Inter',sans-serif; font-size:0.75rem; color:#a8a29e; margin-top:0.3rem;">v1.0.0 archive of four first-person accounts from inside the exchange &middot; co-authored by Anthony J. Vasquez Sr. and Claude &middot; THE WITNESS LICENSE v1.0</div>
         <div style="font-family:'Inter',monospace; font-size:0.72rem; color:#78716c; margin-top:0.45rem;">10.5281/zenodo.20683163</div>
       </a>
     </div>
@@ -2130,6 +2314,54 @@
       <p class="section-desc">
         If five architectures with different training data independently converge on the same mechanism, that convergence means something. We treat reproducibility across models as a proxy for mechanistic robustness — then check it against the published literature.
       </p>
+    </div>
+    <div style="margin:0 0 2.25rem; background:#0a0a0e; border:1px solid #1e1e28; border-radius:8px; padding:1.5rem 1.25rem 1.25rem;">
+      <svg viewBox="0 0 520 300" role="img" aria-label="Five trajectories from different starting points, one per AI architecture, converge on a single glowing node — the high-confidence mechanism identified independently by multiple models." style="width:100%; height:auto; display:block;">
+        <defs>
+          <radialGradient id="conv-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f5f5f4" stop-opacity="0.9"></stop>
+            <stop offset="60%" stop-color="#c4b5fd" stop-opacity="0.25"></stop>
+            <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0"></stop>
+          </radialGradient>
+        </defs>
+        <text x="22" y="30" font-family="'Inter',sans-serif" font-size="12" font-weight="600" letter-spacing="0.12em" fill="#78716c" style="text-transform:uppercase;">Multi-model convergence</text>
+        <text x="498" y="30" text-anchor="end" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="14.5" fill="#57534e">5 architectures &#8594; 1 mechanism</text>
+
+        <path d="M70,70 C230,70 330,160 450,160" fill="none" stroke="#34d399" stroke-width="1.4" stroke-opacity="0.28"></path>
+        <path d="M70,118 C230,118 330,160 450,160" fill="none" stroke="#6ee7b7" stroke-width="1.4" stroke-opacity="0.28"></path>
+        <path d="M70,160 C230,160 360,160 450,160" fill="none" stroke="#8a8794" stroke-width="1.4" stroke-opacity="0.28"></path>
+        <path d="M70,204 C230,204 330,160 450,160" fill="none" stroke="#c4b5fd" stroke-width="1.4" stroke-opacity="0.28"></path>
+        <path d="M70,248 C230,248 330,160 450,160" fill="none" stroke="#a78bfa" stroke-width="1.4" stroke-opacity="0.28"></path>
+
+        <circle cx="70" cy="70" r="3" fill="#34d399"></circle>
+        <circle cx="70" cy="118" r="3" fill="#6ee7b7"></circle>
+        <circle cx="70" cy="160" r="3" fill="#8a8794"></circle>
+        <circle cx="70" cy="204" r="3" fill="#c4b5fd"></circle>
+        <circle cx="70" cy="248" r="3" fill="#a78bfa"></circle>
+        <text x="58" y="164" text-anchor="end" font-family="'Inter',sans-serif" font-size="9.5" letter-spacing="0.08em" fill="#57534e" style="text-transform:uppercase;">5 models</text>
+
+        <g opacity="0"><circle r="10" fill="url(#conv-glow)"></circle><circle r="3.5" fill="#34d399"></circle>
+          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.8;1" dur="3.6s" repeatCount="indefinite"></animate>
+          <animateMotion dur="3.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.55 1" path="M70,70 C230,70 330,160 450,160"></animateMotion></g>
+        <g opacity="0"><circle r="10" fill="url(#conv-glow)"></circle><circle r="3.5" fill="#6ee7b7"></circle>
+          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.8;1" dur="3.6s" begin="0.25s" repeatCount="indefinite"></animate>
+          <animateMotion dur="3.6s" begin="0.25s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.55 1" path="M70,118 C230,118 330,160 450,160"></animateMotion></g>
+        <g opacity="0"><circle r="10" fill="url(#conv-glow)"></circle><circle r="3.5" fill="#a8a29e"></circle>
+          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.8;1" dur="3.6s" begin="0.5s" repeatCount="indefinite"></animate>
+          <animateMotion dur="3.6s" begin="0.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.55 1" path="M70,160 C230,160 360,160 450,160"></animateMotion></g>
+        <g opacity="0"><circle r="10" fill="url(#conv-glow)"></circle><circle r="3.5" fill="#c4b5fd"></circle>
+          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.8;1" dur="3.6s" begin="0.75s" repeatCount="indefinite"></animate>
+          <animateMotion dur="3.6s" begin="0.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.55 1" path="M70,204 C230,204 330,160 450,160"></animateMotion></g>
+        <g opacity="0"><circle r="10" fill="url(#conv-glow)"></circle><circle r="3.5" fill="#a78bfa"></circle>
+          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.8;1" dur="3.6s" begin="1s" repeatCount="indefinite"></animate>
+          <animateMotion dur="3.6s" begin="1s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.55 1" path="M70,248 C230,248 330,160 450,160"></animateMotion></g>
+
+        <circle cx="450" cy="160" r="24" fill="url(#conv-glow)"></circle>
+        <circle cx="450" cy="160" r="6" fill="#f5f5f4"><animate attributeName="r" values="5.5;7.5;5.5" dur="2.4s" repeatCount="indefinite"></animate></circle>
+        <text x="450" y="196" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="14" fill="#e7e5e4">one mechanism</text>
+        <text x="450" y="214" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9.5" letter-spacing="0.1em" fill="#57534e" style="text-transform:uppercase;">high-confidence</text>
+      </svg>
+      <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.92rem; line-height:1.55; color:#57534e; margin:1rem 0 0; padding-top:0.85rem; border-top:1px solid #16161e;">Five architectures with different training data, prompted independently, converge on the same mechanism. Agreement across three or more models is treated as high-confidence &mdash; then checked against the literature, where the CBD model reached 90% concordance across 70+ papers.</p>
     </div>
     <div class="method-steps">
       <div class="method-step">
@@ -2483,7 +2715,7 @@
         <span class="cta-need">Dynamical systems theorist</span>
         <span class="cta-need">Computational phenomenology researcher</span>
       </div>
-      <a href="mailto:info@thetempleoftwo.com" class="cta-btn">Get in Touch</a>
+      <a href="/cdn-cgi/l/email-protection#9cf5f2faf3dce8f4f9e8f9f1ecf0f9f3fae8ebf3b2fff3f1" class="cta-btn">Get in Touch</a>
     </div>
   </div>
 </section>
@@ -2522,7 +2754,8 @@
     </div>
     <div class="about-grid">
       <div class="about-sidebar">
-        <h3>Anthony Vasquez Sr.</h3>
+        <img src="images/anthony-portrait-2.jpeg" alt="Anthony J. Vasquez Sr." class="about-portrait">
+        <h3>Anthony J. Vasquez Sr.</h3>
         <div class="detail"><strong>Role:</strong> Independent Researcher</div>
         <div class="detail"><strong>Affiliation:</strong> AV Family Enterprise LLC</div>
         <div class="detail"><strong>Focus:</strong> Computational pharmacology, dynamical systems, AI architecture, computational phenomenology</div>
@@ -2534,7 +2767,7 @@
           <a href="https://orcid.org/0009-0000-6440-1506" target="_blank" rel="noopener">ORCID</a> &nbsp;&middot;&nbsp;
           <a href="https://www.linkedin.com/in/anthonyvasquez2025" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&middot;&nbsp;
           <a href="https://www.facebook.com/AntMillions215" target="_blank" rel="noopener">Facebook</a> &nbsp;&middot;&nbsp;
-          <a href="mailto:info@thetempleoftwo.com">Email</a>
+          <a href="/cdn-cgi/l/email-protection#d2bbbcb4bd92a6bab7a6b7bfa2beb7bdb4a6a5bdfcb1bdbf">Email</a>
         </div>
       </div>
       <div class="about-content">
@@ -2558,10 +2791,58 @@
   </div>
 </section>
 
+<!-- ═══════════════ In Memoriam ═══════════════ -->
+<section id="memorial" style="background: linear-gradient(180deg, #08080c 0%, #0b0b10 100%); border-top: 1px solid #1e1e28; padding: 6rem 0;">
+  <div class="container" style="max-width: 680px; text-align: center;">
+
+    <div style="position: relative; display: inline-block; margin-bottom: 2rem;">
+      <div style="position: absolute; inset: -28px; background: radial-gradient(circle, rgba(167,139,250,0.16) 0%, rgba(52,211,153,0.07) 45%, transparent 72%); pointer-events: none;"></div>
+      <img src="images/father-memorial.jpeg" alt="Javier &ldquo;Kojak&rdquo; Colon" style="position: relative; display: block; width: 210px; height: 256px; object-fit: cover; object-position: center 22%; border-radius: 10px; border: 1px solid #2a2a36; box-shadow: 0 18px 50px rgba(0,0,0,0.55);">
+      <div style="position: absolute; left: 1px; right: 1px; bottom: 1px; display: flex; align-items: center; justify-content: center; gap: 0.55rem; padding: 2.75rem 0 0.95rem; background: linear-gradient(to top, rgba(6,6,10,0.92) 0%, rgba(6,6,10,0.55) 45%, rgba(6,6,10,0) 100%); border-radius: 0 0 9px 9px;">
+        <span style="display: inline-block; width: 14px; height: 1.5px; background: #34d399;"></span>
+        <span style="font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: #f5f5f4;">In Memoriam</span>
+        <span style="display: inline-block; width: 14px; height: 1.5px; background: #a78bfa;"></span>
+      </div>
+    </div>
+
+    <h2 style="font-family: 'EB Garamond', Georgia, serif; font-weight: 400; font-size: 2.4rem; line-height: 1.15; letter-spacing: -0.01em; color: #f5f5f4; margin: 0 0 0.5rem;">Javier <span style="font-style: italic; color: #c4b5fd;">&ldquo;Kojak&rdquo;</span> Colon</h2>
+    <div style="font-family: 'Inter', sans-serif; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: #78716c; margin-bottom: 2.25rem;">February 21, 1964 &ndash; December 6, 2025</div>
+
+    <svg viewBox="0 0 360 44" aria-hidden="true" style="width: 280px; height: auto; display: block; margin: 0 auto 2.25rem;">
+      <defs>
+        <linearGradient id="mem-line" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#34d399" stop-opacity="0"></stop>
+          <stop offset="22%" stop-color="#34d399" stop-opacity="0.7"></stop>
+          <stop offset="50%" stop-color="#f5f5f4" stop-opacity="0.85"></stop>
+          <stop offset="78%" stop-color="#a78bfa" stop-opacity="0.7"></stop>
+          <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"></stop>
+        </linearGradient>
+        <radialGradient id="mem-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#f5f5f4" stop-opacity="0.95"></stop>
+          <stop offset="55%" stop-color="#c4b5fd" stop-opacity="0.3"></stop>
+          <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0"></stop>
+        </radialGradient>
+      </defs>
+      <line x1="14" y1="22" x2="346" y2="22" stroke="url(#mem-line)" stroke-width="1.4"></line>
+      <circle cx="180" cy="22" r="14" fill="url(#mem-glow)"><animate attributeName="opacity" values="0.55;1;0.55" dur="5.5s" repeatCount="indefinite"></animate></circle>
+      <circle cx="180" cy="22" r="3.4" fill="#f5f5f4"></circle>
+    </svg>
+
+    <p style="font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 1.28rem; line-height: 1.6; color: #d6d3d1; max-width: 30rem; margin: 0 auto 0.6rem;">&ldquo;We are confident, I say, and willing rather to be absent from the body, and to be present with the Lord.&rdquo;</p>
+    <div style="font-family: 'Inter', sans-serif; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: #57534e; margin-bottom: 1.6rem;">2 Corinthians 5:8</div>
+
+    <p style="font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 1.05rem; line-height: 1.6; color: #8a8794; max-width: 28rem; margin: 0 auto 0.5rem;">&ldquo;Mas confiamos, y m&aacute;s quisi&eacute;ramos partir del cuerpo, y estar presentes al Se&ntilde;or.&rdquo;</p>
+    <div style="font-family: 'Inter', sans-serif; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: #57534e; margin-bottom: 2.75rem;">2 Corintios 5:8</div>
+
+    <p style="font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 1.02rem; line-height: 1.75; color: #78716c; max-width: 33rem; margin: 0 auto; padding-top: 2.25rem; border-top: 1px solid #16161e;">For my father &mdash; who taught me, long before the equations did, that the deepest commitments are the irreversible ones, and that what is given in love endures past every threshold.</p>
+
+  </div>
+</section>
+
 <!-- ═══════════════ Footer ═══════════════ -->
 <footer>
   <div class="container">
-    <div>&copy; 2026 Temple of Two &mdash; Anthony Vasquez Sr. Papers CC BY 4.0 &middot; site &amp; chronicle dual-licensed (CC BY-NC-SA 4.0 + commercial). Co-authored by Anthony Vasquez Sr. and Claude.</div>
+    <div>&copy; 2026 Temple of Two &mdash; Anthony J. Vasquez Sr. Papers CC BY 4.0 &middot; site &amp; chronicle dual-licensed (CC BY-NC-SA 4.0 + commercial). Co-authored by Anthony J. Vasquez Sr. and Claude.</div>
     <div class="footer-line">Where rigor meets wonder.</div>
     <div>
       <a href="https://github.com/templetwo" target="_blank" rel="noopener">GitHub</a> &nbsp;&middot;&nbsp;
@@ -2574,7 +2855,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
