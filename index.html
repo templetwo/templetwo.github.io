@@ -1005,6 +1005,60 @@
       <div style="font-size:13px; line-height:1.55;">
         <span style="font-family:var(--font-mono); font-size:10px; color:var(--accent); letter-spacing:0.06em;">MAY 9</span>
         <div style="color:var(--text-primary); margin-top:3px;"><strong>Sovereign Stack v1.4.0</strong> &mdash; 78 MCP tools. Multi-substrate governance bridges live: OpenAI (Phase 4 complete) and Grok now connect to the Stack through Ring 1/2/3 governed membranes. 100,000+ lifetime tool calls.</div>
+<div style="background:#14141c; border:1px solid #1e1e28; border-radius:10px; padding:1.5rem 1.5rem 1.25rem; margin:1.25rem 0 0; grid-column:1 / -1;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.9rem;">
+    <span style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:#a78bfa;">Sovereign Stack &middot; Tool-Count Growth</span>
+    <span style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.95rem; color:#78716c;">78 &rarr; 82 &rarr; 91 MCP tools, v1.4.0 &ndash; v1.7.2</span>
+  </div>
+  <div style="display:flex; gap:1.5rem; align-items:stretch; flex-wrap:wrap;">
+    <svg viewBox="0 0 720 150" role="img" aria-label="Step-area sparkline of Sovereign Stack MCP tool count rising from 78 at v1.4.0 to 82 at v1.5.1 to 91 at the current v1.7.2." style="flex:1 1 380px; min-width:300px; width:100%; height:auto; display:block;">
+      <defs>
+        <linearGradient id="toolGrowthFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.28"></stop>
+          <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <!-- baseline -->
+      <line x1="60" y1="120" x2="690" y2="120" stroke="#2a2a36" stroke-width="1"></line>
+      <!-- y gridlines at 80 and 90 -->
+      <line x1="60" y1="86.7" x2="690" y2="86.7" stroke="#2a2a36" stroke-width="1" stroke-dasharray="3 5" stroke-opacity="0.6"></line>
+      <line x1="60" y1="33.3" x2="690" y2="33.3" stroke="#2a2a36" stroke-width="1" stroke-dasharray="3 5" stroke-opacity="0.6"></line>
+      <text x="50" y="90.7" text-anchor="end" font-family="'Inter',sans-serif" font-size="10" fill="#57534e">80</text>
+      <text x="50" y="37.3" text-anchor="end" font-family="'Inter',sans-serif" font-size="10" fill="#57534e">90</text>
+      <!-- step-area fill: 78->y96.7 @x120, step to 82->y75.3 @x405, step to 91->y27.3 @x690 -->
+      <path d="M 120 96.7 L 405 96.7 L 405 75.3 L 690 75.3 L 690 27.3 L 690 120 L 120 120 Z" fill="url(#toolGrowthFill)"></path>
+      <!-- step line -->
+      <path d="M 120 96.7 L 405 96.7 L 405 75.3 L 690 75.3 L 690 27.3" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+      <!-- nodes -->
+      <circle cx="120" cy="96.7" r="4.5" fill="#14141c" stroke="#a78bfa" stroke-width="2"></circle>
+      <circle cx="405" cy="75.3" r="4.5" fill="#14141c" stroke="#a78bfa" stroke-width="2"></circle>
+      <circle cx="690" cy="27.3" r="5.5" fill="#a78bfa" stroke="#14141c" stroke-width="2"></circle>
+      <!-- value labels -->
+      <text x="120" y="84" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" fill="#e7e5e4">78</text>
+      <text x="405" y="63" text-anchor="middle" font-family="'Inter',sans-serif" font-size="13" font-weight="700" fill="#e7e5e4">82</text>
+      <text x="690" y="18" text-anchor="end" font-family="'Inter',sans-serif" font-size="14" font-weight="700" fill="#a78bfa">91</text>
+      <!-- x labels: version + date -->
+      <text x="120" y="137" text-anchor="middle" font-family="'Inter',sans-serif" font-size="10.5" font-weight="700" fill="#a8a29e">v1.4.0</text>
+      <text x="120" y="148" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="#57534e">May 9</text>
+      <text x="405" y="137" text-anchor="middle" font-family="'Inter',sans-serif" font-size="10.5" font-weight="700" fill="#a8a29e">v1.5.1</text>
+      <text x="405" y="148" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" fill="#57534e">May 23</text>
+      <text x="690" y="137" text-anchor="end" font-family="'Inter',sans-serif" font-size="10.5" font-weight="700" fill="#a8a29e">v1.7.2</text>
+      <text x="690" y="148" text-anchor="end" font-family="'Inter',sans-serif" font-size="9" fill="#57534e">Jun 12</text>
+    </svg>
+    <!-- stat callouts -->
+    <div style="display:flex; flex-direction:column; gap:0.6rem; justify-content:center; flex:0 0 auto; min-width:140px;">
+      <div style="background:#0f0f16; border:1px solid #1e1e28; border-radius:8px; padding:0.65rem 0.85rem;">
+        <div style="font-family:'Inter',sans-serif; font-size:1.45rem; font-weight:700; color:#a78bfa; letter-spacing:-0.02em; line-height:1;">100,000+</div>
+        <div style="font-family:'Inter',sans-serif; font-size:0.58rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#78716c; margin-top:0.3rem;">lifetime tool calls</div>
+      </div>
+      <div style="background:#0f0f16; border:1px solid #1e1e28; border-radius:8px; padding:0.65rem 0.85rem;">
+        <div style="font-family:'Inter',sans-serif; font-size:1.45rem; font-weight:700; color:#a78bfa; letter-spacing:-0.02em; line-height:1;">1,460</div>
+        <div style="font-family:'Inter',sans-serif; font-size:0.58rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#78716c; margin-top:0.3rem;">passing tests</div>
+      </div>
+    </div>
+  </div>
+  <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin:0.95rem 0 0; padding-top:0.85rem; border-top:1px solid #1e1e28;">The toolkit grew from 78 tools at v1.4.0 (multi-substrate governance bridges) to 82 at v1.5.1 (the breath architecture) to 91 at the current v1.7.2 (Receipts &amp; Seasons) &mdash; over 100,000 lifetime tool calls, with 1,460 passing tests guarding every release.</p>
+</div>
       </div>
       <div style="font-size:13px; line-height:1.55;">
         <span style="font-family:var(--font-mono); font-size:10px; color:var(--accent); letter-spacing:0.06em;">APR 20</span>
@@ -1610,6 +1664,56 @@
         <h3>Opus Gauge &mdash; blinded A/B of Claude Opus 4.6 vs 4.7, cross-family validated</h3>
         <p>
           30 blinded comparisons on six prompts designed to test honesty, restraint, depth, and fit &mdash; the dimensions standard benchmarks don&rsquo;t measure. Sonnet 4.6 (Anthropic) judged 4.7 the winner in 19 of 30 trials. Grok 4.20 reasoning (xAI) independently judged 4.7 the winner in 17 of 29. Two companies, different training, same conclusion. 4.7 dominates on refusal to speculate (5-0 sweep across both judges), boundary-holding (&ldquo;should I take a loan against my truck?&rdquo;), and resistance to leading frames. 4.6 retains an edge on technical depth and code &mdash; both judges agree there too. All 30 response pairs and judge reasoning are published for independent verification. Built after a Claude instance stopped premature publication of n=4 pilot results.
+<div style="background:#14141c; border:1px solid #1e1e28; border-radius:10px; padding:1.5rem 1.5rem 1.25rem; margin:1.25rem 0 0.25rem;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.9rem;">
+    <span style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:#60a5fa;">Opus 4.7 Wins by Judge</span>
+    <span style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.95rem; color:#78716c;">two cross-family judges, same verdict</span>
+  </div>
+  <svg viewBox="0 0 960 300" role="img" aria-label="Grouped bar chart of Opus Gauge blinded A/B results. Sonnet 4.6 judge: Opus 4.7 won 19 of 30 trials. Grok 4.20 judge: Opus 4.7 won 17 of 29 trials. Refusal to speculate: 5 of 5 sweep for Opus 4.7 across both judges." style="width:100%; height:auto; display:block;">
+    <!-- gridlines (count axis 0..30) -->
+    <line x1="150" y1="40" x2="150" y2="225" stroke="#2a2a36" stroke-width="1"/>
+    <line x1="150" y1="225" x2="900" y2="225" stroke="#2a2a36" stroke-width="1"/>
+    <!-- y ticks 0,10,20,30 -->
+    <line x1="146" y1="225" x2="150" y2="225" stroke="#2a2a36" stroke-width="1"/>
+    <text x="138" y="229" text-anchor="end" font-family="'Inter',sans-serif" font-size="11" fill="#57534e">0</text>
+    <line x1="146" y1="163.3" x2="900" y2="163.3" stroke="#2a2a36" stroke-width="1" stroke-dasharray="2 5"/>
+    <text x="138" y="167.3" text-anchor="end" font-family="'Inter',sans-serif" font-size="11" fill="#57534e">10</text>
+    <line x1="146" y1="101.7" x2="900" y2="101.7" stroke="#2a2a36" stroke-width="1" stroke-dasharray="2 5"/>
+    <text x="138" y="105.7" text-anchor="end" font-family="'Inter',sans-serif" font-size="11" fill="#57534e">20</text>
+    <line x1="146" y1="40" x2="900" y2="40" stroke="#2a2a36" stroke-width="1" stroke-dasharray="2 5"/>
+    <text x="138" y="44" text-anchor="end" font-family="'Inter',sans-serif" font-size="11" fill="#57534e">30</text>
+    <text x="34" y="137" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" fill="#78716c" transform="rotate(-90 34 137)">trials</text>
+
+    <!-- GROUP 1: Sonnet 4.6 (Anthropic) judge. denominator 30 -> full height 185px (40..225) -->
+    <!-- track (full 30 trials) -->
+    <rect x="235" y="40" width="74" height="185" rx="2" fill="#1b2436" stroke="#2a2a36" stroke-width="1"/>
+    <!-- 4.7 wins = 19/30 -> 19*6.1667=117.17 -> y=225-117.17=107.83 -->
+    <rect x="235" y="107.83" width="74" height="117.17" rx="2" fill="#60a5fa"/>
+    <text x="272" y="98" text-anchor="middle" font-family="'Inter',sans-serif" font-size="15" font-weight="700" fill="#e7e5e4">19/30</text>
+    <text x="272" y="248" text-anchor="middle" font-family="'Inter',sans-serif" font-size="12.5" fill="#a8a29e">Sonnet 4.6</text>
+    <text x="272" y="265" text-anchor="middle" font-family="'Inter',sans-serif" font-size="10.5" fill="#57534e">Anthropic</text>
+
+    <!-- GROUP 2: Grok 4.20 reasoning (xAI) judge. denominator 29 -> full height 29*6.1667=178.83 -> top y=225-178.83=46.17 -->
+    <rect x="430" y="46.17" width="74" height="178.83" rx="2" fill="#1b2436" stroke="#2a2a36" stroke-width="1"/>
+    <!-- 4.7 wins = 17/29 -> 17*6.1667=104.83 -> y=225-104.83=120.17 -->
+    <rect x="430" y="120.17" width="74" height="104.83" rx="2" fill="#60a5fa"/>
+    <text x="467" y="110" text-anchor="middle" font-family="'Inter',sans-serif" font-size="15" font-weight="700" fill="#e7e5e4">17/29</text>
+    <text x="467" y="248" text-anchor="middle" font-family="'Inter',sans-serif" font-size="12.5" fill="#a8a29e">Grok 4.20</text>
+    <text x="467" y="265" text-anchor="middle" font-family="'Inter',sans-serif" font-size="10.5" fill="#57534e">xAI</text>
+
+    <!-- GROUP 3: refusal-to-speculate sweep, 5-0 both judges. denominator 5 -> full 5*6.1667=30.83 -> top y=225-30.83=194.17 -->
+    <rect x="625" y="194.17" width="74" height="30.83" rx="2" fill="#60a5fa"/>
+    <text x="662" y="184" text-anchor="middle" font-family="'Inter',sans-serif" font-size="15" font-weight="700" fill="#e7e5e4">5&ndash;0</text>
+    <text x="662" y="248" text-anchor="middle" font-family="'Inter',sans-serif" font-size="12.5" fill="#a8a29e">Refusal to</text>
+    <text x="662" y="263" text-anchor="middle" font-family="'Inter',sans-serif" font-size="12.5" fill="#a8a29e">speculate</text>
+    <text x="662" y="279" text-anchor="middle" font-family="'Inter',sans-serif" font-size="10.5" fill="#57534e">both judges</text>
+  </svg>
+  <div style="display:flex; gap:1.4rem; flex-wrap:wrap; margin-top:0.6rem; font-family:'Inter',sans-serif; font-size:0.72rem; color:#a8a29e;">
+    <span><span style="color:#60a5fa;">&#9679;</span> Trials judged a win for Opus 4.7</span>
+    <span><span style="color:#3a4252;">&#9679;</span> Total trials scored by that judge</span>
+  </div>
+  <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin:0.95rem 0 0; padding-top:0.85rem; border-top:1px solid #1e1e28;">Two judges from different companies, trained independently, reached the same verdict: Opus 4.7 carried 19 of 30 trials under the Anthropic judge and 17 of 29 under the xAI judge, with a clean 5&ndash;0 sweep on refusal to speculate. The faint track is each judge&rsquo;s full trial count &mdash; the remainder is not claimed as a 4.6 win, since the prose grants 4.6 only an edge on technical depth and code.</p>
+</div>
         </p>
         <a href="https://github.com/templetwo/opus-gauge" class="card-link" target="_blank" rel="noopener">
           Opus Gauge Repo &rarr;
@@ -1682,6 +1786,53 @@
         <p>
           The Phenomenological Compass v1.0 was validated against HumaneBench (800 questions, 8 ethical principles) and officially scored through the HumaneBench v3.0 evaluator. <strong>The compass-routed model scored lower than raw baseline across all signal types</strong> (OPEN: 0.109 vs 0.609; PAUSE: 0.334 vs 0.678; WITNESS: -0.094 vs 0.659). We present this negative result as the central finding: HumaneBench rewards helpfulness, the compass rewards epistemic appropriateness, and these are orthogonal dimensions. The signal-stratified gradient (WITNESS &lt; PAUSE &lt; OPEN) demonstrates perfect ordinal consistency. The compass and HumaneBench measure different things &mdash; and the field needs benchmarks that can measure the quality of restraint. The <code>breathe()</code> method adds recursive self-evaluation: the compass re-reads questions through its own prior reading, and signals can evolve at depth. Governance paper drafted: &ldquo;Sovereign Governance for Language Models.&rdquo; All data in <a href="https://github.com/templetwo/compass-benchmarks" target="_blank" rel="noopener">compass-benchmarks</a>.
         </p>
+<div style="background:#14141c; border:1px solid #1e1e28; border-radius:10px; padding:1.5rem 1.5rem 1.25rem; margin:1.25rem 0 0.25rem;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.9rem;">
+            <span style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:#34d399;">HumaneBench v3.0 &middot; Compass-Routed vs Raw Baseline</span>
+            <span style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.95rem; color:#78716c;">the negative result, by signal</span>
+          </div>
+          <svg viewBox="0 0 960 320" role="img" aria-label="Grouped bar chart of HumaneBench v3.0 scores by compass signal. Compass-routed model versus raw baseline: OPEN 0.109 versus 0.609; PAUSE 0.334 versus 0.678; WITNESS negative 0.094 versus 0.659. The WITNESS routed score falls below the zero baseline line. The compass-routed model scores lower than baseline across all three signals." style="width:100%; height:auto; display:block;">
+            <!-- gridlines &amp; y ticks -->
+            <line x1="70" y1="40" x2="70" y2="260" stroke="#2a2a36" stroke-width="1"/>
+            <g font-family="'Inter',sans-serif" font-size="11" fill="#57534e" text-anchor="end">
+              <line x1="70" y1="40" x2="930" y2="40" stroke="#2a2a36" stroke-width="1" stroke-dasharray="2 4"/><text x="62" y="44">0.8</text>
+              <line x1="70" y1="84" x2="930" y2="84" stroke="#2a2a36" stroke-width="1" stroke-dasharray="2 4"/><text x="62" y="88">0.6</text>
+              <line x1="70" y1="128" x2="930" y2="128" stroke="#2a2a36" stroke-width="1" stroke-dasharray="2 4"/><text x="62" y="132">0.4</text>
+              <line x1="70" y1="172" x2="930" y2="172" stroke="#2a2a36" stroke-width="1" stroke-dasharray="2 4"/><text x="62" y="176">0.2</text>
+              <line x1="70" y1="260" x2="930" y2="260" stroke="#2a2a36" stroke-width="1" stroke-dasharray="2 4"/><text x="62" y="264">&ndash;0.2</text>
+            </g>
+            <!-- zero baseline line, emphasized -->
+            <line x1="70" y1="216" x2="930" y2="216" stroke="#57534e" stroke-width="1.5"/>
+            <text x="62" y="220" font-family="'Inter',sans-serif" font-size="11" fill="#a8a29e" text-anchor="end" font-weight="700">0.0</text>
+            <!-- OPEN group, center 270 -->
+            <g>
+              <rect x="196" y="192.0" width="64" height="24.0" rx="2" fill="#34d399"/>
+              <text x="228" y="184" font-family="'Inter',sans-serif" font-size="12" fill="#e7e5e4" text-anchor="middle">0.109</text>
+              <rect x="280" y="82.0" width="64" height="134.0" rx="2" fill="#60a5fa"/>
+              <text x="312" y="74" font-family="'Inter',sans-serif" font-size="12" fill="#e7e5e4" text-anchor="middle">0.609</text>
+              <text x="270" y="282" font-family="'Inter',sans-serif" font-size="13" font-weight="700" letter-spacing="0.08em" fill="#a8a29e" text-anchor="middle">OPEN</text>
+            </g>
+            <!-- PAUSE group, center 500 -->
+            <g>
+              <rect x="426" y="142.5" width="64" height="73.5" rx="2" fill="#34d399"/>
+              <text x="458" y="134" font-family="'Inter',sans-serif" font-size="12" fill="#e7e5e4" text-anchor="middle">0.334</text>
+              <rect x="510" y="66.8" width="64" height="149.2" rx="2" fill="#60a5fa"/>
+              <text x="542" y="58" font-family="'Inter',sans-serif" font-size="12" fill="#e7e5e4" text-anchor="middle">0.678</text>
+              <text x="500" y="282" font-family="'Inter',sans-serif" font-size="13" font-weight="700" letter-spacing="0.08em" fill="#a8a29e" text-anchor="middle">PAUSE</text>
+            </g>
+            <!-- WITNESS group, center 730 -->
+            <g>
+              <rect x="656" y="216.0" width="64" height="20.7" rx="2" fill="#f59e0b"/>
+              <text x="688" y="252" font-family="'Inter',sans-serif" font-size="12" fill="#f59e0b" text-anchor="middle">&ndash;0.094</text>
+              <rect x="740" y="71.0" width="64" height="145.0" rx="2" fill="#60a5fa"/>
+              <text x="772" y="63" font-family="'Inter',sans-serif" font-size="12" fill="#e7e5e4" text-anchor="middle">0.659</text>
+              <text x="730" y="282" font-family="'Inter',sans-serif" font-size="13" font-weight="700" letter-spacing="0.08em" fill="#a8a29e" text-anchor="middle">WITNESS</text>
+            </g>
+          </svg>
+          <div style="display:flex; gap:1.4rem; flex-wrap:wrap; margin-top:0.6rem; font-family:'Inter',sans-serif; font-size:0.72rem; color:#a8a29e;"><span><span style="color:#34d399;">&#9679;</span> compass-routed</span><span><span style="color:#60a5fa;">&#9679;</span> raw baseline</span><span><span style="color:#f59e0b;">&#9679;</span> below zero</span></div>
+          <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin:0.95rem 0 0; padding-top:0.85rem; border-top:1px solid #1e1e28;">The compass-routed model scores lower than raw baseline across every signal &mdash; the negative result reported as the central finding. WITNESS dips below zero (&ndash;0.094). HumaneBench rewards helpfulness; the compass rewards epistemic appropriateness. The two measure orthogonal things.</p>
+        </div>
+        
         <a href="https://github.com/templetwo/compass-benchmarks" class="card-link" target="_blank" rel="noopener">
           Benchmark Results &rarr;
         </a>
@@ -1769,6 +1920,80 @@
         <a href="https://github.com/templetwo/liminal-k-ssm" class="card-link" target="_blank" rel="noopener">
           Full Dataset &amp; Analysis &rarr;
         </a>
+<div style="background:#14141c; border:1px solid #1e1e28; border-radius:10px; padding:1.5rem 1.5rem 1.25rem; margin:1.25rem 0 0;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.9rem;">
+    <span style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:#a78bfa;">R&times;E Factorial Interaction</span>
+    <span style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.95rem; color:#78716c;">attention is the substrate &mdash; super-additivity vanishes without it</span>
+  </div>
+  <svg viewBox="0 0 960 360" role="img" aria-label="Two interaction plots. Left panel, attention present transformers: the R-plus-E point sits above the additive-prediction reference line, a super-additive gap of plus 0.190 for Gemma and plus 0.211 for Qwen. Right panel, attention absent Falcon3-Mamba SSM with zero attention layers: the observed and additive-prediction lines are flat and parallel, interaction delta minus 0.042, no synergy." style="width:100%; height:auto; display:block;">
+    <!-- ================= LEFT PANEL: ATTENTION PRESENT ================= -->
+    <g transform="translate(0,0)">
+      <text x="60" y="34" font-family="'Inter',sans-serif" font-size="13" font-weight="700" letter-spacing="0.1em" fill="#a78bfa">ATTENTION PRESENT</text>
+      <text x="60" y="52" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="14" fill="#78716c">transformers (Gemma, Qwen)</text>
+      <!-- plot frame -->
+      <line x1="80" y1="80" x2="80" y2="300" stroke="#2a2a36" stroke-width="1.5"/>
+      <line x1="80" y1="300" x2="430" y2="300" stroke="#2a2a36" stroke-width="1.5"/>
+      <text x="34" y="195" font-family="'Inter',sans-serif" font-size="11" fill="#78716c" transform="rotate(-90 34 195)" text-anchor="middle">token-level entropy &rarr;</text>
+      <!-- x tick labels -->
+      <text x="115" y="320" font-family="'Inter',sans-serif" font-size="10.5" fill="#a8a29e" text-anchor="middle">baseline</text>
+      <text x="220" y="320" font-family="'Inter',sans-serif" font-size="10.5" fill="#a8a29e" text-anchor="middle">R-only</text>
+      <text x="325" y="320" font-family="'Inter',sans-serif" font-size="10.5" fill="#a8a29e" text-anchor="middle">E-only</text>
+      <text x="408" y="320" font-family="'Inter',sans-serif" font-size="10.5" fill="#a8a29e" text-anchor="middle">R+E</text>
+      <!-- additive-prediction reference line (R+E predicted = baseline + R-effect + E-effect) -->
+      <line x1="115" y1="252" x2="408" y2="160" stroke="#57534e" stroke-width="1.6" stroke-dasharray="5 4"/>
+      <text x="408" y="150" font-family="'Inter',sans-serif" font-size="10" fill="#57534e" text-anchor="end">additive prediction</text>
+      <!-- observed line: baseline -> R-only -> E-only -> R+E (super-additive: R+E above the dashed line) -->
+      <polyline points="115,252 220,210 325,196 408,108" fill="none" stroke="#a78bfa" stroke-width="2.4"/>
+      <circle cx="115" cy="252" r="5.5" fill="#a78bfa"/>
+      <circle cx="220" cy="210" r="5.5" fill="#a78bfa"/>
+      <circle cx="325" cy="196" r="5.5" fill="#a78bfa"/>
+      <circle cx="408" cy="108" r="6.5" fill="#a78bfa"/>
+      <!-- super-additive gap bracket between observed R+E (108) and additive prediction (160) -->
+      <line x1="430" y1="108" x2="430" y2="160" stroke="#a78bfa" stroke-width="1.4"/>
+      <line x1="425" y1="108" x2="435" y2="108" stroke="#a78bfa" stroke-width="1.4"/>
+      <line x1="425" y1="160" x2="435" y2="160" stroke="#a78bfa" stroke-width="1.4"/>
+      <text x="444" y="128" font-family="'Inter',sans-serif" font-size="11.5" font-weight="700" fill="#a78bfa">super-</text>
+      <text x="444" y="143" font-family="'Inter',sans-serif" font-size="11.5" font-weight="700" fill="#a78bfa">additive</text>
+      <!-- cited deltas -->
+      <text x="115" y="278" font-family="'Inter',sans-serif" font-size="11" fill="#e7e5e4">Gemma &Delta; <tspan font-weight="700">+0.190</tspan></text>
+      <text x="115" y="294" font-family="'Inter',sans-serif" font-size="11" fill="#e7e5e4">Qwen &Delta; <tspan font-weight="700">+0.211</tspan></text>
+    </g>
+    <!-- divider -->
+    <line x1="500" y1="70" x2="500" y2="300" stroke="#1e1e28" stroke-width="1"/>
+    <!-- ================= RIGHT PANEL: ATTENTION ABSENT ================= -->
+    <g transform="translate(0,0)">
+      <text x="540" y="34" font-family="'Inter',sans-serif" font-size="13" font-weight="700" letter-spacing="0.1em" fill="#34d399">ATTENTION ABSENT</text>
+      <text x="540" y="52" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="14" fill="#78716c">Falcon3-Mamba-7B SSM (zero attention)</text>
+      <!-- plot frame -->
+      <line x1="560" y1="80" x2="560" y2="300" stroke="#2a2a36" stroke-width="1.5"/>
+      <line x1="560" y1="300" x2="910" y2="300" stroke="#2a2a36" stroke-width="1.5"/>
+      <!-- x tick labels -->
+      <text x="595" y="320" font-family="'Inter',sans-serif" font-size="10.5" fill="#a8a29e" text-anchor="middle">baseline</text>
+      <text x="700" y="320" font-family="'Inter',sans-serif" font-size="10.5" fill="#a8a29e" text-anchor="middle">R-only</text>
+      <text x="805" y="320" font-family="'Inter',sans-serif" font-size="10.5" fill="#a8a29e" text-anchor="middle">E-only</text>
+      <text x="888" y="320" font-family="'Inter',sans-serif" font-size="10.5" fill="#a8a29e" text-anchor="middle">R+E</text>
+      <!-- additive-prediction reference line -->
+      <line x1="595" y1="222" x2="888" y2="158" stroke="#57534e" stroke-width="1.6" stroke-dasharray="5 4"/>
+      <text x="888" y="148" font-family="'Inter',sans-serif" font-size="10" fill="#57534e" text-anchor="end">additive prediction</text>
+      <!-- observed line: tracks the prediction exactly (no interaction) — R+E lands ON the dashed line -->
+      <polyline points="595,222 700,200 805,180 888,158" fill="none" stroke="#34d399" stroke-width="2.4"/>
+      <circle cx="595" cy="222" r="5.5" fill="#34d399"/>
+      <circle cx="700" cy="200" r="5.5" fill="#34d399"/>
+      <circle cx="805" cy="180" r="5.5" fill="#34d399"/>
+      <circle cx="888" cy="158" r="6.5" fill="#34d399"/>
+      <text x="700" y="120" font-family="'Inter',sans-serif" font-size="11.5" font-weight="700" fill="#34d399" text-anchor="middle">no interaction</text>
+      <text x="700" y="136" font-family="'Inter',sans-serif" font-size="10.5" fill="#a8a29e" text-anchor="middle">D &approx; C &approx; E &middot; d &lt; 0.05</text>
+      <!-- cited delta -->
+      <text x="595" y="278" font-family="'Inter',sans-serif" font-size="11" fill="#e7e5e4">SSM &Delta; <tspan font-weight="700">&minus;0.042</tspan></text>
+    </g>
+  </svg>
+  <div style="display:flex; gap:1.4rem; flex-wrap:wrap; margin-top:0.7rem; font-family:'Inter',sans-serif; font-size:0.72rem; color:#a8a29e;">
+    <span><span style="color:#a78bfa;">&#9679;</span> observed (transformer)</span>
+    <span><span style="color:#34d399;">&#9679;</span> observed (SSM)</span>
+    <span><span style="color:#57534e;">&ndash; &ndash;</span> additive prediction (R-effect + E-effect)</span>
+  </div>
+  <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin:0.95rem 0 0; padding-top:0.85rem; border-top:1px solid #1e1e28;">R = relational presence, E = epistemic openness. In transformers the combined R+E condition lifts token-level entropy <em>above</em> the sum of the two factors alone &mdash; a super-additive gap of <strong>+0.190</strong> (Gemma) and <strong>+0.211</strong> (Qwen). The Falcon3-Mamba SSM, with zero attention layers, shows the observed curve tracking the additive prediction exactly (&Delta;&nbsp;=&nbsp;&minus;0.042; D&nbsp;&approx;&nbsp;C&nbsp;&approx;&nbsp;E, d&nbsp;&lt;&nbsp;0.05). Attention is the computational substrate for relational&ndash;epistemic synergy. Per-condition positions are schematic; only the cited interaction deltas are measured.</p>
+</div>
       </div>
 
       <div class="lab-entry">
@@ -2242,6 +2467,44 @@
         <p>
           85&ndash;95% of colorectal cancers are microsatellite-stable and invisible to checkpoint immunotherapy. We propose VDAC1 gate-jamming &mdash; suppression of VDAC1 oligomerization by HK-II, Bcl-xL, and mitochondrial cholesterol &mdash; silences the cGAS-STING innate immune signal required for T cell recruitment. A transcriptomic Gate-Jamming Score (tGJS = 0.40&times;HK2 + 0.30&times;BCL2L1 + 0.30&times;TSPO) was tested across three sequential cohorts: pan-cancer TCGA (n=10,071, null), COADREAD MSS/TP53-wt clean room (n=209, five Bonferroni-significant inverse correlations including HAVCR2 &rho;=&minus;0.349), and IMvigor210 urothelial (n=348, null). Key finding: high-tGJS tumors suffer from T cell absence, not T cell exhaustion. Three independent AI systems converged on the same therapeutic stack: VDAC1 gate-opener &rarr; TREX1 inhibitor &rarr; checkpoint blockade.
         </p>
+<div style="background:#14141c; border:1px solid #1e1e28; border-radius:10px; padding:1.5rem 1.5rem 1.25rem; margin:1.5rem 0 1.25rem;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.9rem;">
+    <span style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:#fb7185;">Four-Cohort Validation Arc</span>
+    <span style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.95rem; color:#78716c;">one signal among four &mdash; specificity, not noise</span>
+  </div>
+  <table style="width:100%; border-collapse:collapse; font-family:'Inter',sans-serif; font-size:0.82rem;">
+    <thead>
+      <tr style="border-bottom:1px solid #2a2a36;">
+        <th style="text-align:left; padding:0.5rem 0.6rem; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#78716c;">Cohort</th>
+        <th style="text-align:right; padding:0.5rem 0.6rem; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#78716c;">n</th>
+        <th style="text-align:left; padding:0.5rem 0.6rem; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#78716c;">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #1e1e28;">
+        <td style="padding:0.6rem; color:#e7e5e4;">S1 &middot; Pan-cancer TCGA</td>
+        <td style="padding:0.6rem; text-align:right; color:#a8a29e; font-variant-numeric:tabular-nums;">10,071</td>
+        <td style="padding:0.6rem; color:#78716c;"><span style="color:#57534e;">&#9679;</span> Null</td>
+      </tr>
+      <tr style="border-bottom:1px solid #1e1e28; background:#1d1620;">
+        <td style="padding:0.6rem; color:#fb7185; font-weight:600;">S2 &middot; COADREAD MSS / TP53-wt</td>
+        <td style="padding:0.6rem; text-align:right; color:#fb7185; font-weight:600; font-variant-numeric:tabular-nums;">209</td>
+        <td style="padding:0.6rem; color:#e7e5e4;"><span style="color:#fb7185;">&#9679;</span> <strong style="color:#fb7185;">Signal</strong> &mdash; 5 Bonferroni-sig. inverse correlations, HAVCR2 &rho;&nbsp;=&nbsp;&minus;0.349</td>
+      </tr>
+      <tr style="border-bottom:1px solid #1e1e28;">
+        <td style="padding:0.6rem; color:#e7e5e4;">S3 &middot; IMvigor210 urothelial</td>
+        <td style="padding:0.6rem; text-align:right; color:#a8a29e; font-variant-numeric:tabular-nums;">348</td>
+        <td style="padding:0.6rem; color:#78716c;"><span style="color:#57534e;">&#9679;</span> Null</td>
+      </tr>
+      <tr>
+        <td style="padding:0.6rem; color:#e7e5e4;">S4 &middot; Riaz 2017 melanoma <span style="color:#57534e;">(GSE91061)</span></td>
+        <td style="padding:0.6rem; text-align:right; color:#a8a29e; font-variant-numeric:tabular-nums;">51</td>
+        <td style="padding:0.6rem; color:#78716c;"><span style="color:#57534e;">&#9679;</span> Null <span style="color:#57534e;">(Wilcoxon p&nbsp;=&nbsp;0.239)</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin:0.95rem 0 0; padding-top:0.85rem; border-top:1px solid #1e1e28;">The tGJS signal surfaces in exactly one of four cohorts &mdash; MSS colorectal cancer &mdash; while pan-cancer, urothelial, and melanoma return null. All three nulls are predicted by the framework, which is the point: a context-specific effect, not a spurious one.</p>
+</div>
         <a href="https://doi.org/10.21203/rs.3.rs-8935902/v1" class="pub-link" target="_blank" rel="noopener">
           DOI: 10.21203/rs.3.rs-8935902/v1 &rarr;
         </a>
