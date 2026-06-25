@@ -145,3 +145,21 @@ body {
   .essay-head .subtitle { font-size: 1.1rem; }
   .essay-body { font-size: 1.1rem; }
 }
+
+/* ── Byline + footnotes + epigraph cite (Witness Essay V onward) ── */
+.essay-head .byline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem; color: #78716c;
+  margin-top: 1rem; line-height: 1.6;
+}
+.essay-body sup.fn-ref { font-size: 0.7em; line-height: 0; }
+.essay-body sup.fn-ref a { border-bottom: none; padding: 0 0.12em; }
+.essay-body blockquote .cite {
+  font-style: normal; font-size: 0.9em;
+  color: #78716c; display: inline-block; margin-top: 0.4rem;
+}
+.essay-body .notes-intro { font-size: 0.95rem; color: #a8a29e; font-style: italic; }
+.essay-body ol.notes { font-size: 0.92rem; color: #a8a29e; line-height: 1.6; }
+.essay-body ol.notes li { margin-bottom: 0.7rem; }
+.essay-body ol.notes li a.fn-back { border-bottom: none; margin-left: 0.35em; color: #78716c; }
+.essay-body ol.notes li a.fn-back:hover { color: #a78bfa; }
