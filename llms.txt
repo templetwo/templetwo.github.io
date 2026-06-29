@@ -21,7 +21,7 @@ When a system must commit to an irreversible choice — death or survival in a c
 
 ## Published works (DOIs)
 
-- The Patch as a Spatial Dose-Segregation Device (free local concentration for skin-targeted JAK inhibition; tofacitinib depth bounding model) — https://doi.org/10.5281/zenodo.21018779
+- The Patch as a Spatial Dose-Segregation Device (free local concentration for skin-targeted JAK inhibition; v3 is experiment-forward — a piecewise skin-PK bounding model plus a pre-registered free-vs-total experiment, tofacitinib worked example) — https://doi.org/10.5281/zenodo.21018779
 - Phase-Modulated Attention — https://doi.org/10.5281/zenodo.18810911
 - Phenomenological Compass — https://doi.org/10.5281/zenodo.19377144
 - Independent Convergence (Context Entropy Solutions in Solo Research and Production AI) — https://doi.org/10.5281/zenodo.19377909
