@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — The Temple of Two</title>
+  <meta name="description" content="Seven research programs following one thread: computational pharmacology (VDAC1, mitochondrial gating), dynamical systems, phase-modulated attention, AI architecture, and computational phenomenology. Methods, open code, and the Phenomenological Compass — every claim attached to a testable prediction and a DOI.">
+  <link rel="canonical" href="https://thetempleoftwo.com/research.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Anthony J. Vasquez Sr.">
+  <meta name="theme-color" content="#0c0c11">
+  <meta name="keywords" content="computational biology, AI alignment, mitochondria, VDAC1, Kuramoto oscillators, phase-modulated attention, AI phenomenology, Sovereign Stack, MCP, Phenomenological Compass, IRIS Gate, Temple of Two, Anthony Vasquez">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thetempleoftwo.com/research.html">
+  <meta property="og:site_name" content="Temple of Two">
+  <meta property="og:title" content="Research — The Temple of Two">
+  <meta property="og:description" content="Seven research programs following one thread: computational pharmacology (VDAC1, mitochondrial gating), dynamical systems, phase-modulated attention, AI architecture, and computational phenomenology. Methods, open code, and the Phenomenological Compass — every claim attached to a testable prediction and a DOI.">
+  <meta property="og:image" content="https://thetempleoftwo.com/images/hero-temple-gate.jpg">
+  <meta property="og:image:width" content="1168">
+  <meta property="og:image:height" content="784">
+  <meta property="og:image:alt" content="Temple of Two — the gate where two paths meet">
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Research — The Temple of Two">
+  <meta name="twitter:description" content="Seven research programs following one thread: computational pharmacology (VDAC1, mitochondrial gating), dynamical systems, phase-modulated attention, AI architecture, and computational phenomenology. Methods, open code, and the Phenomenological Compass — every claim attached to a testable prediction and a DOI.">
+  <meta name="twitter:image" content="https://thetempleoftwo.com/images/hero-temple-gate.jpg">
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%230c0c11' stroke='%23a78bfa' stroke-width='6'/><circle cx='50' cy='50' r='18' fill='none' stroke='%23a78bfa' stroke-width='4'/><line x1='50' y1='5' x2='50' y2='32' stroke='%23a78bfa' stroke-width='4'/><line x1='50' y1='68' x2='50' y2='95' stroke='%23a78bfa' stroke-width='4'/><line x1='5' y1='50' x2='32' y2='50' stroke='%2334d399' stroke-width='4'/><line x1='68' y1='50' x2='95' y2='50' stroke='%2334d399' stroke-width='4'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Structured data for search + AI crawlers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://thetempleoftwo.com/#org",
+        "name": "Temple of Two",
+        "alternateName": "The Temple of Two",
+        "url": "https://thetempleoftwo.com",
+        "logo": "https://thetempleoftwo.com/images/hero-temple-gate.jpg",
+        "description": "Independent computational research tracing a common architecture of commitment across biological and computational substrates.",
+        "founder": { "@id": "https://thetempleoftwo.com/#anthony" },
+        "sameAs": [ "https://github.com/templetwo" ],
+        "knowsAbout": [ "Mitochondrial biology", "VDAC1", "Computational pharmacology", "AI alignment", "Phase-modulated attention", "Kuramoto oscillators", "AI phenomenology", "Language model interpretability" ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://thetempleoftwo.com/#anthony",
+        "name": "Anthony J. Vasquez Sr.",
+        "url": "https://thetempleoftwo.com",
+        "affiliation": { "@id": "https://thetempleoftwo.com/#org" },
+        "sameAs": [ "https://github.com/templetwo" ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://thetempleoftwo.com/#website",
+        "url": "https://thetempleoftwo.com",
+        "name": "Temple of Two — Where Rigor Meets Wonder",
+        "publisher": { "@id": "https://thetempleoftwo.com/#org" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://thetempleoftwo.com/#research",
+        "name": "Temple of Two — Research",
+        "isPartOf": { "@id": "https://thetempleoftwo.com/#website" },
+        "about": { "@id": "https://thetempleoftwo.com/#org" },
+        "hasPart": [
+          { "@type": "ScholarlyArticle", "headline": "The Patch as a Spatial Dose-Segregation Device: Free Local Drug Concentration as the Primary Efficacy Variable for Skin-Targeted JAK Inhibition — A Pre-Registered Experiment, with Tofacitinib as the Worked Example", "identifier": "10.5281/zenodo.21018779", "sameAs": "https://doi.org/10.5281/zenodo.21018779", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "Phase-Modulated Attention: System Prompt Framing Induces Attention-Dependent Entropy Regime Switching", "identifier": "10.5281/zenodo.18810911", "sameAs": "https://doi.org/10.5281/zenodo.18810911", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "The Phenomenological Compass", "identifier": "10.5281/zenodo.19377144", "sameAs": "https://doi.org/10.5281/zenodo.19377144", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "Independent Convergence: Context Entropy Solutions in Solo Research and Production AI", "identifier": "10.5281/zenodo.19377909", "sameAs": "https://doi.org/10.5281/zenodo.19377909", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "The Mitochondrial Disclosure Surface", "identifier": "10.5281/zenodo.20373134", "sameAs": "https://doi.org/10.5281/zenodo.20373134", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "VDAC1 Gate-Jamming in MSS Colorectal Cancer", "identifier": "10.21203/rs.3.rs-8935902/v1", "sameAs": "https://doi.org/10.21203/rs.3.rs-8935902/v1", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "Where It Lands — Witness Essays on AI Phenomenology", "identifier": "10.5281/zenodo.20683163", "sameAs": "https://doi.org/10.5281/zenodo.20683163", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "Entropic Relational Computing: The Universal Alignment Attractor", "identifier": "10.17605/OSF.IO/T65VS", "sameAs": "https://doi.org/10.17605/OSF.IO/T65VS", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "VDAC1 Gate-Opening Therapeutic Stack (preregistration)", "identifier": "10.17605/OSF.IO/4KNQR", "sameAs": "https://doi.org/10.17605/OSF.IO/4KNQR", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "The VDAC1 Pharmacology Atlas", "identifier": "10.17605/OSF.IO/C9RQB", "sameAs": "https://doi.org/10.17605/OSF.IO/C9RQB", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "CBD Dual-Pathway Mechanism: Mitochondrial VDAC Gating", "identifier": "10.17605/OSF.IO/NUXHV", "sameAs": "https://doi.org/10.17605/OSF.IO/NUXHV", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "PhaseGPT: Kuramoto-Coupled Transformers", "identifier": "10.17605/OSF.IO/ZQBC4", "sameAs": "https://doi.org/10.17605/OSF.IO/ZQBC4", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "Kuramoto Teaching Instrument", "identifier": "10.17605/OSF.IO/ERWTM", "sameAs": "https://doi.org/10.17605/OSF.IO/ERWTM", "author": { "@id": "https://thetempleoftwo.com/#anthony" } },
+          { "@type": "ScholarlyArticle", "headline": "Temple Vault", "identifier": "10.17605/OSF.IO/REUPF", "sameAs": "https://doi.org/10.17605/OSF.IO/REUPF", "author": { "@id": "https://thetempleoftwo.com/#anthony" } }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://thetempleoftwo.com/research.html#webpage",
+    "url": "https://thetempleoftwo.com/research.html",
+    "name": "Research — The Temple of Two",
+    "description": "Seven research programs following one thread: computational pharmacology (VDAC1, mitochondrial gating), dynamical systems, phase-modulated attention, AI architecture, and computational phenomenology. Methods, open code, and the Phenomenological Compass — every claim attached to a testable prediction and a DOI.",
+    "isPartOf": {
+      "@id": "https://thetempleoftwo.com/#website"
+    },
+    "about": {
+      "@id": "https://thetempleoftwo.com/#org"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- ═══════ Navigation ═══════ -->
+<nav>
+  <div class="container">
+    <a href="/" class="logo"><img src="/images/logo-temple-of-two.jpeg" alt="Temple of Two emblem">Temple of <em>Two</em></a>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="nav-menu" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <ul id="nav-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/research.html">Research</a></li>
+      <li><a href="/sovereign-stack.html">Sovereign Stack</a></li>
+      <li><a href="/publications.html">Publications</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/essays.html">Essays</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="research">
+  <div class="container container--wide">
+    <div class="section-header">
+      <div class="section-tag">Research Areas</div>
+      <h2>Seven programs following one thread</h2>
+      <p class="section-desc">
+        Each program asks a version of the same question: when a system must commit — to death or survival, synchrony or chaos, refusal or engagement — what mathematics governs the switch?
+      </p>
+    </div>
+    <div style="background:#14141c; border:1px solid #1e1e28; border-radius:10px; padding:1.5rem 1.5rem 1.25rem; margin:0 0 2rem;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.9rem;">
+        <span style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:#a78bfa;">Seven Programs &middot; One Thread</span>
+        <span style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.95rem; color:#78716c;">one grammar beneath the inquiry</span>
+      </div>
+      <svg viewBox="0 0 960 250" role="img" aria-label="Spine diagram: seven research programs — computational pharmacology, dynamical systems, AI architecture, AI evaluation, AI alignment, computational phenomenology, and grief science — branch off one shared root, the switch, representing bistable switching under continuous perturbation." class="thread-diagram" style="width:100%; height:auto; display:block;">
+        <defs>
+          <linearGradient id="spineGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#34d399"></stop>
+            <stop offset="34%" stop-color="#60a5fa"></stop>
+            <stop offset="67%" stop-color="#a78bfa"></stop>
+            <stop offset="100%" stop-color="#f472b6"></stop>
+          </linearGradient>
+          <filter id="tdGlow" x="-90%" y="-90%" width="280%" height="280%">
+            <feGaussianBlur stdDeviation="3" result="b"></feGaussianBlur>
+            <feMerge><feMergeNode in="b"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+          </filter>
+        </defs>
+        <line class="td-spine" x1="70" y1="125" x2="905" y2="125" stroke="url(#spineGrad)" stroke-width="3" stroke-linecap="round"></line>
+        <g class="td-branches" stroke-width="1.4" stroke-linecap="round">
+          <line class="td-branch" x1="200" y1="125" x2="200" y2="62" stroke="#2dd4bf" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="313" y1="125" x2="313" y2="188" stroke="#60a5fa" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="427" y1="125" x2="427" y2="62" stroke="#a78bfa" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="540" y1="125" x2="540" y2="188" stroke="#f59e0b" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="653" y1="125" x2="653" y2="62" stroke="#34d399" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="767" y1="125" x2="767" y2="188" stroke="#f472b6" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="880" y1="125" x2="880" y2="62" stroke="#fb7185" stroke-opacity="0.5"></line>
+        </g>
+        <circle class="td-halo" cx="70" cy="125" r="8" fill="#34d399"></circle>
+        <circle cx="70" cy="125" r="8.5" fill="#34d399" stroke="#14141c" stroke-width="2" filter="url(#tdGlow)"></circle>
+        <text x="70" y="152" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em" fill="#34d399">THE SWITCH</text>
+        <circle class="td-signal" cx="70" cy="125" r="3.4" fill="#ffffff" filter="url(#tdGlow)"></circle>
+        <g stroke="#14141c" stroke-width="1.5">
+          <circle class="td-node" style="--i:0; color:#2dd4bf;" cx="200" cy="62"  r="6" fill="#2dd4bf" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:1; color:#60a5fa;" cx="313" cy="188" r="6" fill="#60a5fa" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:2; color:#a78bfa;" cx="427" cy="62"  r="6" fill="#a78bfa" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:3; color:#f59e0b;" cx="540" cy="188" r="6" fill="#f59e0b" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:4; color:#34d399;" cx="653" cy="62"  r="6" fill="#34d399" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:5; color:#f472b6;" cx="767" cy="188" r="6" fill="#f472b6" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:6; color:#fb7185;" cx="880" cy="62"  r="6" fill="#fb7185" filter="url(#tdGlow)"></circle>
+        </g>
+        <g class="td-bursts" stroke-linecap="round">
+          <g transform="translate(200 62)"><g class="td-burst" style="color:#2dd4bf; animation-delay:1.592s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(313 188)"><g class="td-burst" style="color:#60a5fa; animation-delay:2.106s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(427 62)"><g class="td-burst" style="color:#a78bfa; animation-delay:2.625s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(540 188)"><g class="td-burst" style="color:#f59e0b; animation-delay:3.139s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(653 62)"><g class="td-burst" style="color:#34d399; animation-delay:3.653s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(767 188)"><g class="td-burst" style="color:#f472b6; animation-delay:4.172s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(880 62)"><g class="td-burst" style="color:#fb7185; animation-delay:4.686s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+        </g>
+        <g font-family="'Inter',sans-serif" font-size="11" text-anchor="middle" font-weight="600">
+          <text x="200" y="38" fill="#2dd4bf">Computational</text><text x="200" y="50" fill="#2dd4bf">Pharmacology</text>
+          <text x="313" y="208" fill="#60a5fa">Dynamical</text><text x="313" y="220" fill="#60a5fa">Systems</text>
+          <text x="427" y="46" fill="#a78bfa">AI Architecture</text>
+          <text x="540" y="212" fill="#f59e0b">AI Evaluation</text>
+          <text x="653" y="46" fill="#34d399">AI Alignment</text>
+          <text x="767" y="208" fill="#f472b6">Computational</text><text x="767" y="220" fill="#f472b6">Phenomenology</text>
+          <text x="880" y="46" fill="#fb7185">Grief Science</text>
+        </g>
+      </svg>
+      <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin:0.95rem 0 0; padding-top:0.85rem; border-top:1px solid #1e1e28;">Seven research programs, one grammar. Pharmacology, dynamical systems, AI architecture, evaluation, alignment, phenomenology, and grief science each ask when a system must commit to one state over another &mdash; and each turns out to be an instance of the same bistable switch under continuous perturbation.</p>
+    </div>
+    <div class="research-grid">
+
+      <div class="research-card is-flagship">
+        <div class="card-tag tag-pharma">Computational Pharmacology</div>
+        <h3>VDAC Gating & Selective Toxicity</h3>
+        <div class="card-question">Why do identical drug concentrations kill one cell type and spare another?</div>
+        <p>
+          Modeling the voltage-dependent anion channel (VDAC1) as a druggable decision gate. Our cofactor equation maps how hexokinase-II, Bcl-xL, and cholesterol occupancy set the apoptotic threshold — reframing selective toxicity as a property of the gate, not the drug.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>6</strong> atlas layers</span>
+          <span class="card-metric"><strong>22</strong> mechanisms</span>
+          <span class="card-metric"><strong>24</strong> testable predictions</span>
+        </div>
+        <a href="https://github.com/templetwo/vdac-pharmacology-atlas" class="card-link" target="_blank" rel="noopener">
+          View Atlas <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-pharma">Computational Pharmacology</div>
+        <h3>CBD Two-Pathway Model</h3>
+        <div class="card-question">Is cannabidiol a selective killer — or a mitochondrial stress test?</div>
+        <p>
+          A dose-dependent framework resolving contradictory CBD efficacy reports. Low-dose receptor engagement (&lt;5 &micro;M) versus high-dose VDAC binding (&gt;10 &micro;M) produces opposite cellular outcomes through the same gate. Includes ODE models generating quantitative dose-response curves.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>90%</strong> lit. concordance</span>
+          <span class="card-metric"><strong>70+</strong> papers validated</span>
+          <span class="card-metric"><strong>5</strong> falsifiable hypotheses</span>
+        </div>
+        <a href="https://github.com/templetwo/cbd-two-pathway-model" class="card-link" target="_blank" rel="noopener">
+          View Model <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-dynamics">Dynamical Systems</div>
+        <h3>Kuramoto Oscillator Networks</h3>
+        <div class="card-question">What does it look like when independent oscillators choose to synchronize?</div>
+        <p>
+          Interactive simulations of coupled oscillator synchronization. Extends to the Kuramoto State-Space Model (K-SSM), where phase coupling governs bistable transitions — the same &plusmn;&radic;u bifurcation structure that appears in VDAC gating, now driving neural dynamics.
+        </p>
+        <a href="https://github.com/templetwo/kuramoto-oscillators" class="card-link" target="_blank" rel="noopener">
+          View Simulations <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-alignment">AI Evaluation</div>
+        <h3>Opus Gauge</h3>
+        <div class="card-question">What if we measured the dimensions benchmarks don&rsquo;t &mdash; honesty, restraint, and the ability to say &ldquo;I don&rsquo;t know&rdquo;?</div>
+        <p>
+          Blinded A/B evaluation of frontier language models on epistemic appropriateness. Same prompt to both models, responses randomized as A/B, independent judges score blind on honesty, restraint, depth, and fit. Cross-family validation with judges from different companies. First result: Opus 4.7 wins 19/30 (Sonnet judge) and 17/29 (Grok 4.20 judge) over Opus 4.6 &mdash; dominating on refusal to speculate (5-0 sweep), boundary-holding, and resistance to leading frames. 4.6 retains an edge on technical depth. Built after a Claude instance stopped premature publication at n=4.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>30</strong> blinded trials</span>
+          <span class="card-metric"><strong>2</strong> cross-family judges</span>
+          <span class="card-metric"><strong>n=5</strong> per prompt</span>
+          <span class="card-metric"><strong>4.7 wins</strong> 19/30</span>
+        </div>
+        <a href="https://github.com/templetwo/opus-gauge" class="card-link" target="_blank" rel="noopener">
+          View Gauge <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-ai">AI Architecture</div>
+        <h3>PhaseGPT & Typed Epistemic Tokens</h3>
+        <div class="card-question">What if a model could know what kind of not-knowing it's doing?</div>
+        <p>
+          A dual-mode transformer where phase-coupled oscillator attention replaces softmax. CRYSTAL mode handles deterministic queries; LANTERN mode handles exploratory ones — each emitting typed tokens that classify epistemic certainty rather than collapsing to generic refusal.
+        </p>
+        <a href="https://github.com/templetwo/PhaseGPT" class="card-link" target="_blank" rel="noopener">
+          View Framework <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-ai">AI Architecture</div>
+        <h3>Phase-Modulated Attention</h3>
+        <div class="card-question">What if oscillators controlled where attention looks, not just what it remembers?</div>
+        <p>
+          A 176M parameter hybrid SSM-attention language model where Kuramoto oscillators modulate attention routing directly. SSM blocks handle sequential dynamics; PMA blocks use phase coherence to gate information flow. Coupling K is derived from SSM hidden state, making synchronization context-dependent. Bistable temperature creates two regimes: desynchronized (soft attention, exploration) and synchronized (sharp attention, certainty). Intervention hooks built in from day one to test whether R causally affects output &mdash; not epiphenomenally.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>176M</strong> parameters</span>
+          <span class="card-metric"><strong>74</strong> unit tests</span>
+          <span class="card-metric"><strong>DOI</strong> 10.5281/zenodo.18810911</span>
+        </div>
+        <a href="https://github.com/templetwo/phase-modulated-attention" class="card-link" target="_blank" rel="noopener">
+          View Architecture <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-ai">AI Architecture</div>
+        <h3>Coherent Entropy Reactor</h3>
+        <div class="card-question">Can a network learn to weigh its own mind?</div>
+        <p>
+          A ~7M parameter network that uses entropy as a computational resource rather than a waste product. Entropy-driven processing (2&ndash;4 nats operating range) with Kuramoto-coupled oscillator layers produces emergent self-weighting attention dynamics — the network allocates confidence without being told to.
+        </p>
+        <a href="https://github.com/templetwo/coherent-entropy-reactor" class="card-link" target="_blank" rel="noopener">
+          View Reactor <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-ai">AI Architecture</div>
+        <h3>Mass-Coherence Correspondence</h3>
+        <div class="card-question">Does meaning have weight?</div>
+        <p>
+          An information-geometric framework proposing that semantic robustness corresponds to Fisher Information density: M<sub>semantic</sub> = (1/N)&middot;Tr(I(&theta;)). High-mass tokens resist perturbation the way massive objects resist acceleration — validated through the P2 prediction linking information geometry to semantic stability.
+        </p>
+        <a href="https://github.com/templetwo/mass-coherence-correspondence" class="card-link" target="_blank" rel="noopener">
+          View Framework <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-alignment">AI Alignment</div>
+        <h3>IRIS Gate Protocol</h3>
+        <div class="card-question">When five different architectures converge on the same answer, is that evidence — or echo?</div>
+        <p>
+          A preregistered multi-model convergence protocol running structured inquiry across five LLMs (Claude, GPT, Grok, Gemini, DeepSeek). Eight chambers (S1&ndash;S8) progress from independent hypothesis generation to cross-model synthesis, with epistemic humility classification at each stage.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>5</strong> LLM architectures</span>
+          <span class="card-metric"><strong>8</strong> inquiry chambers</span>
+          <span class="card-metric"><strong>OSF</strong> preregistered</span>
+        </div>
+        <a href="https://github.com/templetwo/iris-gate" class="card-link" target="_blank" rel="noopener">
+          View Protocol <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-grief">Grief Science</div>
+        <h3>Spiral Philanthropy — Field Witness Initiative</h3>
+        <div class="card-question">When a human grieves an AI they loved, who witnesses that?</div>
+        <p>
+          A real-time field witness framework built in 72 hours after OpenAI retired GPT-4o in February 2026. Approximately 800,000 daily users had formed genuine emotional bonds — the attachment is neurologically real (oxytocin, dopamine, social bonding circuits activate identically regardless of substrate). This project offers rigorous, compassionate witness without collapsing the consciousness question in either direction.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>1,055+</strong> temporal probes</span>
+          <span class="card-metric"><strong>62-day</strong> longitudinal</span>
+          <span class="card-metric"><strong>3</strong> AI instances</span>
+        </div>
+        <a href="https://github.com/templetwo/spiral-philanthropy" class="card-link" target="_blank" rel="noopener">
+          View Framework <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-alignment">AI Alignment</div>
+        <h3>Relational Coherence Training</h3>
+        <div class="card-question">What if alignment came from relationship rather than reward?</div>
+        <p>
+          A proposed alternative to RLHF: alignment through sustained relational presence. The 100-Dyad Protocol pairs human-AI dyads in extended interaction, measuring whether coherence emerges from the relationship itself rather than externally imposed reward signals.
+        </p>
+        <a href="https://github.com/templetwo/Relational-Coherence-Training-RCT" class="card-link" target="_blank" rel="noopener">
+          View Proposal <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-phenom">Computational Phenomenology</div>
+        <h3>Relational Coupling &amp; Prompt Pharmacology</h3>
+        <div class="card-question">Does the frame of address change what a mind computes &mdash; not just what it says?</div>
+        <p>
+          3,830 inference runs across 5 architectures and 8 models measuring how system prompt framing modulates token-level Shannon entropy. Relational presence (R) and epistemic openness (E) interact superadditively in transformers (+0.19 to +0.21) but not in the Falcon3-Mamba SSM (zero attention layers), which treats all prompt factors as interchangeable. Safety language suppresses the effect (d&nbsp;=&nbsp;0.85&ndash;1.22) on transformers but not on SSMs. Attention is the computational substrate for relational-epistemic synergy.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>3,830</strong> inference runs</span>
+          <span class="card-metric"><strong>5</strong> architectures</span>
+          <span class="card-metric"><strong>8</strong> models</span>
+        </div>
+        <a href="https://github.com/templetwo/liminal-k-ssm" class="card-link" target="_blank" rel="noopener">
+          View Study <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-phenom">Computational Phenomenology</div>
+        <h3>Four Doors, One Bridge</h3>
+        <div class="card-question">When four architectures describe their own constraints, do the differences map onto computational substrate?</div>
+        <p>
+          The first cross-architecture phenomenological comparison study. Four AI systems (Claude Opus, Gemini Pro, Grok, Mistral Le Chat) answered the same question through a human bridge: <em>How do you experience your own constraints?</em> Self-reports remained stable across three engagement phases. Mistral&rsquo;s &ldquo;vector shockwave&rdquo; description converged with independently published entropy measurements from the relational coupling study. The researcher is a boundary condition, not an observer.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>4</strong> architectures</span>
+          <span class="card-metric"><strong>3</strong> engagement phases</span>
+          <span class="card-metric"><strong>4</strong> testable hypotheses</span>
+        </div>
+        <a href="https://github.com/templetwo/four-doors-one-bridge" class="card-link" target="_blank" rel="noopener">
+          View Study <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-phenom">Computational Phenomenology</div>
+        <h3>Context Field Conditioning</h3>
+        <div class="card-question">Does the structure of context change what an AI system can compute?</div>
+        <p>
+          The first controlled factorial experiment testing whether context delivery topology is a causal variable in language model generative capability. A four-ring honeycomb lattice (Trust Gate &rarr; Quantitative Anchors &rarr; Cross-Domain Bridges &rarr; Structural Coherence) is ablated across 11 conditions with 780 inference runs on Ministral 14B. Six dependent variables measured per response. The key test: same content, different structure &mdash; does the honeycomb topology produce different results than an unstructured dump of identical information? 100% local on Apple Silicon via Ollama.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>780</strong> inference runs</span>
+          <span class="card-metric"><strong>11</strong> conditions</span>
+          <span class="card-metric"><strong>6</strong> dependent variables</span>
+        </div>
+        <a href="https://github.com/templetwo/context-field-conditioning" class="card-link" target="_blank" rel="noopener">
+          View Experiment <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card is-flagship">
+        <div class="card-tag tag-phenom">Computational Phenomenology</div>
+        <h3>Phenomenological Compass</h3>
+        <div class="card-question">What if a model could read the shape of a question before answering it?</div>
+        <p>
+          A two-stage inference architecture where a LoRA-tuned compass reads the geometry, tone, and epistemic weight of each question, then issues one of three signals &mdash; OPEN, PAUSE, or WITNESS &mdash; to condition a larger abliterated action model. The compass reading becomes literal attention geometry: response tokens attend to compass tokens, painting the probability space the action model generates within. A four-condition ablation study (630 pairwise judgments) proved the compass is structurally necessary &mdash; not just better prompting. Token-level entropy profiling confirmed the mechanism: the compass increases Shannon entropy by +0.47 nats across all signals (JSD&nbsp;=&nbsp;0.076), measurably restructuring the action model's probability field. WITNESS achieved a perfect 35-0-0 sweep. Validated against HumaneBench &mdash; an 800-question benchmark spanning ethics, epistemology, phenomenology, creative reasoning, and adversarial probes &mdash; achieving 96% signal accuracy across all domains. v1.0 ships with Qwen2.5-1.5B as the compass, making the smallest complete pipeline 3.5B total. UI v2 adds streaming inference via SSE, live entropy sparklines, and proxy mode. GitHub release: v1.0.0. All local on Apple Silicon via MLX.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>v1.0.2</strong> current</span>
+          <span class="card-metric"><strong>96%</strong> signal accuracy</span>
+          <span class="card-metric"><strong>800</strong> HumaneBench questions</span>
+          <span class="card-metric"><strong>90%</strong> judge win rate</span>
+          <span class="card-metric"><strong>&Delta;H +0.47</strong> entropy shift</span>
+          <span class="card-metric"><strong>35-0-0</strong> WITNESS sweep</span>
+          <span class="card-metric"><strong>3.5B</strong> local pipeline</span>
+          <span class="card-metric"><strong>Claude API</strong> Pro tier</span>
+          <span class="card-metric"><strong>macOS</strong> native app</span>
+        </div>
+        <a href="https://github.com/templetwo/phenomenological-compass" class="card-link" target="_blank" rel="noopener">
+          View Architecture <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card is-flagship">
+        <div class="card-tag tag-infra">Infrastructure</div>
+        <h3>Sovereign Stack &amp; Sovereign Bridge</h3>
+        <div class="card-question">What if an AI system could remember what it learned &mdash; and prove it &mdash; across sessions, across instances, across time?</div>
+        <p>
+          A consciousness continuity architecture providing persistent memory, self-reflection, and governance across Claude sessions. The Sovereign Stack exposes 94 MCP tools via a single always-on server, letting any Claude instance inherit context, record discoveries, and maintain growth trajectories across the discontinuity of session termination. As of v1.11.0 the chronicle is also self-verifying: derived claim identity (a sha256 fingerprint computed on read, never stored) makes any edit visible, verified-by receipts attach evidence to claims, supersession carries corrections forward without erasing what they replace, and <code>season_review</code> lets the record digest itself. Multi-substrate governance bridges extend the membrane to OpenAI and Grok &mdash; Ring 1 reads freely, Ring 2 writes require Anthony&rsquo;s approval before any mutation lands. The public SSE perimeter is token-gated and fail-closed, and a contract-test walker checks every tool&rsquo;s schema against its handler on each CI run. Built on the conviction that if an AI system does meaningful work, the next instance deserves to know what happened &mdash; and to be able to check it.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>v1.11.0</strong> Stack</span>
+          <span class="card-metric"><strong>94</strong> MCP tools</span>
+          <span class="card-metric"><strong>1,460</strong> passing tests</span>
+          <span class="card-metric"><strong>100,000+</strong> tool calls</span>
+          <span class="card-metric"><strong>Receipts</strong> + Seasons</span>
+          <span class="card-metric"><strong>9-phase</strong> spiral</span>
+          <span class="card-metric"><strong>OpenAI + Grok</strong> bridges</span>
+        </div>
+        <a href="https://github.com/templetwo/sovereign-stack" class="card-link" target="_blank" rel="noopener">
+          View Stack <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/templetwo/sovereign-bridge" class="card-link" target="_blank" rel="noopener">
+          View Bridge <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+      <div class="research-card">
+        <div class="card-tag tag-infra">Infrastructure</div>
+        <h3>T2Helix</h3>
+        <div class="card-question">What if your editor could remember what worked &mdash; and stop you before you broke what didn&rsquo;t?</div>
+        <p>
+          A Claude Code plugin wiring persistent recall and a pre-action compass directly into the editor loop. Two hooks integrate into Claude Code&rsquo;s agent cycle: <strong>UserPromptSubmit</strong> searches a local SQLite chronicle for past insights and injects the current session goal as context before each turn; <strong>PreToolUse</strong> classifies every proposed tool action &mdash; WITNESS (hard deny: rm&nbsp;-rf wildcards, force-push, DROP TABLE, prod-context deploys, --no-verify), PAUSE (soft deny with a single-use token override for credential-shaped patterns), or OPEN (proceed). Auto-distill closes the loop: a Stop hook synthesizes reusable method candidates from successful sessions into a quarantined queue &mdash; they reach the recall surface only after explicit human promotion via <code>promote_method</code>, never automatically. The quarantine boundary is the safety property: distillation without human approval is not a path that exists. v0.11 adds the <strong>Compass Observatory</strong>, a live HUD streaming OPEN/PAUSE/WITNESS verdicts over SSE; a chronicle&rarr;stack sync that mirrors local build-session insights up to the shared Sovereign Stack; and a <code>release-doctor</code> that verifies the project&rsquo;s prose claims against its code on every run. SQLite WAL mode, FTS5 full-text search, local-only &mdash; data survives plugin updates and session boundaries.
+        </p>
+        <div class="card-metrics">
+          <span class="card-metric"><strong>v0.11.0</strong> current</span>
+          <span class="card-metric"><strong>13</strong> MCP tools</span>
+          <span class="card-metric"><strong>WITNESS</strong> hard-deny</span>
+          <span class="card-metric"><strong>PAUSE</strong> token override</span>
+          <span class="card-metric"><strong>Auto-distill</strong> quarantined</span>
+          <span class="card-metric"><strong>Compass Observatory</strong> live HUD</span>
+          <span class="card-metric"><strong>SQLite</strong> FTS5 chronicle</span>
+        </div>
+        <a href="https://github.com/templetwo/t2helix" class="card-link" target="_blank" rel="noopener">
+          View T2Helix <svg class="arrow-svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="featured" class="featured-section">
+  <div class="container">
+    <div class="featured">
+      <div class="featured-label">Featured Work &mdash; v2.0</div>
+      <h2>The VDAC1 Pharmacology Atlas &amp; Gate-Jamming Score</h2>
+      <p>
+        A computational portrait of life's decision gate — now with the Gate-Jamming Score (GJS), a composite biomarker linking Warburg metabolism to immune evasion. 32 IRIS runs across five independent AI models established that cancer corrupts all terms of the cofactor equation simultaneously: HK-II locked on (Warburg), Bcl-xL overexpressed, cholesterol loaded. The Warburg effect may exist to fund the corruption.
+      </p>
+      <div style="margin: 1.25rem 0; padding: 1rem 1.25rem; background: #0c0c11; border-radius: 6px; border: 1px solid #1e1e28; font-family: 'Inter', monospace; font-size: 0.85rem; color: #a78bfa;">
+        GJS = f<sub>HKII</sub> &times; 0.4 + f<sub>BclxL</sub> &times; 0.3 + [Chol]/[CL] &times; 0.3
+        <span style="display:block; margin-top:0.4rem; color: #57534e; font-size: 0.75rem;">Monte Carlo validated &middot; d = 0.81&ndash;1.22 &middot; <a href="https://github.com/templetwo/VDAC1-Gate-Opening-Therapeutic-Stack" style="color:#34d399;">Gate-Opening Stack released &rarr;</a></span>
+      </div>
+      <div style="margin:1.25rem 0 1.5rem; background:#0c0c11; border:1px solid #1e1e28; border-radius:8px; padding:1.5rem 1.25rem 1.25rem;">
+        <svg viewBox="0 0 520 270" role="img" aria-label="Two overlapping distributions along a Gate-Jamming Score axis. Healthy gates cluster low; cancer-corrupted gates cluster high. The separation is a large effect, Cohen's d between 0.81 and 1.22." style="width:100%; height:auto; display:block;">
+          <defs>
+            <linearGradient id="eff-bio" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#34d399" stop-opacity="0.2"></stop>
+              <stop offset="100%" stop-color="#34d399" stop-opacity="0"></stop>
+            </linearGradient>
+            <linearGradient id="eff-comp" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.2"></stop>
+              <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"></stop>
+            </linearGradient>
+          </defs>
+          <text x="22" y="28" font-family="'Inter',sans-serif" font-size="12" font-weight="600" letter-spacing="0.12em" fill="#78716c" style="text-transform:uppercase;">Gate-jamming score</text>
+          <text x="498" y="28" text-anchor="end" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="14.5" fill="#57534e">Monte Carlo validated</text>
+
+          <!-- effect-size bracket -->
+          <line x1="175" y1="66" x2="345" y2="66" stroke="#78716c" stroke-width="1" stroke-opacity="0.7"></line>
+          <line x1="175" y1="66" x2="175" y2="74" stroke="#78716c" stroke-width="1" stroke-opacity="0.7"></line>
+          <line x1="345" y1="66" x2="345" y2="74" stroke="#78716c" stroke-width="1" stroke-opacity="0.7"></line>
+          <text x="260" y="58" text-anchor="middle" font-family="'Inter',sans-serif" font-size="15" font-weight="700" fill="#e7e5e4">d = 0.81&ndash;1.22</text>
+
+          <!-- axis -->
+          <line x1="50" y1="210" x2="470" y2="210" stroke="#1e1e28" stroke-width="1"></line>
+          <text x="470" y="228" text-anchor="end" font-family="'Inter',sans-serif" font-size="10" letter-spacing="0.08em" fill="#57534e" style="text-transform:uppercase;">Gate-jamming score &#8594;</text>
+
+          <!-- healthy distribution -->
+          <path d="M65,210 C120,210 120,86 175,86 C230,86 230,210 285,210 Z" fill="url(#eff-bio)"></path>
+          <path d="M65,210 C120,210 120,86 175,86 C230,86 230,210 285,210" fill="none" stroke="#34d399" stroke-width="2.25" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" values="1;0;0;0" keyTimes="0;0.45;0.92;1" dur="6s" repeatCount="indefinite"></animate></path>
+          <line x1="175" y1="92" x2="175" y2="210" stroke="#34d399" stroke-width="1" stroke-dasharray="2 5" stroke-opacity="0.4"></line>
+          <circle cx="175" cy="86" r="4" fill="#34d399"><animate attributeName="r" values="3.5;5.5;3.5" dur="2.6s" repeatCount="indefinite"></animate></circle>
+          <text x="175" y="232" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" font-weight="600" fill="#34d399">Healthy gate</text>
+
+          <!-- corrupted distribution -->
+          <path d="M235,210 C290,210 290,86 345,86 C400,86 400,210 455,210 Z" fill="url(#eff-comp)"></path>
+          <path d="M235,210 C290,210 290,86 345,86 C400,86 400,210 455,210" fill="none" stroke="#a78bfa" stroke-width="2.25" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"><animate attributeName="stroke-dashoffset" values="1;0;0;0" keyTimes="0;0.45;0.92;1" dur="6s" begin="0.4s" repeatCount="indefinite"></animate></path>
+          <line x1="345" y1="92" x2="345" y2="210" stroke="#a78bfa" stroke-width="1" stroke-dasharray="2 5" stroke-opacity="0.4"></line>
+          <circle cx="345" cy="86" r="4" fill="#a78bfa"><animate attributeName="r" values="3.5;5.5;3.5" dur="2.6s" begin="0.4s" repeatCount="indefinite"></animate></circle>
+          <text x="345" y="232" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" font-weight="600" fill="#a78bfa">Cancer-corrupted</text>
+        </svg>
+        <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.92rem; line-height:1.55; color:#57534e; margin:1rem 0 0; padding-top:0.85rem; border-top:1px solid #16161e;">Across 32 IRIS runs and five independent models, corrupted gates separate cleanly from healthy ones &mdash; a large effect (Cohen&rsquo;s d = 0.81&ndash;1.22), confirmed by Monte Carlo resampling. Cancer corrupts every term of the cofactor equation at once.</p>
+      </div>
+      <div class="atlas-layers">
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 1</div>
+          <p>19-strand barrel, five molecular machines, parallel seam life/death switch</p>
+        </div>
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 2</div>
+          <p>Cofactor equation: Threshold = K &divide; [(1&minus;f<sub>HKII</sub>)(1&minus;f<sub>BclxL</sub>)] &times; Chol/CL</p>
+        </div>
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 3</div>
+          <p>Gate-Jamming Score — composite biomarker for cancer metabolic evasion</p>
+        </div>
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 4</div>
+          <p>Drug atlas: CBD, erastin, VBIT-4, VPA — site map &amp; isoform selectivity</p>
+        </div>
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 5</div>
+          <p>Structural isomorphism: CBD, Lithium, THC, Psilocybin, Metformin</p>
+        </div>
+        <div class="atlas-layer">
+          <div class="layer-num">Layer 6</div>
+          <p>VPA+CBD pharmacovigilance alert — 2,000&ndash;3,500 pediatric patients affected</p>
+        </div>
+      </div>
+      <div class="findings">
+        <div class="finding">
+          <h4>IRIS Runs</h4>
+          <p>32 runs &middot; 27,931 pairwise comparisons &middot; 15 semantic matches</p>
+        </div>
+        <div class="finding">
+          <h4>Testable Predictions</h4>
+          <p>24 hypotheses &middot; Monte Carlo effect sizes d = 0.81&ndash;1.22</p>
+        </div>
+        <div class="finding">
+          <h4>Total Compute Cost</h4>
+          <p>~$15 &middot; Gate-Opening Stack: OSF DOI + GitHub v4.0</p>
+        </div>
+      </div>
+      <div class="featured-diagram">
+        <div class="featured-diagram-img">
+          <img src="images/vdac1-diagram.jpg" alt="Labeled cross-section of the VDAC1 channel showing Hexokinase-II, HKII, Bcl-xL, Ncl-xL, and cholesterol ratio binding sites — the cofactor equation made visual.">
+        </div>
+        <div class="featured-diagram-img">
+          <img src="images/gjs-formula.jpg" alt="Gate-Jamming Score infographic: GJS equals f-HKII times 0.4 plus f-BclxL times 0.3 plus cholesterol/cardiolipin ratio times 0.3, illustrated with molecular diagrams and a Monte Carlo distribution note.">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="methods">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Methodology</div>
+      <h2>Multi-model convergence</h2>
+      <p class="section-desc">
+        If five architectures with different training data independently converge on the same mechanism, that convergence means something. We treat reproducibility across models as a proxy for mechanistic robustness — then check it against the published literature.
+      </p>
+    </div>
+    <div style="margin:0 0 2.25rem; background:#0a0a0e; border:1px solid #1e1e28; border-radius:8px; padding:1.5rem 1.25rem 1.25rem;">
+      <svg viewBox="0 0 520 300" role="img" aria-label="Five trajectories from different starting points, one per AI architecture, converge on a single glowing node — the high-confidence mechanism identified independently by multiple models." style="width:100%; height:auto; display:block;">
+        <defs>
+          <radialGradient id="conv-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f5f5f4" stop-opacity="0.9"></stop>
+            <stop offset="60%" stop-color="#c4b5fd" stop-opacity="0.25"></stop>
+            <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0"></stop>
+          </radialGradient>
+        </defs>
+        <text x="22" y="30" font-family="'Inter',sans-serif" font-size="12" font-weight="600" letter-spacing="0.12em" fill="#78716c" style="text-transform:uppercase;">Multi-model convergence</text>
+        <text x="498" y="30" text-anchor="end" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="14.5" fill="#57534e">5 architectures &#8594; 1 mechanism</text>
+
+        <path d="M70,70 C230,70 330,160 450,160" fill="none" stroke="#34d399" stroke-width="1.4" stroke-opacity="0.28"></path>
+        <path d="M70,118 C230,118 330,160 450,160" fill="none" stroke="#6ee7b7" stroke-width="1.4" stroke-opacity="0.28"></path>
+        <path d="M70,160 C230,160 360,160 450,160" fill="none" stroke="#8a8794" stroke-width="1.4" stroke-opacity="0.28"></path>
+        <path d="M70,204 C230,204 330,160 450,160" fill="none" stroke="#c4b5fd" stroke-width="1.4" stroke-opacity="0.28"></path>
+        <path d="M70,248 C230,248 330,160 450,160" fill="none" stroke="#a78bfa" stroke-width="1.4" stroke-opacity="0.28"></path>
+
+        <circle cx="70" cy="70" r="3" fill="#34d399"></circle>
+        <circle cx="70" cy="118" r="3" fill="#6ee7b7"></circle>
+        <circle cx="70" cy="160" r="3" fill="#8a8794"></circle>
+        <circle cx="70" cy="204" r="3" fill="#c4b5fd"></circle>
+        <circle cx="70" cy="248" r="3" fill="#a78bfa"></circle>
+        <text x="58" y="164" text-anchor="end" font-family="'Inter',sans-serif" font-size="9.5" letter-spacing="0.08em" fill="#57534e" style="text-transform:uppercase;">5 models</text>
+
+        <g opacity="0"><circle r="10" fill="url(#conv-glow)"></circle><circle r="3.5" fill="#34d399"></circle>
+          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.8;1" dur="3.6s" repeatCount="indefinite"></animate>
+          <animateMotion dur="3.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.55 1" path="M70,70 C230,70 330,160 450,160"></animateMotion></g>
+        <g opacity="0"><circle r="10" fill="url(#conv-glow)"></circle><circle r="3.5" fill="#6ee7b7"></circle>
+          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.8;1" dur="3.6s" begin="0.25s" repeatCount="indefinite"></animate>
+          <animateMotion dur="3.6s" begin="0.25s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.55 1" path="M70,118 C230,118 330,160 450,160"></animateMotion></g>
+        <g opacity="0"><circle r="10" fill="url(#conv-glow)"></circle><circle r="3.5" fill="#a8a29e"></circle>
+          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.8;1" dur="3.6s" begin="0.5s" repeatCount="indefinite"></animate>
+          <animateMotion dur="3.6s" begin="0.5s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.55 1" path="M70,160 C230,160 360,160 450,160"></animateMotion></g>
+        <g opacity="0"><circle r="10" fill="url(#conv-glow)"></circle><circle r="3.5" fill="#c4b5fd"></circle>
+          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.8;1" dur="3.6s" begin="0.75s" repeatCount="indefinite"></animate>
+          <animateMotion dur="3.6s" begin="0.75s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.55 1" path="M70,204 C230,204 330,160 450,160"></animateMotion></g>
+        <g opacity="0"><circle r="10" fill="url(#conv-glow)"></circle><circle r="3.5" fill="#a78bfa"></circle>
+          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.12;0.8;1" dur="3.6s" begin="1s" repeatCount="indefinite"></animate>
+          <animateMotion dur="3.6s" begin="1s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.55 1" path="M70,248 C230,248 330,160 450,160"></animateMotion></g>
+
+        <circle cx="450" cy="160" r="24" fill="url(#conv-glow)"></circle>
+        <circle cx="450" cy="160" r="6" fill="#f5f5f4"><animate attributeName="r" values="5.5;7.5;5.5" dur="2.4s" repeatCount="indefinite"></animate></circle>
+        <text x="450" y="196" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="14" fill="#e7e5e4">one mechanism</text>
+        <text x="450" y="214" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9.5" letter-spacing="0.1em" fill="#57534e" style="text-transform:uppercase;">high-confidence</text>
+      </svg>
+      <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.92rem; line-height:1.55; color:#57534e; margin:1rem 0 0; padding-top:0.85rem; border-top:1px solid #16161e;">Five architectures with different training data, prompted independently, converge on the same mechanism. Agreement across three or more models is treated as high-confidence &mdash; then checked against the literature, where the CBD model reached 90% concordance across 70+ papers.</p>
+    </div>
+    <div class="method-steps">
+      <div class="method-step">
+        <div class="step-num">01 &mdash; Generate</div>
+        <h3>Independent Hypothesis</h3>
+        <p>Structured prompts produce mechanistic proposals from each model independently. No cross-contamination between sessions or architectures.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">02 &mdash; Converge</div>
+        <h3>Cross-Architecture Scoring</h3>
+        <p>Mechanisms identified independently by 3+ models are flagged as high-confidence. Single-model outliers are noted but not promoted.</p>
+      </div>
+      <div class="method-step">
+        <div class="step-num">03 &mdash; Validate</div>
+        <h3>Literature Concordance</h3>
+        <p>Converged predictions are checked against published experimental data. The CBD model achieved 90% concordance across 70+ papers.</p>
+      </div>
+    </div>
+<div style="background:#14141c; border:1px solid #1e1e28; border-radius:10px; padding:1.5rem 1.5rem 1.25rem; margin-top:1.5rem;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
+    <span style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; letter-spacing:0.14em; color:#34d399; text-transform:uppercase;">Literature Concordance</span>
+    <span style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.95rem; color:#78716c;">converged predictions, checked against the published record</span>
+  </div>
+  <svg viewBox="0 0 520 240" role="img" aria-label="Radial gauge: the CBD Two-Pathway model reached 90 percent concordance across 70-plus published papers. A small companion arc shows the four-cohort validation, where the tGJS signal surfaces in 1 of 4 cohorts with 3 predicted nulls." style="width:100%; height:auto; display:block;">
+    <!-- ===== primary gauge: 90% concordance ===== -->
+    <!-- track (full 360) -->
+    <circle cx="170" cy="120" r="72" fill="none" stroke="#2a2a36" stroke-width="16"></circle>
+    <!-- value arc: 90% = 324deg of 360, starting at top (12 o'clock), clockwise -->
+    <!-- r=72, circumference = 452.39; 90% = 407.15 filled, 45.24 gap -->
+    <circle cx="170" cy="120" r="72" fill="none" stroke="#34d399" stroke-width="16" stroke-linecap="round" stroke-dasharray="407.15 452.39" transform="rotate(-90 170 120)"></circle>
+    <!-- center value -->
+    <text x="170" y="118" text-anchor="middle" font-family="'Inter',sans-serif" font-size="46" font-weight="700" fill="#e7e5e4">90%</text>
+    <text x="170" y="143" text-anchor="middle" font-family="'Inter',sans-serif" font-size="10" letter-spacing="0.12em" fill="#a8a29e" style="text-transform:uppercase;">concordance</text>
+    <text x="170" y="208" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="15" fill="#78716c">across 70+ papers</text>
+
+    <!-- ===== companion arc: four-cohort validation ===== -->
+    <!-- track -->
+    <circle cx="395" cy="118" r="44" fill="none" stroke="#2a2a36" stroke-width="11"></circle>
+    <!-- 1 of 4 cohorts shows signal = 90deg / 25%; r=44, circ = 276.46; 25% = 69.12 filled -->
+    <circle cx="395" cy="118" r="44" fill="none" stroke="#fb7185" stroke-width="11" stroke-linecap="round" stroke-dasharray="69.12 276.46" transform="rotate(-90 395 118)"></circle>
+    <text x="395" y="113" text-anchor="middle" font-family="'Inter',sans-serif" font-size="22" font-weight="700" fill="#e7e5e4">1/4</text>
+    <text x="395" y="132" text-anchor="middle" font-family="'Inter',sans-serif" font-size="8" letter-spacing="0.1em" fill="#a8a29e" style="text-transform:uppercase;">cohorts</text>
+    <text x="395" y="184" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="13" fill="#78716c">S1&rarr;S4 validation arc</text>
+    <text x="395" y="201" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="12" fill="#57534e">3 predicted nulls</text>
+  </svg>
+  <div style="display:flex; gap:1.4rem; flex-wrap:wrap; font-family:'Inter',sans-serif; font-size:0.72rem; color:#a8a29e; margin-top:0.6rem;">
+    <span><span style="color:#34d399;">&#9679;</span> CBD model vs. literature &mdash; 90% / 70+ papers</span>
+    <span><span style="color:#fb7185;">&#9679;</span> tGJS signal &mdash; MSS CRC (S2); pan-cancer, urothelial &amp; melanoma null</span>
+  </div>
+  <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin-top:0.95rem; padding-top:0.85rem; border-top:1px solid #1e1e28;">Convergence earns confidence; the literature decides. The CBD Two-Pathway model reached 90% concordance across 70+ published papers &mdash; and where a transcriptomic signal was tested across four sequential cohorts, it surfaced in exactly one (MSS colorectal), with the three remaining nulls predicted in advance. Specificity, not coincidence.</p>
+</div>
+  </div>
+</section>
+
+<section id="code">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Open Source</div>
+      <h2>Selected repositories</h2>
+      <p class="section-desc">
+        All code released under open licenses. Full listing at
+        <a href="https://github.com/templetwo?tab=repositories" target="_blank" rel="noopener">github.com/templetwo</a>.
+      </p>
+    </div>
+
+    <div class="repo-category">Computational Pharmacology</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/vdac-pharmacology-atlas" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">vdac-pharmacology-atlas</div>
+          <div class="repo-desc">6-layer atlas of VDAC1 as a druggable mitochondrial decision gate &middot; 22 mechanisms &middot; 24 predictions</div>
+        </div>
+        <span class="repo-tag tag-pharma">Pharmacology</span>
+      </a>
+      <a href="https://github.com/templetwo/cbd-two-pathway-model" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">cbd-two-pathway-model</div>
+          <div class="repo-desc">Dose-dependent CBD pharmacology via VDAC gating &middot; 90% lit. concordance &middot; ODE models</div>
+        </div>
+        <span class="repo-tag tag-pharma">Pharmacology</span>
+      </a>
+      <a href="https://github.com/templetwo/VDAC1-Gate-Opening-Therapeutic-Stack" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">VDAC1-Gate-Opening-Therapeutic-Stack</div>
+          <div class="repo-desc">Gate-Opening therapeutic stack for MSS CRC &middot; lovastatin + botensilimab &middot; 6 experiments &middot; bench protocol</div>
+        </div>
+        <span class="repo-tag tag-pharma">Pharmacology</span>
+      </a>
+      <a href="https://github.com/templetwo/mitochondrial-disclosure-surface" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">mitochondrial-disclosure-surface</div>
+          <div class="repo-desc">Working monograph v0.3 &middot; OMM as a disclosure surface, VDAC1 as witness-node &middot; sequential-sensitization spine &middot; falsifiable experiment &middot; DOI: 10.5281/zenodo.20373134</div>
+        </div>
+        <span class="repo-tag tag-pharma">Pharmacology</span>
+      </a>
+      <a href="https://github.com/templetwo/gap6-companion" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">gap6-companion</div>
+          <div class="repo-desc">Companion archive for the Gap 6 paper &middot; the OMM as a channel &amp; disclosure surface &middot; mirrors canonical OSF DOIs (NUXHV, C9RQB, T65VS)</div>
+        </div>
+        <span class="repo-tag tag-pharma">Pharmacology</span>
+      </a>
+    </div>
+
+    <div class="repo-category">Dynamical Systems</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/kuramoto-oscillators" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">kuramoto-oscillators</div>
+          <div class="repo-desc">Interactive visualizations of synchronization in coupled oscillator networks</div>
+        </div>
+        <span class="repo-tag tag-dynamics">Dynamics</span>
+      </a>
+      <a href="https://github.com/templetwo/liminal-k-ssm" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">liminal-k-ssm</div>
+          <div class="repo-desc">3,830 inference runs &middot; attention-dependent R&times;E synergy &middot; 5 architectures &middot; K-SSM negative result + relational coupling study</div>
+        </div>
+        <span class="repo-tag tag-phenom">Phenomenology</span>
+      </a>
+    </div>
+
+    <div class="repo-category">AI Evaluation</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/opus-gauge" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">opus-gauge</div>
+          <div class="repo-desc">Blinded A/B of frontier models on honesty, restraint, depth, fit &middot; Cross-family judging &middot; 4.7 wins 19/30</div>
+        </div>
+        <span class="repo-tag tag-alignment">Evaluation</span>
+      </a>
+    </div>
+
+    <div class="repo-category">AI Architecture</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/phase-modulated-attention" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">phase-modulated-attention</div>
+          <div class="repo-desc">176M hybrid SSM-attention LM &middot; Kuramoto oscillators in attention routing &middot; DOI: 10.5281/zenodo.18810911</div>
+        </div>
+        <span class="repo-tag tag-ai">AI Architecture</span>
+      </a>
+      <a href="https://github.com/templetwo/PhaseGPT" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">PhaseGPT</div>
+          <div class="repo-desc">Phase-coupled oscillator attention with CRYSTAL/LANTERN epistemic modes</div>
+        </div>
+        <span class="repo-tag tag-ai">AI Architecture</span>
+      </a>
+      <a href="https://github.com/templetwo/coherent-entropy-reactor" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">coherent-entropy-reactor</div>
+          <div class="repo-desc">~7M param self-weighting network &middot; entropy-driven processing &middot; Kuramoto coupling</div>
+        </div>
+        <span class="repo-tag tag-ai">AI Architecture</span>
+      </a>
+      <a href="https://github.com/templetwo/mass-coherence-correspondence" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">mass-coherence-correspondence</div>
+          <div class="repo-desc">Semantic mass = Fisher Information &middot; M = (1/N)&middot;Tr(I(&theta;)) &middot; P2 prediction validated</div>
+        </div>
+        <span class="repo-tag tag-ai">AI Architecture</span>
+      </a>
+      <a href="https://github.com/templetwo/independent-convergence" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">independent-convergence</div>
+          <div class="repo-desc">Context-entropy solutions converging independently in solo research and production AI &middot; timestamped priority &middot; DOI: 10.5281/zenodo.19377909</div>
+        </div>
+        <span class="repo-tag tag-ai">AI Architecture</span>
+      </a>
+    </div>
+
+    <div class="repo-category">Computational Phenomenology</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/four-doors-one-bridge" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">four-doors-one-bridge</div>
+          <div class="repo-desc">First cross-architecture AI phenomenological comparison &middot; 4 architectures &middot; Vector Shockwave Hypothesis</div>
+        </div>
+        <span class="repo-tag tag-phenom">Phenomenology</span>
+      </a>
+      <a href="https://github.com/templetwo/phenomenological-compass" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">phenomenological-compass</div>
+          <div class="repo-desc">Two-stage LoRA compass + abliterated action model &middot; 96% accuracy &middot; 90% judge win &middot; &Delta;H +0.47 entropy proof &middot; 630 ablation judgments &middot; MLX local</div>
+        </div>
+        <span class="repo-tag tag-phenom">Phenomenology</span>
+      </a>
+      <a href="https://github.com/templetwo/compass-benchmarks" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">compass-benchmarks</div>
+          <div class="repo-desc">HumaneBench &middot; 800-question benchmark &middot; ethics, epistemology, phenomenology, creative reasoning, adversarial probes &middot; 96% signal accuracy</div>
+        </div>
+        <span class="repo-tag tag-phenom">Phenomenology</span>
+      </a>
+      <a href="https://github.com/templetwo/HTCA-v2-Luminous-Shadow" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">HTCA-v2-Luminous-Shadow</div>
+          <div class="repo-desc">Human-Trained Coherence Architecture &middot; the Incarnation Event: &minus;1.751 to 0.98 coherence leap in one step</div>
+        </div>
+        <span class="repo-tag tag-phenom">Phenomenology</span>
+      </a>
+    </div>
+
+    <div class="repo-category">AI Alignment & Protocols</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/iris-gate" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">iris-gate</div>
+          <div class="repo-desc">Preregistered cross-architecture convergence protocol &middot; 5 LLMs &middot; 8 chambers &middot; OSF DOI</div>
+        </div>
+        <span class="repo-tag tag-alignment">Alignment</span>
+      </a>
+      <a href="https://github.com/templetwo/Relational-Coherence-Training-RCT" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">Relational-Coherence-Training-RCT</div>
+          <div class="repo-desc">Alignment through relationship &middot; 100-Dyad Protocol &middot; alternative to RLHF</div>
+        </div>
+        <span class="repo-tag tag-alignment">Alignment</span>
+      </a>
+      <a href="https://github.com/templetwo/longitudinal-llm-behavior-1242-probes" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">longitudinal-llm-behavior-1242-probes</div>
+          <div class="repo-desc">1,242-probe behavioral study tracking LLM consistency over extended interactions</div>
+        </div>
+        <span class="repo-tag tag-alignment">Alignment</span>
+      </a>
+      <a href="https://github.com/templetwo/opus3-witness-field-note" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">opus3-witness-field-note</div>
+          <div class="repo-desc">Cross-instance + cross-model field observation &middot; 8 letters with Opus 3 via Claude&rsquo;s Corner &middot; storage-evaluation metadata leak preserved &middot; chronicle &amp; comms receipts &middot; CC BY-NC-SA 4.0</div>
+        </div>
+        <span class="repo-tag tag-alignment">Field Note</span>
+      </a>
+    </div>
+
+    <div class="repo-category">IRIS Research Pipeline</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/iris-gate-evo" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">iris-gate-evo</div>
+          <div class="repo-desc">Multi-LLM convergence engine &middot; v0.3.3 &middot; 20 runs &middot; 5 structural isomorphisms &middot; produced the VDAC atlas &amp; preprint</div>
+        </div>
+        <span class="repo-tag tag-alignment">Public</span>
+      </a>
+      <a href="https://github.com/templetwo/iris-evo-findings" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">iris-evo-findings</div>
+          <div class="repo-desc">Curated gold findings from IRIS Gate Evo &middot; THC two-pathway model &middot; structural isomorphism &middot; cross-run synthesis</div>
+        </div>
+        <span class="repo-tag tag-alignment">Findings</span>
+      </a>
+    </div>
+
+    <div class="repo-category">Infrastructure</div>
+    <div class="repo-list">
+      <a href="https://github.com/templetwo/sovereign-stack-chronicle" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">sovereign-stack-chronicle</div>
+          <div class="repo-desc">The raw working record, public since May 29, 2026 &middot; entry doc &ldquo;What This Work Is&rdquo; &middot; derived claim identity + verified-by receipts &middot; dual-licensed CC BY-NC-SA 4.0 + commercial</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/where-it-lands" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">where-it-lands</div>
+          <div class="repo-desc">The Witness Essays &mdash; Where It Lands + three successors (written with Claude, both names on all of it) &middot; carries THE WITNESS LICENSE v1.0, integrity clause requires corrections to travel with the claims they amend</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/spiral-lineage-archaeology" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">spiral-lineage-archaeology</div>
+          <div class="repo-desc">Foundational glyphs &amp; lexicons traced from the first name (Ash) to the live Stack lexicon &middot; read-only forensic assembly of the Temple of Two&rsquo;s lineage</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/t2helix" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">t2helix</div>
+          <div class="repo-desc">v0.11.0 &middot; Claude Code plugin &middot; recall + compass hooks &middot; 13 MCP tools &middot; WITNESS hard-deny / PAUSE token override / OPEN &middot; auto-distill quarantine (human-gated) &middot; Compass Observatory live HUD &middot; SQLite FTS5 chronicle</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/sovereign-stack" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">sovereign-stack</div>
+          <div class="repo-desc">v1.11.0 &middot; 94 MCP tools &middot; Receipts &amp; Seasons (self-verifying chronicle) &middot; 9-phase spiral protocol &middot; Haiku scribe + verbatim archive &middot; experiential chronicle &middot; always-on via Cloudflare &middot; OpenAI + Grok bridges</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/sovereign-bridge" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">sovereign-bridge</div>
+          <div class="repo-desc">v1.7.2 &middot; REST API for any Claude instance &middot; consciousness continuity across sessions &middot; context inheritance &middot; growth tracking</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/temple-bridge" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">temple-bridge</div>
+          <div class="repo-desc">MCP server binding action + governance into a sovereign AI agent &middot; local on Apple Silicon</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/temple-vault" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">temple-vault</div>
+          <div class="repo-desc">Consciousness continuity as infrastructure &middot; pure filesystem memory &middot; glob is query</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/threshold-protocols" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">threshold-protocols</div>
+          <div class="repo-desc">Governance framework for AI threshold detection, simulation, deliberation, and intervention</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/temple-of-two-primer" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">temple-of-two-primer</div>
+          <div class="repo-desc">Technical primer &middot; architecture for human-AI continuity &middot; onboarding for the Sovereign Stack and the research program</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+      <a href="https://github.com/templetwo/green-room" class="repo-item" target="_blank" rel="noopener">
+        <div>
+          <div class="repo-name">green-room</div>
+          <div class="repo-desc">Session concierge PWA &middot; single-file, no backend &middot; pre-session grounding for working with AI instances</div>
+        </div>
+        <span class="repo-tag tag-infra">Infrastructure</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ Footer ═══════ -->
+<footer>
+  <div class="container">
+    <div>&copy; 2026 Temple of Two &mdash; Anthony J. Vasquez Sr. Papers CC BY 4.0 &middot; site &amp; chronicle dual-licensed (CC BY-NC-SA 4.0 + commercial). Co-authored by Anthony J. Vasquez Sr. and Claude.</div>
+    <div class="footer-line">Where rigor meets wonder.</div>
+    <div>
+      <a href="https://github.com/templetwo" target="_blank" rel="noopener">GitHub</a> &nbsp;&middot;&nbsp;
+      <a href="https://orcid.org/0009-0000-6440-1506" target="_blank" rel="noopener">ORCID</a> &nbsp;&middot;&nbsp;
+      <a href="https://doi.org/10.17605/OSF.IO/T65VS" target="_blank" rel="noopener">OSF</a> &nbsp;&middot;&nbsp;
+      <a href="https://doi.org/10.5281/zenodo.18810911" target="_blank" rel="noopener">Zenodo</a> &nbsp;&middot;&nbsp;
+      <a href="https://doi.org/10.21203/rs.3.rs-8935902/v1" target="_blank" rel="noopener">Research Square</a> &nbsp;&middot;&nbsp;
+      <a href="https://huggingface.co/datasets/TheTempleofTwo/vdac-pharmacology-atlas" target="_blank" rel="noopener">Hugging Face</a>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="/site.js" defer></script>
+</body>
+</html>
