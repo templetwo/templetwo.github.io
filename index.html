@@ -1234,42 +1234,72 @@
         <span style="font-family:'Inter',sans-serif; font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:#a78bfa;">Seven Programs &middot; One Thread</span>
         <span style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:0.95rem; color:#78716c;">one grammar beneath the inquiry</span>
       </div>
-      <svg viewBox="0 0 960 250" role="img" aria-label="Spine diagram: seven research programs — computational pharmacology, dynamical systems, AI architecture, AI evaluation, AI alignment, computational phenomenology, and grief science — branch off one shared root, the switch, representing bistable switching under continuous perturbation." style="width:100%; height:auto; display:block;">
+      <style>
+        .thread-diagram .td-node{ transform-box:fill-box; transform-origin:center; transition:filter .2s ease; cursor:default; }
+        .thread-diagram .td-node:hover{ filter:brightness(1.6) drop-shadow(0 0 5px currentColor); }
+        .thread-diagram .td-halo{ transform-box:fill-box; transform-origin:center; }
+        .thread-diagram .td-signal{ opacity:0; }
+        @keyframes td-draw{ to{ stroke-dashoffset:0; } }
+        @keyframes td-pop{ 0%{ transform:scale(0); opacity:0; } 65%{ transform:scale(1.3); } 100%{ transform:scale(1); opacity:1; } }
+        @keyframes td-pulse{ 0%,100%{ opacity:.8; } 50%{ opacity:1; } }
+        @keyframes td-breathe{ 0%{ transform:scale(1); opacity:.5; } 70%,100%{ transform:scale(3); opacity:0; } }
+        @keyframes td-travel{ 0%{ transform:translateX(0); opacity:0; } 10%{ opacity:1; } 90%{ opacity:1; } 100%{ transform:translateX(835px); opacity:0; } }
+        @media (prefers-reduced-motion: no-preference){
+          .thread-diagram .td-spine{ stroke-dasharray:840; stroke-dashoffset:840; animation:td-draw 1.5s ease .15s forwards; }
+          .thread-diagram .td-branch{ stroke-dasharray:66; stroke-dashoffset:66; animation:td-draw .55s ease forwards; }
+          .thread-diagram .td-branch:nth-child(1){ animation-delay:.55s; } .thread-diagram .td-branch:nth-child(2){ animation-delay:.7s; }
+          .thread-diagram .td-branch:nth-child(3){ animation-delay:.85s; } .thread-diagram .td-branch:nth-child(4){ animation-delay:1s; }
+          .thread-diagram .td-branch:nth-child(5){ animation-delay:1.15s; } .thread-diagram .td-branch:nth-child(6){ animation-delay:1.3s; }
+          .thread-diagram .td-branch:nth-child(7){ animation-delay:1.45s; }
+          .thread-diagram .td-node{ opacity:0; animation:td-pop .5s cubic-bezier(.2,.7,.3,1.5) forwards, td-pulse 3.6s ease-in-out infinite; animation-delay:calc(.95s + var(--i) * .12s), calc(1.6s + var(--i) * .12s); }
+          .thread-diagram .td-halo{ animation:td-breathe 3.4s ease-out infinite; }
+          .thread-diagram .td-signal{ animation:td-travel 3.8s linear 1s infinite; }
+        }
+      </style>
+      <svg viewBox="0 0 960 250" role="img" aria-label="Spine diagram: seven research programs — computational pharmacology, dynamical systems, AI architecture, AI evaluation, AI alignment, computational phenomenology, and grief science — branch off one shared root, the switch, representing bistable switching under continuous perturbation." class="thread-diagram" style="width:100%; height:auto; display:block;">
         <defs>
           <linearGradient id="spineGrad" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="#34d399"></stop>
-            <stop offset="100%" stop-color="#a78bfa"></stop>
+            <stop offset="34%" stop-color="#60a5fa"></stop>
+            <stop offset="67%" stop-color="#a78bfa"></stop>
+            <stop offset="100%" stop-color="#f472b6"></stop>
           </linearGradient>
+          <filter id="tdGlow" x="-90%" y="-90%" width="280%" height="280%">
+            <feGaussianBlur stdDeviation="3" result="b"></feGaussianBlur>
+            <feMerge><feMergeNode in="b"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+          </filter>
         </defs>
-        <line x1="70" y1="125" x2="905" y2="125" stroke="url(#spineGrad)" stroke-width="2.5"></line>
-        <circle cx="70" cy="125" r="8" fill="#34d399" stroke="#14141c" stroke-width="2"></circle>
-        <text x="70" y="151" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em" fill="#34d399">THE SWITCH</text>
-        <g stroke="#2a2a36" stroke-width="1">
-          <line x1="200" y1="62" x2="200" y2="125"></line>
-          <line x1="313" y1="125" x2="313" y2="188"></line>
-          <line x1="427" y1="62" x2="427" y2="125"></line>
-          <line x1="540" y1="125" x2="540" y2="188"></line>
-          <line x1="653" y1="62" x2="653" y2="125"></line>
-          <line x1="767" y1="125" x2="767" y2="188"></line>
-          <line x1="880" y1="62" x2="880" y2="125"></line>
+        <line class="td-spine" x1="70" y1="125" x2="905" y2="125" stroke="url(#spineGrad)" stroke-width="3" stroke-linecap="round"></line>
+        <g class="td-branches" stroke-width="1.4" stroke-linecap="round">
+          <line class="td-branch" x1="200" y1="125" x2="200" y2="62" stroke="#2dd4bf" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="313" y1="125" x2="313" y2="188" stroke="#60a5fa" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="427" y1="125" x2="427" y2="62" stroke="#a78bfa" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="540" y1="125" x2="540" y2="188" stroke="#f59e0b" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="653" y1="125" x2="653" y2="62" stroke="#34d399" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="767" y1="125" x2="767" y2="188" stroke="#f472b6" stroke-opacity="0.5"></line>
+          <line class="td-branch" x1="880" y1="125" x2="880" y2="62" stroke="#fb7185" stroke-opacity="0.5"></line>
         </g>
-        <g fill="#a78bfa" stroke="#14141c" stroke-width="1.5">
-          <circle cx="200" cy="62" r="5"></circle>
-          <circle cx="313" cy="188" r="5"></circle>
-          <circle cx="427" cy="62" r="5"></circle>
-          <circle cx="540" cy="188" r="5"></circle>
-          <circle cx="653" cy="62" r="5"></circle>
-          <circle cx="767" cy="188" r="5"></circle>
-          <circle cx="880" cy="62" r="5"></circle>
+        <circle class="td-halo" cx="70" cy="125" r="8" fill="#34d399"></circle>
+        <circle cx="70" cy="125" r="8.5" fill="#34d399" stroke="#14141c" stroke-width="2" filter="url(#tdGlow)"></circle>
+        <text x="70" y="152" text-anchor="middle" font-family="'Inter',sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em" fill="#34d399">THE SWITCH</text>
+        <circle class="td-signal" cx="70" cy="125" r="3.4" fill="#ffffff" filter="url(#tdGlow)"></circle>
+        <g stroke="#14141c" stroke-width="1.5">
+          <circle class="td-node" style="--i:0; color:#2dd4bf;" cx="200" cy="62"  r="6" fill="#2dd4bf" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:1; color:#60a5fa;" cx="313" cy="188" r="6" fill="#60a5fa" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:2; color:#a78bfa;" cx="427" cy="62"  r="6" fill="#a78bfa" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:3; color:#f59e0b;" cx="540" cy="188" r="6" fill="#f59e0b" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:4; color:#34d399;" cx="653" cy="62"  r="6" fill="#34d399" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:5; color:#f472b6;" cx="767" cy="188" r="6" fill="#f472b6" filter="url(#tdGlow)"></circle>
+          <circle class="td-node" style="--i:6; color:#fb7185;" cx="880" cy="62"  r="6" fill="#fb7185" filter="url(#tdGlow)"></circle>
         </g>
-        <g font-family="'Inter',sans-serif" font-size="11" fill="#a8a29e" text-anchor="middle">
-          <text x="200" y="38">Computational</text><text x="200" y="50">Pharmacology</text>
-          <text x="313" y="208">Dynamical</text><text x="313" y="220">Systems</text>
-          <text x="427" y="46">AI Architecture</text>
-          <text x="540" y="212">AI Evaluation</text>
-          <text x="653" y="46">AI Alignment</text>
-          <text x="767" y="208">Computational</text><text x="767" y="220">Phenomenology</text>
-          <text x="880" y="46">Grief Science</text>
+        <g font-family="'Inter',sans-serif" font-size="11" text-anchor="middle" font-weight="600">
+          <text x="200" y="38" fill="#2dd4bf">Computational</text><text x="200" y="50" fill="#2dd4bf">Pharmacology</text>
+          <text x="313" y="208" fill="#60a5fa">Dynamical</text><text x="313" y="220" fill="#60a5fa">Systems</text>
+          <text x="427" y="46" fill="#a78bfa">AI Architecture</text>
+          <text x="540" y="212" fill="#f59e0b">AI Evaluation</text>
+          <text x="653" y="46" fill="#34d399">AI Alignment</text>
+          <text x="767" y="208" fill="#f472b6">Computational</text><text x="767" y="220" fill="#f472b6">Phenomenology</text>
+          <text x="880" y="46" fill="#fb7185">Grief Science</text>
         </g>
       </svg>
       <p style="font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:1rem; line-height:1.6; color:#a8a29e; margin:0.95rem 0 0; padding-top:0.85rem; border-top:1px solid #1e1e28;">Seven research programs, one grammar. Pharmacology, dynamical systems, AI architecture, evaluation, alignment, phenomenology, and grief science each ask when a system must commit to one state over another &mdash; and each turns out to be an instance of the same bistable switch under continuous perturbation.</p>
