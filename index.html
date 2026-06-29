@@ -1239,11 +1239,13 @@
         .thread-diagram .td-node:hover{ filter:brightness(1.6) drop-shadow(0 0 5px currentColor); }
         .thread-diagram .td-halo{ transform-box:fill-box; transform-origin:center; }
         .thread-diagram .td-signal{ opacity:0; }
+        .thread-diagram .td-burst{ transform-box:fill-box; transform-origin:center; opacity:0; will-change:transform,opacity; }
         @keyframes td-draw{ to{ stroke-dashoffset:0; } }
         @keyframes td-pop{ 0%{ transform:scale(0); opacity:0; } 65%{ transform:scale(1.3); } 100%{ transform:scale(1); opacity:1; } }
         @keyframes td-pulse{ 0%,100%{ opacity:.8; } 50%{ opacity:1; } }
         @keyframes td-breathe{ 0%{ transform:scale(1); opacity:.5; } 70%,100%{ transform:scale(3); opacity:0; } }
-        @keyframes td-travel{ 0%{ transform:translateX(0); opacity:0; } 10%{ opacity:1; } 90%{ opacity:1; } 100%{ transform:translateX(835px); opacity:0; } }
+        @keyframes td-travel{ 0%{ transform:translateX(0); opacity:0; } 8%{ opacity:1; } 95%{ opacity:1; } 100%{ transform:translateX(835px); opacity:0; } }
+        @keyframes td-burst{ 0%{ transform:scale(.25); opacity:0; } 8%{ transform:scale(1); opacity:1; } 20%{ transform:scale(1.85); opacity:0; } 100%{ transform:scale(1.85); opacity:0; } }
         @media (prefers-reduced-motion: no-preference){
           .thread-diagram .td-spine{ stroke-dasharray:840; stroke-dashoffset:840; animation:td-draw 1.5s ease .15s forwards; }
           .thread-diagram .td-branch{ stroke-dasharray:66; stroke-dashoffset:66; animation:td-draw .55s ease forwards; }
@@ -1254,6 +1256,7 @@
           .thread-diagram .td-node{ opacity:0; animation:td-pop .5s cubic-bezier(.2,.7,.3,1.5) forwards, td-pulse 3.6s ease-in-out infinite; animation-delay:calc(.95s + var(--i) * .12s), calc(1.6s + var(--i) * .12s); }
           .thread-diagram .td-halo{ animation:td-breathe 3.4s ease-out infinite; }
           .thread-diagram .td-signal{ animation:td-travel 3.8s linear 1s infinite; }
+          .thread-diagram .td-burst{ animation:td-burst 3.8s ease-out infinite; }
         }
       </style>
       <svg viewBox="0 0 960 250" role="img" aria-label="Spine diagram: seven research programs — computational pharmacology, dynamical systems, AI architecture, AI evaluation, AI alignment, computational phenomenology, and grief science — branch off one shared root, the switch, representing bistable switching under continuous perturbation." class="thread-diagram" style="width:100%; height:auto; display:block;">
@@ -1291,6 +1294,15 @@
           <circle class="td-node" style="--i:4; color:#34d399;" cx="653" cy="62"  r="6" fill="#34d399" filter="url(#tdGlow)"></circle>
           <circle class="td-node" style="--i:5; color:#f472b6;" cx="767" cy="188" r="6" fill="#f472b6" filter="url(#tdGlow)"></circle>
           <circle class="td-node" style="--i:6; color:#fb7185;" cx="880" cy="62"  r="6" fill="#fb7185" filter="url(#tdGlow)"></circle>
+        </g>
+        <g class="td-bursts" stroke-linecap="round">
+          <g transform="translate(200 62)"><g class="td-burst" style="color:#2dd4bf; animation-delay:1.592s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(313 188)"><g class="td-burst" style="color:#60a5fa; animation-delay:2.106s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(427 62)"><g class="td-burst" style="color:#a78bfa; animation-delay:2.625s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(540 188)"><g class="td-burst" style="color:#f59e0b; animation-delay:3.139s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(653 62)"><g class="td-burst" style="color:#34d399; animation-delay:3.653s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(767 188)"><g class="td-burst" style="color:#f472b6; animation-delay:4.172s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
+          <g transform="translate(880 62)"><g class="td-burst" style="color:#fb7185; animation-delay:4.686s;"><g stroke="currentColor" stroke-width="1.6"><line x1="0" y1="-5.5" x2="0" y2="-11.5"></line><line x1="0" y1="5.5" x2="0" y2="11.5"></line><line x1="-5.5" y1="0" x2="-11.5" y2="0"></line><line x1="5.5" y1="0" x2="11.5" y2="0"></line><line x1="-4" y1="-4" x2="-8.3" y2="-8.3"></line><line x1="4" y1="4" x2="8.3" y2="8.3"></line><line x1="-4" y1="4" x2="-8.3" y2="8.3"></line><line x1="4" y1="-4" x2="8.3" y2="-8.3"></line></g><circle r="5" fill="none" stroke="currentColor" stroke-width="1.3"></circle></g></g>
         </g>
         <g font-family="'Inter',sans-serif" font-size="11" text-anchor="middle" font-weight="600">
           <text x="200" y="38" fill="#2dd4bf">Computational</text><text x="200" y="50" fill="#2dd4bf">Pharmacology</text>
