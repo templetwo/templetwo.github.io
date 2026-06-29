@@ -1,0 +1,14 @@
+{
+  "name": "templeoftwo-contact",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Contact-form pipeline Worker for thetempleoftwo.com (Turnstile + honeypot -> Resend).",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}

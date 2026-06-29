@@ -1,0 +1,37 @@
+# Temple of Two — contact-form Worker.
+# Deploy:  cd contact-worker && npx wrangler deploy
+# Secrets: npx wrangler secret put RESEND_API_KEY
+#          npx wrangler secret put TURNSTILE_SECRET
+#
+# The Worker FAILS CLOSED: it refuses to send (503) unless at least one anti-abuse
+# control is configured — either TURNSTILE_SECRET (recommended) or the KV rate
+# limiter below. This stops a fresh deploy from being an open email amplifier.
+#
+# !! ORDER MATTERS for Turnstile: do NOT set TURNSTILE_SECRET until index.html's
+#    data-sitekey is replaced with the real Turnstile site key AND deployed. The
+#    secret makes the challenge mandatory; if the page still has the
+#    YOUR_TURNSTILE_SITE_KEY placeholder, no widget renders, no token is sent, and
+#    EVERY submission is rejected 403. Replace the site key first (or in the same
+#    change), then set the secret.
+
+name = "templeoftwo-contact"
+main = "src/worker.js"
+compatibility_date = "2024-11-01"
+
+# Bind the Worker to the live path on your domain so the form can POST to
+# /api/contact same-origin (no CORS, no exposed *.workers.dev URL).
+# Requires the zone thetempleoftwo.com to be on this Cloudflare account.
+routes = [
+  { pattern = "thetempleoftwo.com/api/contact", zone_name = "thetempleoftwo.com" }
+]
+
+[vars]
+CONTACT_TO = "info@thetempleoftwo.com"
+CONTACT_FROM = "Temple of Two <contact@thetempleoftwo.com>"
+
+# Optional per-IP rate limit. Create a KV namespace and uncomment:
+#   npx wrangler kv namespace create RL
+# then paste the printed id below.
+# [[kv_namespaces]]
+# binding = "RL"
+# id = "REPLACE_WITH_KV_NAMESPACE_ID"

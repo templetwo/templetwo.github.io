@@ -576,6 +576,67 @@
     }
     .collab-cta .cta-btn:hover { background: #c4b5fd; color: #0c0c11; }
 
+    /* ── Contact form ── */
+    .contact-wrap {
+      max-width: 620px; margin: 2.5rem auto 0; text-align: left;
+      padding-top: 2rem; border-top: 1px solid #1e1e28;
+      scroll-margin-top: 84px;
+    }
+    .contact-head { text-align: center; margin-bottom: 1.6rem; }
+    .contact-head h3 { color: #f5f5f4; font-size: 1.18rem; margin-bottom: 0.4rem; }
+    .contact-head p { color: #a8a29e; font-size: 0.95rem; max-width: 34rem; margin: 0 auto; }
+    .contact-addr {
+      font-family: 'Inter', sans-serif; font-size: 0.9em; color: #c4b5fd;
+      white-space: nowrap;
+    }
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .cf-field { display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; }
+    .cf-label {
+      font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.07em; color: #a8a29e;
+    }
+    .cf-opt { color: #8a8794; font-weight: 500; text-transform: none; letter-spacing: 0; }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #f5f5f4;
+      background: #0c0c11; border: 1px solid #646472; border-radius: 7px;
+      padding: 0.7rem 0.85rem; width: 100%;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .contact-form textarea { resize: vertical; min-height: 124px; line-height: 1.6; }
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      outline: none; border-color: #a78bfa; box-shadow: 0 0 0 3px rgba(167,139,250,0.16);
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: #57534e; }
+    .contact-form select {
+      appearance: none; -webkit-appearance: none; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23a8a29e' stroke-width='1.6' d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 0.9rem center;
+      padding-right: 2.2rem;
+    }
+    /* honeypot — off-screen, never shown, not tab-reachable */
+    .cf-hp {
+      position: absolute; left: -9999px; top: auto;
+      width: 1px; height: 1px; overflow: hidden;
+    }
+    .cf-turnstile-slot:not([hidden]) { margin-top: 0.1rem; }
+    .cf-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 0.25rem; }
+    .cf-submit { border: 0; cursor: pointer; }
+    .cf-submit[disabled] { opacity: 0.55; cursor: default; }
+    .cf-status { font-family: 'Inter', sans-serif; font-size: 0.85rem; margin: 0; }
+    .cf-status.ok { color: #34d399; }
+    .cf-status.err { color: #f87171; }
+    /* Beat `.collab-cta p` (0,1,1), which would otherwise hand the flexed status
+       row auto side-margins + a 1.5rem bottom gap and recolor the neutral state. */
+    .cf-actions .cf-status { margin: 0; max-width: none; }
+    .cf-actions .cf-status:not(.ok):not(.err) { color: #d6d3d1; }
+    @media (max-width: 540px) { .cf-row { grid-template-columns: 1fr; } }
+
     /* ── Ethos ── */
     .ethos {
       background: linear-gradient(175deg, #0c0c11, #110f1a);

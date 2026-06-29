@@ -622,7 +622,52 @@
         <span class="cta-need">Dynamical systems theorist</span>
         <span class="cta-need">Computational phenomenology researcher</span>
       </div>
-      <a href="/cdn-cgi/l/email-protection#9cf5f2faf3dce8f4f9e8f9f1ecf0f9f3fae8ebf3b2fff3f1" class="cta-btn">Get in Touch</a>
+      <a href="#contact" class="cta-btn">Get in Touch</a>
+
+      <div id="contact" class="contact-wrap">
+        <div class="contact-head">
+          <div class="section-tag">Get in touch</div>
+          <h3>Send a message</h3>
+          <p>Collaboration, a question, a centrifuge to offer &mdash; write directly. It reaches <span class="contact-addr">info@thetempleoftwo.com</span>.</p>
+        </div>
+        <form id="contact-form" class="contact-form" method="post" action="/api/contact" data-endpoint="/api/contact" data-sitekey="YOUR_TURNSTILE_SITE_KEY" novalidate>
+          <div class="cf-row">
+            <label class="cf-field">
+              <span class="cf-label">Name</span>
+              <input type="text" name="name" autocomplete="name" maxlength="200" required>
+            </label>
+            <label class="cf-field">
+              <span class="cf-label">Email</span>
+              <input type="email" name="email" autocomplete="email" maxlength="200" required>
+            </label>
+          </div>
+          <label class="cf-field">
+            <span class="cf-label">How can we help? <span class="cf-opt">(optional)</span></span>
+            <select name="topic">
+              <option value="">Choose a topic&hellip;</option>
+              <option>Wet-lab collaboration (VDAC assays)</option>
+              <option>Electrophysiology</option>
+              <option>Pharmacology review</option>
+              <option>Dynamical-systems theory</option>
+              <option>Computational phenomenology</option>
+              <option>Press / general</option>
+            </select>
+          </label>
+          <label class="cf-field">
+            <span class="cf-label">Message</span>
+            <textarea name="message" rows="5" maxlength="5000" required></textarea>
+          </label>
+          <!-- honeypot: real visitors leave this empty; hidden from view and assistive tech -->
+          <div class="cf-hp" aria-hidden="true">
+            <label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <div class="cf-turnstile-slot" hidden></div>
+          <div class="cf-actions">
+            <button type="submit" class="cf-submit cta-btn">Send message</button>
+            <p class="cf-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
