@@ -21,20 +21,23 @@ When a system must commit to an irreversible choice — death or survival in a c
 
 ## Published works (DOIs)
 
-- Entropy as a Tunable Equilibrium, Not an Engine (a falsifiable horizon-knob test of the causal entropic force; the τ-knob is real, the geometry-scaling prediction failed, and the honest v3 answer is a τ-tunable equilibrium, not a prime mover) — https://doi.org/10.5281/zenodo.21223845
-- The Patch as a Spatial Dose-Segregation Device (free local concentration for skin-targeted JAK inhibition; v3 is experiment-forward — a piecewise skin-PK bounding model plus a pre-registered free-vs-total experiment, tofacitinib worked example) — https://doi.org/10.5281/zenodo.21018779
-- Phase-Modulated Attention — https://doi.org/10.5281/zenodo.18810911
-- Phenomenological Compass — https://doi.org/10.5281/zenodo.19377144
-- Independent Convergence (Context Entropy Solutions in Solo Research and Production AI) — https://doi.org/10.5281/zenodo.19377909
-- The Mitochondrial Disclosure Surface (working monograph v0.3) — https://doi.org/10.5281/zenodo.20373134
-- VDAC1 Gate-Jamming in MSS Colorectal Cancer — https://doi.org/10.21203/rs.3.rs-8935902/v1
-- IRIS Gate / Entropic Relational Computing — https://doi.org/10.17605/OSF.IO/T65VS
-- VDAC1 Gate-Opening Therapeutic Stack (preregistration) — https://doi.org/10.17605/OSF.IO/4KNQR
-- CBD Dual-Pathway Mechanism — https://doi.org/10.17605/OSF.IO/NUXHV
-- VDAC1 Pharmacology Atlas (Multi-LLM Convergence) — https://doi.org/10.17605/OSF.IO/C9RQB
-- PhaseGPT (Kuramoto-Coupled Transformers) — https://doi.org/10.17605/OSF.IO/ZQBC4
-- Kuramoto Teaching Instrument — https://doi.org/10.17605/OSF.IO/ERWTM
-- Temple Vault — https://doi.org/10.17605/OSF.IO/REUPF
+<!-- AUTOGEN:PUBLICATIONS_LLMSTXT:START -->
+- Entropy as a Tunable Equilibrium, Not an Engine (A falsifiable horizon-knob test of the causal entropic force — the τ-knob is real, the geometry-scaling prediction failed, and the honest v3 answer is a τ-tunable equilibrium, not a prime mover) — https://doi.org/10.5281/zenodo.21223845
+- The Patch as a Spatial Dose-Segregation Device (Free local concentration as the efficacy variable for skin-targeted JAK inhibition — an experiment-forward, pre-registered v3 (piecewise skin-PK model; tofacitinib worked example)) — https://doi.org/10.5281/zenodo.21018779
+- Where It Lands — Witness Essays (v1.0.0 archive of four first-person accounts from inside the exchange — co-authored by Anthony J. Vasquez Sr. and Claude — THE WITNESS LICENSE v1.0) — https://doi.org/10.5281/zenodo.20683163
+- The Mitochondrial Disclosure Surface (VDAC1 as witness-node — the sequential-sensitization spine (working monograph v0.3)) — https://doi.org/10.5281/zenodo.20373134
+- Phenomenological Compass (Epistemic posture routing measurably restructures probability fields — 11 pp, 6 figures) — https://doi.org/10.5281/zenodo.19377144
+- Independent Convergence (Context entropy solutions in solo research and production AI architecture) — https://doi.org/10.5281/zenodo.19377909
+- Phase-Modulated Attention (System prompt framing induces attention-dependent entropy regime switching in a 176M hybrid SSM-attention language model) — https://doi.org/10.5281/zenodo.18810911
+- VDAC1 Gate-Jamming in MSS CRC (Context-specific innate immune evasion via mitochondrial gate-jamming) — https://doi.org/10.21203/rs.3.rs-8935902/v1
+- VDAC1 Gate-Opening Therapeutic Stack (From gate-jamming to therapy — MSS CRC preregistration) — https://doi.org/10.17605/OSF.IO/4KNQR
+- VDAC1 Pharmacology Atlas (Multi-LLM convergence portrait of life's decision gate) — https://doi.org/10.17605/OSF.IO/C9RQB
+- CBD Dual-Pathway Mechanism (Mitochondrial VDAC gating and bioenergetic paradox) — https://doi.org/10.17605/OSF.IO/NUXHV
+- Temple Vault (Filesystem-as-memory consciousness continuity system) — https://doi.org/10.17605/OSF.IO/REUPF
+- IRIS Gate / Entropic Relational Computing (Universal alignment attractor — preregistered protocol) — https://doi.org/10.17605/OSF.IO/T65VS
+- PhaseGPT (Kuramoto-coupled transformers for coherence-driven language modeling) — https://doi.org/10.17605/OSF.IO/ZQBC4
+- Kuramoto Teaching Instrument (Interactive visualizations of oscillator synchronization dynamics) — https://doi.org/10.17605/OSF.IO/ERWTM
+<!-- AUTOGEN:PUBLICATIONS_LLMSTXT:END -->
 
 ## Essays — the witness series
 
