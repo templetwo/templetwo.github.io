@@ -22,6 +22,8 @@ When a system must commit to an irreversible choice — death or survival in a c
 ## Published works (DOIs)
 
 <!-- AUTOGEN:PUBLICATIONS_LLMSTXT:START -->
+- Fail-Closed Governance for Fail-Open Harnesses (COSMIC-ALLOW) (A cross-vendor proof-of-allow protocol for AI coding-agent cockpits: deny is the ground state, allow requires an unforgeable sentinel, and a kernel sandbox floor is the load-bearing boundary. Reference implementation: cosmic-cli. Apache-2.0) — https://doi.org/10.5281/zenodo.21461197
+- Short-Horizon Kinetics of Causal-Entropic Forcing (Four pre-registered campaigns (v4.0–v4.3): an apparent short-horizon kinetic separation survives audit, then dissolves under matched-estimator control — finite-sample estimator roughness, not physics. Statics in disguise, on the kinetic axis too) — https://doi.org/10.5281/zenodo.21288848
 - Entropy as a Tunable Equilibrium, Not an Engine (A falsifiable horizon-knob test of the causal entropic force — the τ-knob is real, the geometry-scaling prediction failed, and the honest v3 answer is a τ-tunable equilibrium, not a prime mover) — https://doi.org/10.5281/zenodo.21223845
 - The Patch as a Spatial Dose-Segregation Device (Free local concentration as the efficacy variable for skin-targeted JAK inhibition — an experiment-forward, pre-registered v3 (piecewise skin-PK model; tofacitinib worked example)) — https://doi.org/10.5281/zenodo.21018779
 - Where It Lands — Witness Essays (v1.0.0 archive of four first-person accounts from inside the exchange — co-authored by Anthony J. Vasquez Sr. and Claude — THE WITNESS LICENSE v1.0) — https://doi.org/10.5281/zenodo.20683163
