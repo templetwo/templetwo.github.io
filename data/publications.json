@@ -1,6 +1,14 @@
 {
   "publications": [
     {
+      "doi": "10.5281/zenodo.21461197",
+      "headline": "Fail-Closed Governance for Fail-Open Harnesses: A Cross-Vendor Proof-of-Allow Protocol for Coding Agents (COSMIC-ALLOW RFC v1.1)",
+      "title": "Fail-Closed Governance for Fail-Open Harnesses (COSMIC-ALLOW)",
+      "venue": "Zenodo",
+      "date": "2026-07-20",
+      "blurb": "A cross-vendor proof-of-allow protocol for AI coding-agent cockpits: deny is the ground state, allow requires an unforgeable sentinel, and a kernel sandbox floor is the load-bearing boundary. Reference implementation: cosmic-cli. Apache-2.0."
+    },
+    {
       "doi": "10.5281/zenodo.21223845",
       "headline": "Entropy as a Tunable Equilibrium, Not an Engine: A Falsifiable Horizon-Knob Test of the Causal Entropic Force",
       "title": "Entropy as a Tunable Equilibrium, Not an Engine",
