@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Machine readers: start with /llms.txt — it is written for you.
+Sitemap: https://thetempleoftwo.com/sitemap.xml

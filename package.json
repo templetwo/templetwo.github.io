@@ -1,0 +1,47 @@
+{
+  "name": "temple-of-two-site",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --host 0.0.0.0 --port 8080",
+    "build": "npm run verify:publications && npm run verify:contact && vite build && node scripts/postbuild.mjs",
+    "preview": "vite preview --host 0.0.0.0 --port 8080",
+    "sync:publications": "node scripts/sync-publications.mjs",
+    "verify:publications": "node scripts/sync-publications.mjs --check",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "verify:contact": "node scripts/verify-contact.mjs"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "@tanstack/react-router": "^1.160.0",
+    "@tanstack/react-start": "^1.160.0",
+    "@tanstack/router-plugin": "^1.160.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.510.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.1.0",
+    "tw-animate-css": "^1.3.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/node": "^22.16.5",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.20.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^15.15.0",
+    "lightningcss": "^1.28.0",
+    "prettier": "^3.4.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.56.1",
+    "vite": "^8.1.0"
+  }
+}

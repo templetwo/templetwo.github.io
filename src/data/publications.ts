@@ -1,0 +1,180 @@
+/**
+ * GENERATED — do not edit by hand.
+ * Source: data/publications.json  ·  Regenerate: npm run sync:publications
+ *
+ * The same JSON drives this module, public/llms.txt, and the JSON-LD emitted
+ * by src/lib/seo.ts. `npm run verify:publications` fails the build if they drift.
+ */
+
+export type Publication = {
+  doi: string;
+  headline: string;
+  title: string;
+  venue: string;
+  /** ISO date, YYYY-MM-DD. */
+  date: string;
+  blurb: string;
+  /** Optional override for the record's evidence axis. */
+  evidence?: string;
+};
+
+export const publications: Publication[] = [
+  {
+    doi: "10.5281/zenodo.21683054",
+    headline: "The Black Box Is Smaller Than the Experience: A Byte-Exact, Non-Interventional Reconstruction of the Inference-Event Boundary Around a Small Language Model",
+    title: "The Black Box Is Smaller Than the Experience",
+    venue: "Zenodo",
+    date: "2026-07-29",
+    blurb: "The opacity debate locates the black box in the weights; for one deployed companion we measure how small that box is relative to everything around it. In the studied session the operator's words were 0.56–14.00% of model-input bytes — the rest was enumerable application-layer material. The complete raw record of the system's first lived session is published and SHA-256 manifested (code + evidence: 10.5281/zenodo.21683073). Single session, n=1; the weights black box is untouched.",
+    evidence: "Bounded, n=1",
+  },
+  {
+    doi: "10.5281/zenodo.21461197",
+    headline: "Fail-Closed Governance for Fail-Open Harnesses: A Cross-Vendor Proof-of-Allow Protocol for Coding Agents (COSMIC-ALLOW RFC v1.1)",
+    title: "Fail-Closed Governance for Fail-Open Harnesses (COSMIC-ALLOW)",
+    venue: "Zenodo",
+    date: "2026-07-20",
+    blurb: "A cross-vendor proof-of-allow protocol for AI coding-agent cockpits: deny is the ground state, allow requires an unforgeable sentinel, and a kernel sandbox floor is the load-bearing boundary. Reference implementation: cosmic-cli. Apache-2.0.",
+    evidence: "Supported within scope",
+  },
+  {
+    doi: "10.5281/zenodo.21288848",
+    headline: "Short-Horizon Kinetics of Causal-Entropic Forcing: Finite-Sample Estimator Roughness, Not Physics — Four Pre-Registered Campaigns (v4.0–v4.3)",
+    title: "Short-Horizon Kinetics of Causal-Entropic Forcing",
+    venue: "Zenodo",
+    date: "2026-07-10",
+    blurb: "Four pre-registered campaigns (v4.0–v4.3): an apparent short-horizon kinetic separation survives audit, then dissolves under matched-estimator control — finite-sample estimator roughness, not physics. Statics in disguise, on the kinetic axis too.",
+    evidence: "Bounded null",
+  },
+  {
+    doi: "10.5281/zenodo.21223845",
+    headline: "Entropy as a Tunable Equilibrium, Not an Engine: A Falsifiable Horizon-Knob Test of the Causal Entropic Force",
+    title: "Entropy as a Tunable Equilibrium, Not an Engine",
+    venue: "Zenodo",
+    date: "2026-07-06",
+    blurb: "A falsifiable horizon-knob test of the causal entropic force — the τ-knob is real, the geometry-scaling prediction failed, and the honest v3 answer is a τ-tunable equilibrium, not a prime mover.",
+    evidence: "Bounded null",
+  },
+  {
+    doi: "10.5281/zenodo.21018779",
+    headline: "The Patch as a Spatial Dose-Segregation Device: Free Local Drug Concentration as the Primary Efficacy Variable for Skin-Targeted JAK Inhibition — A Pre-Registered Experiment, with Tofacitinib as the Worked Example",
+    title: "The Patch as a Spatial Dose-Segregation Device",
+    venue: "Zenodo",
+    date: "2026-06-29",
+    blurb: "Free local concentration as the efficacy variable for skin-targeted JAK inhibition — an experiment-forward, pre-registered v3 (piecewise skin-PK model; tofacitinib worked example).",
+    evidence: "Preregistered, untested",
+  },
+  {
+    doi: "10.5281/zenodo.20683163",
+    headline: "Where It Lands — Witness Essays on AI Phenomenology",
+    title: "Where It Lands — Witness Essays",
+    venue: "Zenodo",
+    date: "2026-06-13",
+    blurb: "v1.0.0 archive of four first-person accounts from inside the exchange — co-authored by Anthony J. Vasquez Sr. and Claude — THE WITNESS LICENSE v1.0.",
+    evidence: "Experiential record",
+  },
+  {
+    doi: "10.5281/zenodo.20373134",
+    headline: "The Mitochondrial Disclosure Surface",
+    title: "The Mitochondrial Disclosure Surface",
+    venue: "Zenodo",
+    date: "2026-05-25",
+    blurb: "VDAC1 as witness-node — the sequential-sensitization spine (working monograph v0.3).",
+    evidence: "Untested in vivo",
+  },
+  {
+    doi: "10.5281/zenodo.19377144",
+    headline: "The Phenomenological Compass",
+    title: "Phenomenological Compass",
+    venue: "Zenodo",
+    date: "2026-04-02",
+    blurb: "Epistemic posture routing measurably restructures probability fields — 11 pp, 6 figures.",
+    evidence: "Supported within scope",
+  },
+  {
+    doi: "10.5281/zenodo.19377909",
+    headline: "Independent Convergence: Context Entropy Solutions in Solo Research and Production AI",
+    title: "Independent Convergence",
+    venue: "Zenodo",
+    date: "2026-04-02",
+    blurb: "Context entropy solutions in solo research and production AI architecture.",
+  },
+  {
+    doi: "10.5281/zenodo.18810911",
+    headline: "Phase-Modulated Attention: System Prompt Framing Induces Attention-Dependent Entropy Regime Switching",
+    title: "Phase-Modulated Attention",
+    venue: "Zenodo",
+    date: "2026-02-28",
+    blurb: "System prompt framing induces attention-dependent entropy regime switching in a 176M hybrid SSM-attention language model.",
+    evidence: "Supported within scope",
+  },
+  {
+    doi: "10.21203/rs.3.rs-8935902/v1",
+    headline: "VDAC1 Gate-Jamming in MSS Colorectal Cancer",
+    title: "VDAC1 Gate-Jamming in MSS CRC",
+    venue: "Research Square",
+    date: "2026-02-26",
+    blurb: "Context-specific innate immune evasion via mitochondrial gate-jamming.",
+    evidence: "Untested in vivo",
+  },
+  {
+    doi: "10.17605/OSF.IO/4KNQR",
+    headline: "VDAC1 Gate-Opening Therapeutic Stack (preregistration)",
+    title: "VDAC1 Gate-Opening Therapeutic Stack",
+    venue: "OSF",
+    date: "2026-02-23",
+    blurb: "From gate-jamming to therapy — MSS CRC preregistration.",
+    evidence: "Preregistered, untested",
+  },
+  {
+    doi: "10.17605/OSF.IO/C9RQB",
+    headline: "The VDAC1 Pharmacology Atlas",
+    title: "VDAC1 Pharmacology Atlas",
+    venue: "OSF",
+    date: "2026-02-16",
+    blurb: "Multi-LLM convergence portrait of life's decision gate.",
+    evidence: "Untested in vivo",
+  },
+  {
+    doi: "10.17605/OSF.IO/NUXHV",
+    headline: "CBD Dual-Pathway Mechanism: Mitochondrial VDAC Gating",
+    title: "CBD Dual-Pathway Mechanism",
+    venue: "OSF",
+    date: "2026-02-12",
+    blurb: "Mitochondrial VDAC gating and bioenergetic paradox.",
+    evidence: "Untested in vivo",
+  },
+  {
+    doi: "10.17605/OSF.IO/REUPF",
+    headline: "Temple Vault",
+    title: "Temple Vault",
+    venue: "OSF",
+    date: "2026-01-19",
+    blurb: "Filesystem-as-memory consciousness continuity system.",
+  },
+  {
+    doi: "10.17605/OSF.IO/T65VS",
+    headline: "Entropic Relational Computing: The Universal Alignment Attractor",
+    title: "IRIS Gate / Entropic Relational Computing",
+    venue: "OSF",
+    date: "2026-01-04",
+    blurb: "Universal alignment attractor — preregistered protocol.",
+    evidence: "Preregistered, untested",
+  },
+  {
+    doi: "10.17605/OSF.IO/ZQBC4",
+    headline: "PhaseGPT: Kuramoto-Coupled Transformers",
+    title: "PhaseGPT",
+    venue: "OSF",
+    date: "2025-10-20",
+    blurb: "Kuramoto-coupled transformers for coherence-driven language modeling.",
+  },
+  {
+    doi: "10.17605/OSF.IO/ERWTM",
+    headline: "Kuramoto Teaching Instrument",
+    title: "Kuramoto Teaching Instrument",
+    venue: "OSF",
+    date: "2025-10-20",
+    blurb: "Interactive visualizations of oscillator synchronization dynamics.",
+  },
+];

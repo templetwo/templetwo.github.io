@@ -1,0 +1,209 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  /* Surfaces — astronomical darkness, not ordinary black */
+  --color-void: #07080c;
+  --color-bg: #0b0d12;
+  --color-surface: #12151c;
+  --color-surface-raised: #181c26;
+  --color-surface-warm: #16130f;
+  --color-fg: #ebe6dc;
+  --color-fg-soft: #c8c2b4;
+  /* Raised from #5c574e for WCAG-friendlier metadata */
+  --color-muted: #9a9488;
+  --color-border: #242833;
+  --color-border-strong: #3a4050;
+
+  /* Wonder — warm light, amber, candle, dawn (restrained) */
+  --color-wonder: #c9955a;
+  --color-wonder-soft: #b88850;
+  --color-wonder-glow: #e8c48a;
+  --color-wonder-field: #1a1410;
+
+  /* Rigor — cool graphite, blue-gray, steel */
+  --color-rigor: #8a9eb2;
+  --color-rigor-soft: #6f8296;
+  --color-rigor-bright: #b4c2d0;
+  --color-rigor-field: #0e1218;
+
+  /* Epistemic status */
+  --color-living: #7aab8a;
+  --color-uncertain: #c4a060;
+  --color-bounded: #b87a7a;
+  --color-witness: #a69eb4;
+
+  /* Ivory / brass accents */
+  --color-ivory: #f0ebe0;
+  --color-brass: #b8925a;
+  --color-ember: #c47a4a;
+
+  /* Paper inversion (Record) */
+  --color-paper: #f3efe6;
+  --color-paper-raised: #faf7f0;
+  --color-paper-ink: #1a1814;
+  --color-paper-mute: #5c574e;
+  --color-paper-line: #d4cfc3;
+  --color-paper-accent: #8a6238;
+
+  --font-serif: "Cormorant Garamond", "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, monospace;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  --shadow-soft: 0 12px 40px -16px rgb(0 0 0 / 0.55);
+  --shadow-ember: 0 0 48px -12px rgb(201 149 90 / 0.18);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  /*
+   * The header is sticky, so any in-page anchor lands under it unless the
+   * target reserves room. Several routes set `scroll-mt-24` by hand and the
+   * homepage's #covenant did not — make it the default for every anchor
+   * target so a new one cannot forget.
+   */
+  :target {
+    scroll-margin-top: 6rem;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    min-height: 100dvh;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid color-mix(in oklab, var(--color-wonder) 80%, white);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-wonder) 35%, transparent);
+    color: var(--color-ivory);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--color-ivory);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grain {
+    position: relative;
+  }
+  .grain::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    z-index: 1;
+  }
+
+  .field-lines {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% 0%, color-mix(in oklab, var(--color-wonder) 8%, transparent), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, color-mix(in oklab, var(--color-rigor) 10%, transparent), transparent 50%),
+      linear-gradient(
+        to bottom,
+        transparent 0%,
+        color-mix(in oklab, var(--color-border) 40%, transparent) 50%,
+        transparent 100%
+      );
+  }
+
+  .threshold-glow {
+    box-shadow: var(--shadow-ember);
+  }
+
+  .prose-temple {
+    max-width: 68ch;
+  }
+  .prose-temple p + p {
+    margin-top: 1.15em;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -100px;
+    z-index: 100;
+    border-radius: 0.375rem;
+    background: var(--color-ivory);
+    color: var(--color-void);
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+  .skip-link:focus {
+    top: 0.75rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    /* Smooth anchor scrolling is the most motion-sensitive thing on the site,
+       and it lives on `html` — neutralising animations alone left it running. */
+    html {
+      scroll-behavior: auto !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

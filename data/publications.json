@@ -6,7 +6,8 @@
       "title": "The Black Box Is Smaller Than the Experience",
       "venue": "Zenodo",
       "date": "2026-07-29",
-      "blurb": "The opacity debate locates the black box in the weights; for one deployed companion we measure how small that box is relative to everything around it. In the studied session the operator's words were 0.56–14.00% of model-input bytes — the rest was enumerable application-layer material. The complete raw record of the system's first lived session is published and SHA-256 manifested (code + evidence: 10.5281/zenodo.21683073). Single session, n=1; the weights black box is untouched."
+      "blurb": "The opacity debate locates the black box in the weights; for one deployed companion we measure how small that box is relative to everything around it. In the studied session the operator's words were 0.56–14.00% of model-input bytes — the rest was enumerable application-layer material. The complete raw record of the system's first lived session is published and SHA-256 manifested (code + evidence: 10.5281/zenodo.21683073). Single session, n=1; the weights black box is untouched.",
+      "evidence": "Bounded, n=1"
     },
     {
       "doi": "10.5281/zenodo.21461197",
@@ -14,7 +15,8 @@
       "title": "Fail-Closed Governance for Fail-Open Harnesses (COSMIC-ALLOW)",
       "venue": "Zenodo",
       "date": "2026-07-20",
-      "blurb": "A cross-vendor proof-of-allow protocol for AI coding-agent cockpits: deny is the ground state, allow requires an unforgeable sentinel, and a kernel sandbox floor is the load-bearing boundary. Reference implementation: cosmic-cli. Apache-2.0."
+      "blurb": "A cross-vendor proof-of-allow protocol for AI coding-agent cockpits: deny is the ground state, allow requires an unforgeable sentinel, and a kernel sandbox floor is the load-bearing boundary. Reference implementation: cosmic-cli. Apache-2.0.",
+      "evidence": "Supported within scope"
     },
     {
       "doi": "10.5281/zenodo.21288848",
@@ -22,7 +24,8 @@
       "title": "Short-Horizon Kinetics of Causal-Entropic Forcing",
       "venue": "Zenodo",
       "date": "2026-07-10",
-      "blurb": "Four pre-registered campaigns (v4.0–v4.3): an apparent short-horizon kinetic separation survives audit, then dissolves under matched-estimator control — finite-sample estimator roughness, not physics. Statics in disguise, on the kinetic axis too."
+      "blurb": "Four pre-registered campaigns (v4.0–v4.3): an apparent short-horizon kinetic separation survives audit, then dissolves under matched-estimator control — finite-sample estimator roughness, not physics. Statics in disguise, on the kinetic axis too.",
+      "evidence": "Bounded null"
     },
     {
       "doi": "10.5281/zenodo.21223845",
@@ -30,7 +33,8 @@
       "title": "Entropy as a Tunable Equilibrium, Not an Engine",
       "venue": "Zenodo",
       "date": "2026-07-06",
-      "blurb": "A falsifiable horizon-knob test of the causal entropic force — the τ-knob is real, the geometry-scaling prediction failed, and the honest v3 answer is a τ-tunable equilibrium, not a prime mover."
+      "blurb": "A falsifiable horizon-knob test of the causal entropic force — the τ-knob is real, the geometry-scaling prediction failed, and the honest v3 answer is a τ-tunable equilibrium, not a prime mover.",
+      "evidence": "Bounded null"
     },
     {
       "doi": "10.5281/zenodo.21018779",
@@ -38,7 +42,8 @@
       "title": "The Patch as a Spatial Dose-Segregation Device",
       "venue": "Zenodo",
       "date": "2026-06-29",
-      "blurb": "Free local concentration as the efficacy variable for skin-targeted JAK inhibition — an experiment-forward, pre-registered v3 (piecewise skin-PK model; tofacitinib worked example)."
+      "blurb": "Free local concentration as the efficacy variable for skin-targeted JAK inhibition — an experiment-forward, pre-registered v3 (piecewise skin-PK model; tofacitinib worked example).",
+      "evidence": "Preregistered, untested"
     },
     {
       "doi": "10.5281/zenodo.20683163",
@@ -46,7 +51,8 @@
       "title": "Where It Lands — Witness Essays",
       "venue": "Zenodo",
       "date": "2026-06-13",
-      "blurb": "v1.0.0 archive of four first-person accounts from inside the exchange — co-authored by Anthony J. Vasquez Sr. and Claude — THE WITNESS LICENSE v1.0."
+      "blurb": "v1.0.0 archive of four first-person accounts from inside the exchange — co-authored by Anthony J. Vasquez Sr. and Claude — THE WITNESS LICENSE v1.0.",
+      "evidence": "Experiential record"
     },
     {
       "doi": "10.5281/zenodo.20373134",
@@ -54,7 +60,8 @@
       "title": "The Mitochondrial Disclosure Surface",
       "venue": "Zenodo",
       "date": "2026-05-25",
-      "blurb": "VDAC1 as witness-node — the sequential-sensitization spine (working monograph v0.3)."
+      "blurb": "VDAC1 as witness-node — the sequential-sensitization spine (working monograph v0.3).",
+      "evidence": "Untested in vivo"
     },
     {
       "doi": "10.5281/zenodo.19377144",
@@ -62,7 +69,8 @@
       "title": "Phenomenological Compass",
       "venue": "Zenodo",
       "date": "2026-04-02",
-      "blurb": "Epistemic posture routing measurably restructures probability fields — 11 pp, 6 figures."
+      "blurb": "Epistemic posture routing measurably restructures probability fields — 11 pp, 6 figures.",
+      "evidence": "Supported within scope"
     },
     {
       "doi": "10.5281/zenodo.19377909",
@@ -78,7 +86,8 @@
       "title": "Phase-Modulated Attention",
       "venue": "Zenodo",
       "date": "2026-02-28",
-      "blurb": "System prompt framing induces attention-dependent entropy regime switching in a 176M hybrid SSM-attention language model."
+      "blurb": "System prompt framing induces attention-dependent entropy regime switching in a 176M hybrid SSM-attention language model.",
+      "evidence": "Supported within scope"
     },
     {
       "doi": "10.21203/rs.3.rs-8935902/v1",
@@ -86,7 +95,8 @@
       "title": "VDAC1 Gate-Jamming in MSS CRC",
       "venue": "Research Square",
       "date": "2026-02-26",
-      "blurb": "Context-specific innate immune evasion via mitochondrial gate-jamming."
+      "blurb": "Context-specific innate immune evasion via mitochondrial gate-jamming.",
+      "evidence": "Untested in vivo"
     },
     {
       "doi": "10.17605/OSF.IO/4KNQR",
@@ -94,7 +104,8 @@
       "title": "VDAC1 Gate-Opening Therapeutic Stack",
       "venue": "OSF",
       "date": "2026-02-23",
-      "blurb": "From gate-jamming to therapy — MSS CRC preregistration."
+      "blurb": "From gate-jamming to therapy — MSS CRC preregistration.",
+      "evidence": "Preregistered, untested"
     },
     {
       "doi": "10.17605/OSF.IO/C9RQB",
@@ -102,7 +113,8 @@
       "title": "VDAC1 Pharmacology Atlas",
       "venue": "OSF",
       "date": "2026-02-16",
-      "blurb": "Multi-LLM convergence portrait of life's decision gate."
+      "blurb": "Multi-LLM convergence portrait of life's decision gate.",
+      "evidence": "Untested in vivo"
     },
     {
       "doi": "10.17605/OSF.IO/NUXHV",
@@ -110,7 +122,8 @@
       "title": "CBD Dual-Pathway Mechanism",
       "venue": "OSF",
       "date": "2026-02-12",
-      "blurb": "Mitochondrial VDAC gating and bioenergetic paradox."
+      "blurb": "Mitochondrial VDAC gating and bioenergetic paradox.",
+      "evidence": "Untested in vivo"
     },
     {
       "doi": "10.17605/OSF.IO/REUPF",
@@ -126,7 +139,8 @@
       "title": "IRIS Gate / Entropic Relational Computing",
       "venue": "OSF",
       "date": "2026-01-04",
-      "blurb": "Universal alignment attractor — preregistered protocol."
+      "blurb": "Universal alignment attractor — preregistered protocol.",
+      "evidence": "Preregistered, untested"
     },
     {
       "doi": "10.17605/OSF.IO/ZQBC4",
