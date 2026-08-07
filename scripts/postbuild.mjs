@@ -124,13 +124,47 @@ function stub(to) {
 `;
 }
 
+/*
+ * A stub must never shadow a real route.
+ *
+ * GitHub Pages resolves an extension-less request by trying `<name>.html`
+ * BEFORE `<name>/index.html`. So writing a stub at `about.html` that redirects
+ * to `/about` makes /about serve the stub, which redirects to /about — an
+ * infinite reload on a page linked from the main nav. This shipped live on
+ * 2026-08-07 and was caught by requesting the deployed URL.
+ *
+ * Where the legacy path collides with a real page, copy the real page there
+ * instead of a stub: /about.html and /about then serve identical content, and
+ * the old URL still resolves for anything citing it.
+ */
+let stubs = 0;
+let copies = 0;
 for (const [from, to] of REDIRECTS) {
   if (from === "/index.html") continue; // the real homepage lives there
   const dest = join(OUT, from.replace(/^\//, "").split("/").join(sep));
   await mkdir(dirname(dest), { recursive: true });
-  await writeFile(dest, stub(to), "utf8");
+
+  const routeName = from.replace(/^\//, "").replace(/\.html$/, "");
+  const realPage = join(OUT, routeName, "index.html");
+  let shadows = false;
+  try {
+    await readFile(realPage, "utf8");
+    shadows = true;
+  } catch {
+    shadows = false;
+  }
+
+  if (shadows) {
+    await writeFile(dest, await readFile(realPage, "utf8"), "utf8");
+    copies++;
+  } else {
+    await writeFile(dest, stub(to), "utf8");
+    stubs++;
+  }
 }
-console.log(`postbuild · wrote ${REDIRECTS.length - 1} redirect stubs`);
+console.log(
+  `postbuild · wrote ${stubs} redirect stubs, ${copies} shadow-safe copies`,
+);
 
 /* Cloudflare Pages honours this file with real 301s; Pages ignores it. */
 const redirectsFile = REDIRECTS.filter(([from]) => from !== "/index.html")
