@@ -400,11 +400,11 @@ function HomePage() {
       <section className="border-t border-border bg-void">
         <Section narrow>
           <Eyebrow>{memorial.eyebrow}</Eyebrow>
-          <div className="mt-6 overflow-hidden rounded-xl border border-border">
+          <div className="mx-auto mt-6 w-full max-w-md overflow-hidden rounded-xl border border-border">
             <img
               src={memorial.image}
               alt={memorial.imageAlt}
-              className="max-h-80 w-full object-cover object-top"
+              className="aspect-[4/5] w-full object-cover object-center"
               loading="lazy"
               width={820}
               height={1024}
