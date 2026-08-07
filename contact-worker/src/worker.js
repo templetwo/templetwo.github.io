@@ -1,13 +1,13 @@
 // Temple of Two — contact-form pipeline (Cloudflare Worker).
 //
-// Flow:  site form  ──POST──▶  this Worker  ──▶  Resend  ──▶  info@thetempleoftwo.com
+// Flow:  site form  ──POST──▶  this Worker  ──▶  Cloudflare Email (or Resend)  ──▶  info@thetempleoftwo.com
 //
 // Defences, in order: method gate → body size/field caps → honeypot → field
 // validation → Cloudflare Turnstile (fail-CLOSED once a secret is set) → optional
 // per-IP rate limit (KV) → HTML-escaped email via Resend.
 //
 // Secrets live in `wrangler secret`, never in this file:
-//   RESEND_API_KEY     (required to actually send)
+//   RESEND_API_KEY     (only if not using the Cloudflare EMAIL binding)
 //   TURNSTILE_SECRET   (optional; when present, the challenge is enforced)
 // Plain vars (wrangler.toml [vars]): CONTACT_TO, CONTACT_FROM.
 // Optional KV binding `RL` enables rate limiting.
@@ -89,11 +89,15 @@ export default {
       await env.RL.put(key, String(count), { expirationTtl: RL_WINDOW_SECONDS });
     }
 
-    if (!env.RESEND_API_KEY) return respond(false, 'not_configured', 500, cors, wantsJson);
+    // A transport must exist: the Cloudflare EMAIL binding or a Resend key.
+    if (!env.EMAIL && !env.RESEND_API_KEY) {
+      return respond(false, 'not_configured', 500, cors, wantsJson);
+    }
 
     const to = env.CONTACT_TO || 'info@thetempleoftwo.com';
-    const from = env.CONTACT_FROM || 'Temple of Two <contact@thetempleoftwo.com>';
-    const sent = await sendEmail(env.RESEND_API_KEY, { to, from, name, email, topic, message });
+    // Must be a domain on this Cloudflare account when sending via the binding.
+    const from = env.CONTACT_FROM || 'Temple of Two <contact@templetwo.com>';
+    const sent = await deliver(env, { to, from, name, email, topic, message });
     if (!sent) return respond(false, 'send_failed', 502, cors, wantsJson);
 
     return respond(true, null, 200, cors, wantsJson);
@@ -182,7 +186,95 @@ async function verifyTurnstile(secret, token, ip) {
   }
 }
 
-async function sendEmail(apiKey, m) {
+/* ── Cloudflare-native send (no third-party account, no API key) ──
+ *
+ * Workers cannot open SMTP connections, so the Webador mailbox that receives
+ * info@thetempleoftwo.com cannot also be the sender. This uses Email Routing's
+ * `send_email` binding instead: it delivers only to addresses verified on the
+ * account, which is exactly the shape of a contact form with one recipient.
+ *
+ * The `from` domain must be a zone on this Cloudflare account — templetwo.com,
+ * not thetempleoftwo.com (that one is on Webador).
+ */
+
+/** base64 of a UTF-8 string, chunked so large bodies don't blow the stack. */
+function b64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let bin = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) {
+    bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  }
+  return btoa(bin);
+}
+
+/** RFC 2047 encoded-word — subjects carry names and em dashes. */
+function encodeHeader(s) {
+  return /^[\x20-\x7E]*$/.test(s) ? s : "=?UTF-8?B?" + b64(s) + "?=";
+}
+
+/** Strip CR/LF so a crafted field cannot inject extra headers. */
+function headerSafe(s) {
+  return String(s).replace(/[\r\n]+/g, " ").trim();
+}
+
+function buildMime({ fromEmail, fromName, to, replyTo, subject, text, html }) {
+  const boundary = "t2b_" + crypto.randomUUID().replace(/-/g, "");
+  const date = new Date().toUTCString().replace(/GMT$/, "+0000");
+  const domain = fromEmail.split("@")[1] || "templetwo.com";
+  return [
+    "From: " + encodeHeader(headerSafe(fromName)) + " <" + headerSafe(fromEmail) + ">",
+    "To: " + headerSafe(to),
+    "Reply-To: " + headerSafe(replyTo),
+    "Subject: " + encodeHeader(headerSafe(subject)),
+    "Message-ID: <" + crypto.randomUUID() + "@" + domain + ">",
+    "Date: " + date,
+    "MIME-Version: 1.0",
+    'Content-Type: multipart/alternative; boundary="' + boundary + '"',
+    "",
+    "--" + boundary,
+    "Content-Type: text/plain; charset=UTF-8",
+    "Content-Transfer-Encoding: base64",
+    "",
+    b64(text),
+    "--" + boundary,
+    "Content-Type: text/html; charset=UTF-8",
+    "Content-Transfer-Encoding: base64",
+    "",
+    b64(html),
+    "--" + boundary + "--",
+    "",
+  ].join("\r\n");
+}
+
+async function sendViaCloudflare(env, m, subject, text, html) {
+  try {
+    const { EmailMessage } = await import("cloudflare:email");
+    // CONTACT_FROM may be "Name <addr>" or a bare address.
+    const raw = String(m.from || "");
+    const angle = raw.match(/^\s*(.*?)\s*<([^>]+)>\s*$/);
+    const fromName = angle ? angle[1] || "Temple of Two" : "Temple of Two";
+    const fromEmail = angle ? angle[2] : raw;
+
+    const mime = buildMime({
+      fromEmail,
+      fromName,
+      to: m.to,
+      replyTo: m.email,
+      subject,
+      text,
+      html,
+    });
+    await env.EMAIL.send(new EmailMessage(fromEmail, m.to, mime));
+    return true;
+  } catch (e) {
+    // Never log the message body or address list.
+    console.log("cf_email_error " + (e && e.name ? e.name : "unknown"));
+    return false;
+  }
+}
+
+/** One message body, used by whichever transport is configured. */
+function composeEmail(m) {
   const subject = 'Temple of Two — message from ' + m.name + (m.topic ? ' · ' + m.topic : '');
   const text =
     'From: ' + m.name + ' <' + m.email + '>\n' +
@@ -195,6 +287,24 @@ async function sendEmail(apiKey, m) {
       '<hr style="border:none;border-top:1px solid #ddd">' +
       '<p style="white-space:pre-wrap">' + escapeHtml(m.message) + '</p>' +
     '</div>';
+  return { subject: subject, text: text, html: html };
+}
+
+/**
+ * Prefer the Cloudflare binding when it is bound; fall back to Resend when a
+ * key is present. Either transport alone is sufficient — the caller has
+ * already refused the request if neither exists.
+ */
+async function deliver(env, m) {
+  const c = composeEmail(m);
+  if (env.EMAIL) return sendViaCloudflare(env, m, c.subject, c.text, c.html);
+  return sendEmail(env.RESEND_API_KEY, m, c);
+}
+
+async function sendEmail(apiKey, m, c) {
+  const subject = c.subject;
+  const text = c.text;
+  const html = c.html;
   try {
     const r = await fetch('https://api.resend.com/emails', {
       method: 'POST',

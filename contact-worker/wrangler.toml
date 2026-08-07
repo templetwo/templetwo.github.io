@@ -18,20 +18,49 @@ name = "templeoftwo-contact"
 main = "src/worker.js"
 compatibility_date = "2024-11-01"
 
-# Bind the Worker to the live path on your domain so the form can POST to
-# /api/contact same-origin (no CORS, no exposed *.workers.dev URL).
-# Requires the zone thetempleoftwo.com to be on this Cloudflare account.
+# The original route below could never fire: thetempleoftwo.com is managed by
+# Webador, which does not permit changing nameservers, so Cloudflare cannot
+# hold that zone. Verified 2026-08-07 — the apex resolves straight to GitHub
+# Pages (server: GitHub.com, no cf-ray) and /api/contact returns 404/405 from
+# GitHub, never reaching a Worker.
+#
+# routes = [
+#   { pattern = "thetempleoftwo.com/api/contact", zone_name = "thetempleoftwo.com" }
+# ]
+#
+# templetwo.com IS on this Cloudflare account (zone active, ns michelle/bart.
+# ns.cloudflare.com — it already serves stack.templetwo.com). So the Worker
+# takes a custom domain there instead: the site posts cross-origin, and
+# ALLOWED_ORIGINS in src/worker.js already allowlists thetempleoftwo.com and
+# its www variant. No *.workers.dev hostname is exposed, and thetempleoftwo.com
+# DNS is never touched.
 routes = [
-  { pattern = "thetempleoftwo.com/api/contact", zone_name = "thetempleoftwo.com" }
+  { pattern = "contact.templetwo.com", custom_domain = true }
+]
+
+# Cloudflare-native sending — no third-party account, no API key to rotate.
+# Restricted to a single destination, so even a compromised Worker cannot mail
+# anyone but the inbox this form is for. The address must be verified under
+# Email Routing → Destination addresses before the first send will land.
+send_email = [
+  { name = "EMAIL", destination_address = "info@thetempleoftwo.com" }
 ]
 
 [vars]
 CONTACT_TO = "info@thetempleoftwo.com"
-CONTACT_FROM = "Temple of Two <contact@thetempleoftwo.com>"
+# The sender domain must be a zone on THIS Cloudflare account. thetempleoftwo.com
+# is on Webador, so mail is sent from templetwo.com and lands in the Webador
+# mailbox — receiving is unchanged, only the sending leg moved.
+CONTACT_FROM = "Temple of Two <contact@templetwo.com>"
 
-# Optional per-IP rate limit. Create a KV namespace and uncomment:
-#   npx wrangler kv namespace create RL
-# then paste the printed id below.
-# [[kv_namespaces]]
-# binding = "RL"
-# id = "REPLACE_WITH_KV_NAMESPACE_ID"
+# Per-IP rate limit — 5 submissions per 10 minutes (RL_MAX / RL_WINDOW_SECONDS
+# in src/worker.js). This binding is also what satisfies the Worker's
+# fail-closed check, so without it every request returns 503 not_configured.
+#
+# NOTE: `RL` must stay a KV namespace. src/worker.js calls RL.get()/RL.put();
+# Cloudflare's native Rate Limiting binding exposes only limit() and caps its
+# window at 10 or 60 seconds, so swapping it in would satisfy the fail-closed
+# check and then throw on the first real submission.
+[[kv_namespaces]]
+binding = "RL"
+id = "2bfb953515a74867aa94104636971d14"
