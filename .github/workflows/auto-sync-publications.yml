@@ -1,0 +1,62 @@
+name: Auto-sync publications
+
+# Keeps the generated surfaces from lagging behind data/publications.json.
+#
+# The build already REFUSES to ship on drift (`npm run verify:publications` is
+# the first step of `npm run build`, and deploy.yml runs it again). That is the
+# guard. This job is the self-heal path: it regenerates and commits, so editing
+# data/publications.json — including straight from the GitHub web UI — does not
+# leave main in a state where every deploy fails until someone runs the script
+# locally.
+#
+# Ported from the pre-redesign Python pipeline (scripts/sync_publications.py)
+# to scripts/sync-publications.mjs. Same contract, same schedule.
+
+on:
+  schedule:
+    # 12:00 UTC daily (~08:00 ET)
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/publications.json"
+      - "scripts/sync-publications.mjs"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-sync-publications
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Regenerate publication surfaces
+        run: npm run sync:publications
+
+      - name: Commit and push if drift
+        run: |
+          if git diff --quiet; then
+            echo "No drift — generated surfaces already match data/publications.json"
+            exit 0
+          fi
+          git config user.name "temple-site-sync[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore(site): auto-sync publication surfaces from data/publications.json"
+          git push origin HEAD:main
+          echo "Pushed sync commit — the deploy workflow will rebuild from main"
