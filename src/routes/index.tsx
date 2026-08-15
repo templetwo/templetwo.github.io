@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Section, Eyebrow } from "@/components/temple/section";
 import { TwoDoors } from "@/components/temple/two-doors";
 import { ThresholdField } from "@/components/temple/threshold-field";
+import { HeroBackdrop } from "@/components/temple/hero-backdrop";
 import { WonderReceiptPanel } from "@/components/temple/wonder-receipt";
 import { StandingTriple } from "@/components/temple/standing-badge";
 import {
@@ -45,20 +46,7 @@ function HomePage() {
     <div className="grain">
       {/* Scene 1 — The Door */}
       <section className="relative overflow-hidden border-b border-border">
-        <div className="pointer-events-none absolute inset-0">
-          <img
-            src="/images/hero-temple-gate.webp"
-            alt=""
-            width={1168}
-            height={784}
-            fetchPriority="high"
-            decoding="async"
-            className="h-full w-full object-cover opacity-[0.22]"
-            aria-hidden
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg/70 via-bg/85 to-bg" />
-          <div className="absolute inset-0 field-lines opacity-60" />
-        </div>
+        <HeroBackdrop />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-wonder/40 to-transparent" />
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pb-24 sm:pt-28">
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted">
