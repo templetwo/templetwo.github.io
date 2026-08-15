@@ -167,6 +167,23 @@
     box-shadow: var(--shadow-ember);
   }
 
+  /* The living seal at the hero's threshold. The bezel runs wonder→rigor —
+     amber into steel — the same axis as everything else at the meeting
+     point; the disc floats on a soft ember-and-steel halo. */
+  .seal-bezel {
+    background: linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--color-wonder) 70%, transparent),
+      color-mix(in oklab, var(--color-ivory) 25%, transparent) 50%,
+      color-mix(in oklab, var(--color-rigor) 70%, transparent)
+    );
+  }
+  .seal-disc {
+    filter:
+      drop-shadow(0 0 28px rgb(201 149 90 / 0.18))
+      drop-shadow(0 0 48px rgb(138 158 178 / 0.14));
+  }
+
   .prose-temple {
     max-width: 68ch;
   }

@@ -3,6 +3,7 @@ import { Section, Eyebrow } from "@/components/temple/section";
 import { TwoDoors } from "@/components/temple/two-doors";
 import { ThresholdField } from "@/components/temple/threshold-field";
 import { HeroBackdrop } from "@/components/temple/hero-backdrop";
+import { HeroSeal } from "@/components/temple/hero-seal";
 import { WonderReceiptPanel } from "@/components/temple/wonder-receipt";
 import { StandingTriple } from "@/components/temple/standing-badge";
 import {
@@ -82,21 +83,7 @@ function HomePage() {
             </Link>
           </div>
 
-          <div
-            className="mt-14 flex h-20 items-center justify-center gap-0 sm:mt-20 sm:h-28"
-            aria-hidden
-          >
-            <div className="h-px w-1/3 max-w-xs bg-gradient-to-r from-transparent to-wonder/70" />
-            <div className="relative mx-1 flex h-10 w-10 items-center justify-center">
-              <span className="absolute h-10 w-10 rounded-full bg-wonder/20 blur-md" />
-              <span className="absolute h-10 w-10 rounded-full bg-rigor/25 blur-md" />
-              <span className="relative h-2.5 w-2.5 rounded-full bg-ivory/90" />
-            </div>
-            <div className="h-px w-1/3 max-w-xs bg-gradient-to-l from-transparent to-rigor/70" />
-          </div>
-          <p className="text-center font-mono text-xs uppercase tracking-[0.16em] text-muted">
-            Two fields approach · neither is erased
-          </p>
+          <HeroSeal />
         </div>
       </section>
 
