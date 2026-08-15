@@ -6,7 +6,16 @@ export function SiteFooter() {
     <footer className="mt-auto border-t border-border bg-void">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <p className="font-serif text-2xl text-ivory">Temple of Two</p>
+          <img
+            src="/images/logo-temple-of-two.webp"
+            alt="Seal of the Temple of Two — diamond, infinity, waves, sword, and spiral, ringed in binary and circuitry"
+            width={512}
+            height={506}
+            loading="lazy"
+            decoding="async"
+            className="h-20 w-20 rounded-full border border-border/60 object-cover sm:h-24 sm:w-24"
+          />
+          <p className="mt-4 font-serif text-2xl text-ivory">Temple of Two</p>
           <p className="mt-2 font-serif text-lg italic text-wonder-soft">
             {site.tagline}.
           </p>
