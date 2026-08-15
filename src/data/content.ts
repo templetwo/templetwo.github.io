@@ -651,6 +651,7 @@ export type RecordEntry = {
   href: string;
   summary: string;
   standing: StandingAxes;
+  doi?: string;
 };
 
 /** Entries the record holds that are not publications — corrections, releases, limits. */
@@ -709,6 +710,7 @@ const publicationEntries: RecordEntry[] = publications.map((p) => ({
   title: p.title,
   href: `https://doi.org/${p.doi}`,
   summary: p.blurb,
+  doi: p.doi,
   standing: {
     kind: "Publication",
     lifecycle: `Published · ${p.venue}`,

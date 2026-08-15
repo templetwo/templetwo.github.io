@@ -42,6 +42,8 @@ const facets: Array<RecordKind | "All"> = [
 
 function RecordPage() {
   const [filter, setFilter] = useState<(typeof facets)[number]>("All");
+  const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
+
   const entries = useMemo(
     () =>
       filter === "All"
@@ -49,6 +51,21 @@ function RecordPage() {
         : recordEntries.filter((r) => r.kind === filter),
     [filter],
   );
+
+  const handleCopy = (text: string, id: string) => {
+    if (typeof navigator === "undefined" || !navigator.clipboard) return;
+    // The ✓ is a receipt: it renders only after the clipboard write resolves.
+    navigator.clipboard.writeText(text).then(
+      () => {
+        setCopiedSlug(id);
+        setTimeout(() => setCopiedSlug(null), 2000);
+      },
+      () => {
+        setCopiedSlug(`failed:${id}`);
+        setTimeout(() => setCopiedSlug(null), 2000);
+      },
+    );
+  };
 
   return (
     <div>
@@ -97,7 +114,15 @@ function RecordPage() {
           </div>
 
           <ol className="mt-10 space-y-0 border-l border-paper-line pl-6 sm:pl-8">
-            {entries.map((r) => (
+            {entries.map((r) => {
+              // A DOI chip belongs on every entry that resolves through
+              // doi.org — negative results and corrections most of all.
+              const doi =
+                r.doi ??
+                (r.href.startsWith("https://doi.org/")
+                  ? r.href.slice("https://doi.org/".length)
+                  : undefined);
+              return (
               <li key={r.title} className="relative pb-10 last:pb-0">
                 <span
                   className="absolute -left-[1.55rem] top-1.5 h-2.5 w-2.5 rounded-full border border-paper-accent bg-paper sm:-left-[2.05rem]"
@@ -126,8 +151,39 @@ function RecordPage() {
                   {r.standing.kind} · {r.standing.lifecycle} ·{" "}
                   {r.standing.evidence}
                 </p>
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleCopy(r.href, `link-${r.title}`)}
+                    className="inline-flex items-center gap-1 rounded border border-paper-line bg-paper-raised px-2 py-0.5 font-mono text-[11px] text-paper-mute hover:border-paper-ink/50 hover:text-paper-ink"
+                  >
+                    <span>
+                      {copiedSlug === `link-${r.title}`
+                        ? "Link copied ✓"
+                        : copiedSlug === `failed:link-${r.title}`
+                          ? "Copy failed"
+                          : "Copy link"}
+                    </span>
+                  </button>
+                  {doi && (
+                    <button
+                      type="button"
+                      onClick={() => handleCopy(doi, `doi-${r.title}`)}
+                      className="inline-flex items-center gap-1 rounded border border-paper-line bg-paper-raised px-2 py-0.5 font-mono text-[11px] text-paper-accent hover:border-paper-accent hover:text-paper-ink"
+                    >
+                      <span>
+                        {copiedSlug === `doi-${r.title}`
+                          ? "DOI copied ✓"
+                          : copiedSlug === `failed:doi-${r.title}`
+                            ? "Copy failed"
+                            : `DOI: ${doi}`}
+                      </span>
+                    </button>
+                  )}
+                </div>
               </li>
-            ))}
+              );
+            })}
             {entries.length === 0 && (
               <li className="text-sm text-paper-mute">
                 No entries in this facet.

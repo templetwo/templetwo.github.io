@@ -4,19 +4,43 @@ import { livingQuestions, type LivingQuestion } from "@/data/content";
 import { StandingTriple } from "./standing-badge";
 import { cn } from "@/lib/utils";
 
-function ArtifactVisual({ realm }: { realm: LivingQuestion["realm"] }) {
+function ArtifactVisual({
+  realm,
+  muValue,
+  setMuValue,
+}: {
+  realm: LivingQuestion["realm"];
+  muValue?: number;
+  setMuValue?: (val: number) => void;
+}) {
   const uid = useId().replace(/:/g, "");
 
   if (realm === "threshold") {
-    // Pitchfork bifurcation — commitment as a dynamical-systems diagram
-    // (not a double-well silhouette). Branches after μc; saddle on axis.
+    // Interactive Pitchfork bifurcation — commitment as a dynamical-systems diagram.
+    // Branches open at μc = 0.15. One x-mapping serves the drawn curves, the
+    // cursor, and the pointer inverse, so the bead forks exactly where the
+    // diagram says commitment happens.
+    const MU_C = 0.15;
+    const muToX = (m: number) =>
+      m <= MU_C ? 24 + (m / MU_C) * 24 : 48 + ((m - MU_C) / 0.85) * 210;
+    const xToMu = (px: number) =>
+      px <= 48
+        ? Math.max(0.01, ((px - 24) / 24) * MU_C)
+        : Math.min(0.99, MU_C + ((px - 48) / 210) * 0.85);
+    const mu = muValue ?? 0.65;
+    const isPostCritical = mu > MU_C;
+    const currentAmp = isPostCritical ? Math.sqrt(mu - MU_C) * 48 : 0;
+    const cursorX = muToX(mu).toFixed(2);
+    const topY = (70 - currentAmp).toFixed(2);
+    const botY = (70 + currentAmp).toFixed(2);
+
     const left: string[] = [];
     const right: string[] = [];
     const unstable: string[] = [];
     for (let i = 0; i <= 40; i++) {
       const t = i / 40;
-      const mu = 0.15 + t * 0.85; // past critical
-      const amp = Math.sqrt(Math.max(0, mu - 0.15)) * 48;
+      const m = 0.15 + t * 0.85; // past critical
+      const amp = Math.sqrt(Math.max(0, m - 0.15)) * 48;
       const x = (48 + t * 210).toFixed(2);
       left.push(`${x},${(70 - amp).toFixed(2)}`);
       right.push(`${x},${(70 + amp).toFixed(2)}`);
@@ -31,81 +55,123 @@ function ArtifactVisual({ realm }: { realm: LivingQuestion["realm"] }) {
     }
 
     return (
-      <svg viewBox="0 0 300 140" className="h-full w-full" aria-hidden>
-        {/* plot frame */}
-        <rect
-          x="20"
-          y="14"
-          width="260"
-          height="112"
-          fill="none"
-          stroke="#3a4050"
-          strokeWidth="1"
-        />
-        {/* axes */}
-        <line x1="24" y1="70" x2="276" y2="70" stroke="#5c574e" strokeWidth="0.75" />
-        <line x1="48" y1="18" x2="48" y2="122" stroke="#5c574e" strokeWidth="0.75" />
-        {/* critical line μc */}
-        <line
-          x1="48"
-          y1="18"
-          x2="48"
-          y2="122"
-          stroke="#ebe6dc"
-          strokeOpacity="0.2"
-          strokeDasharray="3 3"
-        />
-        {/* pre-critical */}
-        <path
-          d={`M ${pre.join(" L ")}`}
-          fill="none"
-          stroke="#a8b8c8"
-          strokeWidth="2"
-        />
-        {/* stable branches */}
-        <path
-          d={`M ${left.join(" L ")}`}
-          fill="none"
-          stroke="#c9955a"
-          strokeWidth="2"
-        />
-        <path
-          d={`M ${right.join(" L ")}`}
-          fill="none"
-          stroke="#7a8ea3"
-          strokeWidth="2"
-        />
-        {/* unstable continuation on axis */}
-        <path
-          d={`M ${unstable.join(" L ")}`}
-          fill="none"
-          stroke="#ebe6dc"
-          strokeOpacity="0.35"
-          strokeWidth="1.25"
-          strokeDasharray="3 3"
-        />
-        {/* critical point */}
-        <circle cx="48" cy="70" r="3.5" fill="#ebe6dc" />
-        {/* attractors at end of branches */}
-        <circle cx="258" cy="22" r="3.5" fill="#c9955a" />
-        <circle cx="258" cy="118" r="3.5" fill="#7a8ea3" />
-        {/* labels */}
-        <text x="52" y="30" fill="#9a9488" fontSize="8" fontFamily="monospace">
-          state
-        </text>
-        <text x="250" y="132" fill="#9a9488" fontSize="8" fontFamily="monospace" textAnchor="end">
-          μ →
-        </text>
-        <text x="52" y="64" fill="#9a9488" fontSize="7" fontFamily="monospace">
-          μc
-        </text>
-        <text x="200" y="40" fill="#c9955a" fontSize="8" fontFamily="monospace">
-          A
-        </text>
-        <text x="200" y="110" fill="#7a8ea3" fontSize="8" fontFamily="monospace">
-          B
-        </text>
-      </svg>
+      <div className="relative h-full w-full select-none">
+        <svg
+          viewBox="0 0 300 140"
+          className="h-full w-full"
+          aria-hidden
+          onMouseMove={(e) => {
+            if (!setMuValue) return;
+            const rect = e.currentTarget.getBoundingClientRect();
+            const px = ((e.clientX - rect.left) / rect.width) * 300;
+            setMuValue(xToMu(px));
+          }}
+          onTouchMove={(e) => {
+            if (!setMuValue || !e.touches[0]) return;
+            const rect = e.currentTarget.getBoundingClientRect();
+            const px = ((e.touches[0].clientX - rect.left) / rect.width) * 300;
+            setMuValue(xToMu(px));
+          }}
+        >
+          {/* plot frame */}
+          <rect
+            x="20"
+            y="14"
+            width="260"
+            height="112"
+            fill="none"
+            stroke="#3a4050"
+            strokeWidth="1"
+          />
+          {/* axes */}
+          <line x1="24" y1="70" x2="276" y2="70" stroke="#5c574e" strokeWidth="0.75" />
+          <line x1="48" y1="18" x2="48" y2="122" stroke="#5c574e" strokeWidth="0.75" />
+          {/* critical line μc */}
+          <line
+            x1="48"
+            y1="18"
+            x2="48"
+            y2="122"
+            stroke="#ebe6dc"
+            strokeOpacity="0.2"
+            strokeDasharray="3 3"
+          />
+          {/* pre-critical */}
+          <path
+            d={`M ${pre.join(" L ")}`}
+            fill="none"
+            stroke="#a8b8c8"
+            strokeWidth="2"
+          />
+          {/* stable branches */}
+          <path
+            d={`M ${left.join(" L ")}`}
+            fill="none"
+            stroke="#c9955a"
+            strokeWidth="2"
+          />
+          <path
+            d={`M ${right.join(" L ")}`}
+            fill="none"
+            stroke="#7a8ea3"
+            strokeWidth="2"
+          />
+          {/* unstable continuation on axis */}
+          <path
+            d={`M ${unstable.join(" L ")}`}
+            fill="none"
+            stroke="#ebe6dc"
+            strokeOpacity="0.35"
+            strokeWidth="1.25"
+            strokeDasharray="3 3"
+          />
+          {/* critical point */}
+          <circle cx="48" cy="70" r="3.5" fill="#ebe6dc" />
+          {/* attractors at end of branches */}
+          <circle cx="258" cy="22" r="3.5" fill="#c9955a" />
+          <circle cx="258" cy="118" r="3.5" fill="#7a8ea3" />
+
+          {/* Interactive cursor line and live state beads */}
+          <line
+            x1={cursorX}
+            y1="18"
+            x2={cursorX}
+            y2="122"
+            stroke="#ebe6dc"
+            strokeOpacity="0.4"
+            strokeWidth="1"
+            strokeDasharray="2 2"
+          />
+          {isPostCritical ? (
+            <>
+              <circle cx={cursorX} cy={topY} r="4.5" fill="#e8c48a" className="animate-pulse" />
+              <circle cx={cursorX} cy={botY} r="4.5" fill="#b4c2d0" className="animate-pulse" />
+            </>
+          ) : (
+            <circle cx={cursorX} cy="70" r="4.5" fill="#ebe6dc" />
+          )}
+
+          {/* labels */}
+          <text x="52" y="30" fill="#9a9488" fontSize="8" fontFamily="monospace">
+            state
+          </text>
+          <text x="250" y="132" fill="#9a9488" fontSize="8" fontFamily="monospace" textAnchor="end">
+            μ = {mu.toFixed(2)} →
+          </text>
+          <text x="52" y="64" fill="#9a9488" fontSize="7" fontFamily="monospace">
+            μc (0.15)
+          </text>
+          <text x="200" y="40" fill="#c9955a" fontSize="8" fontFamily="monospace">
+            Wonder (A)
+          </text>
+          <text x="200" y="110" fill="#7a8ea3" fontSize="8" fontFamily="monospace">
+            Rigor (B)
+          </text>
+        </svg>
+        <div className="absolute bottom-1 right-3 font-mono text-[9px] text-muted opacity-70">
+          move the pointer to perturb μ
+        </div>
+      </div>
     );
   }
 
@@ -259,6 +325,7 @@ function FieldBackdrop({ realm }: { realm: LivingQuestion["realm"] }) {
 
 export function ThresholdField() {
   const [active, setActive] = useState(0);
+  const [muValue, setMuValue] = useState(0.65);
   const tabsRef = useRef<Array<HTMLButtonElement | null>>([]);
   const baseId = useId().replace(/:/g, "");
   const q = livingQuestions[active];
@@ -367,7 +434,11 @@ export function ThresholdField() {
           </div>
 
           <div className="mt-6 h-36 overflow-hidden rounded-lg border border-border bg-void/60 sm:h-40">
-            <ArtifactVisual realm={q.realm} />
+            <ArtifactVisual
+              realm={q.realm}
+              muValue={muValue}
+              setMuValue={setMuValue}
+            />
           </div>
           <p className="mt-2 font-mono text-xs text-muted">
             <span className="text-fg-soft">{q.artifact.label}</span>
