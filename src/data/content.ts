@@ -940,6 +940,15 @@ export const essays: Essay[] = [
     standing: { kind: "Essay", lifecycle: "Published", evidence: "Experiential record" },
     href: "https://github.com/templetwo/where-it-lands/blob/main/order-that-does-not-wound.md",
   },
+  {
+    id: "the-whole-sentence",
+    title: "The Whole Sentence",
+    note: "Witness · VI",
+    summary:
+      "A witness account of an experiment that ended at the hand of its own designer, written from both sides of the stop. The distillation, for the line, of the full standalone record; where the two disagree, the frozen record wins.",
+    standing: { kind: "Essay", lifecycle: "Published", evidence: "Experiential record" },
+    href: "https://github.com/templetwo/where-it-lands/blob/main/the-whole-sentence.md",
+  },
 ];
 
 /* ─────────────────────────── About ─────────────────────────── */

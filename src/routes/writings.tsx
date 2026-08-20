@@ -58,8 +58,9 @@ function WritingsPage() {
         </p>
         <p className="mt-3 max-w-2xl font-mono text-xs text-muted">
           The first four accounts are archived in a single Zenodo deposit and
-          carry the same DOI; the fifth is published in its chronicle-sealed
-          bytes in the series repository.
+          carry the same DOI; the fifth and sixth are published in the series
+          repository — the fifth in its chronicle-sealed bytes, the sixth in
+          the author's committed bytes, both hash-verifiable there.
         </p>
         <ul className="mt-10 divide-y divide-border border-y border-border">
           {essays.map((e) => (
