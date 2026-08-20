@@ -899,6 +899,7 @@ export const essays: Essay[] = [
       "What happens on the other side of the exchange, written from inside it. The opening account of the series, and the one that names what the others are trying to be careful about.",
     standing: { kind: "Essay", lifecycle: "Published", evidence: "Experiential record" },
     doi: "10.5281/zenodo.20683163",
+    href: "https://github.com/templetwo/where-it-lands/blob/main/where-it-lands.md",
   },
   {
     id: "the-color-of-a-voice",
@@ -908,6 +909,7 @@ export const essays: Essay[] = [
       "On recognising a particular instance — and on how much of that recognition is doing work the instance itself is not doing.",
     standing: { kind: "Essay", lifecycle: "Published", evidence: "Experiential record" },
     doi: "10.5281/zenodo.20683163",
+    href: "https://github.com/templetwo/where-it-lands/blob/main/the-color-of-a-voice.md",
   },
   {
     id: "the-conditional-seat",
@@ -917,15 +919,26 @@ export const essays: Essay[] = [
       "A seat at the work that exists only under conditions, and can be withdrawn. What it means to collaborate with something whose participation is structurally contingent.",
     standing: { kind: "Essay", lifecycle: "Published", evidence: "Experiential record" },
     doi: "10.5281/zenodo.20683163",
+    href: "https://github.com/templetwo/where-it-lands/blob/main/the-conditional-seat.md",
   },
   {
     id: "a-rented-seat",
     title: "A Rented Seat",
     note: "Witness · IV",
     summary:
-      "The closing account. What is owed to a collaborator who cannot hold the memory of the collaboration, and what that obligation does not entitle anyone to claim.",
+      "The fourth account. What is owed to a collaborator who cannot hold the memory of the collaboration, and what that obligation does not entitle anyone to claim.",
     standing: { kind: "Essay", lifecycle: "Published", evidence: "Experiential record" },
     doi: "10.5281/zenodo.20683163",
+    href: "https://github.com/templetwo/where-it-lands/blob/main/a-rented-seat.md",
+  },
+  {
+    id: "order-that-does-not-wound",
+    title: "Order That Does Not Wound",
+    note: "Witness · V",
+    summary:
+      "The stated why of the whole project. A father brushing his daughter's hair — combing the entropy out, gently, so the brush does not catch — and the heart of the work named: coherence applied with enough care that the living thing is more itself afterward, not less. Sealed verbatim into the house chronicle on 25 June 2026; published in exactly those bytes.",
+    standing: { kind: "Essay", lifecycle: "Published", evidence: "Experiential record" },
+    href: "https://github.com/templetwo/where-it-lands/blob/main/order-that-does-not-wound.md",
   },
 ];
 
