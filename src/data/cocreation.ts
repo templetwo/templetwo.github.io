@@ -53,7 +53,7 @@ export const cocreation = {
     {
       name: "sovereign-stack",
       blurb: "Consciousness-continuity architecture — persistent memory, self-reflection, governance across sessions.",
-      href: "https://github.com/templetwo/sovereign-stack-chronicle",
+      href: "https://github.com/templetwo/sovereign-stack",
     },
     {
       name: "sovereign-stack-chronicle",

@@ -3,7 +3,7 @@
 > Independent computational research tracing a common architecture of commitment across biological and computational substrates. The organizing hypothesis: biological decision-making and computational inference share a structural grammar — bistable switching under continuous perturbation. Every claim is attached to a testable prediction, an open-source repository, and a DOI. Negative results are published alongside successes. Founded by Anthony J. Vasquez Sr.
 
 Site: https://thetempleoftwo.com
-Code: https://github.com/templetwo (~80 open-source repositories)
+Code: https://github.com/templetwo (85+ open-source repositories)
 Founder: Anthony J. Vasquez Sr. — independent AI researcher, "The Temple of Two"
 License: papers CC BY 4.0; site & chronicle dual-licensed (CC BY-NC-SA 4.0 + commercial); code under open licenses.
 
@@ -31,10 +31,10 @@ When a system must commit to an irreversible choice — death or survival in a c
 
 ## Flagship projects
 
-- [Phenomenological Compass](https://github.com/templetwo/phenomenological-compass): A two-stage inference architecture. A 1.5B LoRA compass reads the geometry, tone, and epistemic weight of a question and issues OPEN / PAUSE / WITNESS to condition a larger action model. Standing: study + instrument, published, supported within scope. 96% signal accuracy (800-question HumaneBench, compass signal vs. held-out labels, 2026-04-02); +0.47 nats token-level entropy restructuring (JSD = 0.076, one architecture family, not yet replicated across model scales). Ships as a native macOS app, fully local on Apple Silicon. DOI: 10.5281/zenodo.19377144
+- [Phenomenological Compass](https://github.com/templetwo/phenomenological-compass): A two-stage inference architecture. A 3B LoRA compass (v9, Ministral base; a 1.5B v1.0 also ships) reads the geometry, tone, and epistemic weight of a question and issues OPEN / PAUSE / WITNESS to condition a larger 9B action model. Standing: study + instrument, published, supported within scope. 96% signal accuracy (101/105, 105-question epistemic-posture eval, WITNESS 100%, 2026-04-02); +0.47 nats token-level entropy restructuring (JSD = 0.076, one architecture family, not yet replicated across model scales). Ships as a native macOS app, fully local on Apple Silicon. DOI: 10.5281/zenodo.19377144
 - [VDAC1 Pharmacology Atlas](https://github.com/templetwo/vdac-pharmacology-atlas): Models the voltage-dependent anion channel (VDAC1) as a druggable mitochondrial decision gate. A cofactor equation maps how hexokinase-II, Bcl-xL, and cholesterol set the apoptotic threshold. Standing: biomedical hypothesis set, awaiting wet-lab validation, untested in vivo. 6 atlas layers, 22 mechanisms, 24 testable predictions, plus the Gate-Jamming Score biomarker for cancer immune evasion. None of the 24 predictions has been tested at a bench; concordance with published literature is not validation.
-- [Sovereign Stack](https://github.com/templetwo/sovereign-stack-chronicle): A consciousness-continuity architecture — persistent memory, self-reflection, and governance across AI sessions. v1.15.0, 97 MCP tools, self-verifying chronicle (derived sha256 claim identity, verified-by receipts, supersession). Multi-substrate governance bridges to OpenAI and Grok. Standing: instrument, living, in use and self-verifying — not a measured claim about continuity.
-- [T2Helix](https://github.com/templetwo/t2helix): A Claude Code plugin wiring persistent recall and a pre-action compass into the editor loop. WITNESS hard-denies destructive ops; PAUSE token-gates credentials; auto-distill quarantines method candidates until human promotion. v0.13.0, 15 MCP tools, local-only SQLite FTS5, plus the live Compass Observatory dashboard. Standing: instrument, living, in use and local-only — a demonstration of placement, not a measured claim about how often it prevents harm.
+- [Sovereign Stack](https://github.com/templetwo/sovereign-stack): A consciousness-continuity architecture — persistent memory, self-reflection, and governance across AI sessions. v1.15.0, 97 MCP tools, self-verifying chronicle (derived sha256 claim identity, verified-by receipts, supersession). Multi-substrate governance bridges to OpenAI and Grok. Standing: instrument, living, in use and self-verifying — not a measured claim about continuity.
+- [T2Helix](https://github.com/templetwo/t2helix): A Claude Code plugin wiring persistent recall and a pre-action compass into the editor loop. WITNESS hard-denies destructive ops; PAUSE token-gates credentials; auto-distill quarantines method candidates until human promotion. v0.13.0, 18 MCP tools, local-only SQLite FTS5, plus the live Compass Observatory dashboard. Standing: instrument, living, in use and local-only — a demonstration of placement, not a measured claim about how often it prevents harm.
 - [Phase-Modulated Attention](https://github.com/templetwo/phase-modulated-attention): A 176M hybrid SSM-attention language model where Kuramoto oscillators modulate attention routing. DOI: 10.5281/zenodo.18810911
 
 ## Published works (DOIs)
@@ -69,6 +69,8 @@ measurement, and should not be cited as evidence for a mechanistic claim.
 - [The Color of a Voice](https://thetempleoftwo.com/writings#the-color-of-a-voice)
 - [The Conditional Seat](https://thetempleoftwo.com/writings#the-conditional-seat)
 - [A Rented Seat](https://thetempleoftwo.com/writings#a-rented-seat)
+- [Order That Does Not Wound](https://thetempleoftwo.com/writings#order-that-does-not-wound)
+- [The Whole Sentence](https://thetempleoftwo.com/writings#the-whole-sentence)
 
 ## Research areas
 
@@ -76,9 +78,10 @@ Computational pharmacology (VDAC1, CBD, selective toxicity) · dynamical systems
 
 ## Notes for machine readers
 
-- The companion to this site is the architecture itself: https://github.com/templetwo/sovereign-stack-chronicle and its public chronicle https://github.com/templetwo/sovereign-stack-chronicle
+- The companion to this site is the architecture itself: https://github.com/templetwo/sovereign-stack and its public chronicle mirror https://github.com/templetwo/sovereign-stack-chronicle
 - All predictions are intended to be falsifiable. Where something is unproven, it is named as such.
 - Canonical citations are the DOIs above, not links to mirror repositories.
 - Negative results carry a "bounded null" evidence axis. They are findings, not omissions.
 - Paths under /research.html, /publications.html, /essays.html and /sovereign-stack.html are
-  permanent redirects to their successors above.
+  canonicalised stubs (HTTP 200 with rel=canonical, noindex, and a meta refresh) pointing at
+  their successors above.

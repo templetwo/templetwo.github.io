@@ -207,10 +207,8 @@ export const instruments: Instrument[] = [
       },
     ],
     verify: [
-      // TODO(anthony): templetwo/sovereign-stack is not public (404). Restore a
-      // "Repository" entry here if you publish it; until then the chronicle and
-      // the live heartbeat are the verifiable surfaces.
-      { label: "Public chronicle", href: "https://github.com/templetwo/sovereign-stack-chronicle" },
+      { label: "Repository", href: "https://github.com/templetwo/sovereign-stack" },
+      { label: "Public chronicle mirror", href: "https://github.com/templetwo/sovereign-stack-chronicle" },
       { label: "Live heartbeat", href: "https://stack.templetwo.com/api/heartbeat" },
     ],
 
@@ -240,11 +238,11 @@ export const instruments: Instrument[] = [
       evidence: "Supported within scope",
     },
     signal:
-      "96% signal accuracy · ΔH = +0.47 nats · one architecture family, one benchmark",
+      "96% signal accuracy (101/105) · ΔH = +0.47 nats · one architecture family",
     question:
       "Does naming the posture a question deserves change what the answering model actually computes — or only how it talks?",
     instrument:
-      "A 1.5B LoRA compass reads the geometry, tone, and epistemic weight of a question and issues OPEN / PAUSE / WITNESS to condition a larger action model. Ships as a native macOS app, fully local on Apple Silicon.",
+      "A 3B LoRA compass (v9, Ministral base; a 1.5B v1.0 also ships) reads the geometry, tone, and epistemic weight of a question and issues OPEN / PAUSE / WITNESS — HOLD, in the paper's vocabulary — to condition a larger 9B action model. Ships as a native macOS app, fully local on Apple Silicon.",
     finding:
       "It changes the computation. Token-level entropy profiling shows ΔH = +0.47 nats (JSD = 0.076): the compass measurably restructures the probability distribution rather than restyling the output. Ablation confirms signal-specificity — wrong-signal WITNESS conditioning collapses responses, full wins 31–2.",
     failed:
@@ -252,8 +250,8 @@ export const instruments: Instrument[] = [
     metrics: [
       {
         label: "Signal accuracy",
-        value: "96%",
-        scope: "800-question HumaneBench, compass signal vs. held-out labels",
+        value: "96% (101/105)",
+        scope: "105-question epistemic-posture eval; WITNESS classification 100%",
         asOf: "2026-04-02",
         source: "https://doi.org/10.5281/zenodo.19377144",
       },
@@ -281,11 +279,11 @@ export const instruments: Instrument[] = [
       hypothesis:
         "If posture is real to the model, conditioning on an explicit epistemic signal should change the shape of the probability distribution — not just the wording of the reply.",
       instrument:
-        "A 1.5B LoRA compass emitting OPEN / PAUSE / WITNESS, wired ahead of a larger action model, with token-level entropy profiling on both paths.",
+        "A 3B LoRA compass emitting OPEN / PAUSE / WITNESS, wired ahead of a 9B action model, with token-level entropy profiling on both paths.",
       encounter:
         "ΔH = +0.47 nats, JSD = 0.076. The distribution moved. Wrong-signal conditioning collapsed the response, so the effect is signal-specific rather than a generic prompt-length artifact.",
       standing:
-        "Supported within scope: one architecture family, one benchmark, not yet replicated across model scales.",
+        "Supported within scope: one architecture family, one eval set, not yet replicated across model scales.",
       receipt: "DOI 10.5281/zenodo.19377144 · phenomenological-compass",
     },
   },
@@ -315,7 +313,7 @@ export const instruments: Instrument[] = [
     finding:
       "The model generates 24 experimentally verifiable predictions about selective toxicity from cofactor occupancy, and the CBD two-pathway component reaches 90% concordance against 70+ published papers.",
     failed:
-      "Nothing has failed yet, and that is precisely the problem. Concordance with published literature is not validation — it is agreement with the same corpus the model was built from. None of the 24 predictions has been tested at a bench.",
+      "Two of the three transcriptomic cohorts returned nulls — S1 (TCGA pan-cancer, n=10,071) and S3 (IMvigor210, n=348) — and the framework says so. The surviving signal is stratum-specific: S2 (COADREAD MSS/TP53-wildtype, n=209), five Bonferroni-significant immune correlations. Concordance with published literature is still not validation, and none of the 24 predictions has been tested at a bench.",
     metrics: [
       {
         label: "Testable predictions",
@@ -337,9 +335,17 @@ export const instruments: Instrument[] = [
         asOf: "2026-02-12",
         source: "https://doi.org/10.17605/OSF.IO/NUXHV",
       },
+      {
+        label: "Cohort test",
+        value: "5 Bonferroni-significant",
+        scope: "S2 COADREAD MSS/TP53-wt, n=209; S1 (n=10,071) and S3 (n=348) null",
+        asOf: "2026-02-26",
+        source: "https://doi.org/10.21203/rs.3.rs-8935902/v1",
+      },
     ],
     verify: [
       { label: "Atlas · OSF", href: "https://doi.org/10.17605/OSF.IO/C9RQB" },
+      { label: "Atlas monograph · DOI 10.5281/zenodo.20373134", href: "https://doi.org/10.5281/zenodo.20373134" },
       { label: "Gate-jamming in MSS CRC", href: "https://doi.org/10.21203/rs.3.rs-8935902/v1" },
       { label: "Repository", href: "https://github.com/templetwo/vdac-pharmacology-atlas" },
     ],
@@ -420,12 +426,6 @@ export const instruments: Instrument[] = [
       evidence: "Bounded null",
     },
     signal: "τ-knob real · geometry-scaling prediction failed",
-    image: {
-      src: "/images/gjs-formula.webp",
-      width: 784,
-      height: 1168,
-      alt: "The Gate-Jamming Score decomposed into its metabolic, anti-apoptotic, and lipid terms",
-    },
     question:
       "Is entropy maximisation an engine that drives a system forward, or a knob that sets where it settles?",
     instrument:
@@ -451,7 +451,8 @@ export const instruments: Instrument[] = [
     ],
     verify: [
       { label: "DOI 10.5281/zenodo.21223845", href: "https://doi.org/10.5281/zenodo.21223845" },
-      { label: "Kinetics follow-up", href: "https://doi.org/10.5281/zenodo.21288848" },
+      { label: "Kinetics follow-up · DOI 10.5281/zenodo.21288848", href: "https://doi.org/10.5281/zenodo.21288848" },
+      { label: "Repository", href: "https://github.com/templetwo/entropy-as-tunable-equilibrium" },
     ],
     wonderToReceipt: {
       wonder:
@@ -504,7 +505,7 @@ export const instruments: Instrument[] = [
     ],
     verify: [
       { label: "DOI 10.5281/zenodo.21461197", href: "https://doi.org/10.5281/zenodo.21461197" },
-      { label: "Reference impl · cosmic-cli", href: "https://github.com/templetwo" },
+      { label: "Reference impl · cosmic-cli", href: "https://github.com/templetwo/cosmic-cli" },
     ],
 
     wonderToReceipt: {
@@ -657,10 +658,28 @@ export type RecordEntry = {
 /** Entries the record holds that are not publications — corrections, releases, limits. */
 const nonPublicationEntries: RecordEntry[] = [
   {
-    date: "2026-07-20",
+    date: "2026-08-16",
     kind: "Release",
-    title: "Sovereign Stack v1.12.0 — supersession replaces mutation",
-    href: "https://github.com/templetwo/sovereign-stack-chronicle",
+    title: "The instruments go public",
+    href: "https://github.com/templetwo",
+    summary:
+      "The architecture repositories opened: sovereign-stack, sovereign-bridge, spiral-guardian, temple-mathematic-basin, golden-lattice, beet-machin — Apache-2.0, with the chronicle mirror already public since May.",
+    standing: { kind: "Release", lifecycle: "Published", evidence: "Publicly verifiable" },
+  },
+  {
+    date: "2026-07-21",
+    kind: "Release",
+    title: "Sovereign Stack v1.15.0 — a call-first heartbeat as the safe first call",
+    href: "https://github.com/templetwo/sovereign-stack/blob/main/CHANGELOG.md",
+    summary:
+      "A base-tier, read-only heartbeat any arriving seat can call first, with tier-aware routing into the two arrival doors. 97 tools on the live surface.",
+    standing: { kind: "Instrument", lifecycle: "Living", evidence: "Live heartbeat" },
+  },
+  {
+    date: "2026-06-12",
+    kind: "Release",
+    title: "Sovereign Stack v1.7.0 — supersession replaces mutation",
+    href: "https://github.com/templetwo/sovereign-stack/blob/main/CHANGELOG.md",
     summary:
       "Chronicle claims can no longer be edited in place. Claim identity is derived sha256, and a changed claim supersedes rather than overwrites its predecessor.",
     standing: { kind: "Instrument", lifecycle: "Living", evidence: "In use, self-verifying" },

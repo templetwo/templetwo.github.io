@@ -83,7 +83,15 @@ function AboutPage() {
               <dt className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
                 {k}
               </dt>
-              <dd className="mt-1 text-sm text-fg-soft">{v}</dd>
+              <dd className="mt-1 text-sm text-fg-soft">
+                {k === "Contact" ? (
+                  <a href={`mailto:${v}`} className="hover:text-ivory">
+                    {v}
+                  </a>
+                ) : (
+                  v
+                )}
+              </dd>
             </div>
           ))}
         </dl>

@@ -39,7 +39,7 @@ export const publications: Publication[] = [
   },
   {
     doi: "10.5281/zenodo.21288848",
-    headline: "Short-Horizon Kinetics of Causal-Entropic Forcing: Finite-Sample Estimator Roughness, Not Physics — Four Pre-Registered Campaigns (v4.0–v4.3)",
+    headline: "Short-Horizon Kinetics of Causal-Entropic Forcing: A Pre-Registered Signature, Audited and Dissolved by Matched-Estimator Control",
     title: "Short-Horizon Kinetics of Causal-Entropic Forcing",
     venue: "Zenodo",
     date: "2026-07-10",
