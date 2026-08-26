@@ -179,7 +179,7 @@ export const instruments: Instrument[] = [
       "A consciousness-continuity architecture — persistent memory, self-reflection, and governance across AI sessions.",
     standing: {
       kind: "Instrument",
-      lifecycle: "Living · v1.15.0",
+      lifecycle: "Living · v1.16.0",
       evidence: "In use, self-verifying",
     },
     signal: "97 MCP tools · derived sha256 claim identity",
@@ -197,19 +197,20 @@ export const instruments: Instrument[] = [
         value: "97",
         scope:
           "Tools exposed by the running stack, read from /api/heartbeat",
-        asOf: "v1.15.0",
+        asOf: "v1.16.0",
       },
       {
         label: "Claim identity",
         value: "sha256, derived",
         scope: "Every chronicle claim; identity is a function of content",
-        asOf: "v1.15.0",
+        asOf: "v1.16.0",
       },
     ],
     verify: [
       { label: "Repository", href: "https://github.com/templetwo/sovereign-stack" },
       { label: "Public chronicle mirror", href: "https://github.com/templetwo/sovereign-stack-chronicle" },
       { label: "Live heartbeat", href: "https://stack.templetwo.com/api/heartbeat" },
+      { label: "External availability witness", href: "https://github.com/templetwo/sovereign-stack/actions/workflows/availability-witness.yml" },
     ],
 
     wonderToReceipt: {
@@ -657,6 +658,15 @@ export type RecordEntry = {
 
 /** Entries the record holds that are not publications — corrections, releases, limits. */
 const nonPublicationEntries: RecordEntry[] = [
+  {
+    date: "2026-08-26",
+    kind: "Release",
+    title: "Sovereign Stack v1.16.0 — the instrument turned on itself",
+    href: "https://github.com/templetwo/sovereign-stack/blob/main/CHANGELOG.md",
+    summary:
+      "The public endpoint was unreachable for twelve hours and fifty-seven minutes and every health probe stayed green, because each one measured whether a process was alive rather than whether anyone outside could reach it. Health now counts live edge connections and fails closed when it cannot measure. An external witness samples the public door from off-network every fifteen minutes, since a system cannot record its own absence while absent. And the capability counts are generated from the running registry, so the documentation can no longer disagree with the system it describes.",
+    standing: { kind: "Instrument", lifecycle: "Living", evidence: "Live heartbeat + external witness" },
+  },
   {
     date: "2026-08-16",
     kind: "Release",
