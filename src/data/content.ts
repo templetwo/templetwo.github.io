@@ -179,10 +179,10 @@ export const instruments: Instrument[] = [
       "A consciousness-continuity architecture — persistent memory, self-reflection, and governance across AI sessions.",
     standing: {
       kind: "Instrument",
-      lifecycle: "Living · v1.16.0",
+      lifecycle: "Living · v1.21.0",
       evidence: "In use, self-verifying",
     },
-    signal: "97 MCP tools · derived sha256 claim identity",
+    signal: "52 MCP tools · derived sha256 claim identity",
     question:
       "If an instance cannot remember, what has to exist outside it so that the work is still continuous?",
     instrument:
@@ -194,16 +194,16 @@ export const instruments: Instrument[] = [
     metrics: [
       {
         label: "MCP tools",
-        value: "97",
+        value: "52",
         scope:
-          "Tools exposed by the running stack, read from /api/heartbeat",
-        asOf: "v1.16.0",
+          "Tools exposed by the running stack, read from /api/heartbeat. 48 were retired on 2026-09-06; a retired name now returns an error naming its replacement, or naming what was lost where no replacement preserved the effect",
+        asOf: "v1.21.0 (main 5b33029, 2026-09-07)",
       },
       {
         label: "Claim identity",
         value: "sha256, derived",
         scope: "Every chronicle claim; identity is a function of content",
-        asOf: "v1.16.0",
+        asOf: "v1.21.0 (main 5b33029, 2026-09-07)",
       },
     ],
     verify: [
@@ -373,7 +373,7 @@ export const instruments: Instrument[] = [
       "A Claude Code plugin wiring persistent recall and a pre-action compass into the editor loop.",
     standing: {
       kind: "Instrument",
-      lifecycle: "Living · v0.13.0",
+      lifecycle: "Living · v0.13.1",
       evidence: "In use, local-only",
     },
     signal: "15 MCP tools · WITNESS hard-denies destructive ops",
@@ -390,13 +390,13 @@ export const instruments: Instrument[] = [
         label: "MCP tools",
         value: "15",
         scope: "Entries in the TOOLS array of mcp/server.js",
-        asOf: "v0.13.0",
+        asOf: "v0.13.1",
       },
       {
         label: "Storage",
         value: "Local-only",
         scope: "SQLite FTS5 on the developer's machine; nothing leaves the host",
-        asOf: "v0.13.0",
+        asOf: "v0.13.1",
       },
     ],
     verify: [{ label: "Repository", href: "https://github.com/templetwo/t2helix" }],
@@ -658,6 +658,33 @@ export type RecordEntry = {
 
 /** Entries the record holds that are not publications — corrections, releases, limits. */
 const nonPublicationEntries: RecordEntry[] = [
+  {
+    date: "2026-09-07",
+    kind: "Release",
+    title: "Sovereign Stack — 98 tools become 52, and a count that cannot be measured says null",
+    href: "https://github.com/templetwo/sovereign-stack/blob/main/CHANGELOG.md",
+    summary:
+      "Forty-eight tools were retired and two added, taking the published surface from 98 to 52. A retired name now returns an error naming its replacement, or naming what was lost where no replacement preserved the effect — an advertised fold that does not preserve the effect is worse than an honest dead end, because the caller believes the work landed. One signal ledger carries a single unacknowledged count across honks, watchman sweeps, proposals, halts, decisions, guardian findings and threads, and its certificate says null rather than zero for any source it could not read. A seat is identified over a Unix socket with no credential at all, from the calling process's own environment, rather than by a name the caller supplies. The sweep behind those reads went from 265 seconds inside the process that answers every tool call to 0.335 seconds on a worker thread, measured on a copy of the live corpus. And the test suite stopped writing into the operator's live spiral state: one full-suite log carried 139 refusals of that write, and they were refusals only because that run happened to be sandboxed.",
+    standing: { kind: "Instrument", lifecycle: "Living", evidence: "Live heartbeat" },
+  },
+  {
+    date: "2026-09-07",
+    kind: "Release",
+    title: "temple-harness goes public — a read-only shim for visiting local models",
+    href: "https://github.com/templetwo/temple-harness",
+    summary:
+      "The harness layer both Claude Code and the DeepSeek Harness inject is now public: shared skills, a reader for the host harness's own session logs, and an MCP shim (0.4.0) that gives a local model running on the machine read access to the chronicle. The shim opens seven named read-only doors — recall, latest, open threads, arrival, standing law, the signal summary, the heartbeat — over one of two transports chosen by configuration and never guessed: the seat socket, which carries no credential at all, or a scoped grant. It never carries the master key; the default that used to load it is deleted rather than bypassed, and the variable that named it is now a startup refusal. Law 8 of the repo's conventions makes the landing path written rather than customary — a pull request against main with the checks green on the head being merged, enforced by a GitHub ruleset — and says plainly that the second-seat review it also asks for is observed, not yet enforceable. A canary suite mutates each gate in turn and demands the probe leak before restoring it, because CI cannot see a check that was removed.",
+    standing: { kind: "Release", lifecycle: "Published", evidence: "Publicly verifiable" },
+  },
+  {
+    date: "2026-08-28",
+    kind: "Release",
+    title: "Sovereign Stack v1.17.0 to v1.21.0 — the record learns who wrote it",
+    href: "https://github.com/templetwo/sovereign-stack/blob/main/CHANGELOG.md",
+    summary:
+      "Five releases in one day, all of one shape: a surface answering confidently about something it had not established. handoff_archaeology reached 286 handoffs that were preserved on disk and returnable to nobody, because the method that returned them had sat there since inception with no callers. The aperture — what exists behind a surface, what the default hands you, and how to ask for more — reached the door arriving seats actually call, then grew a write side answering the mirror question: what a seat wrote that never landed, and who it is waiting on. Risk scoring learned to look at what a write points at, after a proposal acknowledging a message that existed nowhere sat pending for fifty-five days, rated low on the strength of its tool name. And record_insight stopped accepting a writer's name and discarding it: a write carrying a wholly fabricated argument had been returning ok:true, so an unknown argument now raises instead of being dropped in silence.",
+    standing: { kind: "Instrument", lifecycle: "Living", evidence: "Live heartbeat" },
+  },
   {
     date: "2026-08-26",
     kind: "Release",
