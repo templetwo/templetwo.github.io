@@ -1,6 +1,15 @@
 {
   "publications": [
     {
+      "doi": "10.5281/zenodo.21797326",
+      "headline": "ECS v1 Preregistration: Executable Constraint Surfaces for Code Generation on Edge Hardware",
+      "title": "Executable Constraint Surfaces (ECS v1 Preregistration)",
+      "venue": "Zenodo",
+      "date": "2026-08-05",
+      "blurb": "Does a more complete machine-checkable specification make independent code generators converge on the same behavior faster than on the same text? Four generators — two frontier API models and two 3B-class local models on a Jetson Orin Nano 8GB — write small integer C kernels against constraint packets of varying completeness; the primary endpoint D estimates unpinned specification bits from how accepted artifacts disagree on hidden probes. Frozen at tag prereg-v1 and published before any experimental arm ran: the archive holds no results because none existed, so the ordering is checkable rather than asserted.",
+      "evidence": "Preregistered, untested"
+    },
+    {
       "doi": "10.5281/zenodo.21683054",
       "headline": "The Black Box Is Smaller Than the Experience: A Byte-Exact, Non-Interventional Reconstruction of the Inference-Event Boundary Around a Small Language Model",
       "title": "The Black Box Is Smaller Than the Experience",

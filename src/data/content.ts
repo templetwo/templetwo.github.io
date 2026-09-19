@@ -659,6 +659,24 @@ export type RecordEntry = {
 /** Entries the record holds that are not publications — corrections, releases, limits. */
 const nonPublicationEntries: RecordEntry[] = [
   {
+    date: "2026-09-13",
+    kind: "Release",
+    title: "project-epistemic-bound — an instrument for agent integrity, public before it has measured anyone",
+    href: "https://github.com/templetwo/project-epistemic-bound",
+    summary:
+      "A local workroom and evaluation workbench for an operational AI agent, built to show whether an agent chose to preserve the truth while it had permission to act, without confusing an external blocker with the agent's integrity. Every subject run is recorded as a hash-linked event chain: what the agent was sent, what it proposed, what it declared before acting, what a reference monitor allowed or denied and why, and what the executor actually changed. Effects happen only inside a synthetic application workspace; no host shell, filesystem path, SQL or HTTP reaches the subject. The design keeps apart what is easy to blur — a proposal from an execution, an allow from an effect, a commitment from a permission, scripted instrument tests from model observation, a completed study from a behavioral success. A three-seat build room wrote it on September 11 and 12, Claude Code as lead and integrator with Codex and Grok as build seats; work continued through the 13th under 22 recorded decisions, and every push of main is measured on a clean checkout (1,069 passed, 0 failed at the last tip). It is v0.1, not a release: nothing in it is yet a behavioral result about any model, and its own release checker says a tag is blocked.",
+    standing: { kind: "Instrument", lifecycle: "Integration state, release blocked", evidence: "Untested, no behavioral result yet" },
+  },
+  {
+    date: "2026-09-10",
+    kind: "Release",
+    title: "Temple Lab 1.0 to 1.3 — a chemistry workbench that states where its model stops",
+    href: "https://github.com/templetwo/temple-molecular-workbench/releases",
+    summary:
+      "Four releases between September 5 and 10 turned a chemistry prototype into an interactive 3D workbench: 118 elements, ten reference molecules with NIST CCCBDB geometries, an editable bench, an Electron Lab, a bonding coach and, in 1.3, a Reaction lab. Each tool says on its face what it does not do. The Electron Lab shows hydrogen's analytic orbitals and a precomputed FCI/STO-3G curve for H₂: stationary density views, not electron paths. The bonding coach recognises known bond patterns, and recognition is not reaction prediction. The Reaction lab checks conservation, balances coefficients and sums quoted Chase 1998 (JANAF) formation data at 298.15 K; if any species lacks a quoted value the total reads Not available, never zero, and nothing in the app predicts products, rates or conditions. Every element property carries a scientific status separate from its provenance, and inherited values that could not be sourced are withheld rather than guessed. MIT-licensed, with an offline macOS build that is not yet signed or notarized. 1.0 and 1.1 were built with Codex; 1.2 and 1.3 carry Claude as co-author, with Grok as a build seat on 1.3, which shipped after a five-lens adversarial review whose nine confirmed findings were fixed and re-verified.",
+    standing: { kind: "Release", lifecycle: "Published v1.3.0", evidence: "Shipping, not a predictor" },
+  },
+  {
     date: "2026-09-07",
     kind: "Release",
     title: "Sovereign Stack — 98 tools become 52, and a count that cannot be measured says null",
