@@ -197,13 +197,13 @@ export const instruments: Instrument[] = [
         value: "52",
         scope:
           "Tools exposed by the running stack, read from /api/heartbeat. 48 were retired on 2026-09-06; a retired name now returns an error naming its replacement, or naming what was lost where no replacement preserved the effect",
-        asOf: "v1.21.0 (main 5b33029, 2026-09-07)",
+        asOf: "v1.21.0 (main 5b33029, heartbeat 2026-09-19)",
       },
       {
         label: "Claim identity",
         value: "sha256, derived",
         scope: "Every chronicle claim; identity is a function of content",
-        asOf: "v1.21.0 (main 5b33029, 2026-09-07)",
+        asOf: "v1.21.0 (main 5b33029, heartbeat 2026-09-19)",
       },
     ],
     verify: [
@@ -658,6 +658,15 @@ export type RecordEntry = {
 
 /** Entries the record holds that are not publications — corrections, releases, limits. */
 const nonPublicationEntries: RecordEntry[] = [
+  {
+    date: "2026-09-19",
+    kind: "Release",
+    title: "cosmic-cli — a mission no longer ends \"complete\": it ends verified, or it says why it needs review",
+    href: "https://github.com/templetwo/cosmic-cli/commit/7174de9",
+    summary:
+      "Until now a cosmic-cli mission that reached the finish line reported \"complete\" for three different endings: the model declared it finished and a syntax check ran, the model declared it finished and nothing ran, or the harness declared it finished on behalf of a model that was looping. The last is an actor approving its own work. A finished mission is now \"verified\" only when the model declared FINISH and a command the operator supplied (--verify-cmd, which the model cannot set) exited 0. Every other ending is \"needs_review\" and records why: declared by the model, synthesized by the harness, or the verifier was blocked. The verifier runs through the same gate as any other shell step, so there is no new ungated path, and only an explicit exit 0 counts as a pass. A synthesized finish is never verified, even when the verifier passes, and the reason now survives the process, in the echo log, the session record, the Helix receipt and the status line. The shape is borrowed from MartinLoop's three-way handoff; no code was taken. Three gate fixes landed the same day: a WRITE with a missing, empty or unknown path now denies by default (CC-008), command-shaped READ keys are scanned against the approval surface (CC-006), and an open() nested inside an interpreter's -c string is treated as opaque (CC-007). Each gate fix was reviewed on its own; their composition inside the gate has not yet had a second review. The finish line was built test-first by Claude and reviewed by Grok Build as second seat: 361 unit tests passed and CI is green on the merge. No tag yet, and the new finish line has not been run against a live model.",
+    standing: { kind: "Instrument", lifecycle: "Merged to main, untagged", evidence: "Unit-tested, not yet run against a live model" },
+  },
   {
     date: "2026-09-13",
     kind: "Release",
