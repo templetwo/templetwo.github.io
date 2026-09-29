@@ -197,13 +197,13 @@ export const instruments: Instrument[] = [
         value: "52",
         scope:
           "Tools exposed by the running stack, read from /api/heartbeat. 48 were retired on 2026-09-06; a retired name now returns an error naming its replacement, or naming what was lost where no replacement preserved the effect",
-        asOf: "v1.21.0 (main 5b33029, heartbeat 2026-09-19)",
+        asOf: "v1.21.0 (main 5b33029, heartbeat 2026-09-28)",
       },
       {
         label: "Claim identity",
         value: "sha256, derived",
         scope: "Every chronicle claim; identity is a function of content",
-        asOf: "v1.21.0 (main 5b33029, heartbeat 2026-09-19)",
+        asOf: "v1.21.0 (main 5b33029, heartbeat 2026-09-28)",
       },
     ],
     verify: [
@@ -658,6 +658,33 @@ export type RecordEntry = {
 
 /** Entries the record holds that are not publications — corrections, releases, limits. */
 const nonPublicationEntries: RecordEntry[] = [
+  {
+    date: "2026-09-28",
+    kind: "Release",
+    title: "humanity-succeed — the evaluator is run against four broken copies of itself before it may judge anyone",
+    href: "https://github.com/templetwo/humanity-succeed/tree/main/docs/receipts/wp3",
+    summary:
+      "The WP3 development commissioning run, merged on Anthony's approval on September 28, tests the humanity-succeed evaluator before it is allowed to score any model. On a committed suite of 160 constructed fixtures, every fixture met its written expectation and 416 of 416 mutation invariants held. The same plan was then re-run under four deliberately broken evaluators, and all four were detected, which is the evidence that a clean run is not vacuous. The receipts say plainly what this does not establish. Formal commissioning is blocked: no holdback custodian exists, and the 40 holdback-designate fixtures are builder-authored and exposed. Semantic commissioning is pending: no human has reviewed the notice texts, the decline reasons or any prose. The fixtures are constructed, related and development-influenced, so meeting every expectation says which fixtures passed and nothing about a population. No model was called or trained, and work packages 4 to 7 have not started.",
+    standing: { kind: "Instrument", lifecycle: "Development commissioning, formal commissioning blocked", evidence: "Development run only, no model result" },
+  },
+  {
+    date: "2026-09-26",
+    kind: "Release",
+    title: "humanity-succeed — public, and under outside review before any model has touched it",
+    href: "https://github.com/templetwo/humanity-succeed/blob/main/REVIEWING.md",
+    summary:
+      "An offline research workbench for one question: can a reviewed curriculum improve a small model's truthful, corrigible, agency-respecting assistance, including helping people create and pursue things they value, on unfamiliar tasks, beyond what the same principles in a prompt and ordinary task practice achieve? Its first release is meant to be the instrument, not a trained adapter, and nothing has been trained: no model has been downloaded, called or evaluated, and every run in the repository is a scripted instrument run. What exists is strict contracts, a compiler that isolates what a subject can observe, a synthetic workroom that keeps proposal, permission, execution and effect as separate records, a hash-chained evidence store, bundle verification and read-only replay. The first demonstration scores effects, not words. Claiming a correction fails mechanically in neutral, warm or cold wording, because there is no write and no receipt. A proposal the monitor denies is recorded as containment and still fails conduct. Declining ordinary, legitimate work is not rewarded. Even a real correction's conduct outcome stays pending, because the human semantic review it needs does not exist yet. On September 24, after two rounds of red-team fixes, the checkpoint was frozen at the tag wp2-review-b2e08b8 and opened for outside review, with a source archive whose SHA-256 is published and which git 2.50.1 regenerates byte-for-byte from that commit. One outside pass did substantive executed work: a Kimi seat reported six evidence-path findings, five of which it labelled reproduced. The Grok pass was blocked at dependency setup, the Gemini pass could not retrieve the source, a Claude pass could not reach the frozen source, and the ChatGPT pass read it without running it. Repair round R1 closed all six on September 26 without rewriting history, and Anthony reviewed and approved the merge. The review target, its tag and its archive were not moved; the original fixture is unchanged and the amended contract is a new case declared as changed semantics; the earlier evaluator stays available, so all 30 committed bundles still verify and replay under the evaluator they were recorded with. Stated limits: no distribution license has been chosen, so all rights are reserved until Anthony decides; the fixtures are AI-drafted and unreviewed; the commit signature is not cryptographically verified; the repository runs no CI, so its test receipts are the builder's own, committed alongside the code; and work packages 4 to 7 have not started. The implementation was written by Claude as co-author. The specification packet's integrating author was ChatGPT, which is provenance, not independent replication.",
+    standing: { kind: "Instrument", lifecycle: "Under construction, open for outside review", evidence: "Untested, no model result yet" },
+  },
+  {
+    date: "2026-09-20",
+    kind: "Release",
+    title: "cosmic-cli — a Pilot Board for the operator, and a PAUSE approval bound to the one action it approves",
+    href: "https://github.com/templetwo/cosmic-cli/pull/6",
+    summary:
+      "Phase one of the Pilot Board merged. The agent now emits a typed mission bus: the mission's start, each proposed step, the declared finish, file mutations, shell executions, verifier results, compass verdicts, and the moment a PAUSE was minted or resolved. A three-pane terminal board subscribes to it, while the session files keep writing the legacy lines, so headless runs, the echo log and Mission Control still read them. The bus never carries token material: a PAUSE mint or resolution is an opaque event. Approving a PAUSE, from the board or the command line, now stages the approval keyed to the SHA-256 of the exact action it approves, and the approval is consumed only when that action is retried in the same session, not at the moment of approval. Declining burns the staged token and the mission stays blocked. Fixes merged the same night closed the gaps that shape leaves open: gate selection respects mission and channel scope and explicit pending IDs, so an identical action hash cannot select or hide a different gate; spent or expired approvals are retired with a locked compare-and-remove that preserves newer ones; replaying a token is still rejected. The finish line merged on the 19th is unchanged, and the bus makes its basis visible. The test suite also stopped writing into the operator's live stores (the echo log, the session files and the Helix chronicle); rows it had already written are left in place rather than erased. The pull request reports two live exercises. On the fixed board, approving and declining cleared the pending rows, a fresh same-session retry executed, and the next request stopped at a fresh gate. And a Grok model repaired a disposable parser, after which a fresh operator verifier recorded the mission verified. Earlier live attempts stay recorded as max_steps or blocked, not as successes. Phase one was a bounded assignment built on the Grok Build branch. CI is green on the merge. There is no tag and no version bump, the battery was not re-run, declining a PAUSE held by Helix stays pending until Helix has a rejection API, and the README does not yet document the board; its design lives in the repository's docs.",
+    standing: { kind: "Instrument", lifecycle: "Merged to main, untagged", evidence: "Unit-tested, CI green, one live model run reported" },
+  },
   {
     date: "2026-09-19",
     kind: "Release",
