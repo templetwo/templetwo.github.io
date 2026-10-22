@@ -168,7 +168,7 @@ function ArtifactVisual({
             Rigor (B)
           </text>
         </svg>
-        <div className="absolute bottom-1 right-3 font-sans text-[11px] italic text-muted opacity-70">
+        <div className="absolute bottom-1 right-3 font-sans text-[11px] italic text-muted">
           move the pointer to perturb μ
         </div>
       </div>
