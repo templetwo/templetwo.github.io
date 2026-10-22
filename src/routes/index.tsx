@@ -107,15 +107,20 @@ function HomePage() {
         <Section>
           <Eyebrow tone="wonder">The covenant of the work</Eyebrow>
           <div className="mt-8 grid gap-8 md:grid-cols-2">
-            <blockquote className="space-y-5 font-serif text-2xl leading-snug text-ivory sm:text-3xl">
-              <p>Wonder may ask beyond the evidence.</p>
+            {/* The four lines as an inscription: brass hairlines above and
+                below, a raised brass initial, and room to breathe. The two
+                coloured lines keep the palette the pillars carry. */}
+            <blockquote className="space-y-6 border-y border-brass/45 py-8 font-serif text-2xl leading-[1.3] text-ivory sm:py-10 sm:text-3xl">
+              <p className="first-letter:text-[1.5em] first-letter:font-medium first-letter:leading-[0.9] first-letter:text-brass">
+                Wonder may ask beyond the evidence.
+              </p>
               <p className="text-wonder-soft">Faith may sustain the search.</p>
               <p className="text-rigor-bright">
                 Rigor governs what may be claimed.
               </p>
               <p>The record preserves both findings and limits.</p>
             </blockquote>
-            <div className="flex flex-col justify-center space-y-6 border-t border-border pt-8 md:border-l md:border-t-0 md:pl-10 md:pt-0">
+            <div className="flex flex-col justify-center space-y-6 md:border-l md:border-brass/30 md:pl-10">
               <p className="font-serif text-xl text-fg-soft sm:text-2xl">
                 Faith opens the inquiry. Rigor governs the claim.
               </p>
