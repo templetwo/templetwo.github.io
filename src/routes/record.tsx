@@ -1,7 +1,12 @@
 import { useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section, Eyebrow } from "@/components/temple/section";
-import { recordEntries, site, type RecordKind } from "@/data/content";
+import {
+  recordEntries,
+  site,
+  type RecordEntry,
+  type RecordKind,
+} from "@/data/content";
 import { pageMeta, jsonLd, pageGraph, recordGraph } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
@@ -39,6 +44,21 @@ const facets: Array<RecordKind | "All"> = [
   "Release",
   "Field observation",
 ];
+
+/**
+ * A stable fragment id per entry so a permalink works: the date, then the
+ * title lowercased with every run of anything but a letter or digit folded
+ * to one hyphen. Two entries on one day with one title would collide; none
+ * do today, and the build's record page is where to count.
+ */
+function entryId(r: RecordEntry) {
+  const slug = r.title
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return `${r.date}-${slug}`;
+}
 
 function RecordPage() {
   const [filter, setFilter] = useState<(typeof facets)[number]>("All");
@@ -122,16 +142,26 @@ function RecordPage() {
                 (r.href.startsWith("https://doi.org/")
                   ? r.href.slice("https://doi.org/".length)
                   : undefined);
+              const id = entryId(r);
               return (
-              <li key={r.title} className="relative pb-10 last:pb-0">
+              <li key={r.title} id={id} className="group relative pb-10 last:pb-0">
+                {/* A brass node centred on the rail; it lifts on hover, on
+                    keyboard focus within the entry, and when the entry is
+                    the permalink target. The text never moves. */}
                 <span
-                  className="absolute -left-[1.55rem] top-1.5 h-2.5 w-2.5 rounded-full border border-paper-accent bg-paper sm:-left-[2.05rem]"
+                  className="absolute -left-[1.8rem] top-2 h-2.5 w-2.5 rounded-full bg-brass ring-4 ring-paper transition-transform duration-200 group-hover:scale-150 group-focus-within:scale-150 group-target:scale-150 group-target:bg-ember sm:-left-[2.3rem]"
                   aria-hidden
                 />
                 <div className="flex flex-wrap items-center gap-3">
-                  <time className="font-mono text-xs text-paper-mute">
-                    {r.date}
-                  </time>
+                  <a
+                    href={`#${id}`}
+                    title="Link to this entry"
+                    className="no-underline hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper-accent"
+                  >
+                    <time className="font-mono text-xs text-paper-mute">
+                      {r.date}
+                    </time>
+                  </a>
                   <span className="font-sans text-[0.8125rem] font-medium text-paper-mute">
                     {r.kind}
                   </span>
@@ -140,11 +170,11 @@ function RecordPage() {
                   href={r.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-2 block font-serif text-xl text-paper-ink no-underline hover:underline sm:text-2xl"
+                  className="mt-2 block font-serif text-xl text-paper-ink no-underline decoration-brass/70 underline-offset-4 transition-colors hover:underline group-focus-within:underline sm:text-2xl"
                 >
                   {r.title}
                 </a>
-                <p className="mt-2 max-w-2xl text-sm text-paper-mute">
+                <p className="prose-temple mt-3 text-base leading-[1.6] text-paper-ink/85">
                   {r.summary}
                 </p>
                 <p className="mt-3 font-mono text-xs text-paper-mute">
