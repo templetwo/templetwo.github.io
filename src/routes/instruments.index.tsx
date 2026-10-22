@@ -59,7 +59,7 @@ function InstrumentsPage() {
               params={{ slug: inst.slug }}
               className="rounded-lg border border-border bg-surface px-4 py-4 no-underline transition-colors hover:border-border-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rigor"
             >
-              <p className="font-serif text-base text-ivory">{inst.name}</p>
+              <p className="font-sans text-base font-medium text-ivory">{inst.name}</p>
               <p className="mt-2 font-mono text-xs text-muted">
                 {inst.standing.kind} · {inst.standing.lifecycle}
               </p>

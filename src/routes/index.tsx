@@ -297,7 +297,7 @@ function HomePage() {
                     href={r.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 block font-serif text-lg text-paper-ink no-underline hover:underline"
+                    className="mt-1 block font-serif text-xl text-paper-ink no-underline hover:underline"
                   >
                     {r.title}
                   </a>
@@ -335,7 +335,7 @@ function HomePage() {
             <blockquote className="mt-8 border-l border-wonder/50 pl-5 font-serif text-xl leading-relaxed text-fg-soft sm:text-2xl">
               {about.voice}
             </blockquote>
-            <p className="mt-6 font-serif text-lg italic text-wonder-soft">
+            <p className="mt-6 font-serif text-xl italic text-wonder-soft">
               {about.faithLine}
             </p>
             <Link
@@ -394,7 +394,7 @@ function HomePage() {
           </h2>
           <p className="mt-2 font-mono text-xs text-muted">{memorial.dates}</p>
           <blockquote className="mt-8">
-            <p className="font-serif text-lg italic leading-relaxed text-fg-soft">
+            <p className="font-serif text-xl italic leading-relaxed text-fg-soft">
               {memorial.verseEn}
             </p>
             <cite className="mt-2 block font-mono text-xs not-italic text-muted">
@@ -402,10 +402,10 @@ function HomePage() {
             </cite>
           </blockquote>
           <blockquote className="mt-5">
-            <p className="font-serif text-base italic text-muted">
+            <p lang="es" className="font-serif text-xl italic text-muted">
               {memorial.verseEs}
             </p>
-            <cite className="mt-2 block font-mono text-xs not-italic text-muted">
+            <cite lang="es" className="mt-2 block font-mono text-xs not-italic text-muted">
               {memorial.verseEsCite}
             </cite>
           </blockquote>

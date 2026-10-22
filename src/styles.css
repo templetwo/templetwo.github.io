@@ -14,6 +14,9 @@
   --color-muted: #9a9488;
   --color-border: #242833;
   --color-border-strong: #3a4050;
+  /* Form-field boundary: 3.48:1 on bg, 3.27:1 on surface (WCAG 1.4.11 needs 3:1).
+     Decorative borders keep --color-border; only inputs use this. */
+  --color-field-line: #5f687c;
 
   /* Wonder — warm light, amber, candle, dawn (restrained) */
   --color-wonder: #c9955a;
@@ -106,7 +109,7 @@
   h4 {
     text-wrap: balance;
     font-family: var(--font-serif);
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: -0.01em;
     color: var(--color-ivory);
   }

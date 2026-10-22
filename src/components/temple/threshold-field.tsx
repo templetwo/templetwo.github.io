@@ -405,7 +405,7 @@ export function ThresholdField() {
                     )}
                     aria-hidden
                   />
-                  <span className="font-serif text-base sm:text-lg">
+                  <span className="font-serif text-xl">
                     {item.question}
                   </span>
                 </button>

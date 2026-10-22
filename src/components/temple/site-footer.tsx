@@ -16,7 +16,7 @@ export function SiteFooter() {
             className="h-20 w-20 rounded-full border border-border/60 object-cover sm:h-24 sm:w-24"
           />
           <p className="mt-4 font-serif text-2xl text-ivory">Temple of Two</p>
-          <p className="mt-2 font-serif text-lg italic text-wonder-soft">
+          <p className="mt-2 font-serif text-xl italic text-wonder-soft">
             {site.tagline}.
           </p>
           <p className="mt-4 max-w-sm text-sm text-muted">

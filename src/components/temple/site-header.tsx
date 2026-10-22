@@ -16,7 +16,7 @@ export function SiteHeader() {
           className="group flex items-baseline gap-2 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wonder"
           onClick={() => setOpen(false)}
         >
-          <span className="font-serif text-lg tracking-tight text-ivory sm:text-xl">
+          <span className="font-serif text-xl tracking-tight text-ivory sm:text-2xl">
             Temple of Two
           </span>
           <span className="hidden font-mono text-xs uppercase tracking-[0.16em] text-muted sm:inline">

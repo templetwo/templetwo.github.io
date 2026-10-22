@@ -6,16 +6,23 @@ export function TwoDoors() {
 
   useEffect(() => {
     const handleKeyDown = (e: globalThis.KeyboardEvent) => {
-      // Single-key shortcuts are a WCAG 2.1.4 hazard for speech-input users.
-      // Fire only when focus is idle on the page body — never while any
-      // control, link, or form field has focus — and never with modifiers.
-      if (document.activeElement && document.activeElement !== document.body)
+      // WCAG 2.1.4: a bare printable key must never act on its own, so the
+      // doors answer Alt+W and Alt+R only (Option on a Mac). Read by key
+      // position, because the Option layer on macOS reports a different
+      // character for the same key. Never inside a field, never with Cmd/Ctrl.
+      if (!e.altKey || e.metaKey || e.ctrlKey) return;
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName))
+      )
         return;
-      if (e.metaKey || e.ctrlKey || e.altKey) return;
 
-      if (e.key === "w" || e.key === "W") {
+      if (e.code === "KeyW") {
+        e.preventDefault();
         navigate({ to: "/writings" });
-      } else if (e.key === "r" || e.key === "R") {
+      } else if (e.code === "KeyR") {
+        e.preventDefault();
         navigate({ to: "/instruments" });
       }
     };
@@ -36,7 +43,7 @@ export function TwoDoors() {
             Enter through Wonder
           </p>
           <span className="rounded border border-wonder/30 bg-wonder-field/80 px-1.5 py-0.5 font-mono text-[10px] text-wonder opacity-75 group-hover:opacity-100">
-            [W]
+            Alt+W
           </span>
         </div>
         <h3 className="mt-3 font-serif text-2xl text-ivory sm:text-3xl">
@@ -61,7 +68,7 @@ export function TwoDoors() {
             Enter through Rigor
           </p>
           <span className="rounded border border-rigor/30 bg-rigor-field/80 px-1.5 py-0.5 font-mono text-[10px] text-rigor-bright opacity-75 group-hover:opacity-100">
-            [R]
+            Alt+R
           </span>
         </div>
         <h3 className="mt-3 font-serif text-2xl text-ivory sm:text-3xl">

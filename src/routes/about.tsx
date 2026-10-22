@@ -152,7 +152,7 @@ function AboutPage() {
               key={p.title}
               className="rounded-xl border border-border bg-surface p-5"
             >
-              <h3 className="font-serif text-lg text-ivory">{p.title}</h3>
+              <h3 className="font-serif text-xl text-ivory">{p.title}</h3>
               <p className="mt-2 text-sm text-muted">{p.body}</p>
             </li>
           ))}
@@ -197,7 +197,7 @@ function AboutPage() {
           </h2>
           <p className="mt-2 font-mono text-xs text-muted">{memorial.dates}</p>
           <blockquote className="mt-8">
-            <p className="font-serif text-lg italic text-fg-soft">
+            <p className="font-serif text-xl italic text-fg-soft">
               {memorial.verseEn}
             </p>
             <cite className="mt-2 block font-mono text-xs not-italic text-muted">
@@ -205,10 +205,10 @@ function AboutPage() {
             </cite>
           </blockquote>
           <blockquote className="mt-5">
-            <p className="font-serif text-base italic text-muted">
+            <p lang="es" className="font-serif text-xl italic text-muted">
               {memorial.verseEs}
             </p>
-            <cite className="mt-2 block font-mono text-xs not-italic text-muted">
+            <cite lang="es" className="mt-2 block font-mono text-xs not-italic text-muted">
               {memorial.verseEsCite}
             </cite>
           </blockquote>
