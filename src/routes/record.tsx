@@ -24,7 +24,7 @@ export const Route = createFileRoute("/record")({
             "Findings, corrections, negative results, releases, and limits.",
         }),
       ),
-      // The 18-publication collection lives here rather than in the root
+      // The 19-publication collection lives here rather than in the root
       // route, so it ships on the page it actually describes.
       jsonLd(recordGraph()),
     ],

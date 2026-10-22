@@ -82,7 +82,7 @@ const WEBSITE_ID = `${ORIGIN}/#website`;
  * The site-wide identity graph: organization, founder, website.
  *
  * Mounted once in the root route, so it ships in the head of every page — keep
- * it small. The 18-publication CollectionPage used to live here too, which put
+ * it small. The 19-publication CollectionPage used to live here too, which put
  * ~9.7 KB of structured data on pages that say nothing about publications; it
  * now lives in `recordGraph()` on /record, where it is actually about the page.
  *
