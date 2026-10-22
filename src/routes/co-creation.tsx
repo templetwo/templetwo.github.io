@@ -166,7 +166,7 @@ function CoCreationPage() {
             github.com/templetwo
           </a>
           {" · "}
-          90+ public repositories · papers CC BY 4.0
+          90+ public repositories · papers licensed per deposit, most CC BY 4.0
         </p>
       </Section>
 

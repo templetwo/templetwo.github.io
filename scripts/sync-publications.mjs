@@ -26,6 +26,9 @@ const END = "<!-- AUTOGEN:PUBLICATIONS_LLMSTXT:END -->";
 
 const check = process.argv.includes("--check");
 
+/** SPDX identifiers seen on the deposits so far; extend when a new one is read. */
+const LICENSES = new Set(["CC-BY-4.0", "Apache-2.0", "MIT"]);
+
 const raw = JSON.parse(await readFile(SOURCE, "utf8"));
 const pubs = raw.publications;
 if (!Array.isArray(pubs) || pubs.length === 0) {
@@ -38,6 +41,20 @@ for (const p of pubs) {
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(p.date)) {
     throw new Error(`Publication date must be YYYY-MM-DD: ${p.doi} has "${p.date}"`);
+  }
+  // Optional, copied from the deposit's own metadata and never invented:
+  // `authors` is the archive's creators list verbatim, `license` an SPDX id.
+  // A row that names authors must also carry its license, so a half-filled
+  // entry cannot ship; an unknown license id fails here rather than in a
+  // crawler. Entries whose deposit has not been read carry neither field.
+  if (p.authors !== undefined) {
+    if (!Array.isArray(p.authors) || p.authors.length === 0 || !p.authors.every((a) => typeof a === "string" && a.trim())) {
+      throw new Error(`Publication "authors" must be a non-empty list of names: ${p.doi}`);
+    }
+    if (!p.license) throw new Error(`Publication names authors but no license: ${p.doi}`);
+  }
+  if (p.license !== undefined && !LICENSES.has(p.license)) {
+    throw new Error(`Unknown license id "${p.license}" on ${p.doi}; known: ${[...LICENSES].join(", ")}`);
   }
 }
 
@@ -58,6 +75,8 @@ const tsBody = sorted
       `    blurb: ${lit(p.blurb)},`,
     ];
     if (p.evidence) lines.push(`    evidence: ${lit(p.evidence)},`);
+    if (p.authors) lines.push(`    authors: ${lit(p.authors)},`);
+    if (p.license) lines.push(`    license: ${lit(p.license)},`);
     return `  {\n${lines.join("\n")}\n  },`;
   })
   .join("\n");
@@ -80,6 +99,10 @@ export type Publication = {
   blurb: string;
   /** Optional override for the record's evidence axis. */
   evidence?: string;
+  /** The deposit's creators, verbatim from the archive, when more than one. */
+  authors?: string[];
+  /** SPDX license identifier as the deposit records it. Absent when unread. */
+  license?: string;
 };
 
 export const publications: Publication[] = [
@@ -95,7 +118,7 @@ ${tsBody}
 const llmsBlock = sorted
   .map(
     (p) =>
-      `- ${p.title} — ${p.venue}, ${p.date} — evidence: ${p.evidence ?? "published, open access (venue fact, not an evidence claim)"} — (${p.blurb}) — https://doi.org/${p.doi}`,
+      `- ${p.title} — ${p.venue}, ${p.date} — evidence: ${p.evidence ?? "published, open access (venue fact, not an evidence claim)"}${p.license ? ` — license: ${p.license}` : ""}${p.authors ? ` — authors: ${p.authors.join("; ")}` : ""} — (${p.blurb}) — https://doi.org/${p.doi}`,
   )
   .join("\n");
 

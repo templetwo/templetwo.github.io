@@ -152,6 +152,27 @@ function siteIdentityGraph(): {
   };
 }
 
+/** SPDX id → the license's own URL, for schema.org `license`. */
+const LICENSE_URL: Record<string, string> = {
+  "CC-BY-4.0": "https://creativecommons.org/licenses/by/4.0/",
+  "Apache-2.0": "https://www.apache.org/licenses/LICENSE-2.0",
+  MIT: "https://opensource.org/license/mit/",
+};
+
+/**
+ * Authorship as the archive records it. A deposit that lists more than one
+ * creator (three do, each naming Claude second) gets every name; the founder
+ * resolves to the site's Person node, any other creator becomes a Person
+ * node carrying the deposit's own string. Single-creator deposits keep the
+ * founder reference, which is what the archive says for them.
+ */
+function articleAuthor(p: (typeof publications)[number]) {
+  if (!p.authors || p.authors.length === 0) return { "@id": PERSON_ID };
+  return p.authors.map((name) =>
+    /vas?quez/i.test(name) ? { "@id": PERSON_ID } : { "@type": "Person", name },
+  );
+}
+
 function recordNode(): Record<string, unknown> {
   return {
     "@type": "CollectionPage",
@@ -181,7 +202,9 @@ function recordNode(): Record<string, unknown> {
       publisher: { "@type": "Organization", name: p.venue },
       abstract: p.blurb,
       isPartOf: { "@id": `${ORIGIN}/#record` },
-      author: { "@id": PERSON_ID },
+      author: articleAuthor(p),
+      // Only when the deposit's license has been read; nothing is assumed.
+      ...(p.license && LICENSE_URL[p.license] ? { license: LICENSE_URL[p.license] } : {}),
     })),
   };
 }
