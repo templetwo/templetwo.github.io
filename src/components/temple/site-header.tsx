@@ -3,6 +3,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { nav, site } from "@/data/content";
+import { SealGlyph } from "@/components/temple/seal-glyph";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -13,14 +14,20 @@ export function SiteHeader() {
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:h-16 sm:px-6">
         <Link
           to="/"
-          className="group flex items-baseline gap-2 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wonder"
+          className="group flex items-center gap-2.5 no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wonder"
           onClick={() => setOpen(false)}
         >
-          <span className="font-serif text-xl tracking-tight text-ivory sm:text-2xl">
-            Temple of Two
-          </span>
-          <span className="hidden font-sans text-sm text-muted sm:inline">
-            {site.tagline}
+          {/* The seal's glyph in brass, 24 px, centred on the wordmark's line
+              box; the wordmark and tagline keep their baseline relationship
+              inside their own span. */}
+          <SealGlyph className="h-6 w-6 shrink-0 text-brass" />
+          <span className="flex items-baseline gap-2">
+            <span className="font-serif text-xl tracking-tight text-ivory sm:text-2xl">
+              Temple of Two
+            </span>
+            <span className="hidden font-sans text-sm text-muted sm:inline">
+              {site.tagline}
+            </span>
           </span>
         </Link>
 
