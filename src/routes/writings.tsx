@@ -117,7 +117,7 @@ function WritingsPage() {
           ].map((t) => (
             <div
               key={t}
-              className="rounded-lg border border-border bg-surface px-4 py-4 font-serif text-lg text-fg-soft"
+              className="rounded-lg border border-border bg-surface px-4 py-4 font-serif text-xl text-fg-soft"
             >
               {t}
             </div>

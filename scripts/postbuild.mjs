@@ -4,7 +4,9 @@
  *
  *   .nojekyll     — Pages otherwise drops _-prefixed asset folders
  *   sitemap.xml   — derived by walking the prerendered output, so it can never
- *                   list a route that was not actually built
+ *                   list a route that was not actually built; lastmod from git
+ *   <route>.html  — a copy of each route's page, so canonical slash-less URLs
+ *                   answer 200 on Pages instead of 301 to the slash form
  *   redirect stubs — the old .html URLs are cited from DOI pages and essays.
  *                   Each gets a real file with a canonical link and a refresh.
  *   _redirects    — 301s for Cloudflare Pages, ignored by GitHub Pages
@@ -12,6 +14,7 @@
  */
 
 import { readdir, readFile, writeFile, mkdir, stat } from "node:fs/promises";
+import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { dirname, join, relative, sep } from "node:path";
 
@@ -61,9 +64,64 @@ async function collectRoutes(dir, base = "") {
 const routes = (await collectRoutes(OUT)).sort();
 console.log(`postbuild · ${routes.length} prerendered routes`);
 
+/*
+ * Every canonical URL answers 200.
+ *
+ * The canonical, og:url, sitemap <loc> and llms.txt links are all slash-less
+ * (/inquiry, /instruments/<slug>), but GitHub Pages only has <route>/index.html
+ * for them and answers 301 to /inquiry/. Pages resolves an extension-less
+ * request by trying <name>.html first (see the shadow note below), so a copy
+ * of each route's page at <route>.html makes the canonical URL itself serve
+ * 200. Both forms stay valid; the copy is the same bytes.
+ */
+let canonicalCopies = 0;
+for (const r of routes) {
+  if (r === "/") continue;
+  const segments = r.replace(/^\//, "").split("/");
+  const page = await readFile(join(OUT, ...segments, "index.html"), "utf8");
+  await writeFile(join(OUT, ...segments) + ".html", page, "utf8");
+  canonicalCopies++;
+}
+console.log(`postbuild · wrote ${canonicalCopies} <route>.html copies so canonical URLs answer 200`);
+
 /* ── sitemap ── */
 
-const today = new Date().toISOString().slice(0, 10);
+/*
+ * lastmod is the date the route's content last changed in git, not the build
+ * clock: a build-dated lastmod restamps every URL on every deploy and tells a
+ * crawler nothing. The sources per route are the route module plus the data
+ * modules it renders. When git cannot answer honestly (no repo, or a shallow
+ * clone whose only commit is the build's), lastmod is omitted rather than
+ * invented, and the log says so.
+ */
+const SHARED_SOURCES = ["src/data/content.ts"];
+function sourcesFor(route) {
+  if (route === "/") return ["src/routes/index.tsx", "src/data/cocreation.ts", ...SHARED_SOURCES];
+  if (route.startsWith("/instruments/")) return ["src/routes/instruments.$slug.tsx", ...SHARED_SOURCES];
+  const name = route.replace(/^\//, "");
+  const extra =
+    name === "record" ? ["data/publications.json"] : name === "co-creation" ? ["src/data/cocreation.ts"] : [];
+  const file = name === "instruments" ? "src/routes/instruments.index.tsx" : `src/routes/${name}.tsx`;
+  return [file, ...extra, ...SHARED_SOURCES];
+}
+
+function git(args) {
+  return execFileSync("git", args, { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+}
+
+let lastmodFor = () => null;
+try {
+  if (git(["rev-parse", "--is-shallow-repository"]) === "true") {
+    console.log("postbuild · shallow clone: sitemap lastmod omitted (fetch full history to derive it)");
+  } else {
+    lastmodFor = (route) => {
+      const date = git(["log", "-1", "--format=%cs", "--", ...sourcesFor(route)]);
+      return /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : null;
+    };
+  }
+} catch {
+  console.log("postbuild · git unavailable: sitemap lastmod omitted");
+}
 
 const sitemapXml = [
   '<?xml version="1.0" encoding="UTF-8"?>',
@@ -71,7 +129,9 @@ const sitemapXml = [
   ...routes.map((r) => {
     const loc = r === "/" ? `${ORIGIN}/` : `${ORIGIN}${r}`;
     const priority = r === "/" ? "1.0" : r.split("/").length > 2 ? "0.6" : "0.8";
-    return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>${priority}</priority>\n  </url>`;
+    const lastmod = lastmodFor(r);
+    const lastmodLine = lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : "";
+    return `  <url>\n    <loc>${loc}</loc>${lastmodLine}\n    <priority>${priority}</priority>\n  </url>`;
   }),
   "</urlset>",
   "",

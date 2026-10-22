@@ -221,7 +221,7 @@ export function ContactForm({ compact }: { compact?: boolean }) {
             name="name"
             required
             autoComplete="name"
-            className="mt-2 w-full rounded-md border border-border bg-bg px-3 py-2.5 text-sm text-fg outline-none ring-wonder/40 focus:ring-2"
+            className="mt-2 w-full rounded-md border border-field-line bg-bg px-3 py-2.5 text-sm text-fg"
           />
         </label>
         <label className="block">
@@ -233,7 +233,7 @@ export function ContactForm({ compact }: { compact?: boolean }) {
             type="email"
             required
             autoComplete="email"
-            className="mt-2 w-full rounded-md border border-border bg-bg px-3 py-2.5 text-sm text-fg outline-none ring-wonder/40 focus:ring-2"
+            className="mt-2 w-full rounded-md border border-field-line bg-bg px-3 py-2.5 text-sm text-fg"
           />
         </label>
       </div>
@@ -244,7 +244,7 @@ export function ContactForm({ compact }: { compact?: boolean }) {
         <select
           name="topic"
           required
-          className="mt-2 w-full rounded-md border border-border bg-bg px-3 py-2.5 text-sm text-fg outline-none ring-wonder/40 focus:ring-2"
+          className="mt-2 w-full rounded-md border border-field-line bg-bg px-3 py-2.5 text-sm text-fg"
           defaultValue=""
         >
           <option value="" disabled>
@@ -273,7 +273,7 @@ export function ContactForm({ compact }: { compact?: boolean }) {
           name="message"
           required
           rows={compact ? 4 : 5}
-          className="mt-2 w-full resize-y rounded-md border border-border bg-bg px-3 py-2.5 text-sm text-fg outline-none ring-wonder/40 focus:ring-2"
+          className="mt-2 w-full resize-y rounded-md border border-field-line bg-bg px-3 py-2.5 text-sm text-fg"
         />
       </label>
       {/* Honeypot */}

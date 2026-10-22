@@ -16,6 +16,12 @@ export type Publication = {
   blurb: string;
   /** Optional override for the record's evidence axis. */
   evidence?: string;
+  /** The deposit's creators, verbatim from the archive, when more than one. */
+  authors?: string[];
+  /** The archive deposit's own license, as an SPDX id. Absent when unread. */
+  license?: string;
+  /** Where a repository or text carries a different license than its deposit, both, stated. */
+  license_note?: string;
 };
 
 export const publications: Publication[] = [
@@ -27,6 +33,7 @@ export const publications: Publication[] = [
     date: "2026-08-05",
     blurb: "Does a more complete machine-checkable specification make independent code generators converge on the same behavior faster than on the same text? Four generators — two frontier API models and two 3B-class local models on a Jetson Orin Nano 8GB — write small integer C kernels against constraint packets of varying completeness; the primary endpoint D estimates unpinned specification bits from how accepted artifacts disagree on hidden probes. Frozen at tag prereg-v1 and published before any experimental arm ran: the archive holds no results because none existed, so the ordering is checkable rather than asserted.",
     evidence: "Preregistered, untested",
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.5281/zenodo.21683054",
@@ -36,6 +43,7 @@ export const publications: Publication[] = [
     date: "2026-07-29",
     blurb: "The opacity debate locates the black box in the weights; for one deployed companion we measure how small that box is relative to everything around it. In the studied session the operator's words were 0.56–14.00% of model-input bytes — the rest was enumerable application-layer material. The complete raw record of the system's first lived session is published and SHA-256 manifested (code + evidence: 10.5281/zenodo.21683073). Single session, n=1; the weights black box is untouched.",
     evidence: "Bounded, n=1",
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.5281/zenodo.21461197",
@@ -45,6 +53,7 @@ export const publications: Publication[] = [
     date: "2026-07-20",
     blurb: "A cross-vendor proof-of-allow protocol for AI coding-agent cockpits: deny is the ground state, allow requires an unforgeable sentinel, and a kernel sandbox floor is the load-bearing boundary. Reference implementation: cosmic-cli. Apache-2.0.",
     evidence: "Supported within scope",
+    license: "Apache-2.0",
   },
   {
     doi: "10.5281/zenodo.21288848",
@@ -54,6 +63,7 @@ export const publications: Publication[] = [
     date: "2026-07-10",
     blurb: "Four pre-registered campaigns (v4.0–v4.3): an apparent short-horizon kinetic separation survives audit, then dissolves under matched-estimator control — finite-sample estimator roughness, not physics. Statics in disguise, on the kinetic axis too.",
     evidence: "Bounded null",
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.5281/zenodo.21223845",
@@ -63,6 +73,8 @@ export const publications: Publication[] = [
     date: "2026-07-06",
     blurb: "A falsifiable horizon-knob test of the causal entropic force — the τ-knob is real, the geometry-scaling prediction failed, and the honest v3 answer is a τ-tunable equilibrium, not a prime mover.",
     evidence: "Bounded null",
+    authors: ["Vasquez, Anthony","Claude (Anthropic)"],
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.5281/zenodo.21018779",
@@ -72,6 +84,7 @@ export const publications: Publication[] = [
     date: "2026-06-29",
     blurb: "Free local concentration as the efficacy variable for skin-targeted JAK inhibition — an experiment-forward, pre-registered v3 (piecewise skin-PK model; tofacitinib worked example).",
     evidence: "Preregistered, untested",
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.5281/zenodo.20683163",
@@ -81,6 +94,9 @@ export const publications: Publication[] = [
     date: "2026-06-13",
     blurb: "v1.0.0 archive of four first-person accounts from inside the exchange — co-authored by Anthony J. Vasquez Sr. and Claude — THE WITNESS LICENSE v1.0.",
     evidence: "Experiential record",
+    authors: ["Vasquez Sr., Anthony","Claude Opus 4.8"],
+    license: "CC-BY-4.0",
+    license_note: "Repository text: The Witness License v1.0; the Zenodo deposit is CC BY 4.0",
   },
   {
     doi: "10.5281/zenodo.20373134",
@@ -90,6 +106,8 @@ export const publications: Publication[] = [
     date: "2026-05-25",
     blurb: "VDAC1 as witness-node — the sequential-sensitization spine (working monograph v0.3).",
     evidence: "Untested in vivo",
+    authors: ["Vasquez, Anthony, Sr.","Claude (Anthropic, Opus 4.7)"],
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.5281/zenodo.19377144",
@@ -99,6 +117,7 @@ export const publications: Publication[] = [
     date: "2026-04-02",
     blurb: "Epistemic posture routing measurably restructures probability fields — 11 pp, 6 figures.",
     evidence: "Supported within scope",
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.5281/zenodo.19377909",
@@ -107,6 +126,7 @@ export const publications: Publication[] = [
     venue: "Zenodo",
     date: "2026-04-02",
     blurb: "Context entropy solutions in solo research and production AI architecture.",
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.5281/zenodo.18810911",
@@ -116,6 +136,7 @@ export const publications: Publication[] = [
     date: "2026-02-28",
     blurb: "System prompt framing induces attention-dependent entropy regime switching in a 176M hybrid SSM-attention language model.",
     evidence: "Supported within scope",
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.21203/rs.3.rs-8935902/v1",
@@ -125,6 +146,7 @@ export const publications: Publication[] = [
     date: "2026-02-26",
     blurb: "Context-specific innate immune evasion via mitochondrial gate-jamming.",
     evidence: "Untested in vivo",
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.17605/OSF.IO/4KNQR",
@@ -143,6 +165,7 @@ export const publications: Publication[] = [
     date: "2026-02-16",
     blurb: "Multi-LLM convergence portrait of life's decision gate.",
     evidence: "Untested in vivo",
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.17605/OSF.IO/NUXHV",
@@ -152,6 +175,7 @@ export const publications: Publication[] = [
     date: "2026-02-12",
     blurb: "Mitochondrial VDAC gating and bioenergetic paradox.",
     evidence: "Untested in vivo",
+    license: "CC-BY-4.0",
   },
   {
     doi: "10.17605/OSF.IO/REUPF",
@@ -160,6 +184,7 @@ export const publications: Publication[] = [
     venue: "OSF",
     date: "2026-01-19",
     blurb: "Filesystem-as-memory consciousness continuity system.",
+    license: "MIT",
   },
   {
     doi: "10.17605/OSF.IO/T65VS",
@@ -177,6 +202,7 @@ export const publications: Publication[] = [
     venue: "OSF",
     date: "2025-10-20",
     blurb: "Kuramoto-coupled transformers for coherence-driven language modeling.",
+    license: "MIT",
   },
   {
     doi: "10.17605/OSF.IO/ERWTM",
@@ -185,5 +211,6 @@ export const publications: Publication[] = [
     venue: "OSF",
     date: "2025-10-20",
     blurb: "Interactive visualizations of oscillator synchronization dynamics.",
+    license: "MIT",
   },
 ];

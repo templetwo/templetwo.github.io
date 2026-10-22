@@ -50,28 +50,9 @@ function InstrumentsPage() {
         tone="rigor"
       />
 
+      {/* One listing. The card grid that repeated these eight above the list
+          was removed 2026-10-22 (critic B, C5, the duplication only). */}
       <Section className="pt-0">
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {instruments.map((inst) => (
-            <Link
-              key={inst.id}
-              to="/instruments/$slug"
-              params={{ slug: inst.slug }}
-              className="rounded-lg border border-border bg-surface px-4 py-4 no-underline transition-colors hover:border-border-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rigor"
-            >
-              <p className="font-serif text-base text-ivory">{inst.name}</p>
-              <p className="mt-2 font-mono text-xs text-muted">
-                {inst.standing.kind} · {inst.standing.lifecycle}
-              </p>
-              <p className="mt-1 font-mono text-xs text-rigor-bright">
-                {inst.standing.evidence}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
-      <Section className="pt-4">
         <Eyebrow tone="rigor">Overview</Eyebrow>
         <ul className="mt-8 divide-y divide-border border-y border-border">
           {instruments.map((inst) => (

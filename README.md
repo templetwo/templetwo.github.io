@@ -62,6 +62,19 @@ That regenerates `src/data/publications.ts` and the AUTOGEN block in
 read from the same source, so they cannot disagree. CI fails the build if you
 forget to run it.
 
+Three optional fields are copied from the deposit's own metadata and never
+invented: `authors` (the archive's creators list, verbatim, only when it names
+more than one); `license` (an SPDX id: `CC-BY-4.0`, `Apache-2.0`, `MIT`), which
+is **the archive deposit's license id** (Zenodo `metadata.license.id`, the OSF
+node's license), not the license of a repository or text the deposit points
+at; and `license_note`, used only where those differ, stating both side by
+side (Where It Lands: the Zenodo deposit is CC BY 4.0, the repository text
+carries The Witness License v1.0). A deposit whose license has not been read
+carries none of them; the JSON-LD then emits no `license` for it and
+`llms.txt` says nothing. The sync script refuses an entry that names authors
+without a license, an unknown id, or a blurb containing the word "license"
+with no `license_note`.
+
 ## Standing
 
 Every claim carries three axes wherever it renders:
@@ -96,4 +109,4 @@ directory `dist/client`. The emitted `_redirects` file becomes real 301s.
   families are the whole system; do not add a third accent.
 
 © 2026 Temple of Two — Anthony J. Vasquez Sr.
-Papers CC BY 4.0 · site & chronicle dual-licensed.
+Papers licensed per deposit, most CC BY 4.0 · site & chronicle dual-licensed.

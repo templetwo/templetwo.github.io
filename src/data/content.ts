@@ -182,7 +182,7 @@ export const instruments: Instrument[] = [
       lifecycle: "Living · v1.21.0",
       evidence: "In use, self-verifying",
     },
-    signal: "52 MCP tools · derived sha256 claim identity",
+    signal: "53 MCP tools · derived sha256 claim identity",
     question:
       "If an instance cannot remember, what has to exist outside it so that the work is still continuous?",
     instrument:
@@ -194,16 +194,16 @@ export const instruments: Instrument[] = [
     metrics: [
       {
         label: "MCP tools",
-        value: "52",
+        value: "53",
         scope:
-          "Tools exposed by the running stack, read from /api/heartbeat. 48 were retired on 2026-09-06; a retired name now returns an error naming its replacement, or naming what was lost where no replacement preserved the effect",
-        asOf: "v1.21.0 (main 5b33029, heartbeat 2026-09-28)",
+          "Tools exposed by the running stack, read from /api/heartbeat. 48 were retired on 2026-09-06; a retired name now returns an error naming its replacement, or naming what was lost where no replacement preserved the effect; `descend` was added 2026-10-08, 52 became 53",
+        asOf: "v1.21.0 (main 829acb4, heartbeat 2026-10-22)",
       },
       {
         label: "Claim identity",
         value: "sha256, derived",
         scope: "Every chronicle claim; identity is a function of content",
-        asOf: "v1.21.0 (main 5b33029, heartbeat 2026-09-28)",
+        asOf: "v1.21.0 (main 829acb4, heartbeat 2026-10-22)",
       },
     ],
     verify: [

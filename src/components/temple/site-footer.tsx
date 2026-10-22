@@ -16,7 +16,7 @@ export function SiteFooter() {
             className="h-20 w-20 rounded-full border border-border/60 object-cover sm:h-24 sm:w-24"
           />
           <p className="mt-4 font-serif text-2xl text-ivory">Temple of Two</p>
-          <p className="mt-2 font-serif text-lg italic text-wonder-soft">
+          <p className="mt-2 font-serif text-xl italic text-wonder-soft">
             {site.tagline}.
           </p>
           <p className="mt-4 max-w-sm text-sm text-muted">
@@ -100,8 +100,8 @@ export function SiteFooter() {
       <div className="border-t border-border/80">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>
-            © 2026 Temple of Two — {site.founder}. Papers CC BY 4.0 · site &
-            chronicle dual-licensed.
+            © 2026 Temple of Two — {site.founder}. Papers licensed per deposit,
+            most CC BY 4.0 · site & chronicle dual-licensed.
           </p>
           <p className="font-mono tracking-wide">
             Wonder opens · Rigor governs

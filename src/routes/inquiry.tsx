@@ -121,7 +121,7 @@ function InquiryPage() {
               key={arc.title}
               className="rounded-xl border border-border bg-surface p-5"
             >
-              <h3 className="font-serif text-lg text-ivory">{arc.title}</h3>
+              <h3 className="font-serif text-xl text-ivory">{arc.title}</h3>
               <ol className="mt-5 space-y-0">
                 {arc.steps.map((step, i) => (
                   <li key={step} className="relative pl-6">
