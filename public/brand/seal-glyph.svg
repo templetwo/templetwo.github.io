@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="glyph-title">
+<title id="glyph-title">Temple of Two seal</title>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="128" cy="128" r="112" stroke-width="16"/>
+<path d="M128 130C152 80 216 80 216 130S152 180 128 130C104 80 40 80 40 130S104 180 128 130" stroke-width="16"/>
+<path d="M108 34H148L160 52L128 82L96 52ZM96 52H160" stroke-width="12"/>
+<path d="M128 180V190M106 192H150" stroke-width="14" stroke-linecap="butt"/>
+<path d="M122 198L128 228L134 198" stroke-width="10"/>
+</g>
+</svg>
