@@ -52,29 +52,33 @@ function HomePage() {
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pb-24 sm:pt-28">
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted">
             Independent inquiry
-            <span className="hidden sm:inline"> · {site.founder}</span>
+            <span> · {site.founder}</span>
           </p>
           <h1 className="mt-5 max-w-4xl font-serif text-[2.75rem] leading-[1.05] tracking-tight text-ivory sm:mt-6 sm:text-6xl md:text-7xl">
             Where wonder
             <br />
             <span className="italic text-wonder-glow">meets</span> rigor.
           </h1>
+          {/* What the work is, in the words llms.txt already gives machine readers. */}
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-fg-soft sm:mt-8 sm:text-xl">
+            Independent computational research tracing a common architecture
+            of commitment across biological and computational substrates, where
+            every claim is attached to a testable prediction, an open-source
+            repository, and a DOI, and negative results are published alongside
+            successes.
+          </p>
+          <p className="mt-4 max-w-xl text-sm text-muted sm:text-base">
             Temple of Two begins with questions felt before evidence can answer
             them — and builds the instruments required to learn what can
             honestly be known.
           </p>
-          <p className="mt-4 max-w-xl text-sm text-muted sm:text-base">
-            Research · infrastructure · and an ongoing case study in human–AI
-            governed co-creation and trust.
-          </p>
           <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
-            <a
-              href="#covenant"
+            <Link
+              to="/inquiry"
               className="inline-flex h-11 items-center rounded-md bg-ivory px-5 font-sans text-sm font-medium text-void no-underline transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wonder"
             >
               Enter the inquiry
-            </a>
+            </Link>
             <Link
               to="/co-creation"
               className="inline-flex h-11 items-center rounded-md border border-border-strong bg-transparent px-5 font-sans text-sm text-fg-soft no-underline transition-colors hover:border-rigor hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rigor"
