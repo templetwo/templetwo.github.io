@@ -53,6 +53,14 @@
   --font-sans: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, monospace;
 
+  /* Labels: one hand. A label is the sans at 13 px, weight 500, sentence
+     case, tracking normal (the Eyebrow in section.tsx is the reference).
+     This is the only tracking value for anything that stays tracked, which
+     today is the uppercase evidence chip in standing-badge.tsx. Mono means
+     a string a reader can check: a date, a version, a DOI, a hash, a repo
+     name, a keyboard key, the standing triple. Never a caption. */
+  --tracking-label: 0.08em;
+
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;

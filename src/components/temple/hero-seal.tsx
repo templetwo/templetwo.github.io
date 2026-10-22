@@ -28,7 +28,7 @@ export function HeroSeal() {
           </div>
         </div>
       </div>
-      <figcaption className="mt-6 text-center font-mono text-xs uppercase tracking-[0.16em] text-muted">
+      <figcaption className="mt-6 text-center font-serif text-xl italic text-muted">
         Two fields approach · neither is erased
       </figcaption>
     </figure>

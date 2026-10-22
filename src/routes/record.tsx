@@ -78,7 +78,7 @@ function RecordPage() {
 
       <section className="border-y border-border bg-paper text-paper-ink">
         <Section>
-          <p className="font-mono text-xs uppercase tracking-[0.14em] text-paper-mute">
+          <p className="font-sans text-[0.8125rem] font-medium text-paper-mute">
             Filter
           </p>
           {/*
@@ -132,7 +132,7 @@ function RecordPage() {
                   <time className="font-mono text-xs text-paper-mute">
                     {r.date}
                   </time>
-                  <span className="font-mono text-xs uppercase tracking-[0.12em] text-paper-mute">
+                  <span className="font-sans text-[0.8125rem] font-medium text-paper-mute">
                     {r.kind}
                   </span>
                 </div>

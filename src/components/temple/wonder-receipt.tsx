@@ -46,7 +46,7 @@ export function WonderReceiptPanel({
   return (
     <article className="overflow-hidden rounded-xl border border-border bg-surface">
       <div className="border-b border-border bg-surface-warm/60 px-6 py-5 sm:px-8">
-        <p className="font-mono text-xs uppercase tracking-[0.16em] text-wonder-soft">
+        <p className="font-sans text-[0.8125rem] font-medium text-wonder-soft">
           From wonder to receipt
         </p>
         <Heading className="mt-2 font-serif text-2xl text-ivory sm:text-3xl">
@@ -74,7 +74,7 @@ export function WonderReceiptPanel({
                   step.key === "wonder"
                     ? "font-serif text-wonder"
                     : step.key === "receipt"
-                      ? "font-mono text-xs uppercase tracking-wide text-rigor-bright"
+                      ? "font-mono text-xs text-rigor-bright"
                       : "font-sans text-sm text-muted"
                 }
               >

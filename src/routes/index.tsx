@@ -50,7 +50,7 @@ function HomePage() {
         <HeroBackdrop />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-wonder/40 to-transparent" />
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pb-24 sm:pt-28">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted">
+          <p className="font-sans text-[0.8125rem] font-medium text-muted">
             Independent inquiry
             <span> · {site.founder}</span>
           </p>
@@ -131,8 +131,7 @@ function HomePage() {
 
       {/* Method */}
       <Section>
-        <Eyebrow>Method</Eyebrow>
-        <h2 className="mt-3 font-serif text-3xl text-ivory sm:text-4xl">
+        <h2 className="font-serif text-3xl text-ivory sm:text-4xl">
           Three principles
         </h2>
         <ol className="mt-10 grid gap-6 md:grid-cols-3">
@@ -175,8 +174,7 @@ function HomePage() {
       <Section>
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <Eyebrow tone="rigor">Instruments</Eyebrow>
-            <h2 className="mt-3 font-serif text-3xl text-ivory sm:text-4xl">
+            <h2 className="font-serif text-3xl text-ivory sm:text-4xl">
               Load-bearing systems
             </h2>
           </div>
@@ -266,7 +264,7 @@ function HomePage() {
         <Section>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.16em] text-paper-mute">
+              <p className="font-sans text-[0.8125rem] font-medium text-paper-mute">
                 The Record
               </p>
               <h2 className="mt-3 font-serif text-3xl text-paper-ink sm:text-4xl">
@@ -294,7 +292,7 @@ function HomePage() {
                   {r.date}
                 </time>
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-[0.12em] text-paper-mute">
+                  <p className="font-sans text-[0.8125rem] font-medium text-paper-mute">
                     {r.kind}
                   </p>
                   <a
@@ -319,8 +317,7 @@ function HomePage() {
 
       {/* Anthony */}
       <Section>
-        <Eyebrow>Anthony</Eyebrow>
-        <div className="mt-6 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="overflow-hidden rounded-xl border border-border">
             <img
               src={about.portrait}

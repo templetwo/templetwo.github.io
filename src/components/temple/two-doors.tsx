@@ -40,7 +40,7 @@ export function TwoDoors() {
       >
         <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-wonder/15 blur-2xl" />
         <div className="flex items-center justify-between">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-wonder-soft">
+          <p className="font-sans text-[0.8125rem] font-medium text-wonder-soft">
             Enter through Wonder
           </p>
           <span className="rounded border border-wonder/30 bg-wonder-field/80 px-1.5 py-0.5 font-mono text-[10px] text-wonder opacity-75 group-hover:opacity-100">
@@ -66,7 +66,7 @@ export function TwoDoors() {
       >
         <div className="pointer-events-none absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-rigor/20 blur-2xl" />
         <div className="flex items-center justify-between">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-rigor">
+          <p className="font-sans text-[0.8125rem] font-medium text-rigor">
             Enter through Rigor
           </p>
           <span className="rounded border border-rigor/30 bg-rigor-field/80 px-1.5 py-0.5 font-mono text-[10px] text-rigor-bright opacity-75 group-hover:opacity-100">

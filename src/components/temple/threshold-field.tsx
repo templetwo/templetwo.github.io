@@ -168,7 +168,7 @@ function ArtifactVisual({
             Rigor (B)
           </text>
         </svg>
-        <div className="absolute bottom-1 right-3 font-mono text-[9px] text-muted opacity-70">
+        <div className="absolute bottom-1 right-3 font-sans text-[11px] italic text-muted opacity-70">
           move the pointer to perturb μ
         </div>
       </div>
@@ -355,7 +355,7 @@ export function ThresholdField() {
 
       <div className="relative grid gap-0 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
         <div className="border-b border-border p-6 sm:p-8 lg:border-b-0 lg:border-r lg:border-border">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted">
+          <p className="font-sans text-[0.8125rem] font-medium text-muted">
             Threshold field
           </p>
           <p className="mt-3 font-serif text-2xl text-ivory sm:text-3xl">
@@ -421,7 +421,7 @@ export function ThresholdField() {
           aria-labelledby={`${baseId}-tab-${q.id}`}
           tabIndex={0}
         >
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-wonder-soft">
+          <p className="font-sans text-[0.8125rem] font-medium text-wonder-soft">
             Living question
           </p>
           <h3 className="mt-3 font-serif text-2xl text-ivory sm:text-3xl">
@@ -450,7 +450,7 @@ export function ThresholdField() {
 
           {q.answer && (
             <div className="mt-5 rounded-lg border border-living/35 bg-living/[0.07] p-4 sm:p-5">
-              <p className="font-mono text-xs uppercase tracking-[0.14em] text-living">
+              <p className="font-sans text-[0.8125rem] font-medium text-living">
                 Answered · the record changed
               </p>
               <p className="mt-2.5 text-sm leading-relaxed text-fg-soft">
@@ -465,7 +465,7 @@ export function ThresholdField() {
           )}
 
           <div className="mt-5">
-            <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">
+            <p className="font-sans text-[0.8125rem] font-medium text-muted">
               Related work
             </p>
             <ul className="mt-2 flex flex-wrap gap-2">

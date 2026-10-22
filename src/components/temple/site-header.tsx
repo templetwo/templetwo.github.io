@@ -19,7 +19,7 @@ export function SiteHeader() {
           <span className="font-serif text-xl tracking-tight text-ivory sm:text-2xl">
             Temple of Two
           </span>
-          <span className="hidden font-mono text-xs uppercase tracking-[0.16em] text-muted sm:inline">
+          <span className="hidden font-sans text-sm text-muted sm:inline">
             {site.tagline}
           </span>
         </Link>

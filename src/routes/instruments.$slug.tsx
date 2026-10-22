@@ -82,7 +82,7 @@ function InstrumentDetailPage() {
                 key={label}
                 className="grid gap-2 px-6 py-5 sm:grid-cols-[10rem_1fr] sm:gap-6 sm:px-8"
               >
-                <dt className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
+                <dt className="font-sans text-[0.8125rem] font-medium text-muted">
                   {label}
                 </dt>
                 <dd className="text-sm leading-relaxed text-fg-soft sm:text-base">
@@ -91,7 +91,7 @@ function InstrumentDetailPage() {
               </div>
             ))}
             <div className="grid gap-2 px-6 py-5 sm:grid-cols-[10rem_1fr] sm:gap-6 sm:px-8">
-              <dt className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
+              <dt className="font-sans text-[0.8125rem] font-medium text-muted">
                 Standing
               </dt>
               <dd>
@@ -99,7 +99,7 @@ function InstrumentDetailPage() {
               </dd>
             </div>
             <div className="grid gap-2 px-6 py-5 sm:grid-cols-[10rem_1fr] sm:gap-6 sm:px-8">
-              <dt className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
+              <dt className="font-sans text-[0.8125rem] font-medium text-muted">
                 Verify it
               </dt>
               <dd className="flex flex-wrap gap-4">
@@ -133,7 +133,7 @@ function InstrumentDetailPage() {
                 key={m.label}
                 className="rounded-xl border border-border bg-surface p-5"
               >
-                <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
+                <p className="font-sans text-[0.8125rem] font-medium text-muted">
                   {m.label}
                 </p>
                 <p className="mt-2 font-serif text-2xl text-ivory">{m.value}</p>
