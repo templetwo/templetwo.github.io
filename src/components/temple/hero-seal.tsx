@@ -10,12 +10,18 @@
  * capture of the live site: an empty ring where a <video> with a poster had
  * mounted and painted nothing, while the still rendered. An <img> renders
  * everywhere.
+ *
+ * Behind it, a slow breath of light (`.seal-breath` in styles.css): a soft
+ * ivory-amber-steel glow that rises and falls over seven seconds. Transform
+ * and opacity only, visible at rest, still under reduced motion, and held
+ * by the hero's "Pause motion" control.
  */
 export function HeroSeal() {
   return (
     <figure className="mx-auto mt-14 flex flex-col items-center sm:mt-20">
-      <div className="seal-disc relative aspect-square w-[min(22rem,78vw)] shrink-0 sm:w-[24rem] md:w-[28rem]">
-        <div className="seal-bezel absolute inset-0 rounded-full p-[3px]">
+      <div className="relative aspect-square w-[min(22rem,78vw)] shrink-0 sm:w-[24rem] md:w-[28rem]">
+        <div className="seal-breath" aria-hidden />
+        <div className="seal-disc seal-bezel absolute inset-0 rounded-full p-[3px]">
           <div className="relative h-full w-full overflow-hidden rounded-full bg-void">
             <img
               src="/images/infinite-seal.jpg"

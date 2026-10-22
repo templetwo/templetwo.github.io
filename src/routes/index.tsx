@@ -54,13 +54,13 @@ function HomePage() {
             Independent inquiry
             <span> · {site.founder}</span>
           </p>
-          <h1 className="mt-5 max-w-4xl font-serif text-[2.75rem] leading-[1.05] tracking-tight text-ivory sm:mt-6 sm:text-6xl md:text-7xl">
+          <h1 className="hero-rise mt-5 max-w-4xl font-serif text-[2.75rem] leading-[1.05] tracking-tight text-ivory sm:mt-6 sm:text-6xl md:text-7xl">
             Where wonder
             <br />
             <span className="italic text-wonder-glow">meets</span> rigor.
           </h1>
           {/* What the work is, in the words llms.txt already gives machine readers. */}
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-fg-soft sm:mt-8 sm:text-xl">
+          <p className="hero-rise hero-rise-2 mt-6 max-w-2xl text-lg leading-relaxed text-fg-soft sm:mt-8 sm:text-xl">
             Independent computational research tracing a common architecture
             of commitment across biological and computational substrates, where
             every claim is attached to a testable prediction, an open-source
