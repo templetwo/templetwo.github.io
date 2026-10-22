@@ -90,7 +90,7 @@ export function WonderReceiptPanel({
                   <button
                     type="button"
                     onClick={() => handleCopy(arc.receipt, `receipt-${instrument.id}`)}
-                    className="inline-flex items-center gap-1.5 rounded border border-border px-2.5 py-1 font-mono text-[11px] text-muted transition-colors hover:border-rigor hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-rigor"
+                    className="inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1 font-mono text-[0.6875rem] text-muted transition-colors hover:border-rigor hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-rigor"
                   >
                     <span>
                       {copiedKey === `receipt-${instrument.id}`

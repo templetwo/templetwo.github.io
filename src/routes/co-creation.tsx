@@ -42,7 +42,7 @@ function CoCreationPage() {
 
       <Section>
         <Eyebrow tone="rigor">What is under study</Eyebrow>
-        <div className="mt-6 max-w-3xl space-y-5 text-fg-soft">
+        <div className="prose-temple mt-6 text-fg-soft">
           {cocreation.thesis.map((p) => (
             <p key={p.slice(0, 48)} className="text-base leading-relaxed">
               {p}

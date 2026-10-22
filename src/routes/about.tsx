@@ -123,7 +123,7 @@ function AboutPage() {
 
       <Section>
         <Eyebrow>Why Temple of Two?</Eyebrow>
-        <div className="mt-6 max-w-3xl space-y-5 text-fg-soft">
+        <div className="prose-temple mt-6 text-fg-soft">
           <p>
             The name began with two substrates: biological and computational. We
             were asking whether living cells and artificial systems might share
