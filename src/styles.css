@@ -53,10 +53,25 @@
   --font-sans: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, monospace;
 
+  /* Labels: one hand. A label is the sans at 13 px, weight 500, sentence
+     case, tracking normal (the Eyebrow in section.tsx is the reference).
+     This is the only tracking value for anything that stays tracked, which
+     today is the uppercase evidence chip in standing-badge.tsx. Mono means
+     a string a reader can check: a date, a version, a DOI, a hash, a repo
+     name, a keyboard key, the standing triple. Never a caption. */
+  --tracking-label: 0.08em;
+
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
+  /* Radius rule. rounded-xl: an object you enter (the two doors, the
+     threshold field, the wonder-to-receipt panel, an image frame; today
+     also the principle and instrument cards, which critic B's C5 would
+     retire and this pass does not). rounded-md: a control (a button, a
+     field, a keycap, the copy chips). rounded-full: a chip you read (the
+     evidence chip, the record facets, a node on the rail). Chips and
+     keycaps share one edge: px-2 py-0.5 at 0.6875rem. Nothing else rounds. */
 
   --shadow-soft: 0 12px 40px -16px rgb(0 0 0 / 0.55);
   --shadow-ember: 0 0 48px -12px rgb(201 149 90 / 0.18);
@@ -187,6 +202,77 @@
       drop-shadow(0 0 48px rgb(138 158 178 / 0.14));
   }
 
+  /* The hero's one moment. Everything here animates transform and opacity
+     only, from a visible resting state: each element's base style is its
+     finished state, so the page is complete at first paint with scripts off
+     and nothing waits at opacity 0 for an observer. */
+
+  /* A slow breath of light behind the seal. The "Pause motion" button in
+     hero-backdrop.tsx precedes the hero copy in the DOM, so its pressed
+     state (which is also the server-rendered state) holds the breath still
+     with one sibling rule and no script. */
+  .seal-breath {
+    position: absolute;
+    inset: -16%;
+    border-radius: 9999px;
+    pointer-events: none;
+    opacity: 0.55;
+    background: radial-gradient(
+      circle at 50% 50%,
+      color-mix(in oklab, var(--color-ivory) 18%, transparent),
+      color-mix(in oklab, var(--color-wonder) 20%, transparent) 38%,
+      color-mix(in oklab, var(--color-rigor) 12%, transparent) 58%,
+      transparent 72%
+    );
+    animation: seal-breath 7s ease-in-out infinite alternate;
+  }
+  button[aria-pressed="true"] ~ div .seal-breath {
+    animation-play-state: paused;
+  }
+  @keyframes seal-breath {
+    from {
+      opacity: 0.35;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  /* The headline and the first sentence settle into place once, from a
+     visible state (opacity 0.55, 12 px low), over 1.1 s. It runs from first
+     paint without a script; by the time the pause control has hydrated it
+     is over, so that control governs the breath and the loop, not this. */
+  .hero-rise {
+    animation: hero-rise 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .hero-rise-2 {
+    animation-delay: 140ms;
+  }
+  @keyframes hero-rise {
+    from {
+      opacity: 0.55;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* The threshold the pillars already are: amber at the left edge, steel at
+     the right, nothing in the middle where the light meets. */
+  .threshold-wash {
+    background: linear-gradient(
+      to right,
+      color-mix(in oklab, var(--color-wonder) 16%, transparent),
+      transparent 36%,
+      transparent 64%,
+      color-mix(in oklab, var(--color-rigor) 16%, transparent)
+    );
+  }
+
   .prose-temple {
     max-width: 68ch;
   }
@@ -215,6 +301,11 @@
        and it lives on `html` — neutralising animations alone left it running. */
     html {
       scroll-behavior: auto !important;
+    }
+
+    .seal-breath,
+    .hero-rise {
+      animation: none !important;
     }
 
     *,

@@ -50,17 +50,17 @@ function HomePage() {
         <HeroBackdrop />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-wonder/40 to-transparent" />
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pb-24 sm:pt-28">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted">
+          <p className="font-sans text-[0.8125rem] font-medium text-muted">
             Independent inquiry
             <span> · {site.founder}</span>
           </p>
-          <h1 className="mt-5 max-w-4xl font-serif text-[2.75rem] leading-[1.05] tracking-tight text-ivory sm:mt-6 sm:text-6xl md:text-7xl">
+          <h1 className="hero-rise mt-5 max-w-4xl font-serif text-[2.75rem] leading-[1.05] tracking-tight text-ivory sm:mt-6 sm:text-6xl md:text-7xl">
             Where wonder
             <br />
             <span className="italic text-wonder-glow">meets</span> rigor.
           </h1>
           {/* What the work is, in the words llms.txt already gives machine readers. */}
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-fg-soft sm:mt-8 sm:text-xl">
+          <p className="hero-rise hero-rise-2 mt-6 max-w-2xl text-lg leading-relaxed text-fg-soft sm:mt-8 sm:text-xl">
             Independent computational research tracing a common architecture
             of commitment across biological and computational substrates, where
             every claim is attached to a testable prediction, an open-source
@@ -107,15 +107,20 @@ function HomePage() {
         <Section>
           <Eyebrow tone="wonder">The covenant of the work</Eyebrow>
           <div className="mt-8 grid gap-8 md:grid-cols-2">
-            <blockquote className="space-y-5 font-serif text-2xl leading-snug text-ivory sm:text-3xl">
-              <p>Wonder may ask beyond the evidence.</p>
+            {/* The four lines as an inscription: brass hairlines above and
+                below, a raised brass initial, and room to breathe. The two
+                coloured lines keep the palette the pillars carry. */}
+            <blockquote className="space-y-6 border-y border-brass/45 py-8 font-serif text-2xl leading-[1.3] text-ivory sm:py-10 sm:text-3xl">
+              <p className="first-letter:text-[1.5em] first-letter:font-medium first-letter:leading-[0.9] first-letter:text-brass">
+                Wonder may ask beyond the evidence.
+              </p>
               <p className="text-wonder-soft">Faith may sustain the search.</p>
               <p className="text-rigor-bright">
                 Rigor governs what may be claimed.
               </p>
               <p>The record preserves both findings and limits.</p>
             </blockquote>
-            <div className="flex flex-col justify-center space-y-6 border-t border-border pt-8 md:border-l md:border-t-0 md:pl-10 md:pt-0">
+            <div className="flex flex-col justify-center space-y-6 md:border-l md:border-brass/30 md:pl-10">
               <p className="font-serif text-xl text-fg-soft sm:text-2xl">
                 Faith opens the inquiry. Rigor governs the claim.
               </p>
@@ -131,8 +136,7 @@ function HomePage() {
 
       {/* Method */}
       <Section>
-        <Eyebrow>Method</Eyebrow>
-        <h2 className="mt-3 font-serif text-3xl text-ivory sm:text-4xl">
+        <h2 className="font-serif text-3xl text-ivory sm:text-4xl">
           Three principles
         </h2>
         <ol className="mt-10 grid gap-6 md:grid-cols-3">
@@ -175,8 +179,7 @@ function HomePage() {
       <Section>
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <Eyebrow tone="rigor">Instruments</Eyebrow>
-            <h2 className="mt-3 font-serif text-3xl text-ivory sm:text-4xl">
+            <h2 className="font-serif text-3xl text-ivory sm:text-4xl">
               Load-bearing systems
             </h2>
           </div>
@@ -193,7 +196,7 @@ function HomePage() {
               key={inst.id}
               to="/instruments/$slug"
               params={{ slug: inst.slug }}
-              className="group flex flex-col rounded-xl border border-border bg-surface p-5 no-underline transition-colors hover:border-border-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rigor"
+              className="group flex flex-col rounded-xl border border-border bg-surface p-6 no-underline transition-colors hover:border-border-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rigor"
             >
               <h3 className="font-serif text-xl text-ivory group-hover:text-wonder-glow">
                 {inst.name}
@@ -266,7 +269,7 @@ function HomePage() {
         <Section>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.16em] text-paper-mute">
+              <p className="font-sans text-[0.8125rem] font-medium text-paper-mute">
                 The Record
               </p>
               <h2 className="mt-3 font-serif text-3xl text-paper-ink sm:text-4xl">
@@ -294,7 +297,7 @@ function HomePage() {
                   {r.date}
                 </time>
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-[0.12em] text-paper-mute">
+                  <p className="font-sans text-[0.8125rem] font-medium text-paper-mute">
                     {r.kind}
                   </p>
                   <a
@@ -319,8 +322,7 @@ function HomePage() {
 
       {/* Anthony */}
       <Section>
-        <Eyebrow>Anthony</Eyebrow>
-        <div className="mt-6 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="overflow-hidden rounded-xl border border-border">
             <img
               src={about.portrait}

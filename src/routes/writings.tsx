@@ -65,7 +65,7 @@ function WritingsPage() {
         <ul className="mt-10 divide-y divide-border border-y border-border">
           {essays.map((e) => (
             <li key={e.id} id={e.id} className="scroll-mt-24 py-8">
-              <p className="font-mono text-xs uppercase tracking-[0.12em] text-wonder-soft">
+              <p className="font-sans text-[0.8125rem] font-medium text-wonder-soft">
                 {e.note}
               </p>
               <h3 className="mt-2 font-serif text-2xl text-ivory sm:text-3xl">

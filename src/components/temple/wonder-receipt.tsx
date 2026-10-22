@@ -46,7 +46,7 @@ export function WonderReceiptPanel({
   return (
     <article className="overflow-hidden rounded-xl border border-border bg-surface">
       <div className="border-b border-border bg-surface-warm/60 px-6 py-5 sm:px-8">
-        <p className="font-mono text-xs uppercase tracking-[0.16em] text-wonder-soft">
+        <p className="font-sans text-[0.8125rem] font-medium text-wonder-soft">
           From wonder to receipt
         </p>
         <Heading className="mt-2 font-serif text-2xl text-ivory sm:text-3xl">
@@ -74,7 +74,7 @@ export function WonderReceiptPanel({
                   step.key === "wonder"
                     ? "font-serif text-wonder"
                     : step.key === "receipt"
-                      ? "font-mono text-xs uppercase tracking-wide text-rigor-bright"
+                      ? "font-mono text-xs text-rigor-bright"
                       : "font-sans text-sm text-muted"
                 }
               >
@@ -90,7 +90,7 @@ export function WonderReceiptPanel({
                   <button
                     type="button"
                     onClick={() => handleCopy(arc.receipt, `receipt-${instrument.id}`)}
-                    className="inline-flex items-center gap-1.5 rounded border border-border px-2.5 py-1 font-mono text-[11px] text-muted transition-colors hover:border-rigor hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-rigor"
+                    className="inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1 font-mono text-[0.6875rem] text-muted transition-colors hover:border-rigor hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-rigor"
                   >
                     <span>
                       {copiedKey === `receipt-${instrument.id}`

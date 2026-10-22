@@ -80,7 +80,7 @@ function AboutPage() {
               key={k}
               className="rounded-lg border border-border bg-surface px-4 py-3"
             >
-              <dt className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
+              <dt className="font-sans text-[0.8125rem] font-medium text-muted">
                 {k}
               </dt>
               <dd className="mt-1 text-sm text-fg-soft">
@@ -123,7 +123,7 @@ function AboutPage() {
 
       <Section>
         <Eyebrow>Why Temple of Two?</Eyebrow>
-        <div className="mt-6 max-w-3xl space-y-5 text-fg-soft">
+        <div className="prose-temple mt-6 text-fg-soft">
           <p>
             The name began with two substrates: biological and computational. We
             were asking whether living cells and artificial systems might share
@@ -142,8 +142,7 @@ function AboutPage() {
       </Section>
 
       <Section>
-        <Eyebrow>Ethos</Eyebrow>
-        <h2 className="mt-3 font-serif text-3xl text-ivory">
+        <h2 className="font-serif text-3xl text-ivory">
           Rigor is how we honor the questions
         </h2>
         <ol className="mt-8 grid gap-4 md:grid-cols-3">

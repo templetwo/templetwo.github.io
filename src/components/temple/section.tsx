@@ -36,7 +36,7 @@ export function Eyebrow({
   return (
     <p
       className={cn(
-        "font-mono text-xs uppercase tracking-[0.16em]",
+        "font-sans text-[0.8125rem] font-medium",
         tone === "wonder" && "text-wonder-soft",
         tone === "rigor" && "text-rigor",
         tone === "neutral" && "text-muted",

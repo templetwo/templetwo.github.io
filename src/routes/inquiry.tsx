@@ -65,7 +65,7 @@ function InquiryPage() {
                   </p>
                   {q.answer && (
                     <div className="mt-5 rounded-lg border border-living/35 bg-living/[0.07] p-5">
-                      <p className="font-mono text-xs uppercase tracking-[0.14em] text-living">
+                      <p className="font-sans text-[0.8125rem] font-medium text-living">
                         Answered · the record changed
                       </p>
                       <p className="mt-2.5 text-sm leading-relaxed text-fg-soft">
@@ -81,7 +81,7 @@ function InquiryPage() {
                   )}
                 </div>
                 <div className="rounded-xl border border-border bg-surface p-5">
-                  <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
+                  <p className="font-sans text-[0.8125rem] font-medium text-muted">
                     Related work
                   </p>
                   <ul className="mt-4 space-y-2">

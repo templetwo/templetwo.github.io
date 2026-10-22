@@ -93,6 +93,7 @@ export function HeroBackdrop() {
         )}
         <div className="absolute inset-0 bg-gradient-to-b from-bg/30 via-bg/60 to-bg" />
         <div className="absolute inset-0 field-lines opacity-30" />
+        <div className="threshold-wash absolute inset-0 opacity-60" aria-hidden />
       </div>
       <button
         type="button"

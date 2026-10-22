@@ -25,7 +25,7 @@ export function SiteFooter() {
           </p>
         </div>
         <div>
-          <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">
+          <p className="font-sans text-[0.8125rem] font-medium text-muted">
             Navigate
           </p>
           <ul className="mt-3 space-y-2">
@@ -42,7 +42,7 @@ export function SiteFooter() {
           </ul>
         </div>
         <div>
-          <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">
+          <p className="font-sans text-[0.8125rem] font-medium text-muted">
             Verify
           </p>
           <ul className="mt-3 space-y-2 text-sm text-fg-soft">
@@ -103,7 +103,7 @@ export function SiteFooter() {
             © 2026 Temple of Two — {site.founder}. Papers licensed per deposit,
             most CC BY 4.0 · site & chronicle dual-licensed.
           </p>
-          <p className="font-mono tracking-wide">
+          <p className="font-serif text-xl italic text-muted">
             Wonder opens · Rigor governs
           </p>
         </div>

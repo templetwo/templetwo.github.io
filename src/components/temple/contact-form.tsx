@@ -155,7 +155,7 @@ export function ContactForm({ compact }: { compact?: boolean }) {
         className="rounded-xl border border-living/40 bg-living/10 p-6 sm:p-8"
         role="status"
       >
-        <p className="font-mono text-xs uppercase tracking-[0.14em] text-living">
+        <p className="font-sans text-[0.8125rem] font-medium text-living">
           Received
         </p>
         <p className="mt-3 font-serif text-xl text-ivory">
@@ -214,7 +214,7 @@ export function ContactForm({ compact }: { compact?: boolean }) {
       )}
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="block">
-          <span className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
+          <span className="font-sans text-[0.8125rem] font-medium text-muted">
             Name
           </span>
           <input
@@ -225,7 +225,7 @@ export function ContactForm({ compact }: { compact?: boolean }) {
           />
         </label>
         <label className="block">
-          <span className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
+          <span className="font-sans text-[0.8125rem] font-medium text-muted">
             Email
           </span>
           <input
@@ -238,7 +238,7 @@ export function ContactForm({ compact }: { compact?: boolean }) {
         </label>
       </div>
       <label className="block">
-        <span className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
+        <span className="font-sans text-[0.8125rem] font-medium text-muted">
           How can we help?
         </span>
         <select
@@ -266,7 +266,7 @@ export function ContactForm({ compact }: { compact?: boolean }) {
         </select>
       </label>
       <label className="block">
-        <span className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
+        <span className="font-sans text-[0.8125rem] font-medium text-muted">
           Message
         </span>
         <textarea

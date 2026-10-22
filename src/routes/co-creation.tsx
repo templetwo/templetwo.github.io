@@ -42,7 +42,7 @@ function CoCreationPage() {
 
       <Section>
         <Eyebrow tone="rigor">What is under study</Eyebrow>
-        <div className="mt-6 max-w-3xl space-y-5 text-fg-soft">
+        <div className="prose-temple mt-6 text-fg-soft">
           {cocreation.thesis.map((p) => (
             <p key={p.slice(0, 48)} className="text-base leading-relaxed">
               {p}
@@ -93,7 +93,7 @@ function CoCreationPage() {
               key={s.seat}
               className="rounded-xl border border-border bg-surface p-5"
             >
-              <p className="font-mono text-xs uppercase tracking-[0.14em] text-wonder-soft">
+              <p className="font-sans text-[0.8125rem] font-medium text-wonder-soft">
                 {s.seat}
               </p>
               <p className="mt-2 text-sm text-fg-soft">{s.role}</p>

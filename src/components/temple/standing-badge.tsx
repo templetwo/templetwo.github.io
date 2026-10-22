@@ -21,7 +21,7 @@ export function StandingTriple({
   return (
     <div
       className={cn(
-        "flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[0.75rem] leading-snug tracking-wide text-muted",
+        "flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[0.75rem] leading-snug text-muted",
         className,
       )}
     >
@@ -35,7 +35,7 @@ export function StandingTriple({
       </span>
       <span
         className={cn(
-          "rounded-full border px-2 py-0.5 text-[0.6875rem] uppercase tracking-wide",
+          "rounded-full border px-2 py-0.5 text-[0.6875rem] uppercase tracking-label",
           toneClass[tone],
         )}
       >
