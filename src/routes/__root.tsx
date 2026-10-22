@@ -11,12 +11,11 @@ import { pageMeta, jsonLd, siteGraph } from "@/lib/seo";
 import appCss from "../styles.css?url";
 
 /**
- * The mark, inline. The previous favicon was a 670 KB JPEG photograph — this is
- * ~400 bytes, scales, and needs no network request.
+ * The icon set is the seal's line glyph in brass on the void (public/brand,
+ * public/favicon.*). The ico carries 16/32/48 for the browsers that still ask
+ * for it; the SVG scales everywhere else; the PNGs are Chrome renders of the
+ * same glyph at exact sizes.
  */
-const FAVICON =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230b0d12' stroke='%23c9955a' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='18' fill='none' stroke='%23c9955a' stroke-width='4'/%3E%3Cline x1='50' y1='5' x2='50' y2='32' stroke='%23c9955a' stroke-width='4'/%3E%3Cline x1='50' y1='68' x2='50' y2='95' stroke='%23c9955a' stroke-width='4'/%3E%3Cline x1='5' y1='50' x2='32' y2='50' stroke='%238a9eb2' stroke-width='4'/%3E%3Cline x1='68' y1='50' x2='95' y2='50' stroke='%238a9eb2' stroke-width='4'/%3E%3C/svg%3E";
-
 const rootMeta = pageMeta({
   title: `${site.name} — ${site.tagline}`,
   description:
@@ -49,7 +48,31 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap",
       },
-      { rel: "icon", href: FAVICON, type: "image/svg+xml" },
+      { rel: "icon", href: "/favicon.ico", sizes: "32x32" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      {
+        rel: "icon",
+        href: "/favicon-32.png",
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        rel: "icon",
+        href: "/favicon-16.png",
+        type: "image/png",
+        sizes: "16x16",
+      },
+      {
+        rel: "icon",
+        href: "/icon-512.png",
+        type: "image/png",
+        sizes: "512x512",
+      },
+      {
+        rel: "apple-touch-icon",
+        href: "/apple-touch-icon.png",
+        sizes: "180x180",
+      },
       {
         rel: "alternate",
         type: "text/plain",
