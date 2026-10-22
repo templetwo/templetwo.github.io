@@ -36,14 +36,14 @@ export function TwoDoors() {
       <Link
         to="/writings"
               aria-keyshortcuts="Alt+W"
-        className="group relative overflow-hidden rounded-xl border border-wonder/25 bg-wonder-field p-6 no-underline transition-colors duration-200 hover:border-wonder/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wonder sm:p-8"
+        className="group relative overflow-hidden rounded-xl border border-wonder/25 bg-wonder-field p-6 no-underline transition-[border-color,box-shadow] duration-300 hover:border-wonder/55 hover:shadow-[0_0_56px_-16px_rgb(201_149_90_/_0.45)] focus-visible:border-wonder/55 focus-visible:shadow-[0_0_56px_-16px_rgb(201_149_90_/_0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wonder sm:p-8"
       >
-        <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-wonder/15 blur-2xl" />
+        <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-wonder/15 opacity-70 blur-2xl transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" />
         <div className="flex items-center justify-between">
           <p className="font-sans text-[0.8125rem] font-medium text-wonder-soft">
             Enter through Wonder
           </p>
-          <span className="rounded border border-wonder/30 bg-wonder-field/80 px-1.5 py-0.5 font-mono text-[10px] text-wonder opacity-75 group-hover:opacity-100">
+          <span className="rounded-md border border-wonder/30 bg-wonder-field/80 px-2 py-0.5 font-mono text-[0.6875rem] text-wonder opacity-75 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
             Alt+W
           </span>
         </div>
@@ -55,21 +55,27 @@ export function TwoDoors() {
           threshold without collapsing it too quickly.
         </p>
         <span className="mt-6 inline-block font-sans text-sm text-wonder">
-          Open Writings →
+          Open Writings{" "}
+          <span
+            aria-hidden
+            className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1"
+          >
+            →
+          </span>
         </span>
       </Link>
 
       <Link
         to="/instruments"
               aria-keyshortcuts="Alt+R"
-        className="group relative overflow-hidden rounded-xl border border-rigor/30 bg-rigor-field p-6 no-underline transition-colors duration-200 hover:border-rigor/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rigor sm:p-8"
+        className="group relative overflow-hidden rounded-xl border border-rigor/30 bg-rigor-field p-6 no-underline transition-[border-color,box-shadow] duration-300 hover:border-rigor/60 hover:shadow-[0_0_56px_-16px_rgb(138_158_178_/_0.45)] focus-visible:border-rigor/60 focus-visible:shadow-[0_0_56px_-16px_rgb(138_158_178_/_0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rigor sm:p-8"
       >
-        <div className="pointer-events-none absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-rigor/20 blur-2xl" />
+        <div className="pointer-events-none absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-rigor/20 opacity-70 blur-2xl transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" />
         <div className="flex items-center justify-between">
           <p className="font-sans text-[0.8125rem] font-medium text-rigor">
             Enter through Rigor
           </p>
-          <span className="rounded border border-rigor/30 bg-rigor-field/80 px-1.5 py-0.5 font-mono text-[10px] text-rigor-bright opacity-75 group-hover:opacity-100">
+          <span className="rounded-md border border-rigor/30 bg-rigor-field/80 px-2 py-0.5 font-mono text-[0.6875rem] text-rigor-bright opacity-75 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
             Alt+R
           </span>
         </div>
@@ -81,7 +87,13 @@ export function TwoDoors() {
           and verification paths.
         </p>
         <span className="mt-6 inline-block font-sans text-sm text-rigor-bright">
-          Open Instruments →
+          Open Instruments{" "}
+          <span
+            aria-hidden
+            className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1"
+          >
+            →
+          </span>
         </span>
       </Link>
     </div>

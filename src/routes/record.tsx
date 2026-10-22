@@ -185,7 +185,7 @@ function RecordPage() {
                   <button
                     type="button"
                     onClick={() => handleCopy(r.href, `link-${r.title}`)}
-                    className="inline-flex items-center gap-1 rounded border border-paper-line bg-paper-raised px-2 py-0.5 font-mono text-[11px] text-paper-mute hover:border-paper-ink/50 hover:text-paper-ink"
+                    className="inline-flex items-center gap-1 rounded-md border border-paper-line bg-paper-raised px-2 py-0.5 font-mono text-[0.6875rem] text-paper-mute hover:border-paper-ink/50 hover:text-paper-ink"
                   >
                     <span>
                       {copiedSlug === `link-${r.title}`
@@ -199,7 +199,7 @@ function RecordPage() {
                     <button
                       type="button"
                       onClick={() => handleCopy(doi, `doi-${r.title}`)}
-                      className="inline-flex items-center gap-1 rounded border border-paper-line bg-paper-raised px-2 py-0.5 font-mono text-[11px] text-paper-accent hover:border-paper-accent hover:text-paper-ink"
+                      className="inline-flex items-center gap-1 rounded-md border border-paper-line bg-paper-raised px-2 py-0.5 font-mono text-[0.6875rem] text-paper-accent hover:border-paper-accent hover:text-paper-ink"
                     >
                       <span>
                         {copiedSlug === `doi-${r.title}`

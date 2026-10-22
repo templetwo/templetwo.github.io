@@ -196,7 +196,7 @@ function HomePage() {
               key={inst.id}
               to="/instruments/$slug"
               params={{ slug: inst.slug }}
-              className="group flex flex-col rounded-xl border border-border bg-surface p-5 no-underline transition-colors hover:border-border-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rigor"
+              className="group flex flex-col rounded-xl border border-border bg-surface p-6 no-underline transition-colors hover:border-border-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rigor"
             >
               <h3 className="font-serif text-xl text-ivory group-hover:text-wonder-glow">
                 {inst.name}

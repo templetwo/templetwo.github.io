@@ -65,6 +65,13 @@
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
+  /* Radius rule. rounded-xl: an object you enter (the two doors, the
+     threshold field, the wonder-to-receipt panel, an image frame; today
+     also the principle and instrument cards, which critic B's C5 would
+     retire and this pass does not). rounded-md: a control (a button, a
+     field, a keycap, the copy chips). rounded-full: a chip you read (the
+     evidence chip, the record facets, a node on the rail). Chips and
+     keycaps share one edge: px-2 py-0.5 at 0.6875rem. Nothing else rounds. */
 
   --shadow-soft: 0 12px 40px -16px rgb(0 0 0 / 0.55);
   --shadow-ember: 0 0 48px -12px rgb(201 149 90 / 0.18);
