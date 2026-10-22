@@ -6,9 +6,10 @@
  *
  * It is the still artwork at every width. The shimmer loop it used to swap
  * in after hydration (1.77 MB of video for a static drawing) depended on the
- * visitor's GPU and autoplay: a headless desktop capture of the live site
- * showed an empty ring where a <video> with a poster had mounted and painted
- * nothing, while the still rendered. An <img> renders everywhere.
+ * visitor's GPU and autoplay, which is consistent with a headless desktop
+ * capture of the live site: an empty ring where a <video> with a poster had
+ * mounted and painted nothing, while the still rendered. An <img> renders
+ * everywhere.
  */
 export function HeroSeal() {
   return (

@@ -18,10 +18,10 @@ export function TwoDoors() {
       )
         return;
 
-      if (e.code === "KeyW") {
+      if (e.code === "KeyW" || e.key.toLowerCase() === "w") {
         e.preventDefault();
         navigate({ to: "/writings" });
-      } else if (e.code === "KeyR") {
+      } else if (e.code === "KeyR" || e.key.toLowerCase() === "r") {
         e.preventDefault();
         navigate({ to: "/instruments" });
       }
@@ -35,6 +35,7 @@ export function TwoDoors() {
     <div className="grid gap-4 sm:grid-cols-2">
       <Link
         to="/writings"
+              aria-keyshortcuts="Alt+W"
         className="group relative overflow-hidden rounded-xl border border-wonder/25 bg-wonder-field p-6 no-underline transition-colors duration-200 hover:border-wonder/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wonder sm:p-8"
       >
         <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-wonder/15 blur-2xl" />
@@ -60,6 +61,7 @@ export function TwoDoors() {
 
       <Link
         to="/instruments"
+              aria-keyshortcuts="Alt+R"
         className="group relative overflow-hidden rounded-xl border border-rigor/30 bg-rigor-field p-6 no-underline transition-colors duration-200 hover:border-rigor/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rigor sm:p-8"
       >
         <div className="pointer-events-none absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-rigor/20 blur-2xl" />

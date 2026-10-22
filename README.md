@@ -72,8 +72,8 @@ side (Where It Lands: the Zenodo deposit is CC BY 4.0, the repository text
 carries The Witness License v1.0). A deposit whose license has not been read
 carries none of them; the JSON-LD then emits no `license` for it and
 `llms.txt` says nothing. The sync script refuses an entry that names authors
-without a license, an unknown id, or a blurb that names a license with no
-`license_note`.
+without a license, an unknown id, or a blurb containing the word "license"
+with no `license_note`.
 
 ## Standing
 

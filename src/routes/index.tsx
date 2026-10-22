@@ -72,6 +72,10 @@ function HomePage() {
             them — and builds the instruments required to learn what can
             honestly be known.
           </p>
+          <p className="mt-4 max-w-xl text-sm text-muted sm:text-base">
+            Research · infrastructure · and an ongoing case study in human–AI
+            governed co-creation and trust.
+          </p>
           <div className="mt-8 flex flex-wrap gap-3 sm:mt-10">
             <Link
               to="/inquiry"
