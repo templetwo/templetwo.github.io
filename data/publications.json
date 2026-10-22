@@ -76,7 +76,8 @@
         "Vasquez Sr., Anthony",
         "Claude Opus 4.8"
       ],
-      "license": "CC-BY-4.0"
+      "license": "CC-BY-4.0",
+      "license_note": "Repository text: The Witness License v1.0; the Zenodo deposit is CC BY 4.0"
     },
     {
       "doi": "10.5281/zenodo.20373134",

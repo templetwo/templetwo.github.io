@@ -18,8 +18,10 @@ export type Publication = {
   evidence?: string;
   /** The deposit's creators, verbatim from the archive, when more than one. */
   authors?: string[];
-  /** SPDX license identifier as the deposit records it. Absent when unread. */
+  /** The archive deposit's own license, as an SPDX id. Absent when unread. */
   license?: string;
+  /** Where a repository or text carries a different license than its deposit, both, stated. */
+  license_note?: string;
 };
 
 export const publications: Publication[] = [
@@ -94,6 +96,7 @@ export const publications: Publication[] = [
     evidence: "Experiential record",
     authors: ["Vasquez Sr., Anthony","Claude Opus 4.8"],
     license: "CC-BY-4.0",
+    license_note: "Repository text: The Witness License v1.0; the Zenodo deposit is CC BY 4.0",
   },
   {
     doi: "10.5281/zenodo.20373134",

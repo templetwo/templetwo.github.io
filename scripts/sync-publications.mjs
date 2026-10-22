@@ -43,10 +43,15 @@ for (const p of pubs) {
     throw new Error(`Publication date must be YYYY-MM-DD: ${p.doi} has "${p.date}"`);
   }
   // Optional, copied from the deposit's own metadata and never invented:
-  // `authors` is the archive's creators list verbatim, `license` an SPDX id.
-  // A row that names authors must also carry its license, so a half-filled
-  // entry cannot ship; an unknown license id fails here rather than in a
-  // crawler. Entries whose deposit has not been read carry neither field.
+  // `authors` is the archive's creators list verbatim; `license` is the
+  // ARCHIVE DEPOSIT's license id (Zenodo metadata.license.id, OSF license),
+  // as an SPDX id. It is the license of the deposit itself, not of a
+  // repository or text the deposit points at; where those differ,
+  // `license_note` states both side by side (HQ ruling 2026-10-22, on the
+  // Where It Lands entry: deposit CC BY 4.0, repository text The Witness
+  // License v1.0). A row that names authors must also carry its license, so
+  // a half-filled entry cannot ship; an unknown license id fails here rather
+  // than in a crawler. Entries whose deposit has not been read carry neither.
   if (p.authors !== undefined) {
     if (!Array.isArray(p.authors) || p.authors.length === 0 || !p.authors.every((a) => typeof a === "string" && a.trim())) {
       throw new Error(`Publication "authors" must be a non-empty list of names: ${p.doi}`);
@@ -55,6 +60,16 @@ for (const p of pubs) {
   }
   if (p.license !== undefined && !LICENSES.has(p.license)) {
     throw new Error(`Unknown license id "${p.license}" on ${p.doi}; known: ${[...LICENSES].join(", ")}`);
+  }
+  if (p.license_note !== undefined && (typeof p.license_note !== "string" || !p.license_note.trim())) {
+    throw new Error(`Publication "license_note" must be a non-empty string: ${p.doi}`);
+  }
+  // A blurb that names a license is naming one the deposit field may not
+  // carry; it must say which is which, or the two silently contradict.
+  if (/\blicense\b/i.test(p.blurb) && !p.license_note) {
+    throw new Error(
+      `Publication blurb names a license but has no "license_note" stating it beside the deposit's: ${p.doi}`,
+    );
   }
 }
 
@@ -77,6 +92,7 @@ const tsBody = sorted
     if (p.evidence) lines.push(`    evidence: ${lit(p.evidence)},`);
     if (p.authors) lines.push(`    authors: ${lit(p.authors)},`);
     if (p.license) lines.push(`    license: ${lit(p.license)},`);
+    if (p.license_note) lines.push(`    license_note: ${lit(p.license_note)},`);
     return `  {\n${lines.join("\n")}\n  },`;
   })
   .join("\n");
@@ -101,8 +117,10 @@ export type Publication = {
   evidence?: string;
   /** The deposit's creators, verbatim from the archive, when more than one. */
   authors?: string[];
-  /** SPDX license identifier as the deposit records it. Absent when unread. */
+  /** The archive deposit's own license, as an SPDX id. Absent when unread. */
   license?: string;
+  /** Where a repository or text carries a different license than its deposit, both, stated. */
+  license_note?: string;
 };
 
 export const publications: Publication[] = [
@@ -118,7 +136,7 @@ ${tsBody}
 const llmsBlock = sorted
   .map(
     (p) =>
-      `- ${p.title} — ${p.venue}, ${p.date} — evidence: ${p.evidence ?? "published, open access (venue fact, not an evidence claim)"}${p.license ? ` — license: ${p.license}` : ""}${p.authors ? ` — authors: ${p.authors.join("; ")}` : ""} — (${p.blurb}) — https://doi.org/${p.doi}`,
+      `- ${p.title} — ${p.venue}, ${p.date} — evidence: ${p.evidence ?? "published, open access (venue fact, not an evidence claim)"}${p.license ? ` — license: ${p.license}${p.license_note ? ` (${p.license_note})` : ""}` : ""}${p.authors ? ` — authors: ${p.authors.join("; ")}` : ""} — (${p.blurb}) — https://doi.org/${p.doi}`,
   )
   .join("\n");
 
