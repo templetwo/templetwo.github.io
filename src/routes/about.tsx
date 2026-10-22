@@ -44,7 +44,7 @@ function AboutPage() {
       />
 
       <Section className="pt-0">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div className="overflow-hidden rounded-xl border border-border">
             <img
               src={about.portrait}
