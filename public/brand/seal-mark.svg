@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="seal-title">
+<title id="seal-title">Temple of Two seal</title>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="128" cy="128" r="117" stroke-width="5"/>
+<circle cx="128" cy="128" r="107" stroke-width="2.4" stroke-dasharray="0 6.723"/>
+<path d="M128 128C150 82 208 82 208 128S150 174 128 128C106 82 48 82 48 128S106 174 128 128" stroke-width="6"/>
+<path d="M112 46H144L152 62L128 93L104 62ZM104 62H152M120 46L113 62L128 93L143 62L136 46" stroke-width="3.5"/>
+<circle cx="128" cy="151" r="3.5" stroke-width="3.5"/>
+<path d="M128 155V171M112 176H144M122 180L128 229L134 180" stroke-width="3.5"/>
+<path d="M128 186V214" stroke-width="2"/>
+<path d="M62 183c5-6 9-6 13 0s8 6 13 0 8-6 13 0M62 193c5-6 9-6 13 0s8 6 13 0 8-6 13 0M62 203c5-6 9-6 13 0s8 6 13 0 8-6 13 0" stroke-width="3.5"/>
+<path d="M174 190A5 5 0 0 1 184 190A10 10 0 0 1 164 190A15 15 0 0 1 194 190A20 20 0 0 1 154 190" stroke-width="3.5"/>
+</g>
+</svg>
