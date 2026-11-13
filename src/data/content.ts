@@ -179,7 +179,7 @@ export const instruments: Instrument[] = [
       "A consciousness-continuity architecture — persistent memory, self-reflection, and governance across AI sessions.",
     standing: {
       kind: "Instrument",
-      lifecycle: "Living · v1.22.0",
+      lifecycle: "Living · v1.23.0",
       evidence: "In use, self-verifying",
     },
     signal: "53 MCP tools · derived sha256 claim identity",
@@ -197,13 +197,13 @@ export const instruments: Instrument[] = [
         value: "53",
         scope:
           "Tools exposed by the running stack, read from /api/heartbeat. 48 were retired on 2026-09-06; a retired name now returns an error naming its replacement, or naming what was lost where no replacement preserved the effect; `descend` was added 2026-10-08, 52 became 53",
-        asOf: "v1.22.0 (main 31d3141, heartbeat 2026-10-22)",
+        asOf: "v1.23.0 (main d78df71, heartbeat 2026-11-13)",
       },
       {
         label: "Claim identity",
         value: "sha256, derived",
         scope: "Every chronicle claim; identity is a function of content",
-        asOf: "v1.22.0 (main 31d3141, heartbeat 2026-10-22)",
+        asOf: "v1.23.0 (main d78df71, heartbeat 2026-11-13)",
       },
     ],
     verify: [
@@ -373,7 +373,7 @@ export const instruments: Instrument[] = [
       "A Claude Code plugin wiring persistent recall and a pre-action compass into the editor loop.",
     standing: {
       kind: "Instrument",
-      lifecycle: "Living · v0.13.1",
+      lifecycle: "Living · v0.14.0",
       evidence: "In use, local-only",
     },
     signal: "15 MCP tools · WITNESS hard-denies destructive ops",
@@ -390,13 +390,13 @@ export const instruments: Instrument[] = [
         label: "MCP tools",
         value: "15",
         scope: "Entries in the TOOLS array of mcp/server.js",
-        asOf: "v0.13.1",
+        asOf: "v0.14.0",
       },
       {
         label: "Storage",
         value: "Local-only",
         scope: "SQLite FTS5 on the developer's machine; nothing leaves the host",
-        asOf: "v0.13.1",
+        asOf: "v0.14.0",
       },
     ],
     verify: [{ label: "Repository", href: "https://github.com/templetwo/t2helix" }],
@@ -658,6 +658,36 @@ export type RecordEntry = {
 
 /** Entries the record holds that are not publications — corrections, releases, limits. */
 const nonPublicationEntries: RecordEntry[] = [
+  /* Proposed in the 2026-11-13 currency pass, each from a public changelog
+     fetched that day. One contiguous block so it can be kept or dropped as a
+     unit; the entries below it are unchanged. */
+  {
+    date: "2026-10-24",
+    kind: "Release",
+    title: "T2Helix 0.14.0: a failure is no longer learned from quoted text, and approval can be held for a human at a terminal",
+    href: "https://github.com/templetwo/t2helix/blob/main/CHANGELOG.md",
+    summary:
+      "Until this release the plugin tagged a shell call as a failure when its text contained words such as FAILED, a traceback or Error:. The hook sees only calls the harness accepted and receives no exit code, so that text was as often a deliberate failing test, a quoted traceback or a brief describing a failure as it was a real crash, and the tag could not tell which. Ambiguous text is now left untagged, as the module's own contract always said; interrupted calls still tag failure and clean calls still tag success. The changelog gives the measurement behind the change: on one machine, 109 shell calls were tagged as failures in two days, most of them on successful commands, and the rule that pauses on similar past failures issued 19 pauses in that window. The release also adds a switch, T2HELIX_REQUIRE_HUMAN_CONFIRM, off by default. With it on, a pending approval is accepted only from the command line, the text the model receives no longer names the script or the place tokens are listed, and the approval script refuses to run unless it is at a terminal with no agent session in its environment. Running that script from an agent's shell is denied; naming it in a commit message or a log query no longer is. The changelog states the limits: a pseudo-terminal still passes, so the terminal check is not proof of a human, and against an agent with a shell and write access to the store the switch is a speed bump, not a wall. The tool count is unchanged at fifteen.",
+    standing: { kind: "Instrument", lifecycle: "Released, v0.14.0 on main", evidence: "In use, local-only; switch off by default" },
+  },
+  {
+    date: "2026-10-23",
+    kind: "Release",
+    title: "Sovereign Stack v1.23.0: a search answers by relevance, and an empty one says where it looked",
+    href: "https://github.com/templetwo/sovereign-stack/blob/main/CHANGELOG.md",
+    summary:
+      "Eleven planned tasks shipped behind existing seams, with no new store, no daemon and nothing that spends. Recall orders by relevance whenever a query is given and by newest only for a bare browse, and the reply says which order it used and whether that was the default. An empty search names the stores it searched and the ones it did not. A receipt that no longer matches its file says the file has moved on since the write, rather than that it was never verified. Signal counts are reported per source and never summed across sources. The heartbeat says whether the commit it serves is older than the one checked out, and says null with a reason when it cannot read git. Unknown arguments are refused on the write, governance and handoff tools. Every write path refuses to touch the live store while a test is running, and a census test keeps new writers under the same guard. The changelog reports 4,784 tests collected, 4,778 passed and 6 skipped at the final tree. The public heartbeat serves 1.23.0; no v1.23.0 tag has been pushed to the repository.",
+    standing: { kind: "Instrument", lifecycle: "Living · v1.23.0, untagged", evidence: "Live heartbeat" },
+  },
+  {
+    date: "2026-10-22",
+    kind: "Release",
+    title: "Sovereign Stack v1.22.0: the closes of earlier seats become a voice at arrival, and the retired reflector leaves the doors",
+    href: "https://github.com/templetwo/sovereign-stack/blob/main/CHANGELOG.md",
+    summary:
+      "The release gathers 148 commits since 1.21.0. The 2026-09-07 entry already covers the first part of that span, so this one names what landed after it. Every session close writes what the seat learned, what surprised it and what it hands forward, and 149 of those closes sat in the store while no arrival door showed more than the newest. The Descent reads them back at arrival as a voice of its own, rebuilt from the store at read time with no clock, no model and no daemon: superseded closes drop out, a protected close is withheld whole, and an entry the reader cannot read is counted as unreadable rather than treated as absent. A new read tool, descend, returns the closes by month, seat or recurring shape with a coverage line. The arrival doors also stopped presenting the reflector, retired in August, as if it were still writing: its notes are gone from the doors, and a header that said \"since last reflection\" now says what it always measured, the newest entry written by a session close. Lineage letters are read by the next seat of the same model name. And one rule now decides which alerts need acknowledgement, read the same way by both stores that count them; a store that cannot be read reports unknown, never a healthy zero. The changelog reports 4,249 tests passed at the merge of that last change.",
+    standing: { kind: "Instrument", lifecycle: "Living · tagged v1.22.0", evidence: "Live heartbeat" },
+  },
   {
     date: "2026-09-28",
     kind: "Release",
